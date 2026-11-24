@@ -117,24 +117,30 @@ def num(v):
 
 def build(rows, ads, old):
     """APIの結果から data.json の中身を組み立てる。"""
-    # リストインに使うアクションを決める
+    # リストインに使うアクションを、キャンペーンごとに決める（キャンペーンによって計測しているイベントが違うため）
+    forced = os.environ.get('META_LISTIN_ACTION', '').strip()
     totals = {}
     for r in rows:
+        t = totals.setdefault(r['campaign_id'], {'_name': r.get('campaign_name', '')})
         for a in r.get('actions') or []:
-            totals[a['action_type']] = totals.get(a['action_type'], 0) + num(a.get('value'))
-    forced = os.environ.get('META_LISTIN_ACTION', '').strip()
-    listin_type = forced or next((t for t in LISTIN_CANDIDATES if totals.get(t, 0) > 0), LISTIN_CANDIDATES[0])
-    print('アクションの合計（多い順）:')
-    for t, v in sorted(totals.items(), key=lambda x: -x[1])[:25]:
-        print(f'  {t}: {int(v)}')
-    print(f'リストインとして数えるアクション: {listin_type}')
+            t[a['action_type']] = t.get(a['action_type'], 0) + num(a.get('value'))
+    listin_types = {}
+    for cid, t in totals.items():
+        name = t.pop('_name')
+        custom = sorted((k for k in t if k.startswith('offsite_conversion.custom.')), key=lambda k: -t[k])
+        cands = LISTIN_CANDIDATES + custom + ['offsite_conversion.fb_pixel_custom']
+        listin_types[cid] = forced or next((x for x in cands if t.get(x, 0) > 0), LISTIN_CANDIDATES[0])
+        print(f'キャンペーン「{name}」のアクション合計（多い順）:')
+        for k, v in sorted(t.items(), key=lambda x: -x[1])[:25]:
+            print(f'  {k}: {int(v)}')
+        print(f'  → リストインとして数える: {listin_types[cid]}')
 
     lps = list(old.get('lps') or [])
     known = {l['id'] for l in lps}
     campaigns, creatives = {}, {}
     for r in rows:
         ad_id = r['ad_id']
-        campaigns[r['campaign_id']] = {'id': r['campaign_id'], 'name': r.get('campaign_name') or r['campaign_id'], 'account': r.get('account_name') or ''}
+        campaigns[r['campaign_id']] = {'id': r['campaign_id'], 'name': r.get('campaign_name') or r['campaign_id'], 'account': r.get('account_name') or '', 'listinSource': listin_types[r['campaign_id']]}
         c = creatives.get(ad_id)
         if c is None:
             cr = (ads.get(ad_id) or {}).get('creative') or {}
@@ -159,14 +165,14 @@ def build(rows, ads, old):
         c['daily'].append({
             'date': r['date_start'], 'spend': round(num(r.get('spend'))), 'imp': int(num(r.get('impressions'))),
             'click': int(num(r.get('inline_link_clicks'))), 'lpview': int(acts.get('landing_page_view', 0)),
-            'listin': int(acts.get(listin_type, 0)),
+            'listin': int(acts.get(listin_types[r['campaign_id']], 0)),
         })
     for c in creatives.values():
         c['daily'].sort(key=lambda d: d['date'])
     out = {k: v for k, v in old.items() if k not in ('sample', 'campaigns', 'creatives', 'lps', 'updatedAt', 'listinSource', 'tokenExpiresAt')}
     return {
         'updatedAt': datetime.datetime.now(JST).replace(microsecond=0).isoformat(),
-        'listinSource': 'Meta: ' + listin_type,
+        'listinSource': 'Meta: ' + ' / '.join(sorted(set(listin_types.values()))),
         **out,
         'campaigns': sorted(campaigns.values(), key=lambda x: x['name']),
         'lps': lps,
