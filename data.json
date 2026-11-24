@@ -1,8 +1,8 @@
 {
  "updatedAt": "2026-11-24T21:10:23+09:00",
  "listinSource": "Meta: offsite_conversion.fb_pixel_complete_registration",
- "targetCpa": 3000,
- "monthlyGoal": 4000,
+ "targetCpa": null,
+ "monthlyGoal": null,
  "campaigns": [
   {
    "id": "120252087649000333",
@@ -17,7 +17,7 @@
    "group": "直個別",
    "funnel": "FB広告用 直個別動線",
    "url": "https://sub.dezajuku.jp/p/HJq0Cy6qT9ey",
-   "thumbUrl": null,
+   "thumbUrl": "lp_thumbs/HJq0Cy6qT9ey.jpg",
    "source": "UTAGE",
    "stage": "入口",
    "entry": true
@@ -28,7 +28,7 @@
    "group": "直個別",
    "funnel": "FB広告用 直個別動線",
    "url": "https://sub.dezajuku.jp/p/0T5r4j8LcPUn",
-   "thumbUrl": null,
+   "thumbUrl": "lp_thumbs/0T5r4j8LcPUn.jpg",
    "source": "UTAGE",
    "stage": "入口",
    "entry": true
@@ -39,7 +39,7 @@
    "group": "直個別",
    "funnel": "FB広告用 直個別動線",
    "url": "https://sub.dezajuku.jp/p/x98dtrBRlC5s",
-   "thumbUrl": null,
+   "thumbUrl": "lp_thumbs/x98dtrBRlC5s.jpg",
    "source": "UTAGE",
    "stage": "登録後のVSL",
    "entry": false
@@ -50,7 +50,7 @@
    "group": "直個別",
    "funnel": "FB広告用 直個別動線",
    "url": "https://sub.dezajuku.jp/p/2qOW7yEFRmYd",
-   "thumbUrl": null,
+   "thumbUrl": "lp_thumbs/2qOW7yEFRmYd.jpg",
    "source": "UTAGE",
    "stage": "登録後のVSL",
    "entry": false
@@ -61,7 +61,7 @@
    "group": "直個別",
    "funnel": "FB広告用 直個別動線",
    "url": "https://sub.dezajuku.jp/p/KwpIokATS9ya",
-   "thumbUrl": null,
+   "thumbUrl": "lp_thumbs/KwpIokATS9ya.jpg",
    "source": "UTAGE",
    "stage": "オファー",
    "entry": false
@@ -72,7 +72,7 @@
    "group": "直個別",
    "funnel": "FB広告用 直個別動線",
    "url": "https://sub.dezajuku.jp/p/K0i67E2JM42O",
-   "thumbUrl": null,
+   "thumbUrl": "lp_thumbs/K0i67E2JM42O.jpg",
    "source": "UTAGE",
    "stage": "サンキュー",
    "entry": false
@@ -83,7 +83,7 @@
    "group": "直個別",
    "funnel": "FB広告用 直個別動線",
    "url": "https://sub.dezajuku.jp/p/SPRpA0n6Yier",
-   "thumbUrl": null,
+   "thumbUrl": "lp_thumbs/SPRpA0n6Yier.jpg",
    "source": "UTAGE",
    "stage": "サンキュー",
    "entry": false
@@ -94,7 +94,7 @@
    "group": "エバーセミナー",
    "funnel": "sub.dezajuku.jp",
    "url": "https://sub.dezajuku.jp/p/9WbekWYiJNGc",
-   "thumbUrl": null,
+   "thumbUrl": "lp_thumbs/9WbekWYiJNGc.jpg",
    "source": "UTAGE",
    "stage": "入口",
    "entry": true

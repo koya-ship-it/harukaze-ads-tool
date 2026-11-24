@@ -164,8 +164,6 @@ def build(rows, ads, old):
     for c in creatives.values():
         c['daily'].sort(key=lambda d: d['date'])
     out = {k: v for k, v in old.items() if k not in ('sample', 'campaigns', 'creatives', 'lps', 'updatedAt', 'listinSource', 'tokenExpiresAt')}
-    out.setdefault('targetCpa', 3000)
-    out.setdefault('monthlyGoal', 4000)
     return {
         'updatedAt': datetime.datetime.now(JST).replace(microsecond=0).isoformat(),
         'listinSource': 'Meta: ' + listin_type,
