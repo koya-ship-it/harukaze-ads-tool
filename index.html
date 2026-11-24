@@ -209,6 +209,7 @@ table.tb { width: 100%; border-collapse: collapse; font-size: 13px; }
 .dr-cr { background: #f1f0ec; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; display: flex; justify-content: center; }
 .dr-cr img, .dr-cr video { display: block; max-width: 100%; max-height: 62vh; }
 .dr-cr.none { padding: 22px 14px; font-size: 12px; color: var(--ink-3); }
+.rc .adset { font-size: 11px; color: var(--ink-3); margin-top: 3px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .tag.stage { background: #eef6ef; color: var(--green-dark); }
 .lpitem .ms.note { display: block; font-size: 11.5px; color: var(--ink-3); }
 .mgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
@@ -338,7 +339,8 @@ function normalize(d) {
   });
   /* 同じ名前の広告が複数ある時（別の広告セットで同じ広告を出している時）は、広告セット名を後ろに付けて見分ける */
   const cnt = {}; d.creatives.forEach(c => cnt[c.name] = (cnt[c.name] || 0) + 1);
-  d.creatives.forEach(c => { if (cnt[c.name] > 1 && c.adset) c.name += '｜' + c.adset; });
+  d.creatives.forEach(c => { c.dup = cnt[c.name] > 1 && !!c.adset; });
+  d.creatives.forEach(c => { if (c.dup) c.name += '｜' + c.adset; });
   /* 広告アカウントが2つ以上ある時は、キャンペーン名の前にアカウント名を付ける */
   if (new Set(d.campaigns.map(c => c.account || '')).size > 1) d.campaigns.forEach(c => { if (c.account) c.name = c.account + ' / ' + c.name; });
   const u = new Date(d.updatedAt);
@@ -468,7 +470,7 @@ function viewRank() {
     <button class="card rc" data-cr="${c.id}">
       <div style="position:relative">${thumb(c)}<span class="rkbadge ${i < 3 ? 'g' : ''}">${i + 1}位</span></div>
       <div class="pad">
-        <div class="nm"><span>${esc(c.name)}</span><span class="st ${status(m)[0]}">${status(m)[1]}</span></div>
+        <div class="nm"><span>${esc(c.name)}</span><span class="st ${status(m)[0]}">${status(m)[1]}</span></div>${c.dup ? `<div class="adset">広告セット：${esc(c.adset)}</div>` : ''}
         <div class="hero"><b class="num">${int(m.listin)}</b><span>リストイン ・ 1件 ${cpaTxt(m)}</span></div>
         <div class="ms"><div>広告費<b class="num">${yen(m.spend)}</b></div><div>クリック率<b class="num">${pct(m.ctr)}</b></div><div>登録率<b class="num">${pct(m.cvr, 1)}</b></div></div>
         <div class="lp">→ ${esc(lpOf(c.lpId).name)}</div>
