@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#8dbdf0"/><stop offset=".55" stop-color="#f1a38c"/><stop offset=".8" stop-color="#f3be72"/><stop offset="1" stop-color="#e2452c"/></linearGradient></defs>
+  <rect width="64" height="64" rx="14" fill="#161b24"/>
+  <text x="32" y="43" text-anchor="middle" font-family="'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic','Noto Sans JP',sans-serif" font-weight="700" font-size="36" fill="#fff">広</text>
+  <rect x="12" y="52" width="40" height="4" rx="2" fill="url(#g)"/>
+</svg>
