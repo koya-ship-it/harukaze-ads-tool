@@ -188,6 +188,7 @@ def main():
         if not os.environ.get(k, '').strip():
             sys.exit(f'{k} が入っていません。GitHubの Settings → Secrets and variables → Actions に入れてください。')
     acts = ['act_' + re.sub(r'^act_', '', a.strip()) for a in re.split(r'[,\s]+', os.environ['META_AD_ACCOUNT_ID'].strip()) if a.strip()]
+    acts = list(dict.fromkeys(acts))  # 同じIDが2回入っていても1回だけ取る
     days = int(os.environ.get('DAYS') or 60)
     today = datetime.datetime.now(JST).date()
     rng = {'since': (today - datetime.timedelta(days=days - 1)).isoformat(), 'until': today.isoformat()}
@@ -198,7 +199,12 @@ def main():
             'level': 'ad', 'time_increment': 1, 'limit': 500, 'time_range': json.dumps(rng),
             'fields': 'account_name,ad_id,ad_name,adset_name,campaign_id,campaign_name,spend,impressions,inline_link_clicks,actions',
         })
-        print(f'アカウント{n}（{got[0].get("account_name", "") if got else "配信なし"}）：{len(got)}行（広告×日）')
+        if got:
+            name = got[0].get('account_name', '')
+        else:
+            info = api(act, {'fields': 'name'}, soft=True)
+            name = (info.get('name', '') + '・この期間の配信なし') if info else '読めません。トークンにこのアカウントの権限が無い可能性'
+        print(f'アカウント{n}（{name}）：{len(got)}行（広告×日）')
         rows += got
     print(f'{rng["since"]}〜{rng["until"]}：合計 {len(rows)}行')
     if not rows:

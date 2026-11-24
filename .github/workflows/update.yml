@@ -21,7 +21,7 @@ jobs:
       - name: Metaから取って data.json を書き換える
         env:
           META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
-          META_AD_ACCOUNT_ID: ${{ secrets.META_AD_ACCOUNT_ID }}
+          META_AD_ACCOUNT_ID: ${{ secrets.META_AD_ACCOUNT_ID }},${{ secrets.META_AD_ACCOUNT_ID_2 }}
           META_API_VERSION: ${{ vars.META_API_VERSION }}
           META_LISTIN_ACTION: ${{ vars.META_LISTIN_ACTION }}
         run: python scripts/fetch_meta.py
