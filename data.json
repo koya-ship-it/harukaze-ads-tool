@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-24T21:10:23+09:00",
+ "updatedAt": "2026-11-24T21:43:47+09:00",
  "listinSource": "Meta: offsite_conversion.fb_pixel_complete_registration",
  "targetCpa": null,
  "monthlyGoal": null,
@@ -8,6 +8,16 @@
    "id": "120252087649000333",
    "name": "20260617_直面談予約",
    "account": "Harukaze_デザジュク_004"
+  },
+  {
+   "id": "52534648928774",
+   "name": "20260912_10月AIセミナー",
+   "account": "Harukaze_デザジュク_005"
+  },
+  {
+   "id": "52549978676574",
+   "name": "20261110_11月エバーセミナー",
+   "account": "Harukaze_デザジュク_005"
   }
  ],
  "lps": [
@@ -95,6 +105,17 @@
    "funnel": "sub.dezajuku.jp",
    "url": "https://sub.dezajuku.jp/p/9WbekWYiJNGc",
    "thumbUrl": "lp_thumbs/9WbekWYiJNGc.jpg",
+   "source": "UTAGE",
+   "stage": "入口",
+   "entry": true
+  },
+  {
+   "id": "4VITna4r6B0f",
+   "name": "LP 4VITna4r6B0f",
+   "group": "未分類",
+   "funnel": "Metaの広告リンクから追加",
+   "url": "https://www.harukaze.inc/p/4VITna4r6B0f",
+   "thumbUrl": null,
    "source": "UTAGE",
    "stage": "入口",
    "entry": true
@@ -451,8 +472,8 @@
     },
     {
      "date": "2026-11-24",
-     "spend": 5412,
-     "imp": 252,
+     "spend": 5674,
+     "imp": 264,
      "click": 6,
      "lpview": 5,
      "listin": 0
@@ -1223,8 +1244,8 @@
     },
     {
      "date": "2026-11-24",
-     "spend": 5787,
-     "imp": 552,
+     "spend": 5856,
+     "imp": 563,
      "click": 11,
      "lpview": 9,
      "listin": 2
@@ -2385,9 +2406,9 @@
     },
     {
      "date": "2026-11-24",
-     "spend": 15831,
-     "imp": 621,
-     "click": 14,
+     "spend": 16523,
+     "imp": 639,
+     "click": 15,
      "lpview": 11,
      "listin": 1
     }
@@ -2879,10 +2900,10 @@
     },
     {
      "date": "2026-11-24",
-     "spend": 27431,
-     "imp": 1800,
-     "click": 41,
-     "lpview": 30,
+     "spend": 28272,
+     "imp": 1870,
+     "click": 42,
+     "lpview": 31,
      "listin": 3
     }
    ]
@@ -3707,10 +3728,10 @@
     },
     {
      "date": "2026-11-24",
-     "spend": 10918,
-     "imp": 620,
+     "spend": 11198,
+     "imp": 644,
      "click": 19,
-     "lpview": 15,
+     "lpview": 16,
      "listin": 0
     }
    ]
@@ -4097,11 +4118,3885 @@
     },
     {
      "date": "2026-11-24",
-     "spend": 9449,
-     "imp": 730,
-     "click": 22,
-     "lpview": 12,
+     "spend": 9799,
+     "imp": 756,
+     "click": 23,
+     "lpview": 14,
      "listin": 1
+    }
+   ]
+  },
+  {
+   "id": "52549981125174",
+   "name": "20261027_セミナー広告バナー_1080_v3",
+   "adset": "ノンターゲ_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52549981125174.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-10",
+     "spend": 6118,
+     "imp": 945,
+     "click": 13,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-11",
+     "spend": 730,
+     "imp": 116,
+     "click": 3,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-12",
+     "spend": 85,
+     "imp": 25,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-13",
+     "spend": 5359,
+     "imp": 892,
+     "click": 7,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-14",
+     "spend": 7173,
+     "imp": 773,
+     "click": 7,
+     "lpview": 1,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-15",
+     "spend": 5692,
+     "imp": 12620,
+     "click": 29,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-16",
+     "spend": 20982,
+     "imp": 48328,
+     "click": 100,
+     "lpview": 1,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-17",
+     "spend": 741,
+     "imp": 188,
+     "click": 2,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-18",
+     "spend": 1539,
+     "imp": 1301,
+     "click": 3,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-19",
+     "spend": 2312,
+     "imp": 1592,
+     "click": 5,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-20",
+     "spend": 118,
+     "imp": 26,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52549981359174",
+   "name": "20261027_セミナー広告バナー_1080_v3",
+   "adset": "デザジュク生類似_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52549981359174.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-10",
+     "spend": 14165,
+     "imp": 2043,
+     "click": 43,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-11",
+     "spend": 7904,
+     "imp": 1171,
+     "click": 24,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-12",
+     "spend": 2613,
+     "imp": 340,
+     "click": 5,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-13",
+     "spend": 4258,
+     "imp": 618,
+     "click": 7,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-14",
+     "spend": 10643,
+     "imp": 870,
+     "click": 16,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-15",
+     "spend": 3383,
+     "imp": 636,
+     "click": 7,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-16",
+     "spend": 1147,
+     "imp": 353,
+     "click": 4,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-17",
+     "spend": 2160,
+     "imp": 399,
+     "click": 2,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-18",
+     "spend": 1292,
+     "imp": 286,
+     "click": 2,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-19",
+     "spend": 3431,
+     "imp": 546,
+     "click": 3,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-20",
+     "spend": 441,
+     "imp": 84,
+     "click": 2,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52549981555574",
+   "name": "20261027_セミナー広告バナー_1080_v3",
+   "adset": "OPT類似_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52549981555574.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-10",
+     "spend": 4767,
+     "imp": 791,
+     "click": 9,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-11",
+     "spend": 326,
+     "imp": 32,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-12",
+     "spend": 27,
+     "imp": 8,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-13",
+     "spend": 930,
+     "imp": 117,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-14",
+     "spend": 2701,
+     "imp": 212,
+     "click": 6,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-15",
+     "spend": 91,
+     "imp": 29,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-16",
+     "spend": 31,
+     "imp": 25,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-17",
+     "spend": 141,
+     "imp": 5,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52549978676374",
+   "name": "20261104_65秒_1x1_11月セミナー_v1",
+   "adset": "ノンターゲ_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "動画",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52549978676374.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-10",
+     "spend": 9445,
+     "imp": 1198,
+     "click": 16,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-11",
+     "spend": 2724,
+     "imp": 357,
+     "click": 5,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-12",
+     "spend": 1165,
+     "imp": 146,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-13",
+     "spend": 14964,
+     "imp": 2360,
+     "click": 13,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-14",
+     "spend": 30074,
+     "imp": 4265,
+     "click": 18,
+     "lpview": 1,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-15",
+     "spend": 30471,
+     "imp": 5492,
+     "click": 35,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-16",
+     "spend": 24288,
+     "imp": 12592,
+     "click": 43,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-17",
+     "spend": 18683,
+     "imp": 2379,
+     "click": 12,
+     "lpview": 1,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52549981357574",
+   "name": "20261104_65秒_1x1_11月セミナー_v1",
+   "adset": "デザジュク生類似_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "動画",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52549981357574.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-10",
+     "spend": 1221,
+     "imp": 170,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-11",
+     "spend": 359,
+     "imp": 35,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-12",
+     "spend": 38,
+     "imp": 18,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-13",
+     "spend": 1599,
+     "imp": 142,
+     "click": 2,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-14",
+     "spend": 2312,
+     "imp": 213,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-15",
+     "spend": 2398,
+     "imp": 276,
+     "click": 2,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-16",
+     "spend": 2630,
+     "imp": 302,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-17",
+     "spend": 1141,
+     "imp": 153,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52549981554574",
+   "name": "20261104_65秒_1x1_11月セミナー_v1",
+   "adset": "OPT類似_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "動画",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52549981554574.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-10",
+     "spend": 750,
+     "imp": 111,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-11",
+     "spend": 300,
+     "imp": 47,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-12",
+     "spend": 58,
+     "imp": 13,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-13",
+     "spend": 2852,
+     "imp": 277,
+     "click": 2,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-14",
+     "spend": 5572,
+     "imp": 632,
+     "click": 6,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-15",
+     "spend": 3117,
+     "imp": 352,
+     "click": 2,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-16",
+     "spend": 3825,
+     "imp": 637,
+     "click": 7,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-17",
+     "spend": 3190,
+     "imp": 517,
+     "click": 2,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52549980436574",
+   "name": "20261104_65秒_1x1_11月セミナー_v2",
+   "adset": "ノンターゲ_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "動画",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52549980436574.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-10",
+     "spend": 801,
+     "imp": 150,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-11",
+     "spend": 103,
+     "imp": 9,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-12",
+     "spend": 152,
+     "imp": 15,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-13",
+     "spend": 2228,
+     "imp": 581,
+     "click": 4,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-14",
+     "spend": 15562,
+     "imp": 1944,
+     "click": 12,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-15",
+     "spend": 13114,
+     "imp": 14291,
+     "click": 33,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-16",
+     "spend": 57604,
+     "imp": 121897,
+     "click": 338,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-17",
+     "spend": 15663,
+     "imp": 2084,
+     "click": 13,
+     "lpview": 1,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-18",
+     "spend": 15653,
+     "imp": 5590,
+     "click": 30,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-19",
+     "spend": 20036,
+     "imp": 15051,
+     "click": 91,
+     "lpview": 1,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-20",
+     "spend": 5159,
+     "imp": 797,
+     "click": 8,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52549981357774",
+   "name": "20261104_65秒_1x1_11月セミナー_v2",
+   "adset": "デザジュク生類似_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "動画",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52549981357774.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-10",
+     "spend": 1085,
+     "imp": 135,
+     "click": 3,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-11",
+     "spend": 1883,
+     "imp": 247,
+     "click": 3,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-12",
+     "spend": 704,
+     "imp": 62,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-13",
+     "spend": 2034,
+     "imp": 191,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-14",
+     "spend": 6136,
+     "imp": 714,
+     "click": 8,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-15",
+     "spend": 2443,
+     "imp": 455,
+     "click": 4,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-16",
+     "spend": 2081,
+     "imp": 562,
+     "click": 2,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-17",
+     "spend": 2576,
+     "imp": 315,
+     "click": 2,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52549981554774",
+   "name": "20261104_65秒_1x1_11月セミナー_v2",
+   "adset": "OPT類似_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "動画",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52549981554774.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-10",
+     "spend": 898,
+     "imp": 113,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-11",
+     "spend": 340,
+     "imp": 68,
+     "click": 3,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-12",
+     "spend": 112,
+     "imp": 14,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-13",
+     "spend": 455,
+     "imp": 99,
+     "click": 2,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-14",
+     "spend": 2515,
+     "imp": 224,
+     "click": 3,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-15",
+     "spend": 4291,
+     "imp": 524,
+     "click": 6,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-16",
+     "spend": 3853,
+     "imp": 925,
+     "click": 7,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-17",
+     "spend": 8606,
+     "imp": 952,
+     "click": 9,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52549980712374",
+   "name": "20261104_65秒_1x1_11月セミナー_v3",
+   "adset": "ノンターゲ_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "動画",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52549980712374.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-10",
+     "spend": 6286,
+     "imp": 941,
+     "click": 15,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-11",
+     "spend": 1205,
+     "imp": 142,
+     "click": 2,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-12",
+     "spend": 212,
+     "imp": 41,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-13",
+     "spend": 2352,
+     "imp": 464,
+     "click": 5,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-14",
+     "spend": 13656,
+     "imp": 1637,
+     "click": 13,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-15",
+     "spend": 12259,
+     "imp": 10064,
+     "click": 32,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-16",
+     "spend": 25773,
+     "imp": 49650,
+     "click": 97,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-17",
+     "spend": 9067,
+     "imp": 1321,
+     "click": 11,
+     "lpview": 1,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-18",
+     "spend": 13815,
+     "imp": 6673,
+     "click": 34,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-19",
+     "spend": 24015,
+     "imp": 12601,
+     "click": 71,
+     "lpview": 1,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-20",
+     "spend": 12716,
+     "imp": 1901,
+     "click": 19,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52549981357974",
+   "name": "20261104_65秒_1x1_11月セミナー_v3",
+   "adset": "デザジュク生類似_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "動画",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52549981357974.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-10",
+     "spend": 2602,
+     "imp": 289,
+     "click": 5,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-11",
+     "spend": 1110,
+     "imp": 102,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-12",
+     "spend": 290,
+     "imp": 30,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-13",
+     "spend": 2048,
+     "imp": 242,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-14",
+     "spend": 2446,
+     "imp": 279,
+     "click": 5,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-15",
+     "spend": 6735,
+     "imp": 589,
+     "click": 5,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-16",
+     "spend": 2552,
+     "imp": 441,
+     "click": 5,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-17",
+     "spend": 5964,
+     "imp": 422,
+     "click": 3,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52549981554974",
+   "name": "20261104_65秒_1x1_11月セミナー_v3",
+   "adset": "OPT類似_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "動画",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52549981554974.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-10",
+     "spend": 785,
+     "imp": 121,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-11",
+     "spend": 392,
+     "imp": 48,
+     "click": 2,
+     "lpview": 1,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-12",
+     "spend": 133,
+     "imp": 13,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-13",
+     "spend": 3069,
+     "imp": 266,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-14",
+     "spend": 17641,
+     "imp": 1453,
+     "click": 16,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-15",
+     "spend": 14366,
+     "imp": 1364,
+     "click": 10,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-16",
+     "spend": 3581,
+     "imp": 494,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-17",
+     "spend": 10946,
+     "imp": 763,
+     "click": 9,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52538008815774",
+   "name": "AIフェス_正方形_CTA_B_三角形小右寄せ",
+   "adset": "セミナー募集_ノンターゲ_20260925",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52534648928774",
+   "lpId": "4VITna4r6B0f",
+   "imageUrl": "creatives/meta_52538008815774.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-09-26",
+     "spend": 99313,
+     "imp": 35518,
+     "click": 950,
+     "lpview": 95,
+     "listin": 0
+    },
+    {
+     "date": "2026-09-27",
+     "spend": 89525,
+     "imp": 32789,
+     "click": 738,
+     "lpview": 50,
+     "listin": 1
+    },
+    {
+     "date": "2026-09-28",
+     "spend": 61728,
+     "imp": 23076,
+     "click": 479,
+     "lpview": 24,
+     "listin": 0
+    },
+    {
+     "date": "2026-09-29",
+     "spend": 90784,
+     "imp": 29230,
+     "click": 624,
+     "lpview": 37,
+     "listin": 0
+    },
+    {
+     "date": "2026-09-30",
+     "spend": 158011,
+     "imp": 50915,
+     "click": 923,
+     "lpview": 29,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-01",
+     "spend": 91188,
+     "imp": 29756,
+     "click": 521,
+     "lpview": 19,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-02",
+     "spend": 108097,
+     "imp": 31227,
+     "click": 584,
+     "lpview": 27,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-03",
+     "spend": 112310,
+     "imp": 31756,
+     "click": 639,
+     "lpview": 19,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-04",
+     "spend": 219456,
+     "imp": 73305,
+     "click": 1103,
+     "lpview": 34,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-05",
+     "spend": 221784,
+     "imp": 69563,
+     "click": 945,
+     "lpview": 24,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-06",
+     "spend": 162524,
+     "imp": 39845,
+     "click": 673,
+     "lpview": 11,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52538009289574",
+   "name": "AIフェス_正方形_CTA_B_三角形小右寄せ",
+   "adset": "セミナー募集_デザジュク生類似_20260925",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52534648928774",
+   "lpId": "4VITna4r6B0f",
+   "imageUrl": "creatives/meta_52538009289574.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-09-26",
+     "spend": 5230,
+     "imp": 1762,
+     "click": 65,
+     "lpview": 6,
+     "listin": 0
+    },
+    {
+     "date": "2026-09-27",
+     "spend": 25663,
+     "imp": 8879,
+     "click": 186,
+     "lpview": 15,
+     "listin": 0
+    },
+    {
+     "date": "2026-09-28",
+     "spend": 20602,
+     "imp": 7511,
+     "click": 131,
+     "lpview": 8,
+     "listin": 0
+    },
+    {
+     "date": "2026-09-29",
+     "spend": 21658,
+     "imp": 6383,
+     "click": 108,
+     "lpview": 7,
+     "listin": 0
+    },
+    {
+     "date": "2026-09-30",
+     "spend": 31783,
+     "imp": 8509,
+     "click": 137,
+     "lpview": 10,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-01",
+     "spend": 45269,
+     "imp": 12494,
+     "click": 200,
+     "lpview": 17,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-02",
+     "spend": 37534,
+     "imp": 10361,
+     "click": 139,
+     "lpview": 8,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-03",
+     "spend": 33850,
+     "imp": 8780,
+     "click": 138,
+     "lpview": 7,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-04",
+     "spend": 60567,
+     "imp": 16015,
+     "click": 203,
+     "lpview": 7,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-05",
+     "spend": 90201,
+     "imp": 21919,
+     "click": 224,
+     "lpview": 6,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-06",
+     "spend": 91406,
+     "imp": 18171,
+     "click": 268,
+     "lpview": 10,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-10",
+     "spend": 30125,
+     "imp": 6082,
+     "click": 91,
+     "lpview": 2,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52538009291574",
+   "name": "AIフェス_正方形_CTA_B_三角形小右寄せ",
+   "adset": "セミナー募集_OPT類似_20260925",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52534648928774",
+   "lpId": "4VITna4r6B0f",
+   "imageUrl": "creatives/meta_52538009291574.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-09-26",
+     "spend": 19659,
+     "imp": 5121,
+     "click": 166,
+     "lpview": 13,
+     "listin": 0
+    },
+    {
+     "date": "2026-09-27",
+     "spend": 75460,
+     "imp": 20465,
+     "click": 444,
+     "lpview": 42,
+     "listin": 0
+    },
+    {
+     "date": "2026-09-28",
+     "spend": 43728,
+     "imp": 11378,
+     "click": 225,
+     "lpview": 23,
+     "listin": 0
+    },
+    {
+     "date": "2026-09-29",
+     "spend": 54377,
+     "imp": 11333,
+     "click": 212,
+     "lpview": 21,
+     "listin": 0
+    },
+    {
+     "date": "2026-09-30",
+     "spend": 84957,
+     "imp": 17545,
+     "click": 299,
+     "lpview": 37,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-01",
+     "spend": 49097,
+     "imp": 9725,
+     "click": 143,
+     "lpview": 12,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-02",
+     "spend": 132635,
+     "imp": 25561,
+     "click": 409,
+     "lpview": 38,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-03",
+     "spend": 81359,
+     "imp": 14545,
+     "click": 286,
+     "lpview": 23,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-04",
+     "spend": 201691,
+     "imp": 37509,
+     "click": 522,
+     "lpview": 29,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-05",
+     "spend": 275043,
+     "imp": 47777,
+     "click": 569,
+     "lpview": 21,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-06",
+     "spend": 303951,
+     "imp": 40649,
+     "click": 617,
+     "lpview": 19,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-10",
+     "spend": 22279,
+     "imp": 4488,
+     "click": 66,
+     "lpview": 4,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52551874285974",
+   "name": "exec-090145a7-bc10-4b40-9db1-b779d39c1c2c",
+   "adset": "OPT類似_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52551874285974.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-17",
+     "spend": 5230,
+     "imp": 877,
+     "click": 8,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-18",
+     "spend": 2748,
+     "imp": 738,
+     "click": 8,
+     "lpview": 1,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-19",
+     "spend": 5912,
+     "imp": 686,
+     "click": 7,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-20",
+     "spend": 3702,
+     "imp": 404,
+     "click": 10,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52551874975774",
+   "name": "exec-090145a7-bc10-4b40-9db1-b779d39c1c2c",
+   "adset": "デザジュク生類似_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52551874975774.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-17",
+     "spend": 5351,
+     "imp": 1026,
+     "click": 16,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-18",
+     "spend": 8178,
+     "imp": 2100,
+     "click": 11,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-19",
+     "spend": 12863,
+     "imp": 2204,
+     "click": 38,
+     "lpview": 2,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-20",
+     "spend": 6983,
+     "imp": 1151,
+     "click": 9,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52551874976974",
+   "name": "exec-090145a7-bc10-4b40-9db1-b779d39c1c2c - コピー",
+   "adset": "ノンターゲ_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52551874976974.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-17",
+     "spend": 1457,
+     "imp": 335,
+     "click": 2,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-18",
+     "spend": 376,
+     "imp": 285,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-19",
+     "spend": 2312,
+     "imp": 1725,
+     "click": 11,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-20",
+     "spend": 824,
+     "imp": 178,
+     "click": 2,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52551874455574",
+   "name": "exec-0e7ebb65-7d2a-4ea0-a850-13baccc5a835",
+   "adset": "OPT類似_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52551874455574.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-17",
+     "spend": 3408,
+     "imp": 378,
+     "click": 2,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-18",
+     "spend": 1177,
+     "imp": 250,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-19",
+     "spend": 2791,
+     "imp": 265,
+     "click": 2,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-20",
+     "spend": 244,
+     "imp": 49,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52551874975974",
+   "name": "exec-0e7ebb65-7d2a-4ea0-a850-13baccc5a835",
+   "adset": "デザジュク生類似_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52551874975974.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-17",
+     "spend": 2195,
+     "imp": 220,
+     "click": 2,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-18",
+     "spend": 724,
+     "imp": 154,
+     "click": 5,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-19",
+     "spend": 6791,
+     "imp": 540,
+     "click": 6,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-20",
+     "spend": 3066,
+     "imp": 319,
+     "click": 8,
+     "lpview": 1,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52551874977174",
+   "name": "exec-0e7ebb65-7d2a-4ea0-a850-13baccc5a835",
+   "adset": "ノンターゲ_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52551874977174.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-17",
+     "spend": 2597,
+     "imp": 786,
+     "click": 3,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-18",
+     "spend": 5013,
+     "imp": 2854,
+     "click": 19,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-19",
+     "spend": 14305,
+     "imp": 5230,
+     "click": 40,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-20",
+     "spend": 3268,
+     "imp": 347,
+     "click": 4,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52551874211574",
+   "name": "exec-46847a3a-5117-4cf5-8ff6-c053bf4d3f9a",
+   "adset": "OPT類似_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52551874211574.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-17",
+     "spend": 1135,
+     "imp": 280,
+     "click": 3,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-18",
+     "spend": 236,
+     "imp": 56,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-19",
+     "spend": 1580,
+     "imp": 139,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-20",
+     "spend": 528,
+     "imp": 47,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52551874976174",
+   "name": "exec-46847a3a-5117-4cf5-8ff6-c053bf4d3f9a",
+   "adset": "デザジュク生類似_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52551874976174.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-17",
+     "spend": 2318,
+     "imp": 276,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-18",
+     "spend": 1373,
+     "imp": 191,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-19",
+     "spend": 3697,
+     "imp": 291,
+     "click": 5,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-20",
+     "spend": 393,
+     "imp": 48,
+     "click": 3,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52551874977374",
+   "name": "exec-46847a3a-5117-4cf5-8ff6-c053bf4d3f9a",
+   "adset": "ノンターゲ_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52551874977374.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-17",
+     "spend": 2450,
+     "imp": 650,
+     "click": 4,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-18",
+     "spend": 714,
+     "imp": 394,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-19",
+     "spend": 1468,
+     "imp": 757,
+     "click": 2,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-20",
+     "spend": 1222,
+     "imp": 207,
+     "click": 3,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52551874536774",
+   "name": "exec-7a07b02f-b5e9-4245-8bb6-7a9e7690d632",
+   "adset": "OPT類似_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52551874536774.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-17",
+     "spend": 1654,
+     "imp": 172,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-18",
+     "spend": 401,
+     "imp": 61,
+     "click": 2,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-19",
+     "spend": 601,
+     "imp": 79,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-20",
+     "spend": 491,
+     "imp": 59,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52551874976374",
+   "name": "exec-7a07b02f-b5e9-4245-8bb6-7a9e7690d632",
+   "adset": "デザジュク生類似_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52551874976374.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-17",
+     "spend": 448,
+     "imp": 70,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-18",
+     "spend": 488,
+     "imp": 44,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-19",
+     "spend": 568,
+     "imp": 132,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-20",
+     "spend": 1758,
+     "imp": 122,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52551874977574",
+   "name": "exec-7a07b02f-b5e9-4245-8bb6-7a9e7690d632",
+   "adset": "ノンターゲ_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52551874977574.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-17",
+     "spend": 2591,
+     "imp": 588,
+     "click": 5,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-18",
+     "spend": 1047,
+     "imp": 1099,
+     "click": 7,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-19",
+     "spend": 18468,
+     "imp": 10206,
+     "click": 71,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-20",
+     "spend": 6107,
+     "imp": 1198,
+     "click": 25,
+     "lpview": 1,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52551874096574",
+   "name": "exec-f62cced1-64ef-4782-8372-fcd7eab61526",
+   "adset": "OPT類似_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52551874096574.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-17",
+     "spend": 1464,
+     "imp": 250,
+     "click": 5,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-18",
+     "spend": 482,
+     "imp": 99,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-19",
+     "spend": 189,
+     "imp": 88,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-20",
+     "spend": 171,
+     "imp": 43,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52551874976574",
+   "name": "exec-f62cced1-64ef-4782-8372-fcd7eab61526",
+   "adset": "デザジュク生類似_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52551874976574.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-17",
+     "spend": 1151,
+     "imp": 170,
+     "click": 5,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-18",
+     "spend": 444,
+     "imp": 104,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-19",
+     "spend": 2741,
+     "imp": 454,
+     "click": 7,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-20",
+     "spend": 1073,
+     "imp": 181,
+     "click": 3,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52551874976774",
+   "name": "exec-f62cced1-64ef-4782-8372-fcd7eab61526",
+   "adset": "ノンターゲ_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52551874976774.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-17",
+     "spend": 2286,
+     "imp": 804,
+     "click": 5,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-18",
+     "spend": 1611,
+     "imp": 1774,
+     "click": 9,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-19",
+     "spend": 11212,
+     "imp": 7971,
+     "click": 36,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-20",
+     "spend": 1140,
+     "imp": 358,
+     "click": 4,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52538370655174",
+   "name": "動画01_20260927",
+   "adset": "セミナー募集_ノンターゲ_20260925",
+   "account": "Harukaze_デザジュク_005",
+   "format": "動画",
+   "campaignId": "52534648928774",
+   "lpId": "4VITna4r6B0f",
+   "imageUrl": "creatives/meta_52538370655174.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-09-27",
+     "spend": 1093,
+     "imp": 223,
+     "click": 2,
+     "lpview": 1,
+     "listin": 0
+    },
+    {
+     "date": "2026-09-28",
+     "spend": 1080,
+     "imp": 269,
+     "click": 3,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-09-29",
+     "spend": 9031,
+     "imp": 1612,
+     "click": 23,
+     "lpview": 1,
+     "listin": 0
+    },
+    {
+     "date": "2026-09-30",
+     "spend": 15345,
+     "imp": 2609,
+     "click": 39,
+     "lpview": 13,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-01",
+     "spend": 24193,
+     "imp": 4632,
+     "click": 47,
+     "lpview": 5,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-02",
+     "spend": 102018,
+     "imp": 15952,
+     "click": 182,
+     "lpview": 24,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-03",
+     "spend": 35108,
+     "imp": 6760,
+     "click": 60,
+     "lpview": 5,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-04",
+     "spend": 91834,
+     "imp": 15691,
+     "click": 161,
+     "lpview": 13,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-05",
+     "spend": 82872,
+     "imp": 13705,
+     "click": 138,
+     "lpview": 7,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-06",
+     "spend": 124114,
+     "imp": 13326,
+     "click": 134,
+     "lpview": 10,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52538370658374",
+   "name": "動画01_20260927",
+   "adset": "セミナー募集_OPT類似_20260925",
+   "account": "Harukaze_デザジュク_005",
+   "format": "動画",
+   "campaignId": "52534648928774",
+   "lpId": "4VITna4r6B0f",
+   "imageUrl": "creatives/meta_52538370658374.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-09-27",
+     "spend": 757,
+     "imp": 130,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-09-28",
+     "spend": 539,
+     "imp": 108,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-09-29",
+     "spend": 7670,
+     "imp": 990,
+     "click": 20,
+     "lpview": 6,
+     "listin": 0
+    },
+    {
+     "date": "2026-09-30",
+     "spend": 15512,
+     "imp": 2106,
+     "click": 24,
+     "lpview": 3,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-01",
+     "spend": 15386,
+     "imp": 2143,
+     "click": 24,
+     "lpview": 5,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-02",
+     "spend": 17614,
+     "imp": 2099,
+     "click": 36,
+     "lpview": 5,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-03",
+     "spend": 1629,
+     "imp": 209,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-04",
+     "spend": 6160,
+     "imp": 716,
+     "click": 12,
+     "lpview": 1,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-05",
+     "spend": 14820,
+     "imp": 1622,
+     "click": 13,
+     "lpview": 4,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-06",
+     "spend": 10242,
+     "imp": 756,
+     "click": 12,
+     "lpview": 3,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-10",
+     "spend": 1439,
+     "imp": 204,
+     "click": 2,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52538371128574",
+   "name": "動画01_20260927",
+   "adset": "セミナー募集_デザジュク生類似_20260925",
+   "account": "Harukaze_デザジュク_005",
+   "format": "動画",
+   "campaignId": "52534648928774",
+   "lpId": "4VITna4r6B0f",
+   "imageUrl": "creatives/meta_52538371128574.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-09-27",
+     "spend": 876,
+     "imp": 155,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-09-28",
+     "spend": 518,
+     "imp": 140,
+     "click": 3,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-09-29",
+     "spend": 7611,
+     "imp": 1205,
+     "click": 12,
+     "lpview": 3,
+     "listin": 0
+    },
+    {
+     "date": "2026-09-30",
+     "spend": 15741,
+     "imp": 2276,
+     "click": 31,
+     "lpview": 8,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-01",
+     "spend": 15376,
+     "imp": 2923,
+     "click": 35,
+     "lpview": 3,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-02",
+     "spend": 16545,
+     "imp": 2171,
+     "click": 19,
+     "lpview": 3,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-03",
+     "spend": 2003,
+     "imp": 387,
+     "click": 4,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-04",
+     "spend": 5430,
+     "imp": 711,
+     "click": 12,
+     "lpview": 3,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-05",
+     "spend": 9763,
+     "imp": 1515,
+     "click": 12,
+     "lpview": 3,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-06",
+     "spend": 6102,
+     "imp": 739,
+     "click": 8,
+     "lpview": 1,
+     "listin": 0
+    },
+    {
+     "date": "2026-10-10",
+     "spend": 5075,
+     "imp": 772,
+     "click": 14,
+     "lpview": 1,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52549980979374",
+   "name": "納品用_01_タイポ_単価_1080x1080_v1",
+   "adset": "ノンターゲ_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52549980979374.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-10",
+     "spend": 737,
+     "imp": 134,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-11",
+     "spend": 55,
+     "imp": 17,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-12",
+     "spend": 6,
+     "imp": 1,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-13",
+     "spend": 214,
+     "imp": 19,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-14",
+     "spend": 5695,
+     "imp": 525,
+     "click": 5,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-15",
+     "spend": 637,
+     "imp": 297,
+     "click": 3,
+     "lpview": 1,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-16",
+     "spend": 488,
+     "imp": 1221,
+     "click": 2,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-17",
+     "spend": 118,
+     "imp": 31,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52549981358174",
+   "name": "納品用_01_タイポ_単価_1080x1080_v1",
+   "adset": "デザジュク生類似_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52549981358174.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-10",
+     "spend": 3113,
+     "imp": 303,
+     "click": 5,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-11",
+     "spend": 1487,
+     "imp": 165,
+     "click": 3,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-12",
+     "spend": 50,
+     "imp": 17,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-13",
+     "spend": 768,
+     "imp": 107,
+     "click": 3,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-14",
+     "spend": 1958,
+     "imp": 135,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-15",
+     "spend": 286,
+     "imp": 76,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-16",
+     "spend": 132,
+     "imp": 115,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-17",
+     "spend": 85,
+     "imp": 9,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52549981555174",
+   "name": "納品用_01_タイポ_単価_1080x1080_v1",
+   "adset": "OPT類似_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52549981555174.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-10",
+     "spend": 2241,
+     "imp": 247,
+     "click": 2,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-11",
+     "spend": 290,
+     "imp": 29,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-12",
+     "spend": 194,
+     "imp": 7,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-13",
+     "spend": 969,
+     "imp": 129,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-14",
+     "spend": 9797,
+     "imp": 738,
+     "click": 8,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-15",
+     "spend": 3331,
+     "imp": 223,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-16",
+     "spend": 576,
+     "imp": 86,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-17",
+     "spend": 155,
+     "imp": 27,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52549981264774",
+   "name": "納品用_09_青紫_任せる_1080x1080_v1",
+   "adset": "ノンターゲ_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52549981264774.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-10",
+     "spend": 889,
+     "imp": 192,
+     "click": 7,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-11",
+     "spend": 4323,
+     "imp": 636,
+     "click": 12,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-12",
+     "spend": 286,
+     "imp": 43,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-13",
+     "spend": 3140,
+     "imp": 457,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-14",
+     "spend": 13759,
+     "imp": 1279,
+     "click": 11,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-15",
+     "spend": 3799,
+     "imp": 1129,
+     "click": 4,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-16",
+     "spend": 1686,
+     "imp": 2768,
+     "click": 9,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-17",
+     "spend": 358,
+     "imp": 36,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52549981358374",
+   "name": "納品用_09_青紫_任せる_1080x1080_v1",
+   "adset": "デザジュク生類似_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52549981358374.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-10",
+     "spend": 1392,
+     "imp": 165,
+     "click": 5,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-11",
+     "spend": 2069,
+     "imp": 227,
+     "click": 7,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-12",
+     "spend": 777,
+     "imp": 100,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-13",
+     "spend": 3845,
+     "imp": 508,
+     "click": 5,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-14",
+     "spend": 4895,
+     "imp": 468,
+     "click": 3,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-15",
+     "spend": 2545,
+     "imp": 338,
+     "click": 3,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-16",
+     "spend": 391,
+     "imp": 140,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-17",
+     "spend": 237,
+     "imp": 35,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52549981555374",
+   "name": "納品用_09_青紫_任せる_1080x1080_v1",
+   "adset": "OPT類似_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52549981555374.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-10",
+     "spend": 5006,
+     "imp": 628,
+     "click": 17,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-11",
+     "spend": 1695,
+     "imp": 190,
+     "click": 4,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-12",
+     "spend": 301,
+     "imp": 58,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-13",
+     "spend": 750,
+     "imp": 65,
+     "click": 3,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-16",
+     "spend": 1973,
+     "imp": 223,
+     "click": 2,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-17",
+     "spend": 1455,
+     "imp": 174,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-18",
+     "spend": 358,
+     "imp": 57,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-19",
+     "spend": 305,
+     "imp": 58,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-20",
+     "spend": 50,
+     "imp": 16,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52549981207974",
+   "name": "納品用_B_修正疲れ_1080x1080_v1",
+   "adset": "ノンターゲ_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52549981207974.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-10",
+     "spend": 358,
+     "imp": 76,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-11",
+     "spend": 130,
+     "imp": 13,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-12",
+     "spend": 2,
+     "imp": 1,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-13",
+     "spend": 363,
+     "imp": 39,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-14",
+     "spend": 1902,
+     "imp": 161,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-15",
+     "spend": 255,
+     "imp": 130,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-16",
+     "spend": 305,
+     "imp": 644,
+     "click": 2,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-17",
+     "spend": 64,
+     "imp": 18,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52549981359374",
+   "name": "納品用_B_修正疲れ_1080x1080_v1",
+   "adset": "デザジュク生類似_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52549981359374.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-10",
+     "spend": 576,
+     "imp": 78,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-11",
+     "spend": 322,
+     "imp": 19,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-12",
+     "spend": 43,
+     "imp": 8,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-13",
+     "spend": 1943,
+     "imp": 218,
+     "click": 4,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-14",
+     "spend": 7731,
+     "imp": 606,
+     "click": 6,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-15",
+     "spend": 3384,
+     "imp": 343,
+     "click": 10,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-16",
+     "spend": 1320,
+     "imp": 573,
+     "click": 10,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-17",
+     "spend": 2864,
+     "imp": 362,
+     "click": 6,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-18",
+     "spend": 3313,
+     "imp": 353,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-19",
+     "spend": 930,
+     "imp": 125,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-20",
+     "spend": 205,
+     "imp": 38,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52549981556374",
+   "name": "納品用_B_修正疲れ_1080x1080_v1",
+   "adset": "OPT類似_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52549981556374.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-10",
+     "spend": 668,
+     "imp": 91,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-11",
+     "spend": 128,
+     "imp": 9,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-12",
+     "spend": 15,
+     "imp": 2,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-13",
+     "spend": 297,
+     "imp": 30,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-14",
+     "spend": 3785,
+     "imp": 205,
+     "click": 4,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-15",
+     "spend": 386,
+     "imp": 40,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-16",
+     "spend": 101,
+     "imp": 26,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-17",
+     "spend": 56,
+     "imp": 16,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52549981312574",
+   "name": "納品用_H_KV再構成_1080x1080_v2",
+   "adset": "ノンターゲ_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52549981312574.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-10",
+     "spend": 2221,
+     "imp": 239,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-11",
+     "spend": 66,
+     "imp": 15,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-12",
+     "spend": 30,
+     "imp": 9,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-13",
+     "spend": 2212,
+     "imp": 303,
+     "click": 2,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-14",
+     "spend": 4330,
+     "imp": 512,
+     "click": 4,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-15",
+     "spend": 1153,
+     "imp": 1488,
+     "click": 6,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-16",
+     "spend": 5955,
+     "imp": 14788,
+     "click": 32,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-17",
+     "spend": 299,
+     "imp": 76,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-18",
+     "spend": 941,
+     "imp": 860,
+     "click": 7,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-19",
+     "spend": 2371,
+     "imp": 2276,
+     "click": 8,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-20",
+     "spend": 303,
+     "imp": 67,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52549981359574",
+   "name": "納品用_H_KV再構成_1080x1080_v2",
+   "adset": "デザジュク生類似_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52549981359574.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-10",
+     "spend": 483,
+     "imp": 70,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-11",
+     "spend": 24,
+     "imp": 2,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-14",
+     "spend": 2790,
+     "imp": 160,
+     "click": 2,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-15",
+     "spend": 186,
+     "imp": 37,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-16",
+     "spend": 337,
+     "imp": 24,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-17",
+     "spend": 30,
+     "imp": 7,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52549981556574",
+   "name": "納品用_H_KV再構成_1080x1080_v2",
+   "adset": "OPT類似_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52549981556574.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-10",
+     "spend": 979,
+     "imp": 93,
+     "click": 2,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-11",
+     "spend": 253,
+     "imp": 21,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-12",
+     "spend": 186,
+     "imp": 13,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-13",
+     "spend": 2969,
+     "imp": 236,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-14",
+     "spend": 5545,
+     "imp": 422,
+     "click": 5,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-15",
+     "spend": 2297,
+     "imp": 102,
+     "click": 4,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-16",
+     "spend": 2378,
+     "imp": 203,
+     "click": 5,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-17",
+     "spend": 681,
+     "imp": 73,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52549981226574",
+   "name": "納品用_文章A_好きだった_1080x1080_v1",
+   "adset": "ノンターゲ_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52549981226574.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-10",
+     "spend": 4839,
+     "imp": 1151,
+     "click": 28,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-11",
+     "spend": 15476,
+     "imp": 4568,
+     "click": 89,
+     "lpview": 1,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-12",
+     "spend": 5406,
+     "imp": 1492,
+     "click": 20,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-13",
+     "spend": 45042,
+     "imp": 12737,
+     "click": 89,
+     "lpview": 1,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-14",
+     "spend": 79251,
+     "imp": 12913,
+     "click": 159,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-15",
+     "spend": 55797,
+     "imp": 17006,
+     "click": 200,
+     "lpview": 1,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-16",
+     "spend": 15296,
+     "imp": 28433,
+     "click": 98,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-17",
+     "spend": 17471,
+     "imp": 6338,
+     "click": 91,
+     "lpview": 3,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-18",
+     "spend": 44354,
+     "imp": 22951,
+     "click": 247,
+     "lpview": 2,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-19",
+     "spend": 72524,
+     "imp": 25945,
+     "click": 340,
+     "lpview": 8,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-20",
+     "spend": 18239,
+     "imp": 4053,
+     "click": 85,
+     "lpview": 2,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52549981358574",
+   "name": "納品用_文章A_好きだった_1080x1080_v1",
+   "adset": "デザジュク生類似_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52549981358574.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-10",
+     "spend": 39490,
+     "imp": 7050,
+     "click": 163,
+     "lpview": 1,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-11",
+     "spend": 74960,
+     "imp": 13411,
+     "click": 290,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-12",
+     "spend": 11260,
+     "imp": 2573,
+     "click": 45,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-13",
+     "spend": 20990,
+     "imp": 4683,
+     "click": 58,
+     "lpview": 1,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-14",
+     "spend": 19409,
+     "imp": 2296,
+     "click": 33,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-15",
+     "spend": 7988,
+     "imp": 1565,
+     "click": 22,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-16",
+     "spend": 3441,
+     "imp": 958,
+     "click": 12,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-17",
+     "spend": 11541,
+     "imp": 2152,
+     "click": 28,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-18",
+     "spend": 9292,
+     "imp": 2075,
+     "click": 42,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-19",
+     "spend": 27283,
+     "imp": 4771,
+     "click": 81,
+     "lpview": 1,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-20",
+     "spend": 12618,
+     "imp": 2054,
+     "click": 17,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52549981555974",
+   "name": "納品用_文章A_好きだった_1080x1080_v1",
+   "adset": "OPT類似_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52549981555974.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-10",
+     "spend": 24760,
+     "imp": 4566,
+     "click": 98,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-11",
+     "spend": 41226,
+     "imp": 7795,
+     "click": 147,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-12",
+     "spend": 10615,
+     "imp": 2868,
+     "click": 47,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-13",
+     "spend": 14705,
+     "imp": 2903,
+     "click": 33,
+     "lpview": 1,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-14",
+     "spend": 37466,
+     "imp": 4286,
+     "click": 65,
+     "lpview": 1,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-15",
+     "spend": 15799,
+     "imp": 2434,
+     "click": 35,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-16",
+     "spend": 4439,
+     "imp": 987,
+     "click": 10,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-17",
+     "spend": 13504,
+     "imp": 2681,
+     "click": 36,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-18",
+     "spend": 23769,
+     "imp": 3988,
+     "click": 53,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-19",
+     "spend": 53942,
+     "imp": 7884,
+     "click": 108,
+     "lpview": 1,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-20",
+     "spend": 25141,
+     "imp": 3604,
+     "click": 77,
+     "lpview": 2,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52549981283374",
+   "name": "納品用_文章C_修正ばかり_1080x1080_v1",
+   "adset": "ノンターゲ_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52549981283374.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-10",
+     "spend": 57,
+     "imp": 17,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-11",
+     "spend": 123,
+     "imp": 7,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-13",
+     "spend": 0,
+     "imp": 3,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-14",
+     "spend": 91,
+     "imp": 11,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-15",
+     "spend": 282,
+     "imp": 190,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-16",
+     "spend": 462,
+     "imp": 872,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-17",
+     "spend": 76,
+     "imp": 24,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52549981358774",
+   "name": "納品用_文章C_修正ばかり_1080x1080_v1",
+   "adset": "デザジュク生類似_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52549981358774.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-10",
+     "spend": 680,
+     "imp": 74,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-11",
+     "spend": 17,
+     "imp": 2,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-12",
+     "spend": 1,
+     "imp": 1,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-13",
+     "spend": 27,
+     "imp": 7,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-14",
+     "spend": 116,
+     "imp": 11,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-15",
+     "spend": 11,
+     "imp": 4,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-16",
+     "spend": 47,
+     "imp": 8,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-17",
+     "spend": 13,
+     "imp": 2,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-18",
+     "spend": 18,
+     "imp": 1,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-19",
+     "spend": 7,
+     "imp": 7,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-20",
+     "spend": 181,
+     "imp": 10,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
+    }
+   ]
+  },
+  {
+   "id": "52549981556174",
+   "name": "納品用_文章C_修正ばかり_1080x1080_v1",
+   "adset": "OPT類似_20261110",
+   "account": "Harukaze_デザジュク_005",
+   "format": "画像",
+   "campaignId": "52549978676574",
+   "lpId": "9WbekWYiJNGc",
+   "imageUrl": "creatives/meta_52549981556174.jpg",
+   "videoUrl": null,
+   "copy": "",
+   "daily": [
+    {
+     "date": "2026-11-10",
+     "spend": 38,
+     "imp": 9,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-11",
+     "spend": 26,
+     "imp": 5,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-15",
+     "spend": 185,
+     "imp": 10,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-16",
+     "spend": 127,
+     "imp": 11,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-17",
+     "spend": 340,
+     "imp": 39,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-18",
+     "spend": 26,
+     "imp": 6,
+     "click": 0,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-19",
+     "spend": 40,
+     "imp": 4,
+     "click": 2,
+     "lpview": 0,
+     "listin": 0
+    },
+    {
+     "date": "2026-11-20",
+     "spend": 250,
+     "imp": 23,
+     "click": 1,
+     "lpview": 0,
+     "listin": 0
     }
    ]
   }
