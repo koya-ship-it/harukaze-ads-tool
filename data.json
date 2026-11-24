@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-24T22:11:15+09:00",
+ "updatedAt": "2026-11-24T22:13:17+09:00",
  "listinSource": "Meta: offsite_conversion.fb_pixel_complete_registration / offsite_conversion.fb_pixel_lead",
  "targetCpa": null,
  "monthlyGoal": null,
@@ -14,7 +14,7 @@
    "id": "52534648928774",
    "name": "20260912_10月AIセミナー",
    "account": "Harukaze_デザジュク_005",
-   "listinSource": "offsite_conversion.fb_pixel_complete_registration"
+   "listinSource": "offsite_conversion.fb_pixel_lead"
   },
   {
    "id": "52549978676574",
@@ -475,8 +475,8 @@
     },
     {
      "date": "2026-11-24",
-     "spend": 5922,
-     "imp": 284,
+     "spend": 5924,
+     "imp": 285,
      "click": 6,
      "lpview": 5,
      "listin": 0
@@ -1247,8 +1247,8 @@
     },
     {
      "date": "2026-11-24",
-     "spend": 6083,
-     "imp": 586,
+     "spend": 6107,
+     "imp": 589,
      "click": 11,
      "lpview": 9,
      "listin": 2
@@ -2409,9 +2409,9 @@
     },
     {
      "date": "2026-11-24",
-     "spend": 16970,
-     "imp": 661,
-     "click": 16,
+     "spend": 17069,
+     "imp": 664,
+     "click": 17,
      "lpview": 13,
      "listin": 3
     }
@@ -2903,8 +2903,8 @@
     },
     {
      "date": "2026-11-24",
-     "spend": 29248,
-     "imp": 1949,
+     "spend": 29295,
+     "imp": 1958,
      "click": 45,
      "lpview": 31,
      "listin": 3
@@ -3731,8 +3731,8 @@
     },
     {
      "date": "2026-11-24",
-     "spend": 11698,
-     "imp": 664,
+     "spend": 11718,
+     "imp": 666,
      "click": 20,
      "lpview": 16,
      "listin": 0
@@ -4121,8 +4121,8 @@
     },
     {
      "date": "2026-11-24",
-     "spend": 9999,
-     "imp": 775,
+     "spend": 10077,
+     "imp": 777,
      "click": 23,
      "lpview": 14,
      "listin": 1
@@ -5179,7 +5179,7 @@
      "imp": 35518,
      "click": 950,
      "lpview": 95,
-     "listin": 0
+     "listin": 122
     },
     {
      "date": "2026-09-27",
@@ -5187,7 +5187,7 @@
      "imp": 32789,
      "click": 738,
      "lpview": 50,
-     "listin": 1
+     "listin": 59
     },
     {
      "date": "2026-09-28",
@@ -5195,7 +5195,7 @@
      "imp": 23076,
      "click": 479,
      "lpview": 24,
-     "listin": 0
+     "listin": 32
     },
     {
      "date": "2026-09-29",
@@ -5203,7 +5203,7 @@
      "imp": 29230,
      "click": 624,
      "lpview": 37,
-     "listin": 0
+     "listin": 41
     },
     {
      "date": "2026-09-30",
@@ -5211,7 +5211,7 @@
      "imp": 50915,
      "click": 923,
      "lpview": 29,
-     "listin": 0
+     "listin": 43
     },
     {
      "date": "2026-10-01",
@@ -5219,7 +5219,7 @@
      "imp": 29756,
      "click": 521,
      "lpview": 19,
-     "listin": 0
+     "listin": 28
     },
     {
      "date": "2026-10-02",
@@ -5227,7 +5227,7 @@
      "imp": 31227,
      "click": 584,
      "lpview": 27,
-     "listin": 0
+     "listin": 30
     },
     {
      "date": "2026-10-03",
@@ -5235,7 +5235,7 @@
      "imp": 31756,
      "click": 639,
      "lpview": 19,
-     "listin": 0
+     "listin": 26
     },
     {
      "date": "2026-10-04",
@@ -5243,7 +5243,7 @@
      "imp": 73305,
      "click": 1103,
      "lpview": 34,
-     "listin": 0
+     "listin": 41
     },
     {
      "date": "2026-10-05",
@@ -5251,7 +5251,7 @@
      "imp": 69563,
      "click": 945,
      "lpview": 24,
-     "listin": 0
+     "listin": 33
     },
     {
      "date": "2026-10-06",
@@ -5259,7 +5259,7 @@
      "imp": 39845,
      "click": 673,
      "lpview": 11,
-     "listin": 0
+     "listin": 16
     }
    ]
   },
@@ -5281,7 +5281,7 @@
      "imp": 1762,
      "click": 65,
      "lpview": 6,
-     "listin": 0
+     "listin": 7
     },
     {
      "date": "2026-09-27",
@@ -5289,7 +5289,7 @@
      "imp": 8879,
      "click": 186,
      "lpview": 15,
-     "listin": 0
+     "listin": 20
     },
     {
      "date": "2026-09-28",
@@ -5297,7 +5297,7 @@
      "imp": 7511,
      "click": 131,
      "lpview": 8,
-     "listin": 0
+     "listin": 9
     },
     {
      "date": "2026-09-29",
@@ -5305,7 +5305,7 @@
      "imp": 6383,
      "click": 108,
      "lpview": 7,
-     "listin": 0
+     "listin": 8
     },
     {
      "date": "2026-09-30",
@@ -5313,7 +5313,7 @@
      "imp": 8509,
      "click": 137,
      "lpview": 10,
-     "listin": 0
+     "listin": 13
     },
     {
      "date": "2026-10-01",
@@ -5321,7 +5321,7 @@
      "imp": 12494,
      "click": 200,
      "lpview": 17,
-     "listin": 0
+     "listin": 19
     },
     {
      "date": "2026-10-02",
@@ -5329,7 +5329,7 @@
      "imp": 10361,
      "click": 139,
      "lpview": 8,
-     "listin": 0
+     "listin": 14
     },
     {
      "date": "2026-10-03",
@@ -5337,7 +5337,7 @@
      "imp": 8780,
      "click": 138,
      "lpview": 7,
-     "listin": 0
+     "listin": 8
     },
     {
      "date": "2026-10-04",
@@ -5345,7 +5345,7 @@
      "imp": 16015,
      "click": 203,
      "lpview": 7,
-     "listin": 0
+     "listin": 9
     },
     {
      "date": "2026-10-05",
@@ -5353,7 +5353,7 @@
      "imp": 21919,
      "click": 224,
      "lpview": 6,
-     "listin": 0
+     "listin": 7
     },
     {
      "date": "2026-10-06",
@@ -5361,7 +5361,7 @@
      "imp": 18171,
      "click": 268,
      "lpview": 10,
-     "listin": 0
+     "listin": 13
     },
     {
      "date": "2026-10-10",
@@ -5369,7 +5369,7 @@
      "imp": 6082,
      "click": 91,
      "lpview": 2,
-     "listin": 0
+     "listin": 2
     }
    ]
   },
@@ -5391,7 +5391,7 @@
      "imp": 5121,
      "click": 166,
      "lpview": 13,
-     "listin": 0
+     "listin": 13
     },
     {
      "date": "2026-09-27",
@@ -5399,7 +5399,7 @@
      "imp": 20465,
      "click": 444,
      "lpview": 42,
-     "listin": 0
+     "listin": 50
     },
     {
      "date": "2026-09-28",
@@ -5407,7 +5407,7 @@
      "imp": 11378,
      "click": 225,
      "lpview": 23,
-     "listin": 0
+     "listin": 29
     },
     {
      "date": "2026-09-29",
@@ -5415,7 +5415,7 @@
      "imp": 11333,
      "click": 212,
      "lpview": 21,
-     "listin": 0
+     "listin": 24
     },
     {
      "date": "2026-09-30",
@@ -5423,7 +5423,7 @@
      "imp": 17545,
      "click": 299,
      "lpview": 37,
-     "listin": 0
+     "listin": 41
     },
     {
      "date": "2026-10-01",
@@ -5431,7 +5431,7 @@
      "imp": 9725,
      "click": 143,
      "lpview": 12,
-     "listin": 0
+     "listin": 19
     },
     {
      "date": "2026-10-02",
@@ -5439,7 +5439,7 @@
      "imp": 25561,
      "click": 409,
      "lpview": 38,
-     "listin": 0
+     "listin": 44
     },
     {
      "date": "2026-10-03",
@@ -5447,7 +5447,7 @@
      "imp": 14545,
      "click": 286,
      "lpview": 23,
-     "listin": 0
+     "listin": 30
     },
     {
      "date": "2026-10-04",
@@ -5455,7 +5455,7 @@
      "imp": 37509,
      "click": 522,
      "lpview": 29,
-     "listin": 0
+     "listin": 32
     },
     {
      "date": "2026-10-05",
@@ -5463,7 +5463,7 @@
      "imp": 47777,
      "click": 569,
      "lpview": 21,
-     "listin": 0
+     "listin": 25
     },
     {
      "date": "2026-10-06",
@@ -5471,7 +5471,7 @@
      "imp": 40649,
      "click": 617,
      "lpview": 19,
-     "listin": 0
+     "listin": 23
     },
     {
      "date": "2026-10-10",
@@ -5479,7 +5479,7 @@
      "imp": 4488,
      "click": 66,
      "lpview": 4,
-     "listin": 0
+     "listin": 4
     }
    ]
   },
@@ -6191,7 +6191,7 @@
      "imp": 223,
      "click": 2,
      "lpview": 1,
-     "listin": 0
+     "listin": 1
     },
     {
      "date": "2026-09-28",
@@ -6207,7 +6207,7 @@
      "imp": 1612,
      "click": 23,
      "lpview": 1,
-     "listin": 0
+     "listin": 4
     },
     {
      "date": "2026-09-30",
@@ -6215,7 +6215,7 @@
      "imp": 2609,
      "click": 39,
      "lpview": 13,
-     "listin": 0
+     "listin": 15
     },
     {
      "date": "2026-10-01",
@@ -6223,7 +6223,7 @@
      "imp": 4632,
      "click": 47,
      "lpview": 5,
-     "listin": 0
+     "listin": 8
     },
     {
      "date": "2026-10-02",
@@ -6231,7 +6231,7 @@
      "imp": 15952,
      "click": 182,
      "lpview": 24,
-     "listin": 0
+     "listin": 34
     },
     {
      "date": "2026-10-03",
@@ -6239,7 +6239,7 @@
      "imp": 6760,
      "click": 60,
      "lpview": 5,
-     "listin": 0
+     "listin": 7
     },
     {
      "date": "2026-10-04",
@@ -6247,7 +6247,7 @@
      "imp": 15691,
      "click": 161,
      "lpview": 13,
-     "listin": 0
+     "listin": 16
     },
     {
      "date": "2026-10-05",
@@ -6255,7 +6255,7 @@
      "imp": 13705,
      "click": 138,
      "lpview": 7,
-     "listin": 0
+     "listin": 8
     },
     {
      "date": "2026-10-06",
@@ -6263,7 +6263,7 @@
      "imp": 13326,
      "click": 134,
      "lpview": 10,
-     "listin": 0
+     "listin": 14
     }
    ]
   },
@@ -6301,7 +6301,7 @@
      "imp": 990,
      "click": 20,
      "lpview": 6,
-     "listin": 0
+     "listin": 6
     },
     {
      "date": "2026-09-30",
@@ -6309,7 +6309,7 @@
      "imp": 2106,
      "click": 24,
      "lpview": 3,
-     "listin": 0
+     "listin": 3
     },
     {
      "date": "2026-10-01",
@@ -6317,7 +6317,7 @@
      "imp": 2143,
      "click": 24,
      "lpview": 5,
-     "listin": 0
+     "listin": 8
     },
     {
      "date": "2026-10-02",
@@ -6325,7 +6325,7 @@
      "imp": 2099,
      "click": 36,
      "lpview": 5,
-     "listin": 0
+     "listin": 8
     },
     {
      "date": "2026-10-03",
@@ -6341,7 +6341,7 @@
      "imp": 716,
      "click": 12,
      "lpview": 1,
-     "listin": 0
+     "listin": 1
     },
     {
      "date": "2026-10-05",
@@ -6349,7 +6349,7 @@
      "imp": 1622,
      "click": 13,
      "lpview": 4,
-     "listin": 0
+     "listin": 4
     },
     {
      "date": "2026-10-06",
@@ -6357,7 +6357,7 @@
      "imp": 756,
      "click": 12,
      "lpview": 3,
-     "listin": 0
+     "listin": 3
     },
     {
      "date": "2026-10-10",
@@ -6403,7 +6403,7 @@
      "imp": 1205,
      "click": 12,
      "lpview": 3,
-     "listin": 0
+     "listin": 4
     },
     {
      "date": "2026-09-30",
@@ -6411,7 +6411,7 @@
      "imp": 2276,
      "click": 31,
      "lpview": 8,
-     "listin": 0
+     "listin": 12
     },
     {
      "date": "2026-10-01",
@@ -6419,7 +6419,7 @@
      "imp": 2923,
      "click": 35,
      "lpview": 3,
-     "listin": 0
+     "listin": 3
     },
     {
      "date": "2026-10-02",
@@ -6427,7 +6427,7 @@
      "imp": 2171,
      "click": 19,
      "lpview": 3,
-     "listin": 0
+     "listin": 3
     },
     {
      "date": "2026-10-03",
@@ -6443,7 +6443,7 @@
      "imp": 711,
      "click": 12,
      "lpview": 3,
-     "listin": 0
+     "listin": 4
     },
     {
      "date": "2026-10-05",
@@ -6451,7 +6451,7 @@
      "imp": 1515,
      "click": 12,
      "lpview": 3,
-     "listin": 0
+     "listin": 3
     },
     {
      "date": "2026-10-06",
@@ -6459,7 +6459,7 @@
      "imp": 739,
      "click": 8,
      "lpview": 1,
-     "listin": 0
+     "listin": 1
     },
     {
      "date": "2026-10-10",
@@ -6467,7 +6467,7 @@
      "imp": 772,
      "click": 14,
      "lpview": 1,
-     "listin": 0
+     "listin": 1
     }
    ]
   },
