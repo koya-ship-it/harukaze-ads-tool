@@ -16,7 +16,25 @@
 | `creatives/` | 広告クリエイティブの画像・動画。`data.json` の `imageUrl` / `videoUrl` に `creatives/ファイル名` と書くと画面に出る |
 | `データの形_GrokBot向け.md` | 各項目の意味・取得元・未決事項 |
 
-## Grok Botが毎日やること
+## 毎日の自動更新（Metaから直接）
+
+`.github/workflows/update.yml` が毎朝8:30（日本時間）に `scripts/fetch_meta.py` を動かし、Metaから直近60日の数字と広告画像を取って `data.json` と `creatives/` を書き換える。手で今すぐ動かす時は、GitHubの Actions →「Metaから数字を取る」→ Run workflow。
+
+### 最初に1回だけ入れるもの（Settings → Secrets and variables → Actions → New repository secret）
+
+| 名前 | 中身 |
+|---|---|
+| `META_ACCESS_TOKEN` | Metaのアクセストークン（`ads_read` の権限つき）。チャットやファイルには書かない |
+| `META_AD_ACCOUNT_ID` | 広告アカウントID（数字。`act_` は付けても付けなくてもよい） |
+
+### 自動で入るもの・入らないもの
+
+- 入る：キャンペーン、広告の名前・画像・種類、広告費・表示・クリック・LP到達・リストイン、広告のリンク先から割り出したLP。
+- リストインは、Metaが数えた登録（`complete_registration` か `lead`）のうち数字がある最初の1つを使う。どれを使ったかは実行ログと `data.json` の `listinSource` に出る。固定したい時は Variables に `META_LISTIN_ACTION` を入れる。
+- 入らない：`lps` の名前や段階（入口・登録後のVSLなど）、目標の数字（`targetCpa`・`monthlyGoal`）。これは `data.json` を手で直す。自動更新では消えない。
+- 知らないLPへ流している広告があれば、LPは「未分類」に仮の名前で足される。
+
+## 手で直す時（Grok Bot・人）
 
 1. `data.json` を開く。
 2. 各広告（`creatives[]`）の `daily` に、その日の1行 `{date, spend, imp, click, lpview, listin}` を足す。同じ日付の行があれば上書きする。数字が無い項目は `0`。
@@ -29,6 +47,6 @@
 
 ## 今の状態（2026-11-24）
 
-- `data.json` の中身は見本の数字。本物はまだ入っていない。
+- `data.json` の中身は見本の数字。トークンを入れて自動更新が1回動くと、本物に入れ替わる。
 - 見る場所は上の「画面」のURL。`data.json` を書き換えてコミットすると、数分で画面に出る。
 - 未決事項は `データの形_GrokBot向け.md` の「まだ決まっていないこと」を参照。
