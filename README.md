@@ -13,6 +13,7 @@
 | `index.html` | 画面。開くたびに同じ場所の `data.json` を読む |
 | `data.json` | **数字の正本。Grok Botが毎日書き換えるのはこのファイルだけ** |
 | `sample_data.json` | 形の見本（触らない） |
+| `creatives/` | 広告クリエイティブの画像・動画。`data.json` の `imageUrl` / `videoUrl` に `creatives/ファイル名` と書くと画面に出る |
 | `データの形_GrokBot向け.md` | 各項目の意味・取得元・未決事項 |
 
 ## Grok Botが毎日やること

@@ -41,6 +41,8 @@
 | `url` | LPのURL（ウィンドウに実物を映す） | `https://utage-system.com/p/…` |
 | `source` | 取得元の名前 | `UTAGE` |
 | `thumbUrl` | 一覧の小さい画像（無ければ `null`） | |
+| `stage` | ファネルの中の位置（一覧に小さく出る） | `入口` / `登録後のVSL` / `オファー` / `サンキュー` |
+| `entry` | 広告の入口なら `true`。登録後に出るページは `false`（広告の数字を出さない） | `false` |
 
 ## 4. creatives（広告クリエイティブ）— Meta広告から
 
@@ -51,7 +53,8 @@
 | `format` | 種類 | `動画` / `画像` / `カルーセル` |
 | `campaignId` | どのキャンペーンか（`campaigns.id`） | `c1` |
 | `lpId` | どのLPに流しているか（`lps.id`） | `9WbekWYiJNGc` |
-| `imageUrl` | クリエイティブの画像（無ければ `null`） | |
+| `imageUrl` | クリエイティブの画像。`https://…` か、リポジトリ内の場所（例 `creatives/a01.jpg`）。無ければ `null` | `creatives/ever_01.jpg` |
+| `videoUrl` | 動画広告の動画。書き方は `imageUrl` と同じ。入れると詳細で再生できる | |
 | `copy` | 画像が無い時に出す一言 | |
 | `daily` | 日ごとの数字（下の表） | |
 

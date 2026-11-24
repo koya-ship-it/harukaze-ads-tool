@@ -160,7 +160,7 @@ table.tb { width: 100%; border-collapse: collapse; font-size: 13px; }
 .lpitem .url { font-size: 11.5px; color: var(--ink-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-top: 2px; }
 .lpitem .ms { display: flex; gap: 14px; margin-top: 8px; font-size: 11px; color: var(--ink-3); }
 .lpitem .ms b { display: block; font-size: 15px; color: var(--ink); font-weight: 600; }
-.tag { font-size: 10px; font-weight: 700; color: var(--blue); background: var(--blue-soft); padding: 1px 6px; border-radius: 4px; }
+.tag { white-space: nowrap; flex: none; font-size: 10px; font-weight: 700; color: var(--blue); background: var(--blue-soft); padding: 1px 6px; border-radius: 4px; }
 .win { border: 1px solid var(--line); border-radius: 10px; background: #fff; overflow: hidden; }
 .win-bar { display: flex; align-items: center; gap: 10px; padding: 9px 12px; background: #efeeea; border-bottom: 1px solid var(--line); }
 .dots { display: flex; gap: 6px; }
@@ -206,6 +206,11 @@ table.tb { width: 100%; border-collapse: collapse; font-size: 13px; }
 .dr-b { padding: 18px; display: grid; gap: 16px; }
 .dr-top { display: grid; grid-template-columns: 150px 1fr; gap: 14px; }
 .dr-top .thumb { font-size: 14px; }
+.dr-cr { background: #f1f0ec; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; display: flex; justify-content: center; }
+.dr-cr img, .dr-cr video { display: block; max-width: 100%; max-height: 62vh; }
+.dr-cr.none { padding: 22px 14px; font-size: 12px; color: var(--ink-3); }
+.tag.stage { background: #eef6ef; color: var(--green-dark); }
+.lpitem .ms.note { display: block; font-size: 11.5px; color: var(--ink-3); }
 .mgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
 .mgrid div { border: 1px solid var(--line); border-radius: 8px; padding: 9px 10px; font-size: 11px; color: var(--ink-3); }
 .mgrid b { display: block; font-size: 16px; color: var(--ink); font-weight: 600; margin-top: 2px; }
@@ -283,7 +288,7 @@ let AD_DATA = (() => {
   const lps = [
     { id: 'spj6vFEFcDEW', name: 'オプトインLP1', group: '直個別', funnel: 'FB広告用 直個別動線', url: 'https://utage-system.com/p/spj6vFEFcDEW', source: 'UTAGE' },
     { id: 'scStnbMYCLNB', name: 'オプトインLP（3/22修正版）', group: '直個別', funnel: 'FB広告用 直個別動線', url: 'https://utage-system.com/p/scStnbMYCLNB', source: 'UTAGE' },
-    { id: 'V7uKVlkSBOz2', name: '15分OTO オファーページ', group: '直個別', funnel: 'FB広告用 直個別動線', url: 'https://utage-system.com/p/V7uKVlkSBOz2', source: 'UTAGE' },
+    { id: 'V7uKVlkSBOz2', name: '15分OTO オファーページ', group: '直個別', funnel: 'FB広告用 直個別動線', url: 'https://utage-system.com/p/V7uKVlkSBOz2', source: 'UTAGE', stage: '登録後のVSL', entry: false },
     { id: '9WbekWYiJNGc', name: 'AI自動化実演セミナー LP（録画視聴回）', group: 'エバーセミナー', funnel: 'sub.dezajuku.jp', url: 'https://sub.dezajuku.jp/p/9WbekWYiJNGc', source: 'UTAGE' },
   ];
   const campaigns = [{ id: 'c1', name: 'エバーセミナー' }, { id: 'c2', name: '直個別' }];
@@ -351,7 +356,8 @@ const lpOf = id => AD_DATA.lps.find(l => l.id === id);
 const status = m => !isFinite(m.cpa) || m.cpa > AD_DATA.targetCpa * 1.5 ? ['bad', '停止候補'] : m.cpa > AD_DATA.targetCpa ? ['mid', '様子見'] : ['good', '好調'];
 const lpSw = l => { const t = imgOk(l.thumbUrl) ? esc(encodeURI(l.thumbUrl)) : window.LP_THUMBS && LP_THUMBS[l.id]; return `<span class="sw" style="background:${t ? `url('${t}') top/cover` : '#e9e8e3'}"></span>`; };
 const cpaTxt = m => isFinite(m.cpa) ? yen(m.cpa) : '—';
-const imgOk = u => /^https:\/\//.test(u || '');
+/* 画像・動画の場所は https のURLか、このフォルダからの相対パス（例 creatives/a01.jpg）だけ受け付ける */
+const imgOk = u => /^https:\/\/[^\s'"<>]+$/.test(u || '') || /^[\w\-./%]+$/.test(u || '') && !/^\/|\.\./.test(u);
 const thumb = (c, cls = '') => imgOk(c.imageUrl)
   ? `<div class="thumb ${cls}" style="background:#e9e8e3 url('${esc(encodeURI(c.imageUrl))}') center/cover"><span class="fmt">${esc(c.format)}</span></div>`
   : `<div class="thumb ${cls}" style="background:${esc(c.color)}"><span class="fmt">${esc(c.format)}</span>${esc(c.copy).replace(/\n/g, '<br>')}</div>`;
@@ -477,14 +483,14 @@ function viewLp() {
       <div class="card"><div class="card-h"><h2>LP一覧</h2><span class="sub">UTAGEから取得 ・ ${AD_DATA.lps.length}本</span></div>
         ${AD_DATA.lps.map((l, i, arr) => { const { cs, m } = lpStat(l); return `${!i || arr[i - 1].group !== l.group ? `<div class="lpgroup">${esc(l.group)}<span>${esc(l.funnel)}</span></div>` : ''}
         <button class="lpitem ${l.id === S.lp ? 'on' : ''}" data-lp="${l.id}">
-          ${lpSw(l)}<div class="nm">${esc(l.name)}<span class="tag">${esc(l.source)}</span></div><div class="url">${esc(l.url)}</div>
-          <div class="ms"><span><b class="num">${int(m.lpview)}</b>LP到達</span><span><b class="num">${int(m.listin)}</b>リストイン</span><span><b class="num">${pct(lpCvr(m), 1)}</b>LPの登録率</span><span><b class="num">${cs.length}</b>広告</span></div>
+          ${lpSw(l)}<div class="nm">${esc(l.name)}${l.stage ? `<span class="tag stage">${esc(l.stage)}</span>` : ''}<span class="tag">${esc(l.source || '')}</span></div><div class="url">${esc(l.url)}</div>
+          ${l.entry === false ? `<div class="ms note">広告の入口ではないページ（${esc(l.stage || '登録後')}）</div>` : `<div class="ms"><span><b class="num">${int(m.lpview)}</b>LP到達</span><span><b class="num">${int(m.listin)}</b>リストイン</span><span><b class="num">${pct(lpCvr(m), 1)}</b>LPの登録率</span><span><b class="num">${cs.length}</b>広告</span></div>`}
         </button>`; }).join('')}</div>
       <div class="card"><div class="card-h"><h2>このLPに流している広告</h2></div>
         <div class="toplist">${cur.cs.length ? cur.cs.map(c => ({ c, m: stat(c) })).sort((a, b) => b.m.listin - a.m.listin).map((x, i) => `
           <button class="toprow" data-cr="${x.c.id}"><span class="rk">${i + 1}</span>${thumb(x.c, 's')}
             <span><div class="nm">${esc(x.c.name)}</div><div class="mt">1件 ${cpaTxt(x.m)}</div></span><span></span>
-            <span class="big num">${int(x.m.listin)}<small>リストイン</small></span></button>`).join('') : '<div class="card-b" style="color:var(--ink-3)">このキャンペーンでは使っていません。</div>'}</div></div>
+            <span class="big num">${int(x.m.listin)}<small>リストイン</small></span></button>`).join('') : `<div class="card-b" style="color:var(--ink-3)">${lp.entry === false ? '広告から直接は流していません。入口のLPで登録した後に表示されるページです。' : 'このキャンペーンでは使っていません。'}</div>`}</div></div>
     </div>
     <div class="win">
       <div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="win-url">${esc(lp.url)}</span>
@@ -504,6 +510,9 @@ function openDrawer(id) {
   $('#drawer').innerHTML = `
     <div class="dr-h"><h2>${esc(c.name)}</h2><span class="st ${status(m)[0]}">${status(m)[1]}</span><button class="btn" data-close>閉じる</button></div>
     <div class="dr-b">
+      ${imgOk(c.videoUrl) ? `<div class="dr-cr"><video src="${esc(encodeURI(c.videoUrl))}" controls playsinline preload="metadata"${imgOk(c.imageUrl) ? ` poster="${esc(encodeURI(c.imageUrl))}"` : ''}></video></div>`
+        : imgOk(c.imageUrl) ? `<div class="dr-cr"><a href="${esc(encodeURI(c.imageUrl))}" target="_blank" rel="noopener" title="原寸で開く"><img src="${esc(encodeURI(c.imageUrl))}" alt="${esc(c.name)}"></a></div>`
+        : `<div class="dr-cr none">クリエイティブの画像がまだ入っていません（data.json の imageUrl / videoUrl）</div>`}
       <div class="dr-top">${thumb(c)}
         <div><div class="sec-t">リストイン（直近${S.days}日）</div>
           <div style="font-size:38px;font-weight:600;color:var(--green-dark)" class="num">${int(m.listin)}<small style="font-size:13px;color:var(--ink-2)"> 件</small></div>
