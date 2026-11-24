@@ -1,0 +1,92 @@
+{
+  "sample": true,
+  "updatedAt": "2026-11-23T20:30:00+09:00",
+  "targetCpa": 3000,
+  "monthlyGoal": 4000,
+  "campaigns": [
+    {
+      "id": "c1",
+      "name": "エバーセミナー"
+    },
+    {
+      "id": "c2",
+      "name": "直個別"
+    }
+  ],
+  "lps": [
+    {
+      "id": "9WbekWYiJNGc",
+      "name": "AI自動化実演セミナー LP（録画視聴回）",
+      "group": "エバーセミナー",
+      "funnel": "sub.dezajuku.jp",
+      "url": "https://sub.dezajuku.jp/p/9WbekWYiJNGc",
+      "thumbUrl": null,
+      "source": "UTAGE"
+    },
+    {
+      "id": "spj6vFEFcDEW",
+      "name": "オプトインLP1",
+      "group": "直個別",
+      "funnel": "FB広告用 直個別動線",
+      "url": "https://utage-system.com/p/spj6vFEFcDEW",
+      "thumbUrl": null,
+      "source": "UTAGE"
+    }
+  ],
+  "creatives": [
+    {
+      "id": "A01",
+      "name": "A01_実演ダイジェスト",
+      "format": "動画",
+      "campaignId": "c1",
+      "lpId": "9WbekWYiJNGc",
+      "imageUrl": null,
+      "copy": "AIが広告を\n自動で作る",
+      "daily": [
+        {
+          "date": "2026-11-22",
+          "spend": 18400,
+          "imp": 21500,
+          "click": 410,
+          "lpview": 335,
+          "listin": 9
+        },
+        {
+          "date": "2026-11-23",
+          "spend": 17900,
+          "imp": 20800,
+          "click": 395,
+          "lpview": 322,
+          "listin": 7
+        }
+      ]
+    },
+    {
+      "id": "B01",
+      "name": "B01_個別相談訴求",
+      "format": "画像",
+      "campaignId": "c2",
+      "lpId": "spj6vFEFcDEW",
+      "imageUrl": null,
+      "copy": "まずは15分\n無料で相談",
+      "daily": [
+        {
+          "date": "2026-11-22",
+          "spend": 9200,
+          "imp": 8800,
+          "click": 150,
+          "lpview": 121,
+          "listin": 2
+        },
+        {
+          "date": "2026-11-23",
+          "spend": 9600,
+          "imp": 9100,
+          "click": 162,
+          "lpview": 130,
+          "listin": 0
+        }
+      ]
+    }
+  ]
+}
