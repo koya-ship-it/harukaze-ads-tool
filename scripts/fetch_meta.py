@@ -3,7 +3,7 @@
 
 必要な環境変数
   META_ACCESS_TOKEN    Metaのアクセストークン（ads_read）。GitHubのSecretsに入れる
-  META_AD_ACCOUNT_ID   広告アカウントID（act_ は付けても付けなくてもよい）
+  META_AD_ACCOUNT_ID   広告アカウントID（act_ は付けても付けなくてもよい）。複数ある時はカンマ区切り（例 111,222）
 任意
   META_API_VERSION     例 v24.0。空ならMeta側の既定の版を使う
   META_LISTIN_ACTION   リストインとして数えるアクション名を1つに固定したい時
@@ -38,7 +38,7 @@ LISTIN_CANDIDATES = [
 ]
 
 
-def api(path, params):
+def api(path, params, soft=False):
     """Graph APIを呼ぶ。ページ送りをたどって全件返す。"""
     ver = os.environ.get('META_API_VERSION', '').strip()
     base = 'https://graph.facebook.com/' + (ver + '/' if ver else '')
@@ -55,8 +55,11 @@ def api(path, params):
                 msg = json.loads(body).get('error', {}).get('message', body)
             except Exception:
                 msg = body[:300]
+            if soft:
+                print(f'  （読めませんでした {path}: {msg}）')
+                return None
             sys.exit(f'Metaからエラーが返りました（{e.code}）: {msg}')
-        if 'data' not in d:
+        if 'data' not in d or not isinstance(d['data'], list):
             return d
         out += d['data']
         url = d.get('paging', {}).get('next')
@@ -131,7 +134,7 @@ def build(rows, ads, old):
     campaigns, creatives = {}, {}
     for r in rows:
         ad_id = r['ad_id']
-        campaigns[r['campaign_id']] = {'id': r['campaign_id'], 'name': r.get('campaign_name') or r['campaign_id']}
+        campaigns[r['campaign_id']] = {'id': r['campaign_id'], 'name': r.get('campaign_name') or r['campaign_id'], 'account': r.get('account_name') or ''}
         c = creatives.get(ad_id)
         if c is None:
             cr = (ads.get(ad_id) or {}).get('creative') or {}
@@ -148,7 +151,7 @@ def build(rows, ads, old):
                                 'url': link.split('?')[0] if link else '', 'thumbUrl': None, 'source': '', 'stage': '入口', 'entry': True})
                     known.add(lp_id)
             c = creatives[ad_id] = {
-                'id': ad_id, 'name': r.get('ad_name') or ad_id, 'format': '動画' if is_video(cr) else '画像',
+                'id': ad_id, 'name': r.get('ad_name') or ad_id, 'adset': r.get('adset_name') or '', 'account': r.get('account_name') or '', 'format': '動画' if is_video(cr) else '画像',
                 'campaignId': r['campaign_id'], 'lpId': lp_id, 'imageUrl': None, 'videoUrl': None, 'copy': '',
                 '_img': cr.get('image_url') or cr.get('thumbnail_url'), 'daily': [],
             }
@@ -160,7 +163,7 @@ def build(rows, ads, old):
         })
     for c in creatives.values():
         c['daily'].sort(key=lambda d: d['date'])
-    out = {k: v for k, v in old.items() if k not in ('sample', 'campaigns', 'creatives', 'lps', 'updatedAt', 'listinSource')}
+    out = {k: v for k, v in old.items() if k not in ('sample', 'campaigns', 'creatives', 'lps', 'updatedAt', 'listinSource', 'tokenExpiresAt')}
     out.setdefault('targetCpa', 3000)
     out.setdefault('monthlyGoal', 4000)
     return {
@@ -186,16 +189,20 @@ def main():
     for k in ('META_ACCESS_TOKEN', 'META_AD_ACCOUNT_ID'):
         if not os.environ.get(k, '').strip():
             sys.exit(f'{k} が入っていません。GitHubの Settings → Secrets and variables → Actions に入れてください。')
-    act = 'act_' + re.sub(r'^act_', '', os.environ['META_AD_ACCOUNT_ID'].strip())
+    acts = ['act_' + re.sub(r'^act_', '', a.strip()) for a in re.split(r'[,\s]+', os.environ['META_AD_ACCOUNT_ID'].strip()) if a.strip()]
     days = int(os.environ.get('DAYS') or 60)
     today = datetime.datetime.now(JST).date()
     rng = {'since': (today - datetime.timedelta(days=days - 1)).isoformat(), 'until': today.isoformat()}
 
-    rows = api(f'{act}/insights', {
-        'level': 'ad', 'time_increment': 1, 'limit': 500, 'time_range': json.dumps(rng),
-        'fields': 'ad_id,ad_name,campaign_id,campaign_name,spend,impressions,inline_link_clicks,actions',
-    })
-    print(f'{rng["since"]}〜{rng["until"]}：{len(rows)}行（広告×日）')
+    rows = []
+    for n, act in enumerate(acts, 1):
+        got = api(f'{act}/insights', {
+            'level': 'ad', 'time_increment': 1, 'limit': 500, 'time_range': json.dumps(rng),
+            'fields': 'account_name,ad_id,ad_name,adset_name,campaign_id,campaign_name,spend,impressions,inline_link_clicks,actions',
+        })
+        print(f'アカウント{n}（{got[0].get("account_name", "") if got else "配信なし"}）：{len(got)}行（広告×日）')
+        rows += got
+    print(f'{rng["since"]}〜{rng["until"]}：合計 {len(rows)}行')
     if not rows:
         sys.exit('この期間に配信した広告がありません。data.json は書き換えていません。')
 
@@ -209,6 +216,12 @@ def main():
 
     old = json.load(open(DATA, encoding='utf-8')) if os.path.exists(DATA) else {}
     data = build(rows, ads, old)
+    # トークンの期限（分かる時だけ）。0 は期限なし
+    info = api('debug_token', {'input_token': os.environ['META_ACCESS_TOKEN']}, soft=True)
+    exp = ((info or {}).get('data') or {}).get('expires_at')
+    if exp:
+        data['tokenExpiresAt'] = datetime.datetime.fromtimestamp(exp, JST).date().isoformat()
+        print('トークンの期限:', data['tokenExpiresAt'])
     save_images(data)
     with open(DATA, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=1)
