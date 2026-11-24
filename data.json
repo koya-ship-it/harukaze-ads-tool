@@ -1,23 +1,26 @@
 {
- "updatedAt": "2026-11-24T21:43:47+09:00",
- "listinSource": "Meta: offsite_conversion.fb_pixel_complete_registration",
+ "updatedAt": "2026-11-24T22:11:15+09:00",
+ "listinSource": "Meta: offsite_conversion.fb_pixel_complete_registration / offsite_conversion.fb_pixel_lead",
  "targetCpa": null,
  "monthlyGoal": null,
  "campaigns": [
   {
    "id": "120252087649000333",
    "name": "20260617_直面談予約",
-   "account": "Harukaze_デザジュク_004"
+   "account": "Harukaze_デザジュク_004",
+   "listinSource": "offsite_conversion.fb_pixel_complete_registration"
   },
   {
    "id": "52534648928774",
    "name": "20260912_10月AIセミナー",
-   "account": "Harukaze_デザジュク_005"
+   "account": "Harukaze_デザジュク_005",
+   "listinSource": "offsite_conversion.fb_pixel_complete_registration"
   },
   {
    "id": "52549978676574",
    "name": "20261110_11月エバーセミナー",
-   "account": "Harukaze_デザジュク_005"
+   "account": "Harukaze_デザジュク_005",
+   "listinSource": "offsite_conversion.fb_pixel_lead"
   }
  ],
  "lps": [
@@ -472,8 +475,8 @@
     },
     {
      "date": "2026-11-24",
-     "spend": 5674,
-     "imp": 264,
+     "spend": 5922,
+     "imp": 284,
      "click": 6,
      "lpview": 5,
      "listin": 0
@@ -1244,8 +1247,8 @@
     },
     {
      "date": "2026-11-24",
-     "spend": 5856,
-     "imp": 563,
+     "spend": 6083,
+     "imp": 586,
      "click": 11,
      "lpview": 9,
      "listin": 2
@@ -2406,11 +2409,11 @@
     },
     {
      "date": "2026-11-24",
-     "spend": 16523,
-     "imp": 639,
-     "click": 15,
-     "lpview": 11,
-     "listin": 1
+     "spend": 16970,
+     "imp": 661,
+     "click": 16,
+     "lpview": 13,
+     "listin": 3
     }
    ]
   },
@@ -2900,9 +2903,9 @@
     },
     {
      "date": "2026-11-24",
-     "spend": 28272,
-     "imp": 1870,
-     "click": 42,
+     "spend": 29248,
+     "imp": 1949,
+     "click": 45,
      "lpview": 31,
      "listin": 3
     }
@@ -3728,9 +3731,9 @@
     },
     {
      "date": "2026-11-24",
-     "spend": 11198,
-     "imp": 644,
-     "click": 19,
+     "spend": 11698,
+     "imp": 664,
+     "click": 20,
      "lpview": 16,
      "listin": 0
     }
@@ -4118,8 +4121,8 @@
     },
     {
      "date": "2026-11-24",
-     "spend": 9799,
-     "imp": 756,
+     "spend": 9999,
+     "imp": 775,
      "click": 23,
      "lpview": 14,
      "listin": 1
@@ -4434,7 +4437,7 @@
      "imp": 357,
      "click": 5,
      "lpview": 0,
-     "listin": 0
+     "listin": 1
     },
     {
      "date": "2026-11-12",
