@@ -28,7 +28,7 @@ DATA = os.path.join(ROOT, 'data.json')
 CR_DIR = os.path.join(ROOT, 'creatives')
 JST = datetime.timezone(datetime.timedelta(hours=9))
 
-# リストインとして数える候補。上にあるものを優先し、数字が1件でもある最初の1つだけを使う（足し合わせると二重に数えるため）
+# リストインとして数える候補。キャンペーンごとに、件数が一番多い1つだけを使う（足し合わせると二重に数えるため）
 LISTIN_CANDIDATES = [
     'offsite_conversion.fb_pixel_complete_registration',
     'complete_registration',
@@ -129,7 +129,8 @@ def build(rows, ads, old):
         name = t.pop('_name')
         custom = sorted((k for k in t if k.startswith('offsite_conversion.custom.')), key=lambda k: -t[k])
         cands = LISTIN_CANDIDATES + custom + ['offsite_conversion.fb_pixel_custom']
-        listin_types[cid] = forced or next((x for x in cands if t.get(x, 0) > 0), LISTIN_CANDIDATES[0])
+        # 候補のうち件数が一番多いものを使う（同数なら上の候補を優先）。1〜2件だけ紛れたイベントに引っ張られないため
+        listin_types[cid] = forced or max(cands, key=lambda x: (t.get(x, 0), -cands.index(x)))
         print(f'キャンペーン「{name}」のアクション合計（多い順）:')
         for k, v in sorted(t.items(), key=lambda x: -x[1])[:25]:
             print(f'  {k}: {int(v)}')
