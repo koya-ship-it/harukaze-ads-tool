@@ -48,31 +48,57 @@
   },
   {
    "q": "AIアニメ マーケティング 行動経済学",
-   "genre": "AIビジネス系"
+   "genre": "AIビジネス系",
+   "minViews": 30000,
+   "minRatio": 3
   },
   {
    "q": "AI動画 創業物語 経営者",
-   "genre": "AIビジネス系"
+   "genre": "AIビジネス系",
+   "minViews": 30000,
+   "minRatio": 3
   },
   {
    "q": "お金 雑学 AIアニメ",
-   "genre": "AIビジネス系"
+   "genre": "AIビジネス系",
+   "minViews": 30000,
+   "minRatio": 3
   },
   {
    "q": "AI活用 仕事術",
-   "genre": "AI系"
+   "genre": "AI系",
+   "minViews": 30000,
+   "minRatio": 3
   },
   {
    "q": "ChatGPT 使い方 裏技",
-   "genre": "AI系"
+   "genre": "AI系",
+   "minViews": 30000,
+   "minRatio": 3
   },
   {
    "q": "AI デザイン 作り方",
-   "genre": "AIデザイン系"
+   "genre": "AIデザイン系",
+   "minViews": 30000,
+   "minRatio": 3
   },
   {
    "q": "Canva AI デザイン",
-   "genre": "AIデザイン系"
+   "genre": "AIデザイン系",
+   "minViews": 30000,
+   "minRatio": 3
+  },
+  {
+   "q": "AI 広告 動画 作り方",
+   "genre": "AIデザイン系",
+   "minViews": 30000,
+   "minRatio": 3
+  },
+  {
+   "q": "ビジネス 雑学 アニメ 解説",
+   "genre": "AIビジネス系",
+   "minViews": 30000,
+   "minRatio": 3
   }
  ]
 }

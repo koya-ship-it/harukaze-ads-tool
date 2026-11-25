@@ -47,7 +47,7 @@ def main():
             print(f'  「{q["q"]}」: 探せませんでした（{err}）'); continue
         ids = [i['id']['videoId'] for i in d.get('items', []) if i.get('id', {}).get('videoId')]
         for v in ids:
-            found.setdefault(v, (q.get('genre') or 'その他', q['q']))
+            found.setdefault(v, (q.get('genre') or 'その他', q['q'], q))
         print(f'  「{q["q"]}」: {len(ids)}本')
     if not found:
         print('1本も見つからなかったので、trends_youtube.json は書き換えていません。'); return
@@ -69,11 +69,12 @@ def main():
         ch = chans.get(sn['channelId'], {})
         subs = int((ch.get('statistics') or {}).get('subscriberCount') or 0)
         ratio = round(views / subs, 2) if subs else None
-        if sec is None or sec > max_sec or views < min_views or (min_ratio and (ratio or 0) < min_ratio):
+        genre, q, qc = found[vid]
+        mv, mr = int(qc.get('minViews', min_views)), float(qc.get('minRatio', min_ratio))  # 検索語ごとに基準を変えられる
+        if sec is None or sec > max_sec or views < mv or (mr and (ratio or 0) < mr):
             continue
         if not re.search(r'[぀-ヿ一-鿿]', sn.get('title', '') + (ch.get('snippet') or {}).get('title', '')):
             continue  # 日本語のものだけ
-        genre, q = found[vid]
         by_q.setdefault(q, []).append({
             'url': f'https://www.youtube.com/shorts/{vid}', 'genre': [genre], 'kind': 'リール・ショート動画', 'memo': sn.get('title', '')[:90],
             'username': sn.get('channelTitle', ''), 'followers': subs, 'views': views, 'likes': int(st.get('likeCount') or 0),
@@ -84,7 +85,7 @@ def main():
         rows.sort(key=lambda r: -r['views'])
         items += rows[:int(conf.get('perQuery', 8))]
     items.sort(key=lambda r: -r['views'])
-    rule = f'直近{conf.get("days", 180)}日・{max_sec}秒以内・{min_views:,}再生以上' + (f'・再生数が登録者数の{min_ratio:g}倍以上' if min_ratio else '')
+    rule = f'直近{conf.get("days", 180)}日・{max_sec}秒以内・{min_views:,}再生以上' + (f'・再生数が登録者数の{min_ratio:g}倍以上' if min_ratio else '') + '（本数の少ないジャンルは基準をゆるめています）'
     out = {'rule': rule, 'updatedAt': datetime.datetime.now(JST).replace(microsecond=0).isoformat(), 'items': items[:int(conf.get('keep', 60))]}
     with open(OUT, 'w', encoding='utf-8') as f:
         json.dump(out, f, ensure_ascii=False, indent=1); f.write('\n')
