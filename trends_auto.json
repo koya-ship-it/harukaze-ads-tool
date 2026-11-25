@@ -1,8 +1,8 @@
 {
- "rule": "直近180日・再生数がフォロワー数の10倍以上",
- "updatedAt": "2026-11-25T21:41:51+09:00",
- "accounts": 93,
- "checked": 22,
+ "rule": "直近180日・再生数がフォロワー数の10倍以上（企業・メディアは3倍以上）",
+ "updatedAt": "2026-11-26T05:32:51+09:00",
+ "accounts": 142,
+ "checked": 34,
  "items": [
   {
    "url": "https://www.instagram.com/reel/DZT4YWMpp-s/",
