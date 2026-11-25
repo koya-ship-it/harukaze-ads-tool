@@ -1,6 +1,248 @@
 {
- "days": 30,
+ "days": 180,
+ "minRatio": 10,
  "perAccount": 5,
- "keep": 40,
- "accounts": []
+ "keep": 60,
+ "accounts": [
+  {
+   "username": "usutaku_copilot",
+   "genre": "AI系"
+  },
+  {
+   "username": "jerry_ai00",
+   "genre": "AI系"
+  },
+  {
+   "username": "jerry_nft00",
+   "genre": "AI系"
+  },
+  {
+   "username": "kazlily_blog",
+   "genre": "AI系"
+  },
+  {
+   "username": "hiro_insta_papa",
+   "genre": "AI系"
+  },
+  {
+   "username": "ai_susume",
+   "genre": "AI系"
+  },
+  {
+   "username": "anna__nft",
+   "genre": "AI系"
+  },
+  {
+   "username": "posi_aiskill",
+   "genre": "AI系"
+  },
+  {
+   "username": "riko_nft_crypto",
+   "genre": "AI系"
+  },
+  {
+   "username": "renton_work",
+   "genre": "AI系"
+  },
+  {
+   "username": "pom_ai_life",
+   "genre": "AI系"
+  },
+  {
+   "username": "y.gptai",
+   "genre": "AI系"
+  },
+  {
+   "username": "haruto_.ai",
+   "genre": "AI系"
+  },
+  {
+   "username": "ceo_ai_chatgpt",
+   "genre": "AI系"
+  },
+  {
+   "username": "koba.blog",
+   "genre": "AI系"
+  },
+  {
+   "username": "ctgptlb",
+   "genre": "AI系"
+  },
+  {
+   "username": "jojo_ai01",
+   "genre": "AI系"
+  },
+  {
+   "username": "shunsource",
+   "genre": "AI系"
+  },
+  {
+   "username": "mitsuki_ai_",
+   "genre": "AI系"
+  },
+  {
+   "username": "nagi_gpt",
+   "genre": "AI系"
+  },
+  {
+   "username": "ai_start8",
+   "genre": "AI系"
+  },
+  {
+   "username": "chisato___ai___fukugyo",
+   "genre": "AI系"
+  },
+  {
+   "username": "aifreak_tool",
+   "genre": "AI系"
+  },
+  {
+   "username": "myumyugreen",
+   "genre": "AI系"
+  },
+  {
+   "username": "kamoshika_en",
+   "genre": "在宅・副業系"
+  },
+  {
+   "username": "yuri_insta_oni",
+   "genre": "在宅・副業系"
+  },
+  {
+   "username": "fu_ta.setuzei",
+   "genre": "在宅・副業系"
+  },
+  {
+   "username": "yuki___kigyou",
+   "genre": "在宅・副業系"
+  },
+  {
+   "username": "taberina_ch",
+   "genre": "在宅・副業系"
+  },
+  {
+   "username": "api_mywork",
+   "genre": "在宅・副業系"
+  },
+  {
+   "username": "maya_07120321",
+   "genre": "在宅・副業系"
+  },
+  {
+   "username": "bb_ai.pon",
+   "genre": "在宅・副業系"
+  },
+  {
+   "username": "eikorin_222",
+   "genre": "在宅・副業系"
+  },
+  {
+   "username": "mamacreator_labo",
+   "genre": "在宅・副業系"
+  },
+  {
+   "username": "emi_kodama_insta",
+   "genre": "在宅・副業系"
+  },
+  {
+   "username": "_komostagram",
+   "genre": "在宅・副業系"
+  },
+  {
+   "username": "ibl.insta",
+   "genre": "在宅・副業系"
+  },
+  {
+   "username": "usagi_design12",
+   "genre": "在宅・副業系"
+  },
+  {
+   "username": "honami.design",
+   "genre": "在宅・副業系"
+  },
+  {
+   "username": "kanon.aihara",
+   "genre": "在宅・副業系"
+  },
+  {
+   "username": "mai_design_ewa",
+   "genre": "在宅・副業系"
+  },
+  {
+   "username": "ryomama_work",
+   "genre": "在宅・副業系"
+  },
+  {
+   "username": "kodai_snswork_",
+   "genre": "在宅・副業系"
+  },
+  {
+   "username": "haru_free_sensei",
+   "genre": "在宅・副業系"
+  },
+  {
+   "username": "ogico_freelance",
+   "genre": "在宅・副業系"
+  },
+  {
+   "username": "tenmamalife",
+   "genre": "在宅・副業系"
+  },
+  {
+   "username": "kireina_shiryo",
+   "genre": "デザイン系"
+  },
+  {
+   "username": "designkenkyujo",
+   "genre": "デザイン系"
+  },
+  {
+   "username": "shuuu_works",
+   "genre": "デザイン系"
+  },
+  {
+   "username": "cam_design_tips",
+   "genre": "デザイン系"
+  },
+  {
+   "username": "katatidesign",
+   "genre": "デザイン系"
+  },
+  {
+   "username": "dezatie_official",
+   "genre": "デザイン系"
+  },
+  {
+   "username": "designbeginners",
+   "genre": "デザイン系"
+  },
+  {
+   "username": "_ulidesign_",
+   "genre": "デザイン系"
+  },
+  {
+   "username": "__lia_design",
+   "genre": "デザイン系"
+  },
+  {
+   "username": "yukamaru_design",
+   "genre": "デザイン系"
+  },
+  {
+   "username": "_hironori",
+   "genre": "デザイン系"
+  },
+  {
+   "username": "mato_11234",
+   "genre": "デザイン系"
+  },
+  {
+   "username": "notdesignschool",
+   "genre": "デザイン系"
+  },
+  {
+   "username": "kannart.inc",
+   "genre": "デザイン系"
+  }
+ ]
 }

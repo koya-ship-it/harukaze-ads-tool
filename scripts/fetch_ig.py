@@ -57,7 +57,7 @@ def my_ig_id():
 
 def fetch(ig_id, username):
     fields = ('business_discovery.username(%s){username,name,followers_count,media_count,'
-              'media.limit(30){id,caption,media_type,media_product_type,permalink,timestamp,like_count,comments_count,view_count}}') % username
+              'media.limit(60){id,caption,media_type,media_product_type,permalink,timestamp,like_count,comments_count,view_count}}') % username
     d, err = api(ig_id, {'fields': fields})
     if err and 'view_count' in err:  # 再生数の項目が使えない版の時は外して取り直す
         d, err = api(ig_id, {'fields': fields.replace(',view_count', '')})
@@ -77,6 +77,7 @@ def main():
         return
     since = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=int(conf.get('days', 30)))
     items, ok = [], 0
+    min_ratio = float(conf.get('minRatio') or 0)  # 再生数がフォロワー数の何倍以上のリールだけ残すか
     for a in accounts:
         u = str(a.get('username', '')).strip().lstrip('@')
         if not u:
@@ -104,16 +105,18 @@ def main():
                 'ratio': round(views / fol, 2) if views and fol else None,
                 'postedAt': ts.astimezone(JST).replace(microsecond=0).isoformat(),
             })
-        rows.sort(key=lambda r: -((r['views'] or 0) or (r['likes'] or 0)))
-        print(f'  @{u}: フォロワー {bd.get("followers_count")}・直近{conf.get("days", 30)}日のリール {len(rows)}本')
-        items += rows[:int(conf.get('perAccount', 5))]
+        hit = [r for r in rows if (r['ratio'] or 0) >= min_ratio] if min_ratio else rows
+        hit.sort(key=lambda r: -((r['views'] or 0) or (r['likes'] or 0)))
+        best = max([r['ratio'] or 0 for r in rows], default=0)
+        print(f'  @{u}: フォロワー {bd.get("followers_count")}・直近{conf.get("days", 30)}日のリール {len(rows)}本・最大 {best}倍・基準（{min_ratio}倍以上）を超えた {len(hit)}本')
+        items += hit[:int(conf.get('perAccount', 5))]
     if test:
         print('テスト終了。読めたアカウント', ok, '／ 取れたリール', len(items), '／ 再生数あり', sum(1 for r in items if r['views'] is not None)); return
     if not ok:
         print('1つも読めなかったので、trends_auto.json は書き換えていません。'); return
     items = [r for r in items if r['url']]
     items.sort(key=lambda r: -((r['views'] or 0) or (r['likes'] or 0)))
-    out = {'updatedAt': datetime.datetime.now(JST).replace(microsecond=0).isoformat(), 'items': items[:int(conf.get('keep', 40))]}
+    out = {'rule': f'直近{conf.get("days", 30)}日・再生数がフォロワー数の{min_ratio:g}倍以上' if min_ratio else f'直近{conf.get("days", 30)}日', 'updatedAt': datetime.datetime.now(JST).replace(microsecond=0).isoformat(), 'items': items[:int(conf.get('keep', 40))]}
     with open(OUT, 'w', encoding='utf-8') as f:
         json.dump(out, f, ensure_ascii=False, indent=1); f.write('\n')
     print(f'trends_auto.json を書き換えました：{len(out["items"])}本（{ok}アカウント）')
