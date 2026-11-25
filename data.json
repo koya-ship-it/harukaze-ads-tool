@@ -1,8 +1,40 @@
 {
- "updatedAt": "2026-11-25T14:35:27+09:00",
+ "updatedAt": "2026-11-25T19:51:04+09:00",
  "listinSource": "Meta: offsite_conversion.fb_pixel_complete_registration / offsite_conversion.fb_pixel_lead",
  "targetCpa": null,
  "monthlyGoal": null,
+ "projects": [
+  {
+   "id": "p1",
+   "name": "直個別動線",
+   "campaignIds": [
+    "120252087649000333"
+   ],
+   "lpGroups": [
+    "直個別"
+   ]
+  },
+  {
+   "id": "p2",
+   "name": "11月エバーセミナー動線",
+   "campaignIds": [
+    "52549978676574"
+   ],
+   "lpGroups": [
+    "エバーセミナー"
+   ]
+  },
+  {
+   "id": "p3",
+   "name": "10月AIセミナー動線",
+   "campaignIds": [
+    "52534648928774"
+   ],
+   "lpGroups": [
+    "10月AIセミナー"
+   ]
+  }
+ ],
  "campaigns": [
   {
    "id": "120252087649000333",
@@ -483,8 +515,8 @@
     },
     {
      "date": "2026-11-25",
-     "spend": 5779,
-     "imp": 255,
+     "spend": 7903,
+     "imp": 366,
      "click": 4,
      "lpview": 3,
      "listin": 1
@@ -1255,10 +1287,10 @@
     },
     {
      "date": "2026-11-25",
-     "spend": 8860,
-     "imp": 657,
-     "click": 19,
-     "lpview": 9,
+     "spend": 10915,
+     "imp": 870,
+     "click": 24,
+     "lpview": 14,
      "listin": 2
     }
    ]
@@ -2401,10 +2433,10 @@
     },
     {
      "date": "2026-11-25",
-     "spend": 6481,
-     "imp": 243,
-     "click": 11,
-     "lpview": 9,
+     "spend": 7883,
+     "imp": 299,
+     "click": 15,
+     "lpview": 11,
      "listin": 2
     }
    ]
@@ -2895,10 +2927,10 @@
     },
     {
      "date": "2026-11-25",
-     "spend": 24174,
-     "imp": 1541,
-     "click": 38,
-     "lpview": 33,
+     "spend": 31139,
+     "imp": 2075,
+     "click": 42,
+     "lpview": 36,
      "listin": 3
     }
    ]
@@ -3715,10 +3747,10 @@
     },
     {
      "date": "2026-11-25",
-     "spend": 8448,
-     "imp": 424,
-     "click": 10,
-     "lpview": 9,
+     "spend": 12267,
+     "imp": 572,
+     "click": 18,
+     "lpview": 13,
      "listin": 1
     }
    ]
@@ -4105,10 +4137,10 @@
     },
     {
      "date": "2026-11-25",
-     "spend": 10711,
-     "imp": 732,
-     "click": 21,
-     "lpview": 14,
+     "spend": 14241,
+     "imp": 991,
+     "click": 26,
+     "lpview": 19,
      "listin": 0
     }
    ]
@@ -7964,37 +7996,5 @@
    ]
   }
  ],
- "tokenExpiresAt": "2027-01-23",
- "projects": [
-  {
-   "id": "p1",
-   "name": "直個別動線",
-   "campaignIds": [
-    "120252087649000333"
-   ],
-   "lpGroups": [
-    "直個別"
-   ]
-  },
-  {
-   "id": "p2",
-   "name": "11月エバーセミナー動線",
-   "campaignIds": [
-    "52549978676574"
-   ],
-   "lpGroups": [
-    "エバーセミナー"
-   ]
-  },
-  {
-   "id": "p3",
-   "name": "10月AIセミナー動線",
-   "campaignIds": [
-    "52534648928774"
-   ],
-   "lpGroups": [
-    "10月AIセミナー"
-   ]
-  }
- ]
+ "tokenExpiresAt": "2027-01-23"
 }
