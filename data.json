@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-25T19:56:23+09:00",
+ "updatedAt": "2026-11-25T20:01:01+09:00",
  "listinSource": "Meta: offsite_conversion.fb_pixel_complete_registration / offsite_conversion.fb_pixel_lead",
  "targetCpa": null,
  "monthlyGoal": null,
@@ -2927,8 +2927,8 @@
     },
     {
      "date": "2026-11-25",
-     "spend": 31326,
-     "imp": 2091,
+     "spend": 31350,
+     "imp": 2097,
      "click": 42,
      "lpview": 36,
      "listin": 3
@@ -3747,8 +3747,8 @@
     },
     {
      "date": "2026-11-25",
-     "spend": 12268,
-     "imp": 573,
+     "spend": 12312,
+     "imp": 576,
      "click": 18,
      "lpview": 13,
      "listin": 1
@@ -4137,8 +4137,8 @@
     },
     {
      "date": "2026-11-25",
-     "spend": 14242,
-     "imp": 992,
+     "spend": 14315,
+     "imp": 994,
      "click": 26,
      "lpview": 19,
      "listin": 0
