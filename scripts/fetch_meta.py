@@ -121,7 +121,7 @@ def add_videos(data, acts):
         rows = api(f'{act}/advideos', {'fields': 'id,source,length', 'limit': 100}, soft=True)
         if isinstance(rows, list):
             got.update({str(v['id']): v for v in rows if v.get('id')})
-            print(f'  {act} の動画ライブラリ：{len(rows)}本')
+            print(f'  {act} の動画ライブラリ：{len(rows)}本（URLあり {len([1 for v in rows if v.get("source")])}本・広告で使用中と一致 {len([1 for v in rows if str(v.get("id")) in want])}本）')
     n = 0
     for c in data['creatives']:
         v = got.get(c.pop('_vid', None) or '')
