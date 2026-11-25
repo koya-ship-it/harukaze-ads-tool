@@ -17,6 +17,8 @@
 
 自動で集まる分：`trend_accounts.json` の `accounts` に `{"username": "アカウント名", "genre": "AI系"}` を並べると、更新のたびにそのアカウントの直近30日のリールを取り、再生数の多い順に `trends_auto.json` へ書く（`scripts/fetch_ig.py`）。相手がビジネス／クリエイターアカウントの時だけ取れる。Instagramを読む権限つきのトークンが要る（`META_ACCESS_TOKEN` に権限を足すか、別に `META_IG_TOKEN` を入れる）。読めるかは Actions の「Instagramを読めるか試す」で確かめられる。
 
+動画単位で集まる分（YouTubeショート）：`trend_queries.json` の `queries` に `{"q": "探す言葉", "genre": "ジャンル"}` を並べると、毎朝1回、その言葉で伸びているショート動画を探して `trends_youtube.json` に書く（`scripts/fetch_youtube.py`）。基準は `days`・`maxSeconds`・`minViews`・`minRatio` で変えられる。無料の `YOUTUBE_API_KEY`（Secrets）が要る。入っていない間は何もしない。
+
 手で足す時（どれでもよい）
 - 画面の「＋ URLを足す」→ GitHubの「トレンドを足す」→ Run workflow → URL・ジャンル・種類・メモを入れて実行。1〜2分で並ぶ。
 - Grok BotやAIが `trends.json` に直接足す。形は `{id, url, genre: [..], kind, memo, addedAt, addedBy}`。

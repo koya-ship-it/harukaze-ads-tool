@@ -544,8 +544,8 @@ function ranked() {
 const REPO = 'https://github.com/koya-ship-it/harukaze-ads-tool';
 const CLAUDE_URL = 'claude://code/new';  /* Claudeアプリの Code の新しいセッションを開くリンク。?q= を付けると、依頼文が入った状態で開く */
 const CODEX_URL = 'codex://threads/new';  /* ChatGPTアプリ（Codex）の新しいスレッドを開くリンク。?prompt= を付けると、依頼文が入った状態で開く */
-let TRENDS = [], AUTO = { items: [] };
-const T = { q: '', genre: '', kind: '', sort: 'views', src: '' };
+let TRENDS = [], AUTO = { items: [] }, YT = { items: [] };
+const T = { q: '', genre: '', kind: '', site: '', sort: 'views', src: '' };
 const man = n => n == null ? '—' : n >= 1e4 ? (n / 1e4).toFixed(n >= 1e5 ? 0 : 1) + '万' : int(n);
 function embedOf(u) {
   let m;
@@ -559,25 +559,25 @@ function embedOf(u) {
 }
 function viewTrend() {
   /* 自動で集めた分（Instagramの決めたアカウントのリール）と、手で足した分を一緒に並べる */
-  const ALL = [...(AUTO.items || []).map(t => ({ ...t, auto: true })), ...TRENDS.map(t => ({ ...t, postedAt: t.addedAt }))].filter(t => /^https:\/\//.test(t.url || ''));
+  const ALL = [...(AUTO.items || []).map(t => ({ ...t, auto: true, site: 'Instagram' })), ...(YT.items || []).map(t => ({ ...t, auto: true, site: 'YouTube' })), ...TRENDS.map(t => ({ ...t, postedAt: t.addedAt }))].filter(t => /^https:\/\//.test(t.url || ''));
   const cnt = k => ALL.reduce((a, t) => { [].concat(t[k] || []).forEach(v => a[v] = (a[v] || 0) + 1); return a; }, {});
   const chips = (k, c) => Object.entries(c).map(([v, n]) => `<button class="chip ${T[k] === v ? 'on' : ''}" data-tk="${k}" data-tv="${esc(v)}">${esc(v)}<small>${n}</small></button>`).join('');
   const q = T.q.trim().toLowerCase();
   const key = { views: t => t.views || 0, ratio: t => t.ratio || 0, new: t => +new Date(t.postedAt || 0) }[T.sort];
-  const list = ALL.filter(t => (!T.genre || [].concat(t.genre || []).includes(T.genre)) && (!T.kind || t.kind === T.kind) && (!T.src || (T.src === 'auto') === !!t.auto) && (!q || [t.memo, t.url, t.kind, [].concat(t.genre || []).join(' '), t.username, t.addedBy].join(' ').toLowerCase().includes(q)))
+  const list = ALL.filter(t => (!T.genre || [].concat(t.genre || []).includes(T.genre)) && (!T.kind || t.kind === T.kind) && (!T.site || t.site === T.site) && (!T.src || (T.src === 'auto') === !!t.auto) && (!q || [t.memo, t.url, t.kind, [].concat(t.genre || []).join(' '), t.username, t.addedBy, t.query].join(' ').toLowerCase().includes(q)))
     .sort((a, b) => key(b) - key(a) || +new Date(b.postedAt || 0) - +new Date(a.postedAt || 0));
   const add = `<a class="btn" href="${REPO}/actions/workflows/add-trend.yml" target="_blank" rel="noopener">＋ URLを足す</a>`;
-  const seg = `<div class="seg">${[['views', '再生数が多い'], ['ratio', 'フォロワー比で伸びた'], ['new', '新しい']].map(([k, l]) => `<button data-tk="sort" data-tv="${k}" class="${T.sort === k ? 'on' : ''}">${l}</button>`).join('')}</div>`;
+  const seg = `<div class="seg">${[['views', '再生数が多い'], ['ratio', 'フォロワー・登録者比で伸びた'], ['new', '新しい']].map(([k, l]) => `<button data-tk="sort" data-tv="${k}" class="${T.sort === k ? 'on' : ''}">${l}</button>`).join('')}</div>`;
   const bar = `<div class="tr-bar"><input id="trq" type="search" placeholder="メモ・アカウント・ジャンルで探す" value="${esc(T.q)}">${seg}<span class="spacer"></span><span class="lbl">${list.length} / ${ALL.length}件${AUTO.updatedAt ? ' ・ 自動取得 ' + esc(String(AUTO.updatedAt).slice(5, 16).replace('T', ' ').replace('-', '/')) : ''}</span>${add}</div>
-    ${AUTO.rule ? `<div class="tr-rule">自動で集める基準：${esc(AUTO.rule)}のリール（見ているアカウントの中から）</div>` : ''}
-    <div class="tr-bar">${chips('genre', cnt('genre'))}${chips('kind', cnt('kind'))}${TRENDS.length && (AUTO.items || []).length ? `<button class="chip ${T.src === 'auto' ? 'on' : ''}" data-tk="src" data-tv="auto">自動で集めた分</button><button class="chip ${T.src === 'man' ? 'on' : ''}" data-tk="src" data-tv="man">手で足した分</button>` : ''}</div>`;
+    ${AUTO.rule || YT.rule ? `<div class="tr-rule">自動で集める基準 ─ ${AUTO.rule ? `Instagram：${esc(AUTO.rule)}のリール（見ているアカウントの中から）` : ''}${AUTO.rule && YT.rule ? '　／　' : ''}${YT.rule ? `YouTube：${esc(YT.rule)}（言葉で検索）` : ''}</div>` : ''}
+    <div class="tr-bar">${chips('genre', cnt('genre'))}${Object.keys(cnt('site')).length > 1 ? chips('site', cnt('site')) : ''}${chips('kind', cnt('kind'))}${TRENDS.length && (AUTO.items || []).length ? `<button class="chip ${T.src === 'auto' ? 'on' : ''}" data-tk="src" data-tv="auto">自動で集めた分</button><button class="chip ${T.src === 'man' ? 'on' : ''}" data-tk="src" data-tv="man">手で足した分</button>` : ''}</div>`;
   if (!ALL.length) return `<div class="tr-bar"><span class="spacer"></span>${add}</div><div class="tr-empty"><b>まだ1件も入っていません。</b><br>見ておきたいInstagramのアカウントを登録すると、そのリールが再生数の多い順にここへ自動で並びます。<br>今は、Instagramを読むための権限の追加と、アカウントの登録を待っている状態です。<br>見つけたものを手で足したい時は、右上の「＋ URLを足す」から入れられます。</div>`;
   return bar + (list.length ? `<div class="trs">${list.slice(0, 30).map(t => { const e = embedOf(t.url);
     return `<div class="tr">${e.src ? `<div class="tr-emb ${e.cls}"><iframe src="${esc(e.src)}" loading="lazy" allowfullscreen allow="encrypted-media; picture-in-picture" title="${esc(e.site)}"></iframe></div>` : `<div class="tr-emb"><div class="tr-link"><b style="font-size:14px;color:var(--ink)">${esc(e.site)}</b>このサイトはここに埋め込めないので、リンクで開きます。<a class="btn" href="${esc(t.url)}" target="_blank" rel="noopener">開く ↗</a></div></div>`}
-      <div class="tr-b">${t.auto ? `<div class="tr-st"><span>再生<b class="num">${man(t.views)}</b></span><span>いいね<b class="num">${man(t.likes)}</b></span><span>フォロワー比<b class="num">${t.ratio ? t.ratio + '倍' : '—'}</b></span></div>` : ''}
+      <div class="tr-b">${t.auto ? `<div class="tr-st"><span>再生<b class="num">${man(t.views)}</b></span><span>いいね<b class="num">${man(t.likes)}</b></span><span>${t.site === 'YouTube' ? '登録者比' : 'フォロワー比'}<b class="num">${t.ratio ? t.ratio + '倍' : '—'}</b></span></div>` : ''}
         <div class="tags">${[].concat(t.genre || []).map(g => `<span class="tag stage">${esc(g)}</span>`).join('')}${t.kind ? `<span class="tag">${esc(t.kind)}</span>` : ''}</div>
         ${t.memo ? `<div class="memo">${esc(t.memo)}</div>` : ''}
-        <div class="ft"><span>${t.username ? '@' + esc(t.username) + (t.followers ? '（' + man(t.followers) + '人）' : '') : esc(e.site)}</span><span>${esc(String(t.postedAt || '').slice(0, 10))}</span>${t.addedBy ? `<span>${esc(t.addedBy)}</span>` : ''}<a href="${esc(t.url)}" target="_blank" rel="noopener">元を開く ↗</a></div></div></div>`; }).join('')}</div>${list.length > 30 ? `<div class="tr-empty" style="margin-top:14px;padding:14px">上位30件を表示しています（全${list.length}件）。絞り込むと下位も見られます。</div>` : ''}` : '<div class="tr-empty">この条件に合うものはありません。</div>');
+        <div class="ft"><span>${t.username ? (t.site === 'YouTube' ? 'YouTube ' : '@') + esc(t.username) + (t.followers ? '（' + man(t.followers) + '人）' : '') : esc(e.site)}</span><span>${esc(String(t.postedAt || '').slice(0, 10))}</span>${t.addedBy ? `<span>${esc(t.addedBy)}</span>` : ''}<a href="${esc(t.url)}" target="_blank" rel="noopener">元を開く ↗</a></div></div></div>`; }).join('')}</div>${list.length > 30 ? `<div class="tr-empty" style="margin-top:14px;padding:14px">上位30件を表示しています（全${list.length}件）。絞り込むと下位も見られます。</div>` : ''}` : '<div class="tr-empty">この条件に合うものはありません。</div>');
 }
 
 /* ---------- 導線まとめ ---------- */
@@ -959,6 +959,7 @@ document.addEventListener('click', e => {
 });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
 document.addEventListener('input', e => { if (e.target.id !== 'trq') return; T.q = e.target.value; render(); const i = $('#trq'); i.focus(); i.setSelectionRange(i.value.length, i.value.length); });
+fetch('trends_youtube.json', { cache: 'no-store' }).then(r => r.ok ? r.json() : null).then(a => { if (a && Array.isArray(a.items)) { YT = a; if (S.view === 'trend') render(); } }).catch(() => {});
 fetch('trends_auto.json', { cache: 'no-store' }).then(r => r.ok ? r.json() : null).then(a => { if (a && Array.isArray(a.items)) { AUTO = a; if (S.view === 'trend') render(); } }).catch(() => {});
 fetch('trends.json', { cache: 'no-store' }).then(r => r.ok ? r.json() : []).then(a => { TRENDS = Array.isArray(a) ? a : []; if (S.view === 'trend') render(); }).catch(() => {});
 addEventListener('resize', () => S.view === 'dash' && drawChart());
