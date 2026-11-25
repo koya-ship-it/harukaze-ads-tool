@@ -2,7 +2,7 @@
  "days": 180,
  "minRatio": 10,
  "perAccount": 5,
- "keep": 60,
+ "keep": 80,
  "accounts": [
   {
    "username": "usutaku_copilot",
@@ -66,10 +66,6 @@
   },
   {
    "username": "api_mywork",
-   "genre": "在宅・副業系"
-  },
-  {
-   "username": "maya_07120321",
    "genre": "在宅・副業系"
   },
   {
@@ -147,6 +143,238 @@
   {
    "username": "kannart.inc",
    "genre": "デザイン系"
+  },
+  {
+   "username": "dokurochan92120",
+   "genre": "もしも・科学系"
+  },
+  {
+   "username": "jintaikun_official",
+   "genre": "もしも・科学系"
+  },
+  {
+   "username": "mediatry_official",
+   "genre": "もしも・科学系"
+  },
+  {
+   "username": "if_______ai",
+   "genre": "もしも・科学系"
+  },
+  {
+   "username": "if_series_with_ai",
+   "genre": "もしも・科学系"
+  },
+  {
+   "username": "hibiki_ai1208",
+   "genre": "もしも・科学系"
+  },
+  {
+   "username": "gensou_ai_",
+   "genre": "もしも・科学系"
+  },
+  {
+   "username": "ai_moshimo_world",
+   "genre": "もしも・科学系"
+  },
+  {
+   "username": "moshimo_ai_short",
+   "genre": "もしも・科学系"
+  },
+  {
+   "username": "bat.6880447",
+   "genre": "もしも・科学系"
+  },
+  {
+   "username": "mosinosi.sekai",
+   "genre": "もしも・科学系"
+  },
+  {
+   "username": "rina_on_screen",
+   "genre": "もしも・科学系"
+  },
+  {
+   "username": "ryoma_kumagai",
+   "genre": "もしも・科学系"
+  },
+  {
+   "username": "kinsei.inc",
+   "genre": "もしも・科学系"
+  },
+  {
+   "username": "cafe.stunner",
+   "genre": "もしも・科学系"
+  },
+  {
+   "username": "uchu_to_rekishi.true_story",
+   "genre": "もしも・科学系"
+  },
+  {
+   "username": "hajime_tabicreator",
+   "genre": "もしも・科学系"
+  },
+  {
+   "username": "tombosenseition",
+   "genre": "もしも・科学系"
+  },
+  {
+   "username": "handitover_jp",
+   "genre": "AIで作った動画"
+  },
+  {
+   "username": "liberxx0",
+   "genre": "AIで作った動画"
+  },
+  {
+   "username": "imma.gram",
+   "genre": "AIで作った動画"
+  },
+  {
+   "username": "masakichifamily",
+   "genre": "AIで作った動画"
+  },
+  {
+   "username": "ai_grandma_channel",
+   "genre": "AIで作った動画"
+  },
+  {
+   "username": "3teidao",
+   "genre": "AIで作った動画"
+  },
+  {
+   "username": "ki_medaka3",
+   "genre": "AIで作った動画"
+  },
+  {
+   "username": "ai_norihiko",
+   "genre": "AIで作った動画"
+  },
+  {
+   "username": "kohey_nishi",
+   "genre": "AIで作った動画"
+  },
+  {
+   "username": "taeju_tomato",
+   "genre": "AIで作った動画"
+  },
+  {
+   "username": "shirasu_noodles",
+   "genre": "AIで作った動画"
+  },
+  {
+   "username": "wad_ai0427",
+   "genre": "AIで作った動画"
+  },
+  {
+   "username": "shine_people_japan",
+   "genre": "AIで作った動画"
+  },
+  {
+   "username": "sasa_sns_growth",
+   "genre": "AIで作った動画"
+  },
+  {
+   "username": "tacos_jp8",
+   "genre": "AIで作った動画"
+  },
+  {
+   "username": "shachosong",
+   "genre": "AIビジネス系"
+  },
+  {
+   "username": "rasmaru_ai",
+   "genre": "AIビジネス系"
+  },
+  {
+   "username": "mokopu_ai",
+   "genre": "AIビジネス系"
+  },
+  {
+   "username": "pokousagi_story",
+   "genre": "AIビジネス系"
+  },
+  {
+   "username": "prison_academy__ai_anime",
+   "genre": "AIビジネス系"
+  },
+  {
+   "username": "unique_2026.06",
+   "genre": "AIビジネス系"
+  },
+  {
+   "username": "hajimari_story",
+   "genre": "AIビジネス系"
+  },
+  {
+   "username": "hirokichi_company",
+   "genre": "AIビジネス系"
+  },
+  {
+   "username": "toyora1957",
+   "genre": "AIビジネス系"
+  },
+  {
+   "username": "pro_no_mesen",
+   "genre": "AIビジネス系"
+  },
+  {
+   "username": "acn_shortcut",
+   "genre": "AI系"
+  },
+  {
+   "username": "chatgpt_dojo",
+   "genre": "AI系"
+  },
+  {
+   "username": "miyachi_ai",
+   "genre": "AI系"
+  },
+  {
+   "username": "ki__aikatuyou",
+   "genre": "AI系"
+  },
+  {
+   "username": "shiro_ai_jp",
+   "genre": "AI系"
+  },
+  {
+   "username": "keitowebai",
+   "genre": "AI系"
+  },
+  {
+   "username": "ai_creator_zen",
+   "genre": "AI系"
+  },
+  {
+   "username": "abe_chatgpt",
+   "genre": "AI系"
+  },
+  {
+   "username": "jun.ai.1",
+   "genre": "AI系"
+  },
+  {
+   "username": "masumi_ai_hack",
+   "genre": "AI系"
+  },
+  {
+   "username": "yamamoto.mikazuki.ai",
+   "genre": "AI系"
+  },
+  {
+   "username": "hiro_ai_prompt",
+   "genre": "AI系"
+  },
+  {
+   "username": "ai_study_yuki",
+   "genre": "AI系"
+  },
+  {
+   "username": "konori.design",
+   "genre": "AI系"
+  },
+  {
+   "username": "yurika.ai.marketing",
+   "genre": "AI系"
   }
  ]
 }
