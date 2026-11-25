@@ -2,6 +2,11 @@ name: Instagramを読めるか試す
 
 on:
   workflow_dispatch:
+    inputs:
+      mode:
+        description: '1＝アカウント指定、hashtag＝ハッシュタグ検索'
+        default: '1'
+        type: string
 
 permissions:
   contents: read
@@ -19,5 +24,5 @@ jobs:
           META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
           META_IG_TOKEN: ${{ secrets.META_IG_TOKEN }}
           META_IG_USER_ID: ${{ secrets.META_IG_USER_ID }}
-          IG_TEST: '1'
+          IG_TEST: ${{ inputs.mode }}
         run: python scripts/fetch_ig.py

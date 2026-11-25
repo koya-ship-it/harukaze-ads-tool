@@ -64,17 +64,35 @@ def fetch(ig_id, username):
     return (d or {}).get('business_discovery'), err
 
 
+def hashtag_test(ig_id):
+    """ハッシュタグ検索が今のトークンで使えるかだけ試す（何も書き換えない）。"""
+    for tag in ('ai動画', 'もしも'):
+        d, err = api('ig_hashtag_search', {'user_id': ig_id, 'q': tag})
+        if err or not (d or {}).get('data'):
+            print(f'  #{tag}: 検索できませんでした（{err}）'); continue
+        hid = d['data'][0]['id']
+        m, err = api(f'{hid}/top_media', {'user_id': ig_id, 'limit': 50, 'fields': 'id,caption,media_type,media_product_type,permalink,timestamp,like_count,comments_count'})
+        if err:
+            print(f'  #{tag}: 人気の投稿を取れませんでした（{err}）'); continue
+        rows = m.get('data', [])
+        vids = [r for r in rows if r.get('media_type') == 'VIDEO' or r.get('media_product_type') == 'REELS']
+        likes = sorted([r.get('like_count') or 0 for r in vids], reverse=True)[:5]
+        print(f'  #{tag}: 人気の投稿 {len(rows)}件・うち動画 {len(vids)}件・いいね上位 {likes}・種類 {sorted({str(r.get("media_product_type")) for r in rows})}')
+
+
 def main():
     if not TOKEN:
         print('トークンがありません。'); return
     conf = json.load(open(CONF, encoding='utf-8')) if os.path.exists(CONF) else {}
-    test = os.environ.get('IG_TEST') == '1'
+    test = os.environ.get('IG_TEST') in ('1', 'hashtag')
     accounts = [{'username': 'instagram', 'genre': 'テスト'}] if test else conf.get('accounts') or []
     if not accounts:
         print('trend_accounts.json に見ておきたいアカウントがまだ入っていません。'); return
     ig_id = my_ig_id()
     if not ig_id:
         return
+    if os.environ.get('IG_TEST') == 'hashtag':
+        hashtag_test(ig_id); return
     since = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=int(conf.get('days', 30)))
     items, ok = [], 0
     min_ratio = float(conf.get('minRatio') or 0)  # 再生数がフォロワー数の何倍以上のリールだけ残すか
