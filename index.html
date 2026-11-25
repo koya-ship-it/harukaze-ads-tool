@@ -520,6 +520,7 @@ const lpSw = l => { const t = imgOk(l.thumbUrl) ? esc(encodeURI(l.thumbUrl)) : w
 const cpaTxt = m => isFinite(m.cpa) ? yen(m.cpa) : '—';
 /* 画像・動画の場所は https のURLか、このフォルダからの相対パス（例 creatives/a01.jpg）だけ受け付ける */
 const imgOk = u => /^https:\/\/[^\s'"<>]+$/.test(u || '') || /^[\w\-./%]+$/.test(u || '') && !/^\/|\.\./.test(u);
+const srcOf = u => /^https:\/\//.test(u) ? u : encodeURI(u);
 const thumb = (c, cls = '') => imgOk(c.imageUrl)
   ? `<div class="thumb ${cls}" style="background:#e9e8e3 url('${esc(encodeURI(c.imageUrl))}') center/cover"><span class="fmt">${esc(c.format)}</span></div>`
   : `<div class="thumb ${cls}" style="background:${esc(c.color)}"><span class="fmt">${esc(c.format)}</span>${esc(c.copy).replace(/\n/g, '<br>')}</div>`;
@@ -760,7 +761,7 @@ function briefFor(c) {
 - 名前：${c.name}
 - 導線：${proj ? proj.name : ''}
 - 種類：${c.format}
-- 画像：${imgOk(c.imageUrl) ? abs(c.imageUrl) : '（未登録。実物を添付します）'}
+- 画像：${imgOk(c.imageUrl) ? abs(c.imageUrl) : '（未登録。実物を添付します）'}${c.format === '動画' ? `\n- 動画：${imgOk(c.videoUrl) ? c.videoUrl + (c.videoSec ? `（${c.videoSec}秒）` : '') : '（取得できていません。動画ファイルを添付します）'}` : ''}
 - リンク先のLP：${lp.url || '（不明）'}
 
 ■ 成績（${recent()}）
@@ -775,21 +776,29 @@ ${noCv ? `- 登録数：この導線はMetaで登録を計測できていない�
 ■ 数字から見た仮説
 ${hyp.map(h => '- ' + h).join('\n')}
 `;
-  if (c.format === '動画') return `DesignNOWとして、次の動画広告の「編集の型」を読み取り、同じ型で新しい素材を編集できる指示書にしてください。
+  if (c.format === '動画') return `DesignNOWとして、次の動画広告の「編集の型」を読み取り、同じ型で新しい素材を編集できるようにしてください。
 
 ${head}
-■ やってほしいこと
-1. 添付した動画（この広告の実物）を見て、型を言葉にする。
-   - 冒頭3秒の掴み（何を見せ、何と言っているか）
-   - 構成（何秒ごとに何の場面か）と、カットのテンポ（1カットの平均秒数、切り替えの仕方）
-   - テロップ（書体・太さ・色・縁取り・位置・出し方・1画面の文字数）
-   - BGM（雰囲気・テンポ・音量の上げ下げ）と効果音（どこで何を鳴らすか）
-   - CTA（いつ、どんな言葉と見た目で出すか）
-2. それを「編集指示書」にまとめる（別の素材にそのまま当てはめられる粒度で）。
-3. 私が新しい素材を渡したら、この指示書どおりに編集する。
-4. あわせて、上の仮説をもとに、変えると良さそうな点を3つ提案する（冒頭／テロップ／CTAのどれを変えるかを分けて）。
+■ 手順
+1. 動画を取ってくる。上の「動画」のURLから動画ファイルをダウンロードして、作業フォルダに保存する（URLは数日で切れるので最初にやる）。
+2. 動画を実際に見る。ffmpeg などで次の3つを取り出し、コマの画像は必ず開いて目で確認する。
+   - 0.5〜1秒ごとのコマ画像
+   - 場面が切り替わる位置（カットの時刻の一覧）
+   - 音声（セリフ・ナレーションは文字に起こす）
+   読み取れなかった項目は「読み取れず」と書く。推測で埋めない。
+3. 編集の型を言葉にする。
+   - 冒頭3秒の掴み：何を見せ、何と言っているか。なぜ指が止まるのか
+   - 構成表：「何秒〜何秒｜画面に映るもの｜テロップ｜セリフ・ナレーション｜音」を、最初から最後まで
+   - カット：本数、1カットの平均の長さ、最短と最長、つなぎ方、ズームや揺れなどの動き
+   - テロップ：書体の系統と太さ、色、縁取りや座布団、位置、1画面の文字数、出し方、強調する言葉の扱い
+   - 音：BGMの雰囲気とテンポ、音量を上げ下げする所、効果音を入れる所、無音の使い方
+   - CTA：何秒から、どんな言葉と見た目で、どれくらいの長さ出すか
+4. それを「編集指示書」にまとめる。別の素材にそのまま当てはめられるように、秒数の割り振り・テロップの設定値（色・大きさ・位置）・カットのテンポを数字で書く。指示書は作業フォルダに1つのファイルで保存する。
+5. 上の成績と仮説から、変えると良さそうな点を3つ挙げる（冒頭／テロップ／CTAのどれを変えるかを分けて）。
+6. ここで一度止まり、指示書の要点を見せて「新しい素材（動画・台本）を渡してください」と聞く。
+7. 素材を渡されたら、編集指示書どおりに編集して書き出す。比率と長さの目安は元の動画に合わせる。フォント・カットのテンポ・BGMと効果音の入れ方・CTAを、元の型にそろえる。書き出した後、元の動画と並べて、型がそろっているかを自分で見比べる。
 
-※ 画像のURLはサムネイルです。動画の実物は、このあと添付します。`;
+※ 「画像」のURLはサムネイルです。読み取りには必ず「動画」の実物を使ってください。`;
   const fixTxt = { copy: 'コピー（言葉・訴求・数字）', material: '素材（写真・イラスト・主役の絵）', world: '世界観（配色・書体・レイアウト・全体の雰囲気）' };
   const fixBlock = B.fix === 'auto' ? `■ 最初にやること：要素分析
 このバナーを「コピー／素材／世界観」の3つの要素に分けて言葉にし、上の成績と仮説から、当たっている要因だと思う要素を1つ選ぶ。それを「固定する要素」にする。選んだ理由を1〜2行で書いてから作り始める。`
@@ -839,10 +848,10 @@ function aiRender() {
   const seg = (k, opts) => `<div class="seg">${opts.map(([v, l]) => `<button data-bk="${k}" data-bv="${v}" class="${B[k] === v ? 'on' : ''}">${l}</button>`).join('')}</div>`;
   const open = !$('#aiTxt') ? false : !$('#aiTxt').hidden;
   $('#aiBox').innerHTML = video ? `
-    <div class="ai-h"><b>この動画の編集の型を読み取る</b><span>テロップ・カットのテンポ・BGM・効果音・CTAを言葉にして、同じ型で編集できるようにします</span></div>
+    <div class="ai-h"><b>この動画の編集の型を読み取る</b><span>テロップ・カットのテンポ・BGM・効果音・CTAを言葉にして編集指示書にし、新しい素材を同じ型で編集します</span></div>
     <div class="ai-a"><button class="btn primary" data-brief="codex">Codexで始める</button><button class="btn" data-brief="copy">依頼文をコピー</button><button class="btn" data-brief="show">依頼文を見る</button></div>
     <div class="ai-ok" id="aiOk"></div><textarea id="aiTxt" readonly ${open ? '' : 'hidden'}></textarea>
-    <div class="ai-n">「Codexで始める」を押すと、依頼文が入った状態でCodexの新しいスレッドが開きます。動画の実物を一緒に添付してから送ってください。</div>` : `
+    <div class="ai-n">${imgOk(c.videoUrl) ? '「Codexで始める」を押すと、依頼文と動画のURLが入った状態でCodexの新しいスレッドが開きます。Codexが動画を自分で取ってきて読み取ります。' : '「Codexで始める」を押すと、依頼文が入った状態でCodexの新しいスレッドが開きます。この広告は動画の実物が取れていないので、動画ファイルを一緒に添付してから送ってください。'}</div>` : `
     <div class="ai-h"><b>DesignNOWでより良いクリエイティブにする</b><span>固定する要素を1つ決めて、残りをガラッと変えた5案を作ります</span></div>
     <div class="ai-r"><span>作るもの</span>${seg('kind', [['banner', '改善案を5案'], ['motion', '動画にする']])}</div>
     ${B.kind === 'banner' ? `<div class="ai-r"><span>固定する要素</span>${seg('fix', [['auto', 'AIが分析して決める'], ['copy', 'コピー'], ['material', '素材'], ['world', '世界観']])}</div>` : ''}
@@ -860,7 +869,7 @@ function openDrawer(id) {
   $('#drawer').innerHTML = `
     <div class="dr-h"><h2>${esc(c.name)}</h2>${stTag(m)}<button class="btn" data-close>閉じる</button></div>
     <div class="dr-b">
-      ${imgOk(c.videoUrl) ? `<div class="dr-cr"><video src="${esc(encodeURI(c.videoUrl))}" controls playsinline preload="metadata"${imgOk(c.imageUrl) ? ` poster="${esc(encodeURI(c.imageUrl))}"` : ''}></video></div>`
+      ${imgOk(c.videoUrl) ? `<div class="dr-cr"><video src="${esc(srcOf(c.videoUrl))}" controls playsinline preload="metadata"${imgOk(c.imageUrl) ? ` poster="${esc(srcOf(c.imageUrl))}"` : ''}></video></div>`
         : imgOk(c.imageUrl) ? `<div class="dr-cr"><a href="${esc(encodeURI(c.imageUrl))}" target="_blank" rel="noopener" title="原寸で開く"><img src="${esc(encodeURI(c.imageUrl))}" alt="${esc(c.name)}"></a></div>`
         : `<div class="dr-cr none">クリエイティブの画像がまだ入っていません（data.json の imageUrl / videoUrl）</div>`}
       <div class="ai" id="aiBox"></div>
