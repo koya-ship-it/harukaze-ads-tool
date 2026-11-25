@@ -25,10 +25,19 @@ jobs:
           META_API_VERSION: ${{ vars.META_API_VERSION }}
           META_LISTIN_ACTION: ${{ vars.META_LISTIN_ACTION }}
         run: python scripts/fetch_meta.py
+      - name: Instagramの決めたアカウントのリールを取る（失敗しても止めない）
+        continue-on-error: true
+        env:
+          META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
+          META_IG_TOKEN: ${{ secrets.META_IG_TOKEN }}
+          META_IG_USER_ID: ${{ secrets.META_IG_USER_ID }}
+          META_API_VERSION: ${{ vars.META_API_VERSION }}
+        run: python scripts/fetch_ig.py
       - name: 変わっていれば保存する
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data.json creatives
+          [ -f trends_auto.json ] && git add trends_auto.json || true
           git diff --cached --quiet || git commit -m "数字を更新（Meta）"
           git push

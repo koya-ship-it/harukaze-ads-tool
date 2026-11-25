@@ -15,7 +15,9 @@
 
 左のメニューの「トレンド」に、`trends.json` に入っているURLが新しい順に並ぶ。Instagramのリール・TikTok・YouTubeは公式の埋め込みでその場で見られ、広告ライブラリなど埋め込めないものはリンクで並ぶ。ジャンル・種類・言葉で絞れる。
 
-足し方（どれでもよい）
+自動で集まる分：`trend_accounts.json` の `accounts` に `{"username": "アカウント名", "genre": "AI系"}` を並べると、更新のたびにそのアカウントの直近30日のリールを取り、再生数の多い順に `trends_auto.json` へ書く（`scripts/fetch_ig.py`）。相手がビジネス／クリエイターアカウントの時だけ取れる。Instagramを読む権限つきのトークンが要る（`META_ACCESS_TOKEN` に権限を足すか、別に `META_IG_TOKEN` を入れる）。読めるかは Actions の「Instagramを読めるか試す」で確かめられる。
+
+手で足す時（どれでもよい）
 - 画面の「＋ URLを足す」→ GitHubの「トレンドを足す」→ Run workflow → URL・ジャンル・種類・メモを入れて実行。1〜2分で並ぶ。
 - Grok BotやAIが `trends.json` に直接足す。形は `{id, url, genre: [..], kind, memo, addedAt, addedBy}`。
 - 消す・直す時は `trends.json` を編集する。
