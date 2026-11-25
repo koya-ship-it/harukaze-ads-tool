@@ -112,20 +112,16 @@ def video_id_of(creative):
     return str(vid) if vid else None
 
 
-def add_videos(data):
+def add_videos(data, acts):
     """動画広告の実物のURLと長さを入れる。URLはMetaの配信用で期限があるので、更新のたびに取り直す。取れなくても止めない。"""
     want = {c['_vid'] for c in data['creatives'] if c.get('_vid')}
     got = {}
-    ids = sorted(want)
-    for i in range(0, len(ids), 25):
-        res = api('', {'ids': ','.join(ids[i:i + 25]), 'fields': 'source,length'}, soft=True)
-        if isinstance(res, dict):
-            got.update(res)
-        else:  # まとめて取れない時は1本ずつ
-            for v in ids[i:i + 25]:
-                one = api(v, {'fields': 'source,length'}, soft=True)
-                if isinstance(one, dict):
-                    got[v] = one
+    # 広告アカウントの動画ライブラリから取る（動画を1本ずつ直接読む権限は無いため）
+    for act in acts:
+        rows = api(f'{act}/advideos', {'fields': 'id,source,length', 'limit': 100}, soft=True)
+        if isinstance(rows, list):
+            got.update({str(v['id']): v for v in rows if v.get('id')})
+            print(f'  {act} の動画ライブラリ：{len(rows)}本')
     n = 0
     for c in data['creatives']:
         v = got.get(c.pop('_vid', None) or '')
@@ -133,7 +129,8 @@ def add_videos(data):
             c['videoUrl'] = v['source']
             c['videoSec'] = round(float(v.get('length') or 0), 1) or None
             n += 1
-    print(f'動画の実物：{len(want)}本のうち {len([1 for k in want if (got.get(k) or {}).get("source")])}本のURLを取得（広告 {n}本に反映）')
+    hit = len([1 for k in want if (got.get(k) or {}).get('source')])
+    print(f'動画の実物：{len(want)}本のうち {hit}本のURLを取得（広告 {n}本に反映）')
 
 
 def lp_id_from(url):
@@ -267,7 +264,7 @@ def main():
         data['tokenExpiresAt'] = datetime.datetime.fromtimestamp(exp, JST).date().isoformat()
         print('トークンの期限:', data['tokenExpiresAt'])
     save_images(data)
-    add_videos(data)
+    add_videos(data, acts)
     with open(DATA, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=1)
         f.write('\n')
