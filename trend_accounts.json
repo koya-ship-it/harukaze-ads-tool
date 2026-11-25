@@ -376,5 +376,6 @@
    "username": "yurika.ai.marketing",
    "genre": "AI系"
   }
- ]
+ ],
+ "perRun": 10
 }

@@ -17,6 +17,7 @@ import datetime, json, os, sys, urllib.error, urllib.parse, urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONF, OUT = os.path.join(ROOT, 'trend_accounts.json'), os.path.join(ROOT, 'trends_auto.json')
+CACHE = os.path.join(ROOT, 'trends_auto_cache.json')  # アカウントごとの前回の結果。回数制限があるので、少しずつ順番に取り直してためる
 JST = datetime.timezone(datetime.timedelta(hours=9))
 TOKEN = (os.environ.get('META_IG_TOKEN') or os.environ.get('META_ACCESS_TOKEN') or '').strip()
 
@@ -57,7 +58,7 @@ def my_ig_id():
 
 def fetch(ig_id, username):
     fields = ('business_discovery.username(%s){username,name,followers_count,media_count,'
-              'media.limit(60){id,caption,media_type,media_product_type,permalink,timestamp,like_count,comments_count,view_count}}') % username
+              'media.limit(40){id,caption,media_type,media_product_type,permalink,timestamp,like_count,comments_count,view_count}}') % username
     d, err = api(ig_id, {'fields': fields})
     if err and 'view_count' in err:  # 再生数の項目が使えない版の時は外して取り直す
         d, err = api(ig_id, {'fields': fields.replace(',view_count', '')})
@@ -93,15 +94,29 @@ def main():
         return
     if os.environ.get('IG_TEST') == 'hashtag':
         hashtag_test(ig_id); return
+    now = datetime.datetime.now(JST).replace(microsecond=0)
     since = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=int(conf.get('days', 30)))
-    items, ok = [], 0
     min_ratio = float(conf.get('minRatio') or 0)  # 再生数がフォロワー数の何倍以上のリールだけ残すか
-    for a in accounts:
-        u = str(a.get('username', '')).strip().lstrip('@')
-        if not u:
-            continue
+    cache = {} if test else (json.load(open(CACHE, encoding='utf-8')) if os.path.exists(CACHE) else {})
+    names = [str(a.get('username', '')).strip().lstrip('@') for a in accounts]
+    genre = {n: (a.get('genre') or 'その他') for n, a in zip(names, accounts)}
+
+    # 古い順（まだ取っていないものが最初）に、1回の実行で perRun 個だけ取りに行く。読めないと分かったものは7日あけてから試す
+    def due(n):
+        c = cache.get(n)
+        if not c:
+            return ''
+        if c.get('status') == 'invalid' and c.get('fetchedAt', '') > (now - datetime.timedelta(days=7)).isoformat():
+            return '9'
+        return c.get('fetchedAt', '')
+    todo = [n for n in sorted([n for n in names if n], key=due) if due(n) != '9'][:int(conf.get('perRun', 10))]
+    ok = 0
+    for u in todo:
         bd, err = fetch(ig_id, u)
         if not bd:
+            if 'code 4' in str(err) or 'limit' in str(err).lower():
+                print(f'  回数制限に当たったので、今回はここまで（@{u} 以降は次回）'); break
+            cache[u] = {'fetchedAt': now.isoformat(), 'status': 'invalid', 'items': [], 'error': str(err)[:80]}
             print(f'  @{u}: 取れませんでした（{err}）'); continue
         ok += 1
         rows = []
@@ -112,32 +127,36 @@ def main():
                 ts = datetime.datetime.strptime(m['timestamp'], '%Y-%m-%dT%H:%M:%S%z')
             except Exception:
                 continue
-            if ts < since:
-                continue
-            fol = bd.get('followers_count') or 0
-            views = m.get('view_count')
+            fol, views = bd.get('followers_count') or 0, m.get('view_count')
             rows.append({
-                'url': m.get('permalink'), 'genre': [a.get('genre') or 'その他'], 'kind': 'リール・ショート動画',
+                'url': m.get('permalink'), 'genre': [genre[u]], 'kind': 'リール・ショート動画',
                 'memo': ' '.join(str(m.get('caption') or '').split())[:90], 'username': bd.get('username', u), 'followers': fol,
                 'views': views, 'likes': m.get('like_count'), 'comments': m.get('comments_count'),
                 'ratio': round(views / fol, 2) if views and fol else None,
                 'postedAt': ts.astimezone(JST).replace(microsecond=0).isoformat(),
             })
-        hit = [r for r in rows if (r['ratio'] or 0) >= min_ratio] if min_ratio else rows
-        hit.sort(key=lambda r: -((r['views'] or 0) or (r['likes'] or 0)))
         best = max([r['ratio'] or 0 for r in rows], default=0)
-        print(f'  @{u}: フォロワー {bd.get("followers_count")}・直近{conf.get("days", 30)}日のリール {len(rows)}本・最大 {best}倍・基準（{min_ratio}倍以上）を超えた {len(hit)}本')
-        items += hit[:int(conf.get('perAccount', 5))]
+        print(f'  @{u}: フォロワー {bd.get("followers_count")}・リール {len(rows)}本・最大 {best}倍')
+        # 基準を少し下回るものも残しておく（基準を変えた時に取り直さなくて済むように）。上位20本まで
+        rows.sort(key=lambda r: -(r['ratio'] or 0))
+        cache[u] = {'fetchedAt': now.isoformat(), 'status': 'ok', 'followers': bd.get('followers_count'), 'items': rows[:20]}
     if test:
-        print('テスト終了。読めたアカウント', ok, '／ 取れたリール', len(items), '／ 再生数あり', sum(1 for r in items if r['views'] is not None)); return
-    if not ok:
-        print('1つも読めなかったので、trends_auto.json は書き換えていません。'); return
-    items = [r for r in items if r['url']]
+        print('テスト終了。読めたアカウント', ok); return
+    with open(CACHE, 'w', encoding='utf-8') as f:
+        json.dump(cache, f, ensure_ascii=False, indent=1); f.write('\n')
+    items, floor = [], since.astimezone(JST).isoformat()
+    for u in names:
+        c = cache.get(u) or {}
+        hit = [dict(r, genre=[genre[u]]) for r in c.get('items', []) if r.get('url') and (r.get('ratio') or 0) >= min_ratio and r.get('postedAt', '') >= floor]
+        hit.sort(key=lambda r: -((r['views'] or 0) or (r['likes'] or 0)))
+        items += hit[:int(conf.get('perAccount', 5))]
     items.sort(key=lambda r: -((r['views'] or 0) or (r['likes'] or 0)))
-    out = {'rule': f'直近{conf.get("days", 30)}日・再生数がフォロワー数の{min_ratio:g}倍以上' if min_ratio else f'直近{conf.get("days", 30)}日', 'updatedAt': datetime.datetime.now(JST).replace(microsecond=0).isoformat(), 'items': items[:int(conf.get('keep', 40))]}
+    done = len([n for n in names if n in cache])
+    rule = f'直近{conf.get("days", 30)}日・再生数がフォロワー数の{min_ratio:g}倍以上' if min_ratio else f'直近{conf.get("days", 30)}日'
+    out = {'rule': rule, 'updatedAt': now.isoformat(), 'accounts': len(names), 'checked': done, 'items': items[:int(conf.get('keep', 40))]}
     with open(OUT, 'w', encoding='utf-8') as f:
         json.dump(out, f, ensure_ascii=False, indent=1); f.write('\n')
-    print(f'trends_auto.json を書き換えました：{len(out["items"])}本（{ok}アカウント）')
+    print(f'今回 {ok}アカウントを取り直し。確認済み {done}／{len(names)}アカウント。trends_auto.json：{len(out["items"])}本')
 
 
 if __name__ == '__main__':

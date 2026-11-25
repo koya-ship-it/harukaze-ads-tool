@@ -39,5 +39,6 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data.json creatives
           [ -f trends_auto.json ] && git add trends_auto.json || true
+          [ -f trends_auto_cache.json ] && git add trends_auto_cache.json || true
           git diff --cached --quiet || git commit -m "数字を更新（Meta）"
           git push
