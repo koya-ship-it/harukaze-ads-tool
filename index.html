@@ -250,7 +250,7 @@ table.tb { width: 100%; border-collapse: collapse; font-size: 13px; }
 .ai textarea { width: 100%; height: 260px; margin-top: 10px; border: 1px solid var(--line); border-radius: 6px; padding: 10px; font: 12px/1.6 ui-monospace, Menlo, monospace; background: #fff; resize: vertical; }
 .ai-n { font-size: 11px; color: var(--ink-3); margin-top: 8px; line-height: 1.6; }
 .adlib { margin-bottom: 16px; }
-.adlib-b { display: flex; flex-wrap: wrap; gap: 8px; padding: 12px 16px 4px; }
+.adlib-b { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding: 12px 16px 4px; }
 .adlib-w { display: inline-flex; align-items: center; gap: 0; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; font-size: 12.5px; background: #fff; }
 .adlib-w b { padding: 6px 10px; font-weight: 600; }
 .adlib-w a { padding: 6px 10px; border-left: 1px solid var(--line); color: var(--blue); text-decoration: none; font-weight: 600; }
@@ -566,7 +566,15 @@ function embedOf(u) {
 }
 /* 今、実際に配信されている他社の広告は、Metaの広告ライブラリで見られる（数字や動画そのものは公式には取れないので、検索済みの画面を開く） */
 const ADLIB_WORDS = ['AI 副業', '生成AI 講座', 'AI スクール', 'Webデザイン スクール', 'デザイン 講座', '在宅ワーク', '副業 スクール', 'SNS運用 講座', '動画編集 スクール', '無料セミナー AI'];
-const adlib = (q, media) => `https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=JP&is_targeted_country=false&media_type=${media}&search_type=keyword_unordered&q=${encodeURIComponent(q)}`;
+/* 広告費は公開されていないので、代わりに「長く配信が続いている＝止められていない＝当たっている可能性が高い」で絞る。
+   配信開始日が N日以上前で、今も配信中の広告だけを開く */
+const AL = { w: ADLIB_WORDS[0], days: 60, media: 'video' };
+function adlib() {
+  const p = new URLSearchParams({ active_status: 'active', ad_type: 'all', country: 'JP', is_targeted_country: 'false', media_type: AL.media, search_type: 'keyword_unordered', q: AL.w });
+  if (AL.days) { const d = new Date(Date.now() - AL.days * 864e5); p.set('start_date[max]', d.toISOString().slice(0, 10)); }
+  p.set('sort_data[mode]', 'total_impressions'); p.set('sort_data[direction]', 'desc');
+  return 'https://www.facebook.com/ads/library/?' + p.toString();
+}
 function viewTrend() {
   /* 自動で集めた分（Instagramの決めたアカウントのリール）と、手で足した分を一緒に並べる */
   const ALL = [...(AUTO.items || []).map(t => ({ ...t, auto: true, site: 'Instagram' })), ...(YT.items || []).map(t => ({ ...t, auto: true, site: 'YouTube' })), ...TRENDS.map(t => ({ ...t, postedAt: t.addedAt }))].filter(t => /^https:\/\//.test(t.url || ''));
@@ -581,9 +589,15 @@ function viewTrend() {
   const bar = `<div class="tr-bar"><input id="trq" type="search" placeholder="メモ・アカウント・ジャンルで探す" value="${esc(T.q)}">${seg}<span class="spacer"></span><span class="lbl">${list.length} / ${ALL.length}件${AUTO.updatedAt ? ' ・ 自動取得 ' + esc(String(AUTO.updatedAt).slice(5, 16).replace('T', ' ').replace('-', '/')) : ''}</span>${add}</div>
     ${AUTO.rule || YT.rule ? `<div class="tr-rule">自動で集める基準 ─ ${AUTO.rule ? `Instagram：${esc(AUTO.rule)}のリール（見ているアカウント ${AUTO.accounts || ''}個のうち ${AUTO.checked || 0}個を確認済み。回数制限があるので3時間ごとに10個ずつ進みます）` : ''}${AUTO.rule && YT.rule ? '　／　' : ''}${YT.rule ? `YouTube：${esc(YT.rule)}（言葉で検索）` : ''}</div>` : ''}
     <div class="tr-bar">${chips('genre', cnt('genre'))}${Object.keys(cnt('site')).length > 1 ? chips('site', cnt('site')) : ''}${chips('kind', cnt('kind'))}${TRENDS.length && (AUTO.items || []).length ? `<button class="chip ${T.src === 'auto' ? 'on' : ''}" data-tk="src" data-tv="auto">自動で集めた分</button><button class="chip ${T.src === 'man' ? 'on' : ''}" data-tk="src" data-tv="man">手で足した分</button>` : ''}</div>`;
-  const lib = `<div class="card adlib"><div class="card-h"><h2>今、配信されている他社の広告を見る</h2><span class="sub">Metaの広告ライブラリ（日本・配信中）を、言葉で検索した状態で開きます</span></div>
-    <div class="adlib-b">${ADLIB_WORDS.map(w => `<span class="adlib-w"><b>${esc(w)}</b><a href="${adlib(w, 'video')}" target="_blank" rel="noopener">動画</a><a href="${adlib(w, 'image')}" target="_blank" rel="noopener">画像</a></span>`).join('')}</div>
-    <div class="adlib-n">企業が実際に出している広告（Instagram・Facebook）が、CTAつきで見られます。広告費や表示回数は、Metaが公開していないので出ません。良い広告を見つけたら、そのURLを右上の「＋ URLを足す」で残せます。</div></div>`;
+  const aseg = (k, opts) => `<div class="seg">${opts.map(([v, l]) => `<button data-al="${k}" data-av="${v}" class="${String(AL[k]) === String(v) ? 'on' : ''}">${l}</button>`).join('')}</div>`;
+  const lib = `<div class="card adlib"><div class="card-h"><h2>他社の当たっている広告を探す</h2><span class="sub">Metaの広告ライブラリ ・ 日本 ・ 今も配信中</span></div>
+    <div class="adlib-b">
+      <select class="sel" id="alw" aria-label="探す言葉">${ADLIB_WORDS.map(w => `<option ${w === AL.w ? 'selected' : ''}>${esc(w)}</option>`).join('')}</select>
+      ${aseg('days', [[90, '90日以上 配信中'], [60, '60日以上'], [30, '30日以上'], [0, 'すべて']])}
+      ${aseg('media', [['video', '動画'], ['image', '画像'], ['all', '両方']])}
+      <a class="btn primary" href="${esc(adlib())}" target="_blank" rel="noopener">広告ライブラリで開く ↗</a>
+    </div>
+    <div class="adlib-n">他社の広告費は、Metaが公開していないので見られません。代わりに「長く配信が続いている広告」で絞ります。成果の出ない広告は止められるので、60日・90日と続いている広告は、当たっている可能性が高い広告です。良いものはURLを「＋ URLを足す」で残せます。</div></div>`;
   if (!ALL.length) return lib + `<div class="tr-bar"><span class="spacer"></span>${add}</div><div class="tr-empty"><b>まだ1件も入っていません。</b><br>見ておきたいInstagramのアカウントを登録すると、そのリールが再生数の多い順にここへ自動で並びます。<br>今は、Instagramを読むための権限の追加と、アカウントの登録を待っている状態です。<br>見つけたものを手で足したい時は、右上の「＋ URLを足す」から入れられます。</div>`;
   return lib + bar + (list.length ? `<div class="trs">${list.slice(0, 30).map(t => { const e = embedOf(t.url);
     return `<div class="tr">${e.src ? `<div class="tr-emb ${e.cls}"><iframe src="${esc(e.src)}" loading="lazy" allowfullscreen allow="encrypted-media; picture-in-picture" title="${esc(e.site)}"></iframe></div>` : `<div class="tr-emb"><div class="tr-link"><b style="font-size:14px;color:var(--ink)">${esc(e.site)}</b>このサイトはここに埋め込めないので、リンクで開きます。<a class="btn" href="${esc(t.url)}" target="_blank" rel="noopener">開く ↗</a></div></div>`}
@@ -944,10 +958,11 @@ function render() {
 }
 document.addEventListener('click', e => {
   if (S.calOpen && !e.target.closest('#cal,#calBtn')) { S.calOpen = false; S.pick = null; $('#cal').hidden = true; }
-  const t = e.target.closest('[data-bk],[data-brief],[data-cal],[data-calm],[data-calx],[data-day],[data-trend],[data-tk],[data-home],[data-proj],[data-go],[data-d],[data-sort],[data-mode],[data-cr],[data-lp],[data-dev],[data-close]');
+  const t = e.target.closest('[data-al],[data-bk],[data-brief],[data-cal],[data-calm],[data-calx],[data-day],[data-trend],[data-tk],[data-home],[data-proj],[data-go],[data-d],[data-sort],[data-mode],[data-cr],[data-lp],[data-dev],[data-close]');
   if (e.target.id === 'shade') return closeDrawer();
   if (!t) return;
   const d = t.dataset;
+  if (d.al) { AL[d.al] = d.al === 'days' ? +d.av : d.av; render(); return; }
   if (d.bk) { B[d.bk] = d.bv; aiRender(); return; }
   if (d.brief) { const ta = $('#aiTxt'); ta.value = BRIEF;
     if (d.brief === 'show') { ta.hidden = !ta.hidden; return; }
@@ -977,6 +992,7 @@ document.addEventListener('click', e => {
   render(); if (d.go || d.lp || d.home || d.proj) scrollTo(0, 0);
 });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+document.addEventListener('change', e => { if (e.target.id === 'alw') { AL.w = e.target.value; render(); } });
 document.addEventListener('input', e => { if (e.target.id !== 'trq') return; T.q = e.target.value; render(); const i = $('#trq'); i.focus(); i.setSelectionRange(i.value.length, i.value.length); });
 fetch('trends_youtube.json', { cache: 'no-store' }).then(r => r.ok ? r.json() : null).then(a => { if (a && Array.isArray(a.items)) { YT = a; if (S.view === 'trend') render(); } }).catch(() => {});
 fetch('trends_auto.json', { cache: 'no-store' }).then(r => r.ok ? r.json() : null).then(a => { if (a && Array.isArray(a.items)) { AUTO = a; if (S.view === 'trend') render(); } }).catch(() => {});
