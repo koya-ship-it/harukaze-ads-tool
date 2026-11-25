@@ -38,11 +38,11 @@ LISTIN_CANDIDATES = [
 ]
 
 
-def api(path, params, soft=False):
+def api(path, params, soft=False, token=None, quiet=False):
     """Graph APIを呼ぶ。ページ送りをたどって全件返す。"""
     ver = os.environ.get('META_API_VERSION', '').strip()
     base = 'https://graph.facebook.com/' + (ver + '/' if ver else '')
-    params = dict(params, access_token=os.environ['META_ACCESS_TOKEN'])
+    params = dict(params, access_token=token or os.environ['META_ACCESS_TOKEN'])
     url = base + path + '?' + urllib.parse.urlencode(params)
     out = []
     while url:
@@ -56,7 +56,8 @@ def api(path, params, soft=False):
             except Exception:
                 msg = body[:300]
             if soft:
-                print(f'  （読めませんでした {path}: {msg}）')
+                if not quiet:
+                    print(f'  （読めませんでした {path}: {msg}）')
                 return None
             sys.exit(f'Metaからエラーが返りました（{e.code}）: {msg}')
         if 'data' not in d or not isinstance(d['data'], list):
@@ -122,6 +123,19 @@ def add_videos(data, acts):
         if isinstance(rows, list):
             got.update({str(v['id']): v for v in rows if v.get('id')})
             print(f'  {act} の動画ライブラリ：{len(rows)}本（URLあり {len([1 for v in rows if v.get("source")])}本・広告で使用中と一致 {len([1 for v in rows if str(v.get("id")) in want])}本）')
+    # まだ取れていない動画は、Facebookページの権限で読む（トークンにページが割り当てられている時だけ）
+    missing = [v for v in sorted(want) if not (got.get(v) or {}).get('source')]
+    if missing:
+        pages = api('me/accounts', {'fields': 'id,name,access_token', 'limit': 100}, soft=True)
+        pages = pages if isinstance(pages, list) else []
+        print(f'  トークンで見えるFacebookページ：{len(pages)}個')
+        tokens = [None] + [p['access_token'] for p in pages if p.get('access_token')]
+        for v in missing:
+            for tk in tokens:
+                one = api(v, {'fields': 'source,length'}, soft=True, token=tk, quiet=True)
+                if isinstance(one, dict) and one.get('source'):
+                    got[v] = one
+                    break
     n = 0
     for c in data['creatives']:
         v = got.get(c.pop('_vid', None) or '')
