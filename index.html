@@ -239,6 +239,12 @@ table.tb { width: 100%; border-collapse: collapse; font-size: 13px; }
 .tr-st { display: flex; gap: 14px; margin-bottom: 8px; font-size: 10.5px; color: var(--ink-3); }
 .tr-st b { display: block; font-size: 16px; color: var(--ink); font-weight: 600; }
 .tr-st span:first-child b { color: var(--green-dark); font-size: 19px; }
+.ai { border: 1px solid #bfe8cf; background: var(--green-soft); border-radius: 8px; padding: 12px 14px; }
+.ai-h b { display: block; font-size: 14px; } .ai-h span { font-size: 11.5px; color: var(--ink-2); }
+.ai-a { display: flex; gap: 8px; align-items: center; margin-top: 10px; }
+.ai-ok { font-size: 12px; color: var(--green-dark); font-weight: 600; }
+.ai textarea { width: 100%; height: 260px; margin-top: 10px; border: 1px solid var(--line); border-radius: 6px; padding: 10px; font: 12px/1.6 ui-monospace, Menlo, monospace; background: #fff; resize: vertical; }
+.ai-n { font-size: 11px; color: var(--ink-3); margin-top: 8px; line-height: 1.6; }
 .tr-empty { border: 1px dashed #cfcec8; border-radius: 8px; padding: 34px 20px; text-align: center; color: var(--ink-2); font-size: 13px; line-height: 1.9; }
 #back { margin-right: 4px; white-space: nowrap; }
 #calBtn { white-space: nowrap; font-variant-numeric: tabular-nums; }
@@ -729,6 +735,73 @@ function viewLp() {
   </div>`;
 }
 
+/* ---------- 改善案づくり：DesignNOW（Codex／Claude Code）に渡す依頼文を、この広告の実物と成績から組み立てる ---------- */
+let BRIEF = '';
+function briefFor(c) {
+  const m = stat(c), lp = lpOf(c.lpId) || {}, proj = AD_DATA.projects.find(p => p.campaignIds.includes(c.campaignId));
+  const peers = AD_DATA.creatives.filter(x => x.campaignId === c.campaignId), avg = derive(sum(peers.flatMap(x => slice(x))));
+  const noCv = avg.listin < 5;  /* この導線は登録をMetaでほぼ計測できていない → クリックで比べる */
+  const live = peers.map(x => ({ x, m: stat(x) })).filter(o => o.m.spend > 0).sort((a, b) => noCv ? b.m.ctr - a.m.ctr : b.m.listin - a.m.listin);
+  const rk = live.findIndex(o => o.x.id === c.id) + 1, abs = u => { try { return new URL(u, location.href).href; } catch (e) { return u; } };
+  const cmp = (v, a) => !a ? '' : v >= a * 1.1 ? '（導線の平均より高い）' : v <= a * .9 ? '（導線の平均より低い）' : '（導線の平均並み）';
+  const hyp = [];
+  if (avg.ctr && m.ctr <= avg.ctr * .9) hyp.push('クリック率が導線の平均より低い → 最初の一目で止まっていない可能性。掴みのコピーと、目に入る主役の絵を優先して変える。');
+  if (!noCv && avg.ctr && m.ctr >= avg.ctr * 1.1 && avg.cvr && m.cvr <= avg.cvr * .9) hyp.push('クリックはされるが登録に進んでいない → 広告の約束とLPの中身がずれている可能性。LPの訴求に寄せたコピーを試す。');
+  if (noCv && avg.ctr && m.ctr >= avg.ctr * 1.1) hyp.push('クリック率は導線の平均より高い → 掴みは効いている。今の掴みを残して、素材と世界観の違いでさらに伸びるかを見る。');
+  if (!noCv && avg.cvr && m.cvr >= avg.cvr * 1.1) hyp.push('登録率は導線の平均より高い → 訴求は合っている。訴求は残して、見た目（素材・世界観）で表示とクリックを伸ばす。');
+  if (!hyp.length) hyp.push('数字は導線の平均並み → どの軸が効くかまだ分からない。3つの軸を均等に試す。');
+  const head = `■ 元の広告
+- 名前：${c.name}
+- 導線：${proj ? proj.name : ''}
+- 種類：${c.format}
+- 画像：${imgOk(c.imageUrl) ? abs(c.imageUrl) : '（未登録。実物を添付します）'}
+- リンク先のLP：${lp.url || '（不明）'}
+
+■ 成績（${recent()}）
+- 広告費 ${yen(m.spend)}／表示 ${int(m.imp)}／クリック ${int(m.click)}
+- クリック率 ${pct(m.ctr)}${cmp(m.ctr, avg.ctr)}
+${noCv ? `- 登録数：この導線はMetaで登録を計測できていないので、クリック率で判断する
+- 1クリックの費用 ${yen(m.cpc)}（導線の平均 ${yen(avg.cpc)}）
+- 導線の中の順位：クリック率で ${rk || '—'}位／${live.length}本` : `- 登録率 ${pct(m.cvr, 1)}${cmp(m.cvr, avg.cvr)}
+- リストイン ${int(m.listin)}件／1件の費用 ${cpaTxt(m)}（導線の平均 ${cpaTxt(avg)}）
+- 導線の中の順位：リストイン数で ${rk || '—'}位／${live.length}本`}
+
+■ 数字から見た仮説
+${hyp.map(h => '- ' + h).join('\n')}
+`;
+  if (c.format === '動画') return `DesignNOWとして、次の動画広告の「編集の型」を読み取り、同じ型で新しい素材を編集できる指示書にしてください。
+
+${head}
+■ やってほしいこと
+1. 添付した動画（この広告の実物）を見て、型を言葉にする。
+   - 冒頭3秒の掴み（何を見せ、何と言っているか）
+   - 構成（何秒ごとに何の場面か）と、カットのテンポ（1カットの平均秒数、切り替えの仕方）
+   - テロップ（書体・太さ・色・縁取り・位置・出し方・1画面の文字数）
+   - BGM（雰囲気・テンポ・音量の上げ下げ）と効果音（どこで何を鳴らすか）
+   - CTA（いつ、どんな言葉と見た目で出すか）
+2. それを「編集指示書」にまとめる（別の素材にそのまま当てはめられる粒度で）。
+3. 私が新しい素材を渡したら、この指示書どおりに編集する。
+4. あわせて、上の仮説をもとに、変えると良さそうな点を3つ提案する（冒頭／テロップ／CTAのどれを変えるかを分けて）。
+
+※ 画像のURLはサムネイルです。動画の実物は、このあと添付します。`;
+  return `DesignNOWのバナー機能で、次の広告バナーの改善案を5案作ってください。ABテストに出すための案です。
+
+${head}
+■ 進め方
+1. 上の画像を読み取り、今のバナーを3つに分けて言葉にする。
+   - コピー（何を約束しているか、掴みの一言、数字）
+   - 素材（写真・イラスト・背景に何を使っているか）
+   - 世界観（配色・書体・レイアウト・全体の雰囲気）
+2. 次の5案を作る。1案で変えるのは1つの軸だけにする（どの軸が効いたか分かるようにするため）。
+   - A案：コピーだけ変える（訴求の切り口を変える）
+   - B案：コピーだけ変える（訴求は同じで、掴みの一言・数字・言い回しを変える）
+   - C案：素材だけ変える（写真・イラスト・背景を変える。コピーと世界観はそのまま）
+   - D案：世界観だけ変える（コピーと素材は同じで、配色・書体・レイアウトをガラッと変える）
+   - E案：世界観だけ変える（D案とは逆の方向に振る）
+3. サイズと比率は元と同じにする。日付・講師名・ロゴ・価格などの事実は変えない。LPの内容と食い違う約束は書かない。
+4. 各案に「変えた点／狙い／確かめたい仮説」を1行ずつ付ける。ファイル名は「${c.name}_A」〜「_E」。
+5. 最後に、5案と元のバナーを並べた比較の1枚を作る。`;
+}
 /* ---------- クリエイティブの詳細 ---------- */
 function openDrawer(id) {
   const c = AD_DATA.creatives.find(x => x.id === id), m = stat(c), lp = lpOf(c.lpId), rows = slice(c);
@@ -741,6 +814,12 @@ function openDrawer(id) {
       ${imgOk(c.videoUrl) ? `<div class="dr-cr"><video src="${esc(encodeURI(c.videoUrl))}" controls playsinline preload="metadata"${imgOk(c.imageUrl) ? ` poster="${esc(encodeURI(c.imageUrl))}"` : ''}></video></div>`
         : imgOk(c.imageUrl) ? `<div class="dr-cr"><a href="${esc(encodeURI(c.imageUrl))}" target="_blank" rel="noopener" title="原寸で開く"><img src="${esc(encodeURI(c.imageUrl))}" alt="${esc(c.name)}"></a></div>`
         : `<div class="dr-cr none">クリエイティブの画像がまだ入っていません（data.json の imageUrl / videoUrl）</div>`}
+      <div class="ai">
+        <div class="ai-h"><b>${c.format === '動画' ? 'この動画の編集の型を読み取る' : 'DesignNOWで改善案を5案つくる'}</b><span>${c.format === '動画' ? 'テロップ・カットのテンポ・BGM・効果音・CTAを言葉にして、同じ型で編集できるようにします' : 'コピー2案・素材1案・世界観2案。1案で変えるのは1つだけ'}</span></div>
+        <div class="ai-a"><button class="btn primary" data-brief="copy">依頼文をコピー</button><button class="btn" data-brief="show">依頼文を見る</button><span class="ai-ok" id="aiOk"></span></div>
+        <textarea id="aiTxt" readonly hidden></textarea>
+        <div class="ai-n">コピーした文を、DesignNOWをつないだ Codex か Claude Code に貼ると、この広告の画像と成績を読んで作り始めます。${c.format === '動画' ? '動画の実物は、貼る時に一緒に添付してください。' : ''}</div>
+      </div>
       <div class="dr-top">${thumb(c)}
         <div><div class="sec-t">リストイン（${recent()}）</div>
           <div style="font-size:38px;font-weight:600;color:var(--green-dark)" class="num">${int(m.listin)}<small style="font-size:13px;color:var(--ink-2)"> 件</small></div>
@@ -756,6 +835,7 @@ function openDrawer(id) {
           <button class="btn primary" data-lp="${lp.id}">LPを見る</button></div></div>
     </div>`;
   $('#drawer').classList.add('open'); $('#shade').classList.add('open');
+  BRIEF = briefFor(c);
 }
 const closeDrawer = () => { $('#drawer').classList.remove('open'); $('#shade').classList.remove('open'); };
 
@@ -784,10 +864,14 @@ function render() {
 }
 document.addEventListener('click', e => {
   if (S.calOpen && !e.target.closest('#cal,#calBtn')) { S.calOpen = false; S.pick = null; $('#cal').hidden = true; }
-  const t = e.target.closest('[data-cal],[data-calm],[data-calx],[data-day],[data-trend],[data-tk],[data-home],[data-proj],[data-go],[data-d],[data-sort],[data-mode],[data-cr],[data-lp],[data-dev],[data-close]');
+  const t = e.target.closest('[data-brief],[data-cal],[data-calm],[data-calx],[data-day],[data-trend],[data-tk],[data-home],[data-proj],[data-go],[data-d],[data-sort],[data-mode],[data-cr],[data-lp],[data-dev],[data-close]');
   if (e.target.id === 'shade') return closeDrawer();
   if (!t) return;
   const d = t.dataset;
+  if (d.brief) { const ta = $('#aiTxt'); ta.value = BRIEF;
+    if (d.brief === 'show') { ta.hidden = !ta.hidden; return; }
+    const done = ok => { $('#aiOk').textContent = ok ? 'コピーしました' : '下の文を選んでコピーしてください'; if (!ok) { ta.hidden = false; ta.select(); } };
+    (navigator.clipboard ? navigator.clipboard.writeText(BRIEF).then(() => done(true), () => done(false)) : done(false)); return; }
   if ('close' in d) return closeDrawer();
   if (d.cr) return openDrawer(d.cr);
   if (d.trend) { S.proj = null; S.view = 'trend'; closeDrawer(); }
