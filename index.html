@@ -511,6 +511,8 @@ function calHtml() {
     <div class="cal-f"><span>${S.pick != null ? '続けて別の日を押すと期間になります' : '日を押すとその日。数字はリストイン数'}</span><button class="btn" data-calx="1">閉じる</button></div>`;
 }
 const stat = (c, prev) => derive(sum(slice(c, prev)));
+/* 登録をMetaでほぼ計測できていない導線かどうか（全期間で見る）。クリックは多いのに、LP到達も登録もほとんど記録が無い時 */
+const unmeasured = cs => { const t = sum(cs.flatMap(c => c.daily)); return t.click > 200 && t.lpview / t.click < .05 && t.listin < 5; };
 const lpOf = id => AD_DATA.lps.find(l => l.id === id);
 /* 目標の数字（targetCpa・monthlyGoal）が入っていない時は、好調／停止候補などの判定や目標の線を出さない */
 const hasT = () => AD_DATA.targetCpa > 0;
@@ -587,13 +589,13 @@ function viewHome() {
     const sp = `<svg viewBox="0 0 300 44" style="width:100%;display:block">${days.map((v, i) => `<rect x="${i * bw + bw * .15}" y="${42 - v / mx * 38}" width="${bw * .7}" height="${Math.max(1, v / mx * 38)}" rx="1.5" fill="${ix[i].sel ? '#06c755' : '#cfeeda'}"/>`).join('')}</svg>`;
     const top = live.map(c => ({ c, m: stat(c) })).sort((a, b) => b.m.listin - a.m.listin).slice(0, 4);
     const camps = AD_DATA.campaigns.filter(c => p.campaignIds.includes(c.id)).map(c => c.name).join('、');
-    const weak = m.click > 200 && m.lpview / m.click < .05;
+    const weak = unmeasured(cs);
     const x = ext(p), roas = x && m.spend ? (x.paid / m.spend * 100).toFixed(0) + '%' : '—';
     return `<button class="pj" data-proj="${esc(p.id)}">
       <div class="pj-h"><b>${esc(p.name)}</b><span>${esc(camps)}</span></div>
-      <div class="pj-m"><div>リストイン<b class="num">${int(m.listin)}</b></div><div>1件の費用<b class="num">${cpaTxt(m)}</b></div><div>広告費<b class="num">${yen(m.spend)}</b></div><div>ROAS<b class="num">${roas}</b></div></div>
+      <div class="pj-m">${weak ? `<div>クリック<b class="num">${int(m.click)}</b></div><div>1クリックの費用<b class="num">${m.click ? yen(m.cpc) : '—'}</b></div>` : `<div>リストイン<b class="num">${int(m.listin)}</b></div><div>1件の費用<b class="num">${cpaTxt(m)}</b></div>`}<div>広告費<b class="num">${yen(m.spend)}</b></div><div>ROAS<b class="num">${roas}</b></div></div>
       ${x ? `<div class="pj-x"><span>LINEリスト<b class="num">${int(x.line)}</b></span><span>個別予約<b class="num">${int(x.booking)}</b></span><span>成約<b class="num">${int(x.deals)}</b></span><span>売上（入金）<b class="num">${yen(x.paid)}</b></span></div>` : ''}
-      ${weak ? '<div class="pj-w">Metaで登録をほぼ計測できていません（クリックに対してLP到達が5%未満）</div>' : ''}
+      ${weak ? '<div class="pj-w">Metaで登録を計測できていないので、クリックで表示しています</div>' : ''}
       <div class="pj-sp">${sp}</div>
       <div class="pj-f">${top.map(x => thumb(x.c, 's')).join('')}<span>配信中の広告 ${live.length}本 ・ LP ${AD_DATA.lps.filter(l => p.lpGroups.includes(l.group)).length}本</span><span class="go">中を見る →</span></div></button>`;
   }).join('');
@@ -612,19 +614,22 @@ function viewDash() {
   const cs = AD_DATA.creatives.filter(inCamp);
   const now = derive(sum(cs.flatMap(c => slice(c)))), prev = derive(sum(cs.flatMap(c => slice(c, true))));
   const last = new Date(Math.max(...AD_DATA.creatives.flatMap(c => c.daily.map(d => +d.date)), 0));
-  const month = sum(AD_DATA.creatives.flatMap(c => c.daily.filter(d => d.date.getMonth() === last.getMonth() && d.date.getFullYear() === last.getFullYear()))).listin;
+  const un = unmeasured(cs);
+  const month = sum(cs.flatMap(c => c.daily.filter(d => d.date.getMonth() === last.getMonth() && d.date.getFullYear() === last.getFullYear()))).listin;
   const hasG = AD_DATA.monthlyGoal > 0, goalPct = hasG ? Math.min(100, month / AD_DATA.monthlyGoal * 100) : 0;
   const k = (l, v, d, s = '') => `<div class="card kpi"><div class="l">${l}</div><div class="v">${v}</div><div class="s">${d}<span>${prevLbl()}</span>${s}</div></div>`;
   const top = [...cs].map(c => ({ c, m: stat(c) })).sort((a, b) => b.m.listin - a.m.listin);
   const alerts = (hasT() ? top.filter(x => status(x.m)[0] !== 'good') : top.filter(x => x.m.spend > 0)).sort((a, b) => b.m.cpa - a.m.cpa).slice(0, 4);
   const fn = [['表示', now.imp], ['クリック', now.click], ['LP到達', now.lpview], ['リストイン', now.listin]];
-  return `
+  return `${un ? '<div class="pj-w" style="margin:0 0 14px;font-size:12.5px;padding:10px 14px">この導線は、Metaで登録（リストイン）をほぼ計測できていません。LPにMetaの計測タグが入っていないか、登録がLINE側で起きているためです。下の数字はクリックを基準に見てください。リストイン数と1件の費用は、実態と違うので参考にしないでください。</div>' : ''}
   <div class="kpis">
-    <div class="card kpi hero"><div class="l">リストイン数（${perLbl()}）</div><div class="v">${int(now.listin)}<small>件</small></div>
+    ${un ? `<div class="card kpi hero"><div class="l">クリック数（${perLbl()}）</div><div class="v">${int(now.click)}<small>回</small></div>
+      <div class="s">${delta(now.click, prev.click)}<span>${prevLbl()}</span></div>
+      <div class="s"><span>リストインはMetaで計測できていません</span></div></div>` : `<div class="card kpi hero"><div class="l">リストイン数（${perLbl()}）</div><div class="v">${int(now.listin)}<small>件</small></div>
       <div class="s">${delta(now.listin, prev.listin)}<span>${prevLbl()}</span></div>
       ${hasG ? `<div class="goalbar"><i style="width:${goalPct}%"></i></div>` : ''}
-      <div class="s"><span>${last.getMonth() + 1}月の合計 <b class="num">${int(month)}</b>${hasG ? ` / 目標 ${int(AD_DATA.monthlyGoal)}件（${goalPct.toFixed(0)}%）` : '件'}</span></div></div>
-    ${k('1リストインの費用', cpaTxt(now), delta(now.cpa, prev.cpa, true), hasT() ? `<span>目標 ${yen(AD_DATA.targetCpa)}</span>` : '')}
+      <div class="s"><span>${last.getMonth() + 1}月の合計 <b class="num">${int(month)}</b>${hasG ? ` / 目標 ${int(AD_DATA.monthlyGoal)}件（${goalPct.toFixed(0)}%）` : '件'}</span></div></div>`}
+    ${un ? k('1クリックの費用', now.click ? yen(now.cpc) : '—', delta(now.cpc, prev.cpc, true)) : k('1リストインの費用', cpaTxt(now), delta(now.cpa, prev.cpa, true), hasT() ? `<span>目標 ${yen(AD_DATA.targetCpa)}</span>` : '')}
     ${k('使った広告費', yen(now.spend), delta(now.spend, prev.spend))}
     ${k('クリック率', pct(now.ctr), delta(now.ctr, prev.ctr))}
     ${k('登録率（クリック→リストイン）', pct(now.cvr, 1), delta(now.cvr, prev.cvr))}
