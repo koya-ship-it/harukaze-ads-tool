@@ -541,6 +541,7 @@ function ranked() {
 /* ---------- トレンド（伸びているクリエイティブの置き場） ----------
    trends.json に入っているURLを、公式の埋め込みで並べる。足す時は GitHub の「トレンドを足す」から。 */
 const REPO = 'https://github.com/koya-ship-it/harukaze-ads-tool';
+const CLAUDE_URL = 'claude://code/new';  /* Claudeアプリの Code の新しいセッションを開くリンク。?q= を付けると、依頼文が入った状態で開く */
 const CODEX_URL = 'codex://threads/new';  /* ChatGPTアプリ（Codex）の新しいスレッドを開くリンク。?prompt= を付けると、依頼文が入った状態で開く */
 let TRENDS = [], AUTO = { items: [] };
 const T = { q: '', genre: '', kind: '', sort: 'views', src: '' };
@@ -854,9 +855,9 @@ function aiRender() {
   const open = !$('#aiTxt') ? false : !$('#aiTxt').hidden;
   $('#aiBox').innerHTML = video ? `
     <div class="ai-h"><b>この動画の編集の型を読み取る</b><span>テロップ・カットのテンポ・BGM・効果音・CTAを言葉にして編集指示書にし、新しい素材を同じ型で編集します</span></div>
-    <div class="ai-a"><button class="btn primary" data-brief="codex">Codexで始める</button><button class="btn" data-brief="copy">依頼文をコピー</button><button class="btn" data-brief="show">依頼文を見る</button></div>
+    <div class="ai-a"><button class="btn primary" data-brief="codex">Codexで始める</button><button class="btn primary" data-brief="claude">Claudeで始める</button><button class="btn" data-brief="copy">依頼文をコピー</button><button class="btn" data-brief="show">依頼文を見る</button></div>
     <div class="ai-ok" id="aiOk"></div><textarea id="aiTxt" readonly ${open ? '' : 'hidden'}></textarea>
-    <div class="ai-n">${imgOk(c.videoUrl) ? '「Codexで始める」を押すと、依頼文と動画のURLが入った状態でCodexの新しいスレッドが開きます。Codexが動画を自分で取ってきて読み取ります。' : '「Codexで始める」を押すと、依頼文が入った状態でCodexの新しいスレッドが開きます。この広告は動画の実物が取れていないので、動画ファイルを一緒に添付してから送ってください。'}</div>` : `
+    <div class="ai-n">${imgOk(c.videoUrl) ? '「Codexで始める」「Claudeで始める」を押すと、依頼文と動画のURLが入った状態で、それぞれの新しい会話が開きます。AIが動画を自分で取ってきて読み取ります。' : '「Codexで始める」「Claudeで始める」を押すと、依頼文が入った状態で新しい会話が開きます。この広告は動画の実物が取れていないので、動画ファイルを一緒に添付してから送ってください。'}</div>` : `
     <div class="ai-h"><b>DesignNOWでより良いクリエイティブにする</b><span>固定する要素を1つ決めて、残りをガラッと変えた5案を作ります</span></div>
     <div class="ai-r"><span>作るもの</span>${seg('kind', [['banner', '改善案を5案'], ['motion', '動画にする']])}</div>
     ${B.kind === 'banner' ? `<div class="ai-r"><span>固定する要素</span>${seg('fix', [['auto', 'AIが分析して決める'], ['copy', 'コピー'], ['material', '素材'], ['world', '世界観']])}</div>` : ''}
@@ -929,9 +930,9 @@ document.addEventListener('click', e => {
   if (d.bk) { B[d.bk] = d.bv; aiRender(); return; }
   if (d.brief) { const ta = $('#aiTxt'); ta.value = BRIEF;
     if (d.brief === 'show') { ta.hidden = !ta.hidden; return; }
-    const go = d.brief === 'codex';
-    const done = ok => { $('#aiOk').textContent = ok ? (go ? 'Codexを開きました。依頼文が入っています（入っていない時は、貼り付けてください）' : 'コピーしました') : '下の文を選んでコピーしてください'; if (!ok) { ta.hidden = false; ta.select(); }
-      if (go) location.href = CODEX_URL + '?prompt=' + encodeURIComponent(BRIEF); };
+    const app = { codex: ['Codex', CODEX_URL + '?prompt='], claude: ['Claude', CLAUDE_URL + '?q='] }[d.brief], go = !!app;
+    const done = ok => { $('#aiOk').textContent = go ? `${app[0]}を開きました。依頼文が入っています（入っていない時は、貼り付けてください）` : ok ? 'コピーしました' : '下の文を選んでコピーしてください'; if (!ok && !go) { ta.hidden = false; ta.select(); }
+      if (go) location.href = app[1] + encodeURIComponent(BRIEF); };
     (navigator.clipboard ? navigator.clipboard.writeText(BRIEF).then(() => done(true), () => done(false)) : done(false)); return; }
   if ('close' in d) return closeDrawer();
   if (d.cr) return openDrawer(d.cr);
