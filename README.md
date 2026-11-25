@@ -32,7 +32,7 @@
 
 ## 毎日の自動更新（Metaから直接）
 
-`.github/workflows/update.yml` が毎朝8:30（日本時間）に `scripts/fetch_meta.py` を動かし、Metaから直近60日の数字と広告画像を取って `data.json` と `creatives/` を書き換える。手で今すぐ動かす時は、GitHubの Actions →「Metaから数字を取る」→ Run workflow。
+`.github/workflows/update.yml` が8:30から3時間おき（日本時間・23:30まで）に `scripts/fetch_meta.py` を動かし、Metaから直近60日の数字と広告画像を取って `data.json` と `creatives/` を書き換える。手で今すぐ動かす時は、GitHubの Actions →「Metaから数字を取る」→ Run workflow。
 
 ### 最初に1回だけ入れるもの（Settings → Secrets and variables → Actions → New repository secret）
 
@@ -62,6 +62,6 @@
 
 ## 今の状態（2026-11-24）
 
-- 2026-11-24：Metaにつながり、`data.json` は本物の数字。毎朝8:30に自動で更新される。
+- 2026-11-24：Metaにつながり、`data.json` は本物の数字。8:30から3時間おきに自動で更新される。
 - 見る場所は上の「画面」のURL。`data.json` を書き換えてコミットすると、数分で画面に出る。
 - 未決事項は `データの形_GrokBot向け.md` の「まだ決まっていないこと」を参照。

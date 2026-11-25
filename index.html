@@ -237,6 +237,23 @@ table.tb { width: 100%; border-collapse: collapse; font-size: 13px; }
 .tr-b .ft { display: flex; gap: 8px; align-items: center; margin-top: 8px; font-size: 11px; color: var(--ink-3); }
 .tr-b .ft a { margin-left: auto; color: var(--blue); font-weight: 600; text-decoration: none; }
 .tr-empty { border: 1px dashed #cfcec8; border-radius: 8px; padding: 34px 20px; text-align: center; color: var(--ink-2); font-size: 13px; line-height: 1.9; }
+#back { margin-right: 4px; white-space: nowrap; }
+#calBtn { white-space: nowrap; font-variant-numeric: tabular-nums; }
+#calBtn.on { border-color: var(--ink); background: var(--ink); color: #fff; }
+#cal { position: absolute; right: 0; top: calc(100% + 8px); z-index: 30; width: 318px; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 12px; box-shadow: 0 10px 30px rgba(20,25,35,.14); }
+.cal-h { display: flex; align-items: center; gap: 6px; margin-bottom: 8px; }
+.cal-h b { flex: 1; text-align: center; font-size: 14px; }
+.cal-h button { border: 1px solid var(--line); background: #fff; border-radius: 6px; width: 28px; height: 28px; }
+.cal-h button:disabled { opacity: .3; }
+.cal-g { display: grid; grid-template-columns: repeat(7, 1fr); gap: 3px; }
+.cal-g span { text-align: center; font-size: 10.5px; color: var(--ink-3); padding: 2px 0; }
+.cal-d { border: 1px solid transparent; background: #f6f5f1; border-radius: 6px; padding: 4px 0 3px; text-align: center; font-size: 12px; line-height: 1.25; min-height: 40px; }
+.cal-d small { display: block; font-size: 10px; color: var(--green-dark); font-weight: 600; }
+.cal-d:disabled { background: none; color: #c9c8c2; }
+.cal-d.in { background: var(--green-soft); border-color: #bfe8cf; }
+.cal-d.edge { background: var(--ink); color: #fff; border-color: var(--ink); } .cal-d.edge small { color: #9fe9bd; }
+.cal-f { display: flex; align-items: center; gap: 8px; margin-top: 9px; font-size: 11px; color: var(--ink-3); }
+.cal-f button { margin-left: auto; }
 .rail-sec { font-size: 10.5px; color: #6f7a8c; padding: 14px 12px 4px; letter-spacing: .08em; }
 .rail-item.sub { font-size: 12.5px; padding-left: 14px; }
 .rail-item.sub .dot { width: 6px; height: 6px; border-radius: 50%; background: #55607a; flex: none; margin: 0 9px 0 5px; }
@@ -315,6 +332,7 @@ table.tb { width: 100%; border-collapse: collapse; font-size: 13px; }
 
   <div class="main">
     <header class="topbar">
+      <button class="btn" id="back" data-home="1" style="display:none">← 導線まとめ</button>
       <h1 id="ttl"></h1>
       <div class="toptabs" role="tablist" id="tabs">
         <button data-go="dash" class="on">ダッシュボード</button>
@@ -323,8 +341,12 @@ table.tb { width: 100%; border-collapse: collapse; font-size: 13px; }
       </div>
       <div class="spacer"></div>
       <span class="sample">サンプルデータ</span>
-      <div class="seg" id="period" aria-label="期間">
-        <button data-d="7">7日</button><button data-d="14" class="on">14日</button><button data-d="30">30日</button>
+      <div id="periodWrap" style="display:flex;gap:8px;align-items:center;position:relative">
+        <div class="seg" id="period" aria-label="期間">
+          <button data-d="1">今日</button><button data-d="7">7日</button><button data-d="14" class="on">14日</button><button data-d="30">30日</button>
+        </div>
+        <button class="btn" id="calBtn" data-cal="1" aria-label="日付を選ぶ"></button>
+        <div id="cal" hidden></div>
       </div>
     </header>
     <main class="page" id="page"></main>
@@ -400,9 +422,9 @@ let AD_DATA = (() => {
 /* スプレッドシートなど、Meta以外から来る数字（LINEリスト・個別予約・成約・売上）を、今見ている期間で合計する */
 function ext(p, prev) {
   if (!p.extra || !AD_DATA.creatives.length) return null;
-  const all = AD_DATA.creatives[0].daily, win = new Set((prev ? all.slice(-S.days * 2, -S.days) : all.slice(-S.days)).map(d => +d.date));
+  const all = AD_DATA.creatives[0].daily, wset = new Set(all.slice(...win(prev)).map(d => +d.date));
   const t = { line: 0, booking: 0, deals: 0, paid: 0, billed: 0 };
-  p.extra.daily.forEach(r => { if (win.has(+r.date)) for (const k in t) t[k] += +r[k] || 0; });
+  p.extra.daily.forEach(r => { if (wset.has(+r.date)) for (const k in t) t[k] += +r[k] || 0; });
   return t;
 }
 function ensureProjects(d) {
@@ -447,7 +469,34 @@ const P = () => AD_DATA.projects.find(p => p.id === S.proj);
 const inCamp = c => !S.proj || P().campaignIds.includes(c.campaignId);
 const lpsNow = () => S.proj ? AD_DATA.lps.filter(l => P().lpGroups.includes(l.group)) : AD_DATA.lps;
 function enter(id) { S.proj = id; if (S.view === 'home') S.view = 'dash'; const ls = lpsNow(); const used = new Set(AD_DATA.creatives.filter(inCamp).map(c => c.lpId)); S.lp = (ls.find(l => used.has(l.id)) || ls[0] || AD_DATA.lps[0]).id; }
-const slice = (c, prev) => prev ? c.daily.slice(-S.days * 2, -S.days) : c.daily.slice(-S.days);
+/* 期間は「最後の日（end）」と「日数（days）」で持つ。カレンダーで選んだ時は custom */
+const LEN = () => AD_DATA.creatives[0] ? AD_DATA.creatives[0].daily.length : 0;
+const endIx = () => S.end == null ? LEN() - 1 : S.end;
+const win = prev => { const b = endIx() + 1 - (prev ? S.days : 0); return [Math.max(0, b - S.days), Math.max(0, b)]; };
+const slice = (c, prev) => c.daily.slice(...win(prev));
+const dateAt = i => AD_DATA.creatives[0].daily[i].date;
+const rangeTxt = () => S.days === 1 ? md(dateAt(endIx())) : `${md(dateAt(Math.max(0, endIx() - S.days + 1)))}〜${md(dateAt(endIx()))}`;
+const perLbl = () => S.custom ? rangeTxt() : S.days === 1 ? '今日' : `${S.days}日`;
+const prevLbl = () => S.days === 1 ? '前日比' : `前の${S.days}日比`;
+const recent = () => S.custom ? rangeTxt() : S.days === 1 ? '今日' : '直近' + S.days + '日';
+/* グラフに出す日の並び。選んだ期間が短い時は、前後が分かるよう14日分を出して選んだ日だけ濃くする */
+const chartIx = () => { const b = endIx() + 1, n = Math.max(S.days, 14), a = Math.max(0, b - n), [sa, sb] = win(); return [...Array(b - a)].map((_, k) => ({ i: a + k, sel: a + k >= sa && a + k < sb })); };
+/* カレンダー：日ごとのリストイン数を小さく出す。1日押すとその日、続けて別の日を押すと期間 */
+function calHtml() {
+  const n = LEN(), first = dateAt(0), last = dateAt(n - 1), cs = AD_DATA.creatives.filter(inCamp);
+  const m = S.calM || new Date(dateAt(endIx()).getFullYear(), dateAt(endIx()).getMonth(), 1);
+  const ixOf = new Map([...Array(n)].map((_, i) => [+dateAt(i), i])), [sa, sb] = win();
+  const dim = new Date(m.getFullYear(), m.getMonth() + 1, 0).getDate(), lead = m.getDay();
+  const prevOk = m > new Date(first.getFullYear(), first.getMonth(), 1), nextOk = m < new Date(last.getFullYear(), last.getMonth(), 1);
+  let g = ['日', '月', '火', '水', '木', '金', '土'].map(w => `<span>${w}</span>`).join('') + '<i></i>'.repeat(lead);
+  for (let d = 1; d <= dim; d++) { const i = ixOf.get(+new Date(m.getFullYear(), m.getMonth(), d));
+    if (i == null) { g += `<button class="cal-d" disabled>${d}</button>`; continue; }
+    const v = cs.reduce((a, c) => a + c.daily[i].listin, 0), inn = i >= sa && i < sb, edge = inn && (i === sa || i === sb - 1);
+    g += `<button class="cal-d ${inn ? 'in' : ''} ${edge ? 'edge' : ''}" data-day="${i}">${d}<small>${v || '·'}</small></button>`; }
+  return `<div class="cal-h"><button data-calm="-1" ${prevOk ? '' : 'disabled'}>‹</button><b>${m.getFullYear()}年${m.getMonth() + 1}月</b><button data-calm="1" ${nextOk ? '' : 'disabled'}>›</button></div>
+    <div class="cal-g">${g}</div>
+    <div class="cal-f"><span>${S.pick != null ? '続けて別の日を押すと期間になります' : '日を押すとその日。数字はリストイン数'}</span><button class="btn" data-calx="1">閉じる</button></div>`;
+}
 const stat = (c, prev) => derive(sum(slice(c, prev)));
 const lpOf = id => AD_DATA.lps.find(l => l.id === id);
 /* 目標の数字（targetCpa・monthlyGoal）が入っていない時は、好調／停止候補などの判定や目標の線を出さない */
@@ -508,13 +557,13 @@ function viewTrend() {
 /* ---------- 導線まとめ ---------- */
 function viewHome() {
   const all = derive(sum(AD_DATA.creatives.flatMap(c => slice(c)))), prev = derive(sum(AD_DATA.creatives.flatMap(c => slice(c, true))));
-  const k = (l, v, d, s = '') => `<div class="card kpi"><div class="l">${l}</div><div class="v">${v}</div><div class="s">${d}<span>${s || `前の${S.days}日比`}</span></div></div>`;
+  const k = (l, v, d, s = '') => `<div class="card kpi"><div class="l">${l}</div><div class="v">${v}</div><div class="s">${d}<span>${s || prevLbl()}</span></div></div>`;
   const cards = AD_DATA.projects.map(p => {
     const cs = AD_DATA.creatives.filter(c => p.campaignIds.includes(c.campaignId));
     const m = derive(sum(cs.flatMap(c => slice(c)))), live = cs.filter(c => stat(c).spend > 0);
-    const days = [...Array(S.days)].map((_, i) => cs.reduce((a, c) => a + ((c.daily[c.daily.length - S.days + i] || {}).listin || 0), 0));
-    const mx = Math.max(...days, 1), bw = 300 / S.days;
-    const sp = `<svg viewBox="0 0 300 44" style="width:100%;display:block">${days.map((v, i) => `<rect x="${i * bw + bw * .15}" y="${42 - v / mx * 38}" width="${bw * .7}" height="${Math.max(1, v / mx * 38)}" rx="1.5" fill="#06c755"/>`).join('')}</svg>`;
+    const ix = chartIx(), days = ix.map(o => cs.reduce((a, c) => a + ((c.daily[o.i] || {}).listin || 0), 0));
+    const mx = Math.max(...days, 1), bw = 300 / ix.length;
+    const sp = `<svg viewBox="0 0 300 44" style="width:100%;display:block">${days.map((v, i) => `<rect x="${i * bw + bw * .15}" y="${42 - v / mx * 38}" width="${bw * .7}" height="${Math.max(1, v / mx * 38)}" rx="1.5" fill="${ix[i].sel ? '#06c755' : '#cfeeda'}"/>`).join('')}</svg>`;
     const top = live.map(c => ({ c, m: stat(c) })).sort((a, b) => b.m.listin - a.m.listin).slice(0, 4);
     const camps = AD_DATA.campaigns.filter(c => p.campaignIds.includes(c.id)).map(c => c.name).join('、');
     const weak = m.click > 200 && m.lpview / m.click < .05;
@@ -528,12 +577,12 @@ function viewHome() {
       <div class="pj-f">${top.map(x => thumb(x.c, 's')).join('')}<span>配信中の広告 ${live.length}本 ・ LP ${AD_DATA.lps.filter(l => p.lpGroups.includes(l.group)).length}本</span><span class="go">中を見る →</span></div></button>`;
   }).join('');
   return `<div class="kpis" style="grid-template-columns:repeat(4,1fr)">
-    <div class="card kpi hero"><div class="l">リストイン数（全導線・${S.days}日）</div><div class="v">${int(all.listin)}<small>件</small></div><div class="s">${delta(all.listin, prev.listin)}<span>前の${S.days}日比</span></div></div>
+    <div class="card kpi hero"><div class="l">リストイン数（全導線・${perLbl()}）</div><div class="v">${int(all.listin)}<small>件</small></div><div class="s">${delta(all.listin, prev.listin)}<span>${prevLbl()}</span></div></div>
     ${k('1リストインの費用', cpaTxt(all), delta(all.cpa, prev.cpa, true))}
     ${k('使った広告費', yen(all.spend), delta(all.spend, prev.spend))}
     ${(() => { const xs = AD_DATA.projects.map(p => ({ x: ext(p), sp: derive(sum(AD_DATA.creatives.filter(c => p.campaignIds.includes(c.campaignId)).flatMap(c => slice(c)))).spend })).filter(o => o.x); const paid = xs.reduce((a, o) => a + o.x.paid, 0), sp = xs.reduce((a, o) => a + o.sp, 0); return xs.length && sp ? k('ROAS（入金÷広告費）', (paid / sp * 100).toFixed(0) + '%', '', `売上がつながっている導線のみ（${xs.length}本）`) : k('ROAS', '—', '', '売上はまだつないでいません'); })()}
   </div>
-  <div style="display:flex;align-items:baseline;gap:8px;margin:20px 0 10px"><h2 style="font-size:15px;margin:0">導線ごと</h2><span style="font-size:12px;color:var(--ink-3)">${AD_DATA.projects.length}本 ・ 直近${S.days}日</span></div>
+  <div style="display:flex;align-items:baseline;gap:8px;margin:20px 0 10px"><h2 style="font-size:15px;margin:0">導線ごと</h2><span style="font-size:12px;color:var(--ink-3)">${AD_DATA.projects.length}本 ・ ${recent()}</span></div>
   <div class="pjs">${cards}</div>`;
 }
 
@@ -544,14 +593,14 @@ function viewDash() {
   const last = new Date(Math.max(...AD_DATA.creatives.flatMap(c => c.daily.map(d => +d.date)), 0));
   const month = sum(AD_DATA.creatives.flatMap(c => c.daily.filter(d => d.date.getMonth() === last.getMonth() && d.date.getFullYear() === last.getFullYear()))).listin;
   const hasG = AD_DATA.monthlyGoal > 0, goalPct = hasG ? Math.min(100, month / AD_DATA.monthlyGoal * 100) : 0;
-  const k = (l, v, d, s = '') => `<div class="card kpi"><div class="l">${l}</div><div class="v">${v}</div><div class="s">${d}<span>前の${S.days}日比</span>${s}</div></div>`;
+  const k = (l, v, d, s = '') => `<div class="card kpi"><div class="l">${l}</div><div class="v">${v}</div><div class="s">${d}<span>${prevLbl()}</span>${s}</div></div>`;
   const top = [...cs].map(c => ({ c, m: stat(c) })).sort((a, b) => b.m.listin - a.m.listin);
   const alerts = (hasT() ? top.filter(x => status(x.m)[0] !== 'good') : top.filter(x => x.m.spend > 0)).sort((a, b) => b.m.cpa - a.m.cpa).slice(0, 4);
   const fn = [['表示', now.imp], ['クリック', now.click], ['LP到達', now.lpview], ['リストイン', now.listin]];
   return `
   <div class="kpis">
-    <div class="card kpi hero"><div class="l">リストイン数（${S.days}日）</div><div class="v">${int(now.listin)}<small>件</small></div>
-      <div class="s">${delta(now.listin, prev.listin)}<span>前の${S.days}日比</span></div>
+    <div class="card kpi hero"><div class="l">リストイン数（${perLbl()}）</div><div class="v">${int(now.listin)}<small>件</small></div>
+      <div class="s">${delta(now.listin, prev.listin)}<span>${prevLbl()}</span></div>
       ${hasG ? `<div class="goalbar"><i style="width:${goalPct}%"></i></div>` : ''}
       <div class="s"><span>${last.getMonth() + 1}月の合計 <b class="num">${int(month)}</b>${hasG ? ` / 目標 ${int(AD_DATA.monthlyGoal)}件（${goalPct.toFixed(0)}%）` : '件'}</span></div></div>
     ${k('1リストインの費用', cpaTxt(now), delta(now.cpa, prev.cpa, true), hasT() ? `<span>目標 ${yen(AD_DATA.targetCpa)}</span>` : '')}
@@ -585,8 +634,8 @@ function viewDash() {
 }
 function drawChart() {
   const svg = $('#chart'); if (!svg) return;
-  const cs = AD_DATA.creatives.filter(inCamp), n = S.days;
-  const days = [...Array(n)].map((_, i) => { const rows = cs.map(c => c.daily[c.daily.length - n + i]); return { date: rows[0].date, ...derive(sum(rows)) }; });
+  const cs = AD_DATA.creatives.filter(inCamp), ix = chartIx(), n = ix.length;
+  const days = ix.map(o => ({ date: dateAt(o.i), sel: o.sel, ...derive(sum(cs.map(c => c.daily[o.i]))) }));
   const W = svg.clientWidth || 700, H = 250, L = 34, R = 50, T = 12, B = 26, pw = W - L - R, ph = H - T - B;
   const maxL = (Math.max(...days.map(d => d.listin)) || 1) * 1.15, maxC = Math.max(...days.filter(d => isFinite(d.cpa)).map(d => d.cpa), AD_DATA.targetCpa || 0, 1) * 1.2;
   const bw = pw / n, x = i => L + bw * i + bw / 2, yl = v => T + ph - v / maxL * ph, yc = v => T + ph - v / maxC * ph;
@@ -595,7 +644,7 @@ function drawChart() {
   for (let g = 0; g <= 4; g++) { const y = T + ph * g / 4; h += `<line x1="${L}" x2="${W - R}" y1="${y}" y2="${y}" stroke="#eceae5"/><text x="${L - 6}" y="${y + 4}" text-anchor="end" font-size="10" fill="#8a93a6">${Math.round(maxL * (4 - g) / 4)}</text><text x="${W - R + 6}" y="${y + 4}" font-size="10" fill="#8a93a6">¥${Math.round(maxC * (4 - g) / 4 / 100) / 10}k</text>`; }
   if (hasT()) h += `<line x1="${L}" x2="${W - R}" y1="${yc(AD_DATA.targetCpa)}" y2="${yc(AD_DATA.targetCpa)}" stroke="#e5484d" stroke-dasharray="4 4"/><text x="${W - R - 4}" y="${yc(AD_DATA.targetCpa) - 5}" text-anchor="end" font-size="10" fill="#e5484d">目標 ${yen(AD_DATA.targetCpa)}</text>`;
   days.forEach((d, i) => {
-    h += `<rect x="${x(i) - bw * .32}" y="${yl(d.listin)}" width="${bw * .64}" height="${T + ph - yl(d.listin)}" rx="3" fill="#06c755"/>`;
+    h += `<rect x="${x(i) - bw * .32}" y="${yl(d.listin)}" width="${bw * .64}" height="${T + ph - yl(d.listin)}" rx="3" fill="${d.sel ? '#06c755' : '#cfeeda'}"/>`;
     if (i % step === 0 || i === n - 1) h += `<text x="${x(i)}" y="${H - 8}" text-anchor="middle" font-size="10" fill="#8a93a6">${md(d.date)}</text>`;
   });
   const pts = days.map((d, i) => isFinite(d.cpa) ? `${x(i)},${yc(d.cpa)}` : null).filter(Boolean);
@@ -616,7 +665,7 @@ function viewRank() {
   const sorts = [['listin', 'リストイン数'], ['cpa', '1件の費用が安い'], ['ctr', 'クリック率'], ['spend', '広告費']];
   const bar = `<div class="toolbar"><span class="lbl">並び順</span>
     <div class="seg">${sorts.map(([k, l]) => `<button data-sort="${k}" class="${S.sort === k ? 'on' : ''}">${l}</button>`).join('')}</div>
-    <span class="spacer"></span><span class="lbl">${list.length}本 ・ 直近${S.days}日</span>
+    <span class="spacer"></span><span class="lbl">${list.length}本 ・ ${recent()}</span>
     <div class="seg"><button data-mode="card" class="${S.mode === 'card' ? 'on' : ''}">カード</button><button data-mode="table" class="${S.mode === 'table' ? 'on' : ''}">表</button></div></div>`;
   if (S.mode === 'table') return bar + `<div class="card tablewrap"><table class="tb"><thead><tr><th>順位</th><th>クリエイティブ</th>${hasT() ? '<th>状態</th>' : ''}<th>リストイン</th><th>1件の費用</th><th>広告費</th><th>表示</th><th>クリック</th><th>クリック率</th><th>登録率</th><th>LP</th></tr></thead><tbody>
     ${list.map(({ c, m }, i) => `<tr data-cr="${c.id}"><td class="num">${i + 1}</td><td><div class="cn">${thumb(c, 's')}${esc(c.name)}</div></td>
@@ -684,7 +733,7 @@ function openDrawer(id) {
         : imgOk(c.imageUrl) ? `<div class="dr-cr"><a href="${esc(encodeURI(c.imageUrl))}" target="_blank" rel="noopener" title="原寸で開く"><img src="${esc(encodeURI(c.imageUrl))}" alt="${esc(c.name)}"></a></div>`
         : `<div class="dr-cr none">クリエイティブの画像がまだ入っていません（data.json の imageUrl / videoUrl）</div>`}
       <div class="dr-top">${thumb(c)}
-        <div><div class="sec-t">リストイン（直近${S.days}日）</div>
+        <div><div class="sec-t">リストイン（${recent()}）</div>
           <div style="font-size:38px;font-weight:600;color:var(--green-dark)" class="num">${int(m.listin)}<small style="font-size:13px;color:var(--ink-2)"> 件</small></div>
           <div style="font-size:12.5px;color:var(--ink-2);margin-top:4px">1件の費用 <b>${cpaTxt(m)}</b>${hasT() ? `（目標 ${yen(AD_DATA.targetCpa)}）` : ''}</div>
           <div style="font-size:12.5px;color:var(--ink-2);margin-top:2px">${rank ? `今の並び順で <b>${rank}位</b> ・ ` : ''}${esc(AD_DATA.campaigns.find(k => k.id === c.campaignId).name)} ・ ${esc(c.format)}</div></div></div>
@@ -708,11 +757,14 @@ function render() {
   document.querySelectorAll('[data-go]').forEach(b => { if (b.closest('.toptabs') || b.closest('.rail')) b.classList.toggle('on', b.dataset.go === S.view); });
   $('#ttl').textContent = S.view === 'trend' ? 'トレンド' : S.proj ? P().name : '導線まとめ';
   $('#tabs').style.display = S.proj ? '' : 'none';
-  $('#period').style.display = S.view === 'trend' ? 'none' : '';
+  $('#periodWrap').style.display = S.view === 'trend' ? 'none' : 'flex';
   $('#railHome').classList.toggle('on', !S.proj && S.view !== 'trend');
   $('#railTrend').classList.toggle('on', S.view === 'trend');
   document.querySelectorAll('#railProj [data-proj]').forEach(b => b.classList.toggle('on', b.dataset.proj === S.proj));
-  document.querySelectorAll('#period button').forEach(b => b.classList.toggle('on', +b.dataset.d === S.days));
+  document.querySelectorAll('#period button').forEach(b => b.classList.toggle('on', !S.custom && +b.dataset.d === S.days));
+  $('#back').style.display = S.proj ? '' : 'none';
+  $('#calBtn').textContent = '📅 ' + rangeTxt(); $('#calBtn').classList.toggle('on', !!S.custom);
+  $('#cal').hidden = !S.calOpen; if (S.calOpen) $('#cal').innerHTML = calHtml();
   if (S.view === 'dash') {
     const x = ext(P()), px = ext(P(), true);
     if (x) { const m = derive(sum(AD_DATA.creatives.filter(inCamp).flatMap(c => slice(c))));
@@ -722,7 +774,8 @@ function render() {
   }
 }
 document.addEventListener('click', e => {
-  const t = e.target.closest('[data-trend],[data-tk],[data-home],[data-proj],[data-go],[data-d],[data-sort],[data-mode],[data-cr],[data-lp],[data-dev],[data-close]');
+  if (S.calOpen && !e.target.closest('#cal,#calBtn')) { S.calOpen = false; S.pick = null; $('#cal').hidden = true; }
+  const t = e.target.closest('[data-cal],[data-calm],[data-calx],[data-day],[data-trend],[data-tk],[data-home],[data-proj],[data-go],[data-d],[data-sort],[data-mode],[data-cr],[data-lp],[data-dev],[data-close]');
   if (e.target.id === 'shade') return closeDrawer();
   if (!t) return;
   const d = t.dataset;
@@ -733,7 +786,14 @@ document.addEventListener('click', e => {
   if (d.home) { S.proj = null; S.view = 'home'; closeDrawer(); }
   if (d.proj) { enter(d.proj); closeDrawer(); }
   if (d.go) S.view = d.go;
-  if (d.d) S.days = +d.d;
+  if (d.d) { S.days = +d.d; S.end = null; S.custom = false; S.calM = null; }
+  if (d.cal) { S.calOpen = !S.calOpen; S.pick = null; S.calM = null; }
+  if (d.calx) { S.calOpen = false; S.pick = null; }
+  if (d.calm) { const m = S.calM || new Date(dateAt(endIx()).getFullYear(), dateAt(endIx()).getMonth(), 1); S.calM = new Date(m.getFullYear(), m.getMonth() + +d.calm, 1); }
+  if (d.day != null) { const i = +d.day;
+    if (S.pick != null && S.pick !== i) { const a = Math.min(S.pick, i), b = Math.max(S.pick, i); S.end = b; S.days = b - a + 1; S.pick = null; S.calOpen = false; }
+    else { S.end = i; S.days = 1; S.pick = i; }
+    S.custom = true; }
   if (d.sort) S.sort = d.sort;
   if (d.mode) S.mode = d.mode;
   if (d.dev) S.dev = d.dev;
