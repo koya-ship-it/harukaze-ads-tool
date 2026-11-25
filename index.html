@@ -249,6 +249,13 @@ table.tb { width: 100%; border-collapse: collapse; font-size: 13px; }
 .ai-ok { font-size: 12px; color: var(--green-dark); font-weight: 600; }
 .ai textarea { width: 100%; height: 260px; margin-top: 10px; border: 1px solid var(--line); border-radius: 6px; padding: 10px; font: 12px/1.6 ui-monospace, Menlo, monospace; background: #fff; resize: vertical; }
 .ai-n { font-size: 11px; color: var(--ink-3); margin-top: 8px; line-height: 1.6; }
+.adlib { margin-bottom: 16px; }
+.adlib-b { display: flex; flex-wrap: wrap; gap: 8px; padding: 12px 16px 4px; }
+.adlib-w { display: inline-flex; align-items: center; gap: 0; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; font-size: 12.5px; background: #fff; }
+.adlib-w b { padding: 6px 10px; font-weight: 600; }
+.adlib-w a { padding: 6px 10px; border-left: 1px solid var(--line); color: var(--blue); text-decoration: none; font-weight: 600; }
+.adlib-w a:hover { background: #f3f6fd; }
+.adlib-n { padding: 6px 16px 14px; font-size: 11.5px; color: var(--ink-3); line-height: 1.6; }
 .tr-rule { font-size: 11.5px; color: var(--ink-3); margin: -6px 0 10px; }
 .tr-empty { border: 1px dashed #cfcec8; border-radius: 8px; padding: 34px 20px; text-align: center; color: var(--ink-2); font-size: 13px; line-height: 1.9; }
 #back { margin-right: 4px; white-space: nowrap; }
@@ -482,7 +489,7 @@ const derive = t => ({ ...t, ctr: t.imp ? t.click / t.imp : 0, cvr: t.click ? t.
 const P = () => AD_DATA.projects.find(p => p.id === S.proj);
 const inCamp = c => !S.proj || P().campaignIds.includes(c.campaignId);
 const lpsNow = () => S.proj ? AD_DATA.lps.filter(l => P().lpGroups.includes(l.group)) : AD_DATA.lps;
-function enter(id) { S.proj = id; if (S.view === 'home') S.view = 'dash'; const ls = lpsNow(); const used = new Set(AD_DATA.creatives.filter(inCamp).map(c => c.lpId)); S.lp = (ls.find(l => used.has(l.id)) || ls[0] || AD_DATA.lps[0]).id; }
+function enter(id) { S.proj = id; if (S.view === 'home' || S.view === 'trend') S.view = 'dash'; const ls = lpsNow(); const used = new Set(AD_DATA.creatives.filter(inCamp).map(c => c.lpId)); S.lp = (ls.find(l => used.has(l.id)) || ls[0] || AD_DATA.lps[0]).id; }
 /* 期間は「最後の日（end）」と「日数（days）」で持つ。カレンダーで選んだ時は custom */
 const LEN = () => AD_DATA.creatives[0] ? AD_DATA.creatives[0].daily.length : 0;
 const endIx = () => S.end == null ? LEN() - 1 : S.end;
@@ -557,6 +564,9 @@ function embedOf(u) {
   if (/^https:\/\/ads\.tiktok\.com\//.test(u)) return { site: 'TikTok Creative Center' };
   try { return { site: new URL(u).hostname.replace(/^www\./, '') }; } catch (e) { return { site: 'リンク' }; }
 }
+/* 今、実際に配信されている他社の広告は、Metaの広告ライブラリで見られる（数字や動画そのものは公式には取れないので、検索済みの画面を開く） */
+const ADLIB_WORDS = ['AI 副業', '生成AI 講座', 'AI スクール', 'Webデザイン スクール', 'デザイン 講座', '在宅ワーク', '副業 スクール', 'SNS運用 講座', '動画編集 スクール', '無料セミナー AI'];
+const adlib = (q, media) => `https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=JP&is_targeted_country=false&media_type=${media}&search_type=keyword_unordered&q=${encodeURIComponent(q)}`;
 function viewTrend() {
   /* 自動で集めた分（Instagramの決めたアカウントのリール）と、手で足した分を一緒に並べる */
   const ALL = [...(AUTO.items || []).map(t => ({ ...t, auto: true, site: 'Instagram' })), ...(YT.items || []).map(t => ({ ...t, auto: true, site: 'YouTube' })), ...TRENDS.map(t => ({ ...t, postedAt: t.addedAt }))].filter(t => /^https:\/\//.test(t.url || ''));
@@ -565,14 +575,17 @@ function viewTrend() {
   const q = T.q.trim().toLowerCase();
   const key = { views: t => t.views || 0, ratio: t => t.ratio || 0, new: t => +new Date(t.postedAt || 0) }[T.sort];
   const list = ALL.filter(t => (!T.genre || [].concat(t.genre || []).includes(T.genre)) && (!T.kind || t.kind === T.kind) && (!T.site || t.site === T.site) && (!T.src || (T.src === 'auto') === !!t.auto) && (!q || [t.memo, t.url, t.kind, [].concat(t.genre || []).join(' '), t.username, t.addedBy, t.query].join(' ').toLowerCase().includes(q)))
-    .sort((a, b) => key(b) - key(a) || +new Date(b.postedAt || 0) - +new Date(a.postedAt || 0));
+    .sort((a, b) => (T.site ? 0 : (b.site === 'Instagram') - (a.site === 'Instagram')) || key(b) - key(a) || +new Date(b.postedAt || 0) - +new Date(a.postedAt || 0));
   const add = `<a class="btn" href="${REPO}/actions/workflows/add-trend.yml" target="_blank" rel="noopener">＋ URLを足す</a>`;
   const seg = `<div class="seg">${[['views', '再生数が多い'], ['ratio', 'フォロワー・登録者比で伸びた'], ['new', '新しい']].map(([k, l]) => `<button data-tk="sort" data-tv="${k}" class="${T.sort === k ? 'on' : ''}">${l}</button>`).join('')}</div>`;
   const bar = `<div class="tr-bar"><input id="trq" type="search" placeholder="メモ・アカウント・ジャンルで探す" value="${esc(T.q)}">${seg}<span class="spacer"></span><span class="lbl">${list.length} / ${ALL.length}件${AUTO.updatedAt ? ' ・ 自動取得 ' + esc(String(AUTO.updatedAt).slice(5, 16).replace('T', ' ').replace('-', '/')) : ''}</span>${add}</div>
     ${AUTO.rule || YT.rule ? `<div class="tr-rule">自動で集める基準 ─ ${AUTO.rule ? `Instagram：${esc(AUTO.rule)}のリール（見ているアカウント ${AUTO.accounts || ''}個のうち ${AUTO.checked || 0}個を確認済み。回数制限があるので3時間ごとに10個ずつ進みます）` : ''}${AUTO.rule && YT.rule ? '　／　' : ''}${YT.rule ? `YouTube：${esc(YT.rule)}（言葉で検索）` : ''}</div>` : ''}
     <div class="tr-bar">${chips('genre', cnt('genre'))}${Object.keys(cnt('site')).length > 1 ? chips('site', cnt('site')) : ''}${chips('kind', cnt('kind'))}${TRENDS.length && (AUTO.items || []).length ? `<button class="chip ${T.src === 'auto' ? 'on' : ''}" data-tk="src" data-tv="auto">自動で集めた分</button><button class="chip ${T.src === 'man' ? 'on' : ''}" data-tk="src" data-tv="man">手で足した分</button>` : ''}</div>`;
-  if (!ALL.length) return `<div class="tr-bar"><span class="spacer"></span>${add}</div><div class="tr-empty"><b>まだ1件も入っていません。</b><br>見ておきたいInstagramのアカウントを登録すると、そのリールが再生数の多い順にここへ自動で並びます。<br>今は、Instagramを読むための権限の追加と、アカウントの登録を待っている状態です。<br>見つけたものを手で足したい時は、右上の「＋ URLを足す」から入れられます。</div>`;
-  return bar + (list.length ? `<div class="trs">${list.slice(0, 30).map(t => { const e = embedOf(t.url);
+  const lib = `<div class="card adlib"><div class="card-h"><h2>今、配信されている他社の広告を見る</h2><span class="sub">Metaの広告ライブラリ（日本・配信中）を、言葉で検索した状態で開きます</span></div>
+    <div class="adlib-b">${ADLIB_WORDS.map(w => `<span class="adlib-w"><b>${esc(w)}</b><a href="${adlib(w, 'video')}" target="_blank" rel="noopener">動画</a><a href="${adlib(w, 'image')}" target="_blank" rel="noopener">画像</a></span>`).join('')}</div>
+    <div class="adlib-n">企業が実際に出している広告（Instagram・Facebook）が、CTAつきで見られます。広告費や表示回数は、Metaが公開していないので出ません。良い広告を見つけたら、そのURLを右上の「＋ URLを足す」で残せます。</div></div>`;
+  if (!ALL.length) return lib + `<div class="tr-bar"><span class="spacer"></span>${add}</div><div class="tr-empty"><b>まだ1件も入っていません。</b><br>見ておきたいInstagramのアカウントを登録すると、そのリールが再生数の多い順にここへ自動で並びます。<br>今は、Instagramを読むための権限の追加と、アカウントの登録を待っている状態です。<br>見つけたものを手で足したい時は、右上の「＋ URLを足す」から入れられます。</div>`;
+  return lib + bar + (list.length ? `<div class="trs">${list.slice(0, 30).map(t => { const e = embedOf(t.url);
     return `<div class="tr">${e.src ? `<div class="tr-emb ${e.cls}"><iframe src="${esc(e.src)}" loading="lazy" allowfullscreen allow="encrypted-media; picture-in-picture" title="${esc(e.site)}"></iframe></div>` : `<div class="tr-emb"><div class="tr-link"><b style="font-size:14px;color:var(--ink)">${esc(e.site)}</b>このサイトはここに埋め込めないので、リンクで開きます。<a class="btn" href="${esc(t.url)}" target="_blank" rel="noopener">開く ↗</a></div></div>`}
       <div class="tr-b">${t.auto ? `<div class="tr-st"><span>再生<b class="num">${man(t.views)}</b></span><span>いいね<b class="num">${man(t.likes)}</b></span><span>${t.site === 'YouTube' ? '登録者比' : 'フォロワー比'}<b class="num">${t.ratio ? t.ratio + '倍' : '—'}</b></span></div>` : ''}
         <div class="tags">${[].concat(t.genre || []).map(g => `<span class="tag stage">${esc(g)}</span>`).join('')}${t.kind ? `<span class="tag">${esc(t.kind)}</span>` : ''}</div>
@@ -801,10 +814,16 @@ ${head}
    - テロップ：書体の系統と太さ、色、縁取りや座布団、位置、1画面の文字数、出し方、強調する言葉の扱い
    - 音：BGMの雰囲気とテンポ、音量を上げ下げする所、効果音を入れる所、無音の使い方
    - CTA：何秒から、どんな言葉と見た目で、どれくらいの長さ出すか
-4. それを「編集指示書」にまとめる。別の素材にそのまま当てはめられるように、秒数の割り振り・テロップの設定値（色・大きさ・位置）・カットのテンポを数字で書く。指示書は作業フォルダに1つのファイルで保存する。
-5. 上の成績と仮説から、変えると良さそうな点を3つ挙げる（冒頭／テロップ／CTAのどれを変えるかを分けて）。
-6. ここで一度止まり、指示書の要点を見せて「新しい素材（動画・台本）を渡してください」と聞く。
-7. 素材を渡されたら、編集指示書どおりに編集して書き出す。比率と長さの目安は元の動画に合わせる。フォント・カットのテンポ・BGMと効果音の入れ方・CTAを、元の型にそろえる。書き出した後、元の動画と並べて、型がそろっているかを自分で見比べる。
+4. 使う素材を、手元の素材フォルダから選ぶ。BGM・効果音・テロップの書体は、必ず次のフォルダの中から選んで使う。AIで音を作らない。ネットから新しく持ってこない。編集ソフトに最初から入っている音や書体で済ませない。
+   - BGM：~/動画/BGMのコピー/ （雰囲気ごとのフォルダに分かれている。エモい・コミカル・シネマティック・ワクワク・不穏・感動・日常 など）
+   - 効果音：~/動画/SEファイル/
+   - テロップの書体とスタイル：~/動画/フォント/ （フォントファイルと、Premiere Pro のテロップスタイル .prtextstyle）
+   選び方：まずフォルダの中を一覧する。手順3で言葉にした「元の動画の音の雰囲気とテンポ」「効果音が鳴る場面の種類」に近い候補を、ファイル名と長さから数本に絞り、実際に音を確かめて決める。テロップは、元の動画の書体の系統・太さ・色に一番近いスタイルを選ぶ。
+   選んだファイル名と、選んだ理由を1行ずつ書く。合うものが無い場合は、無いと報告して、近い候補を2つ挙げる。勝手に別の素材で埋めない。
+5. それを「編集指示書」にまとめる。使う素材のファイル名も入れる。別の素材にそのまま当てはめられるように、秒数の割り振り・テロップの設定値（色・大きさ・位置）・カットのテンポを数字で書く。指示書は作業フォルダに1つのファイルで保存する。
+6. 上の成績と仮説から、変えると良さそうな点を3つ挙げる（冒頭／テロップ／CTAのどれを変えるかを分けて）。
+7. ここで一度止まり、指示書の要点と選んだ素材を見せて「新しい素材（動画・台本）を渡してください」と聞く。
+8. 素材を渡されたら、編集指示書どおりに、選んだBGM・効果音・テロップスタイルを使って編集して書き出す。比率と長さの目安は元の動画に合わせる。フォント・カットのテンポ・BGMと効果音の入れ方・CTAを、元の型にそろえる。書き出した後、元の動画と並べて、型がそろっているかを自分で見比べる。
 
 ※ 「画像」のURLはサムネイルです。読み取りには必ず「動画」の実物を使ってください。`;
   const fixTxt = { copy: 'コピー（言葉・訴求・数字）', material: '素材（写真・イラスト・主役の絵）', world: '世界観（配色・書体・レイアウト・全体の雰囲気）' };
