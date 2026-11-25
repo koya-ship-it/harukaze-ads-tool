@@ -1,7 +1,25 @@
 {
- "rule": "直近180日・90秒以内・100,000再生以上・再生数が登録者数の10倍以上",
- "updatedAt": "2026-11-25T21:48:23+09:00",
+ "rule": "直近180日・90秒以内・100,000再生以上・再生数が登録者数の10倍以上（本数の少ないジャンルは基準をゆるめています）",
+ "updatedAt": "2026-11-25T21:50:06+09:00",
  "items": [
+  {
+   "url": "https://www.youtube.com/shorts/DOYqOckABhU",
+   "genre": [
+    "AIで作った動画"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "AI動画が怪しいので実践してみた結果...",
+   "username": "あかびんたん",
+   "followers": 1630000,
+   "views": 16408392,
+   "likes": 144071,
+   "comments": 767,
+   "ratio": 10.07,
+   "seconds": 89,
+   "postedAt": "2026-08-30T00:00:12Z",
+   "site": "YouTube",
+   "query": "AI動画 生成 ショート"
+  },
   {
    "url": "https://www.youtube.com/shorts/Xmvr6EQUNr4",
    "genre": [
@@ -47,7 +65,7 @@
    "memo": "1960年代の小学生になったら #もしもシリーズ #雑学 #昭和",
    "username": "Claudine Tlatelpa",
    "followers": 56700,
-   "views": 3297222,
+   "views": 3297219,
    "likes": 98641,
    "comments": 4779,
    "ratio": 58.15,
@@ -65,7 +83,7 @@
    "memo": "そばをご馳走したおじいさん #感動 #ドラマ #ショートドラマ",
    "username": "じんわり劇場",
    "followers": 71900,
-   "views": 3154146,
+   "views": 3154242,
    "likes": 53318,
    "comments": 547,
    "ratio": 43.87,
@@ -83,7 +101,7 @@
    "memo": "INMU KINGミームで面白いAI生成ランキング #ばずれ #面白い動画 #こめお #溝口勇児 #wakattetv #福島大学",
    "username": "ayamaka(あやまか　アヤマカ)Channel",
    "followers": 8300,
-   "views": 2682455,
+   "views": 2682450,
    "likes": 36562,
    "comments": 750,
    "ratio": 323.19,
@@ -91,6 +109,24 @@
    "postedAt": "2026-09-12T10:58:17Z",
    "site": "YouTube",
    "query": "AI動画 生成 ショート"
+  },
+  {
+   "url": "https://www.youtube.com/shorts/RmaT14EDYrY",
+   "genre": [
+    "AIデザイン系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "AIがキーボードを設計→5分で動いた話",
+   "username": "イチケン / ICHIKEN",
+   "followers": 522000,
+   "views": 2452795,
+   "likes": 28172,
+   "comments": 309,
+   "ratio": 4.7,
+   "seconds": 58,
+   "postedAt": "2026-08-01T10:00:14Z",
+   "site": "YouTube",
+   "query": "AI デザイン 作り方"
   },
   {
    "url": "https://www.youtube.com/shorts/-Q88Klo4SB4",
@@ -101,8 +137,8 @@
    "memo": "のび太とみさえ　#アニメ実写化 #クレヨンしんちゃん #ドラえもん #ショートドラマ",
    "username": "文化的なヨル子",
    "followers": 103000,
-   "views": 1907621,
-   "likes": 30085,
+   "views": 1907625,
+   "likes": 30084,
    "comments": 209,
    "ratio": 18.52,
    "seconds": 51,
@@ -119,14 +155,32 @@
    "memo": "【ほっこりドラマ】俺がなりたかった大人 #感動 #ほっこり #ショートドラマ",
    "username": "KIM【AI Creator】",
    "followers": 11800,
-   "views": 1847110,
-   "likes": 34918,
+   "views": 1847328,
+   "likes": 34919,
    "comments": 519,
-   "ratio": 156.53,
+   "ratio": 156.55,
    "seconds": 70,
    "postedAt": "2026-10-05T03:35:20Z",
    "site": "YouTube",
    "query": "AI動画 生成 ショート"
+  },
+  {
+   "url": "https://www.youtube.com/shorts/IaAyS_BQ0bg",
+   "genre": [
+    "AIデザイン系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "ホリエモンも絶賛するINMU KING #INM生成AIキャンプ",
+   "username": "あさげちゃん",
+   "followers": 23200,
+   "views": 1476556,
+   "likes": 7012,
+   "comments": 98,
+   "ratio": 63.64,
+   "seconds": 19,
+   "postedAt": "2026-08-26T08:30:16Z",
+   "site": "YouTube",
+   "query": "AI 広告 動画 作り方"
   },
   {
    "url": "https://www.youtube.com/shorts/wb7c-uul-eo",
@@ -165,6 +219,24 @@
    "query": "AI活用 仕事術"
   },
   {
+   "url": "https://www.youtube.com/shorts/lbDJXemoVGA",
+   "genre": [
+    "AIデザイン系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "【AIが考えたりんご飴Lv100】MeshyAIが考えた3Dモデルを再現してみました#MeshyAI #Meshy7 #SculptingLevelAI #ImageTo3DMod",
+   "username": "りんご飴Lv100🍎もりりん",
+   "followers": 181000,
+   "views": 1203078,
+   "likes": 30180,
+   "comments": 155,
+   "ratio": 6.65,
+   "seconds": 61,
+   "postedAt": "2026-09-08T12:54:36Z",
+   "site": "YouTube",
+   "query": "AI デザイン 作り方"
+  },
+  {
    "url": "https://www.youtube.com/shorts/Q-L-2JZlh64",
    "genre": [
     "AIで作った動画"
@@ -191,10 +263,10 @@
    "memo": "もしもSnow Manが鬼滅の刃の柱だったら【AI実写】#snowman #鬼滅の刃 #柱 #AI実写 #もしもシリーズ  #shorts",
    "username": "IF Vision",
    "followers": 1900,
-   "views": 939695,
+   "views": 939633,
    "likes": 21616,
    "comments": 647,
-   "ratio": 494.58,
+   "ratio": 494.54,
    "seconds": 57,
    "postedAt": "2026-08-05T11:00:28Z",
    "site": "YouTube",
@@ -245,7 +317,7 @@
    "memo": "もしもTWICEが鬼滅の刃の柱だったら【AI実写】#twice  #鬼滅の刃 #柱 #AI実写 #もしもシリーズ  #shorts",
    "username": "IF Vision",
    "followers": 1900,
-   "views": 561872,
+   "views": 561873,
    "likes": 9695,
    "comments": 232,
    "ratio": 295.72,
@@ -263,7 +335,7 @@
    "memo": "もしもM1〜地震がどんどん強くなってきたら……??? #もしも #もしもシリーズ #地震 #災害 #日本",
    "username": "AIと俺",
    "followers": 841,
-   "views": 514970,
+   "views": 514971,
    "likes": 6472,
    "comments": 142,
    "ratio": 612.33,
@@ -281,7 +353,7 @@
    "memo": "ChatGPTに『稼いで』って言ったらヤバいことになりました。 #生成ai #ai活用 #sns #chatgpt #aiツール #プロンプト #働き方  #仕事  #chatgp",
    "username": "ひろゆき【SNS×AI攻略】",
    "followers": 10300,
-   "views": 471549,
+   "views": 471563,
    "likes": 3554,
    "comments": 170,
    "ratio": 45.78,
@@ -299,7 +371,7 @@
    "memo": "もし太陽が消えたら？#もしもシリーズ #シミュレーション #もしも #雑学 #whatif",
    "username": "もしも再現",
    "followers": 11200,
-   "views": 352087,
+   "views": 352074,
    "likes": 3123,
    "comments": 57,
    "ratio": 31.44,
@@ -335,7 +407,7 @@
    "memo": "もしも鬼滅の刃のキャラ達が大学生だったら。 #ai #鬼滅の刃 #demonslayer",
    "username": "HiroのAI動画ラボ",
    "followers": 6620,
-   "views": 266959,
+   "views": 266975,
    "likes": 3277,
    "comments": 74,
    "ratio": 40.33,
@@ -363,6 +435,24 @@
    "query": "AI活用 仕事術"
   },
   {
+   "url": "https://www.youtube.com/shorts/BTcGwgy3-9w",
+   "genre": [
+    "AIで作った動画"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "何故かYouTubeにAI認定された動画 #野球 #堀大輔 ショートスリーパー #ホームラン #大谷翔平",
+   "username": "だいきの人生",
+   "followers": 369,
+   "views": 210776,
+   "likes": 562,
+   "comments": 34,
+   "ratio": 571.21,
+   "seconds": 11,
+   "postedAt": "2026-09-09T08:08:25Z",
+   "site": "YouTube",
+   "query": "AI動画 生成 ショート"
+  },
+  {
    "url": "https://www.youtube.com/shorts/PT0M7FIJY6Y",
    "genre": [
     "もしも・科学系"
@@ -371,10 +461,10 @@
    "memo": "もし太陽が突然消えたら…地球が気づくのは何分後？",
    "username": "科学ブレイク",
    "followers": 2300,
-   "views": 165250,
+   "views": 165233,
    "likes": 555,
    "comments": 8,
-   "ratio": 71.85,
+   "ratio": 71.84,
    "seconds": 70,
    "postedAt": "2026-11-13T10:00:05Z",
    "site": "YouTube",
@@ -407,10 +497,10 @@
    "memo": "もし5秒間 地球上から人がいなくなったら？",
    "username": "IF研究所",
    "followers": 574,
-   "views": 148468,
+   "views": 148507,
    "likes": 1266,
    "comments": 27,
-   "ratio": 258.66,
+   "ratio": 258.72,
    "seconds": 77,
    "postedAt": "2026-10-27T09:02:32Z",
    "site": "YouTube",
@@ -433,6 +523,78 @@
    "postedAt": "2026-06-02T10:45:22Z",
    "site": "YouTube",
    "query": "もしもシリーズ AI"
+  },
+  {
+   "url": "https://www.youtube.com/shorts/oWL8bzZ9eiM",
+   "genre": [
+    "AI系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "iOS27にした人絶対見て👀　#iphone #裏技 #tips  #あいふぉーん",
+   "username": "とい　デキる人のiPhone便利術",
+   "followers": 10800,
+   "views": 70801,
+   "likes": 665,
+   "comments": 4,
+   "ratio": 6.56,
+   "seconds": 64,
+   "postedAt": "2026-09-25T12:09:29Z",
+   "site": "YouTube",
+   "query": "ChatGPT 使い方 裏技"
+  },
+  {
+   "url": "https://www.youtube.com/shorts/95FPEWOgVpc",
+   "genre": [
+    "AI系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "⭕️Claude Code自動化できること8選 #Claude #AI活用 #aiツール",
+   "username": "たくま【ゼロからのAI活用】",
+   "followers": 1530,
+   "views": 63801,
+   "likes": 629,
+   "comments": 8,
+   "ratio": 41.7,
+   "seconds": 73,
+   "postedAt": "2026-06-06T12:36:35Z",
+   "site": "YouTube",
+   "query": "AI活用 仕事術"
+  },
+  {
+   "url": "https://www.youtube.com/shorts/sX6CGKuiKtI",
+   "genre": [
+    "AI系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "【🚨Claude Code活用術】作業を自動化する神スキル7選 #ai #生成ai #claude #スキル",
+   "username": "ゆう AI攻略",
+   "followers": 7390,
+   "views": 48766,
+   "likes": 1473,
+   "comments": 154,
+   "ratio": 6.6,
+   "seconds": 64,
+   "postedAt": "2026-10-22T10:02:37Z",
+   "site": "YouTube",
+   "query": "AI活用 仕事術"
+  },
+  {
+   "url": "https://www.youtube.com/shorts/urzvHJzw4_E",
+   "genre": [
+    "AI系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "【🚨知らないと損】Claudeの初期設定これだけです",
+   "username": "まい【会社辞めてSNS生活】",
+   "followers": 441,
+   "views": 33662,
+   "likes": 318,
+   "comments": 2,
+   "ratio": 76.33,
+   "seconds": 78,
+   "postedAt": "2026-06-08T01:44:49Z",
+   "site": "YouTube",
+   "query": "AI活用 仕事術"
   }
  ]
 }
