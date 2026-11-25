@@ -103,6 +103,39 @@ def is_video(creative):
     return bool((creative.get('asset_feed_spec') or {}).get('videos'))
 
 
+def video_id_of(creative):
+    spec = creative.get('object_story_spec') or {}
+    vid = creative.get('video_id') or (spec.get('video_data') or {}).get('video_id')
+    if not vid:
+        vids = (creative.get('asset_feed_spec') or {}).get('videos') or []
+        vid = vids[0].get('video_id') if vids else None
+    return str(vid) if vid else None
+
+
+def add_videos(data):
+    """動画広告の実物のURLと長さを入れる。URLはMetaの配信用で期限があるので、更新のたびに取り直す。取れなくても止めない。"""
+    want = {c['_vid'] for c in data['creatives'] if c.get('_vid')}
+    got = {}
+    ids = sorted(want)
+    for i in range(0, len(ids), 25):
+        res = api('', {'ids': ','.join(ids[i:i + 25]), 'fields': 'source,length'}, soft=True)
+        if isinstance(res, dict):
+            got.update(res)
+        else:  # まとめて取れない時は1本ずつ
+            for v in ids[i:i + 25]:
+                one = api(v, {'fields': 'source,length'}, soft=True)
+                if isinstance(one, dict):
+                    got[v] = one
+    n = 0
+    for c in data['creatives']:
+        v = got.get(c.pop('_vid', None) or '')
+        if v and v.get('source'):
+            c['videoUrl'] = v['source']
+            c['videoSec'] = round(float(v.get('length') or 0), 1) or None
+            n += 1
+    print(f'動画の実物：{len(want)}本のうち {len([1 for k in want if (got.get(k) or {}).get("source")])}本のURLを取得（広告 {n}本に反映）')
+
+
 def lp_id_from(url):
     m = re.search(r'/p/([A-Za-z0-9]{6,})', url or '')
     return m.group(1) if m else None
@@ -160,7 +193,7 @@ def build(rows, ads, old):
             c = creatives[ad_id] = {
                 'id': ad_id, 'name': r.get('ad_name') or ad_id, 'adset': r.get('adset_name') or '', 'account': r.get('account_name') or '', 'format': '動画' if is_video(cr) else '画像',
                 'campaignId': r['campaign_id'], 'lpId': lp_id, 'imageUrl': None, 'videoUrl': None, 'copy': '',
-                '_img': cr.get('image_url') or cr.get('thumbnail_url'), 'daily': [],
+                '_img': cr.get('image_url') or cr.get('thumbnail_url'), '_vid': video_id_of(cr), 'daily': [],
             }
         acts = {a['action_type']: num(a.get('value')) for a in r.get('actions') or []}
         c['daily'].append({
@@ -234,6 +267,7 @@ def main():
         data['tokenExpiresAt'] = datetime.datetime.fromtimestamp(exp, JST).date().isoformat()
         print('トークンの期限:', data['tokenExpiresAt'])
     save_images(data)
+    add_videos(data)
     with open(DATA, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=1)
         f.write('\n')
