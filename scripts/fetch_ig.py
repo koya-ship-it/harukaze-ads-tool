@@ -100,6 +100,7 @@ def main():
     cache = {} if test else (json.load(open(CACHE, encoding='utf-8')) if os.path.exists(CACHE) else {})
     names = [str(a.get('username', '')).strip().lstrip('@') for a in accounts]
     genre = {n: (a.get('genre') or 'その他') for n, a in zip(names, accounts)}
+    ratio_of = {n: float(a.get('minRatio', min_ratio)) for n, a in zip(names, accounts)}  # アカウントごとに基準を変えられる（企業はフォロワーが多いのでゆるめる）
 
     # 古い順（まだ取っていないものが最初）に、1回の実行で perRun 個だけ取りに行く。読めないと分かったものは7日あけてから試す
     def due(n):
@@ -147,12 +148,12 @@ def main():
     items, floor = [], since.astimezone(JST).isoformat()
     for u in names:
         c = cache.get(u) or {}
-        hit = [dict(r, genre=[genre[u]]) for r in c.get('items', []) if r.get('url') and (r.get('ratio') or 0) >= min_ratio and r.get('postedAt', '') >= floor]
+        hit = [dict(r, genre=[genre[u]]) for r in c.get('items', []) if r.get('url') and (r.get('ratio') or 0) >= ratio_of[u] and r.get('postedAt', '') >= floor]
         hit.sort(key=lambda r: -((r['views'] or 0) or (r['likes'] or 0)))
         items += hit[:int(conf.get('perAccount', 5))]
     items.sort(key=lambda r: -((r['views'] or 0) or (r['likes'] or 0)))
     done = len([n for n in names if n in cache])
-    rule = f'直近{conf.get("days", 30)}日・再生数がフォロワー数の{min_ratio:g}倍以上' if min_ratio else f'直近{conf.get("days", 30)}日'
+    rule = (f'直近{conf.get("days", 30)}日・再生数がフォロワー数の{min_ratio:g}倍以上（企業・メディアは3倍以上）' if min_ratio else f'直近{conf.get("days", 30)}日')
     out = {'rule': rule, 'updatedAt': now.isoformat(), 'accounts': len(names), 'checked': done, 'items': items[:int(conf.get('keep', 40))]}
     with open(OUT, 'w', encoding='utf-8') as f:
         json.dump(out, f, ensure_ascii=False, indent=1); f.write('\n')

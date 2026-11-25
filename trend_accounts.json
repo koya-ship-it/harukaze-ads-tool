@@ -2,8 +2,253 @@
  "days": 180,
  "minRatio": 10,
  "perAccount": 5,
- "keep": 80,
+ "keep": 100,
  "accounts": [
+  {
+   "username": "horiemonai",
+   "genre": "企業・スクール（AI）",
+   "minRatio": 3
+  },
+  {
+   "username": "bytech_officials",
+   "genre": "企業・スクール（AI）",
+   "minRatio": 3
+  },
+  {
+   "username": "ai_mokuyoukai",
+   "genre": "企業・スクール（AI）",
+   "minRatio": 3
+  },
+  {
+   "username": "samuraiengineer_official",
+   "genre": "企業・スクール（AI）",
+   "minRatio": 3
+  },
+  {
+   "username": "mikimikiwebschool",
+   "genre": "企業・スクール（AI）",
+   "minRatio": 3
+  },
+  {
+   "username": "winschool_pca",
+   "genre": "企業・スクール（AI）",
+   "minRatio": 3
+  },
+  {
+   "username": "dxup_official",
+   "genre": "企業・スクール（AI）",
+   "minRatio": 3
+  },
+  {
+   "username": "grateful_agent",
+   "genre": "企業・スクール（AI）",
+   "minRatio": 3
+  },
+  {
+   "username": "comman.inc",
+   "genre": "企業・スクール（AI）",
+   "minRatio": 3
+  },
+  {
+   "username": "she_officials",
+   "genre": "企業・スクール（デザイン・動画）",
+   "minRatio": 3
+  },
+  {
+   "username": "digitalhollywoodtokyo",
+   "genre": "企業・スクール（デザイン・動画）",
+   "minRatio": 3
+  },
+  {
+   "username": "human_academy",
+   "genre": "企業・スクール（デザイン・動画）",
+   "minRatio": 3
+  },
+  {
+   "username": "internetacademy.jp",
+   "genre": "企業・スクール（デザイン・動画）",
+   "minRatio": 3
+  },
+  {
+   "username": "tokyo_designplex",
+   "genre": "企業・スクール（デザイン・動画）",
+   "minRatio": 3
+  },
+  {
+   "username": "nests.jp",
+   "genre": "企業・スクール（デザイン・動画）",
+   "minRatio": 3
+  },
+  {
+   "username": "japan_design_school_official",
+   "genre": "企業・スクール（デザイン・動画）",
+   "minRatio": 3
+  },
+  {
+   "username": "famm_jp",
+   "genre": "企業・スクール（デザイン・動画）",
+   "minRatio": 3
+  },
+  {
+   "username": "webcoach_officials",
+   "genre": "企業・スクール（デザイン・動画）",
+   "minRatio": 3
+  },
+  {
+   "username": "webdesign_chaptertwo",
+   "genre": "企業・スクール（デザイン・動画）",
+   "minRatio": 3
+  },
+  {
+   "username": "nurumayu_design_official",
+   "genre": "企業・スクール（デザイン・動画）",
+   "minRatio": 3
+  },
+  {
+   "username": "_digital_hacks",
+   "genre": "企業・スクール（デザイン・動画）",
+   "minRatio": 3
+  },
+  {
+   "username": "moocres",
+   "genre": "企業・スクール（デザイン・動画）",
+   "minRatio": 3
+  },
+  {
+   "username": "creators.jp",
+   "genre": "企業・スクール（デザイン・動画）",
+   "minRatio": 3
+  },
+  {
+   "username": "workjoy_official",
+   "genre": "企業・スクール（デザイン・動画）",
+   "minRatio": 3
+  },
+  {
+   "username": "dougacamp.fukuoka",
+   "genre": "企業・スクール（デザイン・動画）",
+   "minRatio": 3
+  },
+  {
+   "username": "web.campus",
+   "genre": "企業・スクール（デザイン・動画）",
+   "minRatio": 3
+  },
+  {
+   "username": "remolabo",
+   "genre": "企業・スクール（副業・マーケ）",
+   "minRatio": 3
+  },
+  {
+   "username": "remolabo.insta",
+   "genre": "企業・スクール（副業・マーケ）",
+   "minRatio": 3
+  },
+  {
+   "username": "webmarks_official",
+   "genre": "企業・スクール（副業・マーケ）",
+   "minRatio": 3
+  },
+  {
+   "username": "wannabe__school",
+   "genre": "企業・スクール（副業・マーケ）",
+   "minRatio": 3
+  },
+  {
+   "username": "webst_official",
+   "genre": "企業・スクール（副業・マーケ）",
+   "minRatio": 3
+  },
+  {
+   "username": "resnavi_official",
+   "genre": "企業・スクール（副業・マーケ）",
+   "minRatio": 3
+  },
+  {
+   "username": "techcamp_official",
+   "genre": "企業・スクール（副業・マーケ）",
+   "minRatio": 3
+  },
+  {
+   "username": "mamaworks_channel",
+   "genre": "企業・スクール（副業・マーケ）",
+   "minRatio": 3
+  },
+  {
+   "username": "coconala_official",
+   "genre": "企業・スクール（副業・マーケ）",
+   "minRatio": 3
+  },
+  {
+   "username": "street_academy_official",
+   "genre": "企業・スクール（副業・マーケ）",
+   "minRatio": 3
+  },
+  {
+   "username": "udemyjapan",
+   "genre": "企業・スクール（副業・マーケ）",
+   "minRatio": 3
+  },
+  {
+   "username": "newspicks_official",
+   "genre": "ビジネスメディア",
+   "minRatio": 3
+  },
+  {
+   "username": "pivot0601",
+   "genre": "ビジネスメディア",
+   "minRatio": 3
+  },
+  {
+   "username": "flierinc",
+   "genre": "ビジネスメディア",
+   "minRatio": 3
+  },
+  {
+   "username": "r25_official",
+   "genre": "ビジネスメディア",
+   "minRatio": 3
+  },
+  {
+   "username": "businessinsiderjapan",
+   "genre": "ビジネスメディア",
+   "minRatio": 3
+  },
+  {
+   "username": "forbesjapan",
+   "genre": "ビジネスメディア",
+   "minRatio": 3
+  },
+  {
+   "username": "president_online_official",
+   "genre": "ビジネスメディア",
+   "minRatio": 3
+  },
+  {
+   "username": "nikkei_business_official",
+   "genre": "ビジネスメディア",
+   "minRatio": 3
+  },
+  {
+   "username": "globis_hodai",
+   "genre": "ビジネスメディア",
+   "minRatio": 3
+  },
+  {
+   "username": "studyhacker_media",
+   "genre": "ビジネスメディア",
+   "minRatio": 3
+  },
+  {
+   "username": "lifehacker_japan",
+   "genre": "ビジネスメディア",
+   "minRatio": 3
+  },
+  {
+   "username": "the_gold_online",
+   "genre": "ビジネスメディア",
+   "minRatio": 3
+  },
   {
    "username": "usutaku_copilot",
    "genre": "AI系"
@@ -377,5 +622,5 @@
    "genre": "AI系"
   }
  ],
- "perRun": 10
+ "perRun": 12
 }
