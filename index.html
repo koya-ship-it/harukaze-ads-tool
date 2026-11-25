@@ -220,6 +220,23 @@ table.tb { width: 100%; border-collapse: collapse; font-size: 13px; }
 .toprow .nm, .toprow .mt { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .toprow .big { white-space: nowrap; flex: none; }
 .toprow .big small { white-space: nowrap; }
+.tr-bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 14px; }
+.tr-bar input { flex: 1; min-width: 180px; max-width: 320px; border: 1px solid var(--line); border-radius: 8px; padding: 8px 11px; font: inherit; font-size: 13px; background: #fff; }
+.chip { border: 1px solid var(--line); background: #fff; border-radius: 999px; padding: 5px 12px; font-size: 12px; color: var(--ink-2); }
+.chip.on { background: var(--ink); color: #fff; border-color: var(--ink); }
+.chip small { opacity: .6; margin-left: 4px; }
+.trs { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; align-items: start; }
+.tr { border: 1px solid var(--line); border-radius: 8px; background: #fff; overflow: hidden; }
+.tr-emb { background: #f1f0ec; }
+.tr-emb iframe { display: block; width: 100%; border: 0; }
+.tr-emb.ig iframe { height: 560px; } .tr-emb.tt iframe { height: 580px; } .tr-emb.yt iframe { aspect-ratio: 9 / 16; height: auto; } .tr-emb.yt.wide iframe { aspect-ratio: 16 / 9; }
+.tr-link { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; padding: 26px 16px; font-size: 12px; color: var(--ink-3); }
+.tr-b { padding: 11px 14px 13px; }
+.tr-b .tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 6px; }
+.tr-b .memo { font-size: 13px; line-height: 1.55; white-space: pre-wrap; word-break: break-word; }
+.tr-b .ft { display: flex; gap: 8px; align-items: center; margin-top: 8px; font-size: 11px; color: var(--ink-3); }
+.tr-b .ft a { margin-left: auto; color: var(--blue); font-weight: 600; text-decoration: none; }
+.tr-empty { border: 1px dashed #cfcec8; border-radius: 8px; padding: 34px 20px; text-align: center; color: var(--ink-2); font-size: 13px; line-height: 1.9; }
 .rail-sec { font-size: 10.5px; color: #6f7a8c; padding: 14px 12px 4px; letter-spacing: .08em; }
 .rail-item.sub { font-size: 12.5px; padding-left: 14px; }
 .rail-item.sub .dot { width: 6px; height: 6px; border-radius: 50%; background: #55607a; flex: none; margin: 0 9px 0 5px; }
@@ -290,6 +307,7 @@ table.tb { width: 100%; border-collapse: collapse; font-size: 13px; }
   <nav class="rail" aria-label="メニュー">
     <div class="rail-head"><span class="mark">H</span>Harukaze<br>広告ツール</div>
     <button class="rail-item" data-home="1" id="railHome"><span class="rail-ico"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg></span>導線まとめ</button>
+    <button class="rail-item" data-trend="1" id="railTrend"><span class="rail-ico"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg></span>トレンド</button>
     <div class="rail-sec">導線</div>
     <div id="railProj"></div>
     <div class="rail-foot">データ更新：<span id="src">Grok Bot</span><br><span id="updated"></span><div id="tok"></div></div>
@@ -453,6 +471,38 @@ function ranked() {
   const key = S.sort;
   list.sort((a, b) => key === 'cpa' ? a.m.cpa - b.m.cpa : b.m[key] - a.m[key]);
   return list;
+}
+
+/* ---------- トレンド（伸びているクリエイティブの置き場） ----------
+   trends.json に入っているURLを、公式の埋め込みで並べる。足す時は GitHub の「トレンドを足す」から。 */
+const REPO = 'https://github.com/koya-ship-it/harukaze-ads-tool';
+let TRENDS = [];
+const T = { q: '', genre: '', kind: '' };
+function embedOf(u) {
+  let m;
+  if ((m = u.match(/^https:\/\/(?:www\.)?instagram\.com\/(?:[\w.]+\/)?(reel|reels|p|tv)\/([\w-]+)/))) return { site: 'Instagram', cls: 'ig', src: `https://www.instagram.com/${m[1] === 'p' ? 'p' : 'reel'}/${m[2]}/embed/` };
+  if ((m = u.match(/^https:\/\/(?:www\.|m\.)?tiktok\.com\/@[\w.-]+\/video\/(\d+)/))) return { site: 'TikTok', cls: 'tt', src: `https://www.tiktok.com/embed/v2/${m[1]}` };
+  if ((m = u.match(/^https:\/\/(?:www\.|m\.)?youtube\.com\/shorts\/([\w-]{6,})/))) return { site: 'YouTube', cls: 'yt', src: `https://www.youtube.com/embed/${m[1]}` };
+  if ((m = u.match(/^https:\/\/(?:(?:www\.|m\.)?youtube\.com\/watch\?(?:.*&)?v=|youtu\.be\/)([\w-]{6,})/))) return { site: 'YouTube', cls: 'yt wide', src: `https://www.youtube.com/embed/${m[1]}` };
+  if (/^https:\/\/(?:www\.)?facebook\.com\/ads\/library/.test(u)) return { site: 'Meta広告ライブラリ' };
+  if (/^https:\/\/ads\.tiktok\.com\//.test(u)) return { site: 'TikTok Creative Center' };
+  try { return { site: new URL(u).hostname.replace(/^www\./, '') }; } catch (e) { return { site: 'リンク' }; }
+}
+function viewTrend() {
+  const cnt = k => TRENDS.reduce((a, t) => { (Array.isArray(t[k]) ? t[k] : [t[k]]).filter(Boolean).forEach(v => a[v] = (a[v] || 0) + 1); return a; }, {});
+  const chips = (k, c) => Object.entries(c).map(([v, n]) => `<button class="chip ${T[k] === v ? 'on' : ''}" data-tk="${k}" data-tv="${esc(v)}">${esc(v)}<small>${n}</small></button>`).join('');
+  const q = T.q.trim().toLowerCase();
+  const list = TRENDS.filter(t => /^https:\/\//.test(t.url || '')).filter(t => (!T.genre || [].concat(t.genre || []).includes(T.genre)) && (!T.kind || t.kind === T.kind) && (!q || [t.memo, t.url, t.kind, [].concat(t.genre || []).join(' '), t.addedBy].join(' ').toLowerCase().includes(q)))
+    .sort((a, b) => String(b.addedAt || '').localeCompare(String(a.addedAt || '')));
+  const add = `<a class="btn primary" href="${REPO}/actions/workflows/add-trend.yml" target="_blank" rel="noopener">＋ URLを足す</a>`;
+  const bar = `<div class="tr-bar"><input id="trq" type="search" placeholder="メモ・ジャンル・URLで探す" value="${esc(T.q)}">
+    ${chips('genre', cnt('genre'))}${chips('kind', cnt('kind'))}<span class="spacer"></span><span class="lbl">${list.length} / ${TRENDS.length}件</span>${add}</div>`;
+  if (!TRENDS.length) return `<div class="tr-bar"><span class="spacer"></span>${add}</div><div class="tr-empty"><b>まだ1件も入っていません。</b><br>伸びているリールや広告を見つけたら、右上の「＋ URLを足す」から入れます。<br>開いた画面で「Run workflow」を押し、URL・ジャンル・種類・メモを入れて実行すると、1〜2分でここに並びます。<br>InstagramのリールとTikTok・YouTubeは動画がその場で見られます。広告ライブラリなどはリンクで並びます。</div>`;
+  return bar + (list.length ? `<div class="trs">${list.map(t => { const e = embedOf(t.url);
+    return `<div class="tr">${e.src ? `<div class="tr-emb ${e.cls}"><iframe src="${esc(e.src)}" loading="lazy" allowfullscreen allow="encrypted-media; picture-in-picture" title="${esc(e.site)}"></iframe></div>` : `<div class="tr-emb"><div class="tr-link"><b style="font-size:14px;color:var(--ink)">${esc(e.site)}</b>このサイトはここに埋め込めないので、リンクで開きます。<a class="btn" href="${esc(t.url)}" target="_blank" rel="noopener">開く ↗</a></div></div>`}
+      <div class="tr-b"><div class="tags">${[].concat(t.genre || []).map(g => `<span class="tag stage">${esc(g)}</span>`).join('')}${t.kind ? `<span class="tag">${esc(t.kind)}</span>` : ''}</div>
+        ${t.memo ? `<div class="memo">${esc(t.memo)}</div>` : ''}
+        <div class="ft"><span>${esc(e.site)}</span><span>${esc(String(t.addedAt || '').slice(0, 10))}</span>${t.addedBy ? `<span>${esc(t.addedBy)}</span>` : ''}<a href="${esc(t.url)}" target="_blank" rel="noopener">元を開く ↗</a></div></div></div>`; }).join('')}</div>` : '<div class="tr-empty">この条件に合うものはありません。</div>');
 }
 
 /* ---------- 導線まとめ ---------- */
@@ -653,12 +703,14 @@ const closeDrawer = () => { $('#drawer').classList.remove('open'); $('#shade').c
 
 /* ---------- 描画と操作 ---------- */
 function render() {
-  if (!S.proj) S.view = 'home';
-  $('#page').innerHTML = { home: viewHome, dash: viewDash, rank: viewRank, lp: viewLp }[S.view]();
+  if (!S.proj && S.view !== 'trend') S.view = 'home';
+  $('#page').innerHTML = { trend: viewTrend, home: viewHome, dash: viewDash, rank: viewRank, lp: viewLp }[S.view]();
   document.querySelectorAll('[data-go]').forEach(b => { if (b.closest('.toptabs') || b.closest('.rail')) b.classList.toggle('on', b.dataset.go === S.view); });
-  $('#ttl').textContent = S.proj ? P().name : '導線まとめ';
+  $('#ttl').textContent = S.view === 'trend' ? 'トレンド' : S.proj ? P().name : '導線まとめ';
   $('#tabs').style.display = S.proj ? '' : 'none';
-  $('#railHome').classList.toggle('on', !S.proj);
+  $('#period').style.display = S.view === 'trend' ? 'none' : '';
+  $('#railHome').classList.toggle('on', !S.proj && S.view !== 'trend');
+  $('#railTrend').classList.toggle('on', S.view === 'trend');
   document.querySelectorAll('#railProj [data-proj]').forEach(b => b.classList.toggle('on', b.dataset.proj === S.proj));
   document.querySelectorAll('#period button').forEach(b => b.classList.toggle('on', +b.dataset.d === S.days));
   if (S.view === 'dash') {
@@ -670,12 +722,14 @@ function render() {
   }
 }
 document.addEventListener('click', e => {
-  const t = e.target.closest('[data-home],[data-proj],[data-go],[data-d],[data-sort],[data-mode],[data-cr],[data-lp],[data-dev],[data-close]');
+  const t = e.target.closest('[data-trend],[data-tk],[data-home],[data-proj],[data-go],[data-d],[data-sort],[data-mode],[data-cr],[data-lp],[data-dev],[data-close]');
   if (e.target.id === 'shade') return closeDrawer();
   if (!t) return;
   const d = t.dataset;
   if ('close' in d) return closeDrawer();
   if (d.cr) return openDrawer(d.cr);
+  if (d.trend) { S.proj = null; S.view = 'trend'; closeDrawer(); }
+  if (d.tk) T[d.tk] = T[d.tk] === d.tv ? '' : d.tv;
   if (d.home) { S.proj = null; S.view = 'home'; closeDrawer(); }
   if (d.proj) { enter(d.proj); closeDrawer(); }
   if (d.go) S.view = d.go;
@@ -687,6 +741,8 @@ document.addEventListener('click', e => {
   render(); if (d.go || d.lp || d.home || d.proj) scrollTo(0, 0);
 });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+document.addEventListener('input', e => { if (e.target.id !== 'trq') return; T.q = e.target.value; render(); const i = $('#trq'); i.focus(); i.setSelectionRange(i.value.length, i.value.length); });
+fetch('trends.json', { cache: 'no-store' }).then(r => r.ok ? r.json() : []).then(a => { TRENDS = Array.isArray(a) ? a : []; if (S.view === 'trend') render(); }).catch(() => {});
 addEventListener('resize', () => S.view === 'dash' && drawChart());
 function boot() {
   ensureProjects(AD_DATA);
@@ -696,7 +752,7 @@ function boot() {
   if (AD_DATA.listinSource) $('#src').textContent = 'Metaから毎朝自動';
   if (AD_DATA.tokenExpiresAt) { const left = Math.ceil((new Date(AD_DATA.tokenExpiresAt) - new Date()) / 864e5); $('#tok').textContent = left >= 0 ? `トークン期限 あと${left}日` : 'トークンの期限切れ'; if (left < 10) $('#tok').style.color = '#ff8f8f'; }
   /* #rank や #lp、#lp-sp、#lp=lp2 を付けて開くと、その画面から始まる */
-  location.hash.slice(1).split('-').forEach(h => { const [k, v] = h.split('='); if (k === 'p' && AD_DATA.projects.some(p => p.id === v)) enter(v); if (['dash', 'rank', 'lp'].includes(k)) S.view = k; if (k === 'sp') S.dev = 'sp'; if (k === 'lp' && lpOf(v)) S.lp = v; });
+  location.hash.slice(1).split('-').forEach(h => { const [k, v] = h.split('='); if (k === 'p' && AD_DATA.projects.some(p => p.id === v)) enter(v); if (['dash', 'rank', 'lp'].includes(k)) S.view = k; if (k === 'trend') { S.proj = null; S.view = 'trend'; } if (k === 'sp') S.dev = 'sp'; if (k === 'lp' && lpOf(v)) S.lp = v; });
   render();
 }
 /* 同じ場所に data.json があればそれを使う。無い・読めない時は上の仮データで動く */

@@ -1,0 +1,52 @@
+name: トレンドを足す
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: 'URL（Instagramのリール、TikTok、YouTube、広告ライブラリなど）'
+        required: true
+        type: string
+      genre:
+        description: 'ジャンル'
+        required: true
+        type: choice
+        options: ['AI系', '在宅・副業系', 'デザイン系', 'その他']
+      kind:
+        description: '種類'
+        required: true
+        type: choice
+        options: ['リール・ショート動画', '広告（動画）', '広告（バナー）', 'その他']
+      memo:
+        description: 'メモ（何が良いか・使えそうな点。空でもよい）'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+concurrency: update-data
+
+jobs:
+  add:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: trends.json に足す
+        env:
+          TREND_URL: ${{ inputs.url }}
+          TREND_GENRE: ${{ inputs.genre }}
+          TREND_KIND: ${{ inputs.kind }}
+          TREND_MEMO: ${{ inputs.memo }}
+          TREND_BY: ${{ github.actor }}
+        run: python scripts/add_trend.py
+      - name: 保存する
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add trends.json
+          git diff --cached --quiet || git commit -m "トレンドを1件足す"
+          git push
