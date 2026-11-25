@@ -220,6 +220,35 @@ table.tb { width: 100%; border-collapse: collapse; font-size: 13px; }
 .toprow .nm, .toprow .mt { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .toprow .big { white-space: nowrap; flex: none; }
 .toprow .big small { white-space: nowrap; }
+.rail-sec { font-size: 10.5px; color: #6f7a8c; padding: 14px 12px 4px; letter-spacing: .08em; }
+.rail-item.sub { font-size: 12.5px; padding-left: 14px; }
+.rail-item.sub .dot { width: 6px; height: 6px; border-radius: 50%; background: #55607a; flex: none; margin: 0 9px 0 5px; }
+.rail-item.sub.on .dot { background: var(--green); }
+.rail-item.sub span.t { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pjs { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 14px; }
+.pj { text-align: left; padding: 0; border: 1px solid var(--line); border-radius: 8px; background: #fff; display: flex; flex-direction: column; align-items: stretch; justify-content: flex-start; width: 100%; overflow: hidden; }
+.pjs { align-items: stretch; }
+.pj-sp { margin-top: auto; }
+.pj-f span { white-space: nowrap; }
+.pj-x { display: flex; gap: 14px; padding: 2px 16px 8px; font-size: 11px; color: var(--ink-3); }
+.pj-x b { color: var(--ink); font-size: 13px; font-weight: 600; margin-left: 4px; }
+.ext { margin: 14px 0; }
+.pj-f { flex-wrap: wrap; row-gap: 4px; }
+.ext .mgrid { grid-template-columns: repeat(5, 1fr); padding: 14px 16px; }
+.ext .mgrid b { font-size: 20px; }
+.pj:hover { border-color: #c9c8c2; }
+.pj-h { padding: 14px 16px 10px; border-bottom: 1px solid var(--line); }
+.pj-h b { font-size: 15.5px; display: block; }
+.pj-h span { font-size: 11.5px; color: var(--ink-3); display: block; margin-top: 2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pj-m { display: grid; grid-template-columns: 1.1fr 1fr 1fr 1fr; gap: 10px; padding: 12px 16px 6px; }
+.pj-m div { font-size: 11px; color: var(--ink-3); }
+.pj-m b { display: block; font-size: 17px; color: var(--ink); font-weight: 600; margin-top: 1px; white-space: nowrap; }
+.pj-m div:first-child b { font-size: 26px; color: var(--green-dark); }
+.pj-sp { padding: 4px 16px 0; }
+.pj-f { display: flex; align-items: center; gap: 6px; padding: 10px 16px 14px; font-size: 11.5px; color: var(--ink-3); }
+.pj-f .thumb.s { width: 34px; height: 34px; border-radius: 5px; }
+.pj-f .go { margin-left: auto; color: var(--blue); font-weight: 600; }
+.pj-w { margin: 0 16px 10px; padding: 6px 9px; font-size: 11px; background: #fff6e5; color: #a45e00; border-radius: 6px; }
 .lpstage { display: flex; align-items: center; gap: 7px; padding: 9px 14px 3px; font-size: 11px; font-weight: 700; color: var(--ink-2); }
 .lpstage i { font-style: normal; width: 17px; height: 17px; border-radius: 50%; background: var(--ink); color: #fff; font-size: 10px; display: grid; place-items: center; }
 .lpi { display: flex; gap: 11px; align-items: flex-start; width: 100%; text-align: left; padding: 8px 14px 9px 11px; border: 0; border-left: 3px solid transparent; background: none; }
@@ -260,23 +289,22 @@ table.tb { width: 100%; border-collapse: collapse; font-size: 13px; }
 <div class="app">
   <nav class="rail" aria-label="メニュー">
     <div class="rail-head"><span class="mark">H</span>Harukaze<br>広告ツール</div>
-    <button class="rail-item" data-go="dash"><span class="rail-ico"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>ダッシュボード</button>
-    <button class="rail-item" data-go="rank"><span class="rail-ico"><svg viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM7 6H4v1a3 3 0 0 0 3 3M17 6h3v1a3 3 0 0 1-3 3"/></svg></span>クリエイティブ</button>
-    <button class="rail-item" data-go="lp"><span class="rail-ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></svg></span>LP</button>
+    <button class="rail-item" data-home="1" id="railHome"><span class="rail-ico"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg></span>導線まとめ</button>
+    <div class="rail-sec">導線</div>
+    <div id="railProj"></div>
     <div class="rail-foot">データ更新：<span id="src">Grok Bot</span><br><span id="updated"></span><div id="tok"></div></div>
   </nav>
 
   <div class="main">
     <header class="topbar">
       <h1 id="ttl"></h1>
-      <div class="toptabs" role="tablist">
+      <div class="toptabs" role="tablist" id="tabs">
         <button data-go="dash" class="on">ダッシュボード</button>
         <button data-go="rank">クリエイティブ</button>
         <button data-go="lp">LP</button>
       </div>
       <div class="spacer"></div>
       <span class="sample">サンプルデータ</span>
-      <select class="sel" id="camp" aria-label="キャンペーン"></select>
       <div class="seg" id="period" aria-label="期間">
         <button data-d="7">7日</button><button data-d="14" class="on">14日</button><button data-d="30">30日</button>
       </div>
@@ -351,6 +379,19 @@ let AD_DATA = (() => {
 
 /* ---------- 集計 ---------- */
 /* 外から来たデータ（data.json）を画面用に整える：日付は文字→日付、古い順に並べる、色が無ければ灰色 */
+/* スプレッドシートなど、Meta以外から来る数字（LINEリスト・個別予約・成約・売上）を、今見ている期間で合計する */
+function ext(p, prev) {
+  if (!p.extra || !AD_DATA.creatives.length) return null;
+  const all = AD_DATA.creatives[0].daily, win = new Set((prev ? all.slice(-S.days * 2, -S.days) : all.slice(-S.days)).map(d => +d.date));
+  const t = { line: 0, booking: 0, deals: 0, paid: 0, billed: 0 };
+  p.extra.daily.forEach(r => { if (win.has(+r.date)) for (const k in t) t[k] += +r[k] || 0; });
+  return t;
+}
+function ensureProjects(d) {
+  d.projects = d.projects || [];
+  const lpG = id => (d.lps.find(l => l.id === id) || {}).group;
+  d.campaigns.forEach(c => { if (!d.projects.some(p => p.campaignIds.includes(c.id))) d.projects.push({ id: 'c' + c.id, name: c.name, campaignIds: [c.id], lpGroups: [...new Set(d.creatives.filter(x => x.campaignId === c.id).map(x => lpG(x.lpId)).filter(Boolean))] }); });
+}
 function normalize(d) {
   const day = v => { const [y, m, dd] = String(v).slice(0, 10).split('-').map(Number); return new Date(y, m - 1, dd); };
   /* どの広告も「最新日までの60日」に日付をそろえる。数字が無い日は0（途中から始めた広告・止めた広告があっても日付がずれない） */
@@ -366,12 +407,16 @@ function normalize(d) {
   d.creatives.forEach(c => { c.dup = cnt[c.name] > 1 && !!c.adset; });
   d.creatives.forEach(c => { if (c.dup) c.name += '｜' + c.adset; });
   /* 広告アカウントが2つ以上ある時は、キャンペーン名の前にアカウント名を付ける */
+  /* 導線（プロジェクト）＝キャンペーンのまとまり。data.json に無いキャンペーンは、1キャンペーン＝1導線で自動で足す */
+  ensureProjects(d);
+  const dd = v => { const [y, m, x] = String(v).slice(0, 10).split('-').map(Number); return new Date(y, m - 1, x); };
+  d.projects.forEach(p => { if (p.extra) p.extra.daily.forEach(r => r.date = dd(r.date)); });
   if (new Set(d.campaigns.map(c => c.account || '')).size > 1) d.campaigns.forEach(c => { if (c.account) c.name = c.account + ' / ' + c.name; });
   const u = new Date(d.updatedAt);
   if (!isNaN(u)) d.updatedAt = `${u.getMonth() + 1}/${u.getDate()} ${String(u.getHours()).padStart(2, '0')}:${String(u.getMinutes()).padStart(2, '0')}`;
   return d;
 }
-const S = { view: 'dash', days: 14, camp: 'all', sort: 'listin', mode: 'card', lp: null, dev: 'pc' };
+const S = { view: 'home', proj: null, days: 14, sort: 'listin', mode: 'card', lp: null, dev: 'pc' };
 const $ = (s, r = document) => r.querySelector(s);
 const yen = n => '¥' + Math.round(n).toLocaleString('ja-JP');
 const int = n => Math.round(n).toLocaleString('ja-JP');
@@ -380,7 +425,10 @@ const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;'
 const md = d => (d.getMonth() + 1) + '/' + d.getDate();
 const sum = rows => rows.reduce((a, r) => { for (const k of ['spend', 'imp', 'click', 'lpview', 'listin']) a[k] += r[k]; return a; }, { spend: 0, imp: 0, click: 0, lpview: 0, listin: 0 });
 const derive = t => ({ ...t, ctr: t.imp ? t.click / t.imp : 0, cvr: t.click ? t.listin / t.click : 0, cpa: t.listin ? t.spend / t.listin : Infinity, cpc: t.click ? t.spend / t.click : 0 });
-const inCamp = c => S.camp === 'all' || c.campaignId === S.camp;
+const P = () => AD_DATA.projects.find(p => p.id === S.proj);
+const inCamp = c => !S.proj || P().campaignIds.includes(c.campaignId);
+const lpsNow = () => S.proj ? AD_DATA.lps.filter(l => P().lpGroups.includes(l.group)) : AD_DATA.lps;
+function enter(id) { S.proj = id; if (S.view === 'home') S.view = 'dash'; const ls = lpsNow(); const used = new Set(AD_DATA.creatives.filter(inCamp).map(c => c.lpId)); S.lp = (ls.find(l => used.has(l.id)) || ls[0] || AD_DATA.lps[0]).id; }
 const slice = (c, prev) => prev ? c.daily.slice(-S.days * 2, -S.days) : c.daily.slice(-S.days);
 const stat = (c, prev) => derive(sum(slice(c, prev)));
 const lpOf = id => AD_DATA.lps.find(l => l.id === id);
@@ -405,6 +453,38 @@ function ranked() {
   const key = S.sort;
   list.sort((a, b) => key === 'cpa' ? a.m.cpa - b.m.cpa : b.m[key] - a.m[key]);
   return list;
+}
+
+/* ---------- 導線まとめ ---------- */
+function viewHome() {
+  const all = derive(sum(AD_DATA.creatives.flatMap(c => slice(c)))), prev = derive(sum(AD_DATA.creatives.flatMap(c => slice(c, true))));
+  const k = (l, v, d, s = '') => `<div class="card kpi"><div class="l">${l}</div><div class="v">${v}</div><div class="s">${d}<span>${s || `前の${S.days}日比`}</span></div></div>`;
+  const cards = AD_DATA.projects.map(p => {
+    const cs = AD_DATA.creatives.filter(c => p.campaignIds.includes(c.campaignId));
+    const m = derive(sum(cs.flatMap(c => slice(c)))), live = cs.filter(c => stat(c).spend > 0);
+    const days = [...Array(S.days)].map((_, i) => cs.reduce((a, c) => a + ((c.daily[c.daily.length - S.days + i] || {}).listin || 0), 0));
+    const mx = Math.max(...days, 1), bw = 300 / S.days;
+    const sp = `<svg viewBox="0 0 300 44" style="width:100%;display:block">${days.map((v, i) => `<rect x="${i * bw + bw * .15}" y="${42 - v / mx * 38}" width="${bw * .7}" height="${Math.max(1, v / mx * 38)}" rx="1.5" fill="#06c755"/>`).join('')}</svg>`;
+    const top = live.map(c => ({ c, m: stat(c) })).sort((a, b) => b.m.listin - a.m.listin).slice(0, 4);
+    const camps = AD_DATA.campaigns.filter(c => p.campaignIds.includes(c.id)).map(c => c.name).join('、');
+    const weak = m.click > 200 && m.lpview / m.click < .05;
+    const x = ext(p), roas = x && m.spend ? (x.paid / m.spend * 100).toFixed(0) + '%' : '—';
+    return `<button class="pj" data-proj="${esc(p.id)}">
+      <div class="pj-h"><b>${esc(p.name)}</b><span>${esc(camps)}</span></div>
+      <div class="pj-m"><div>リストイン<b class="num">${int(m.listin)}</b></div><div>1件の費用<b class="num">${cpaTxt(m)}</b></div><div>広告費<b class="num">${yen(m.spend)}</b></div><div>ROAS<b class="num">${roas}</b></div></div>
+      ${x ? `<div class="pj-x"><span>LINEリスト<b class="num">${int(x.line)}</b></span><span>個別予約<b class="num">${int(x.booking)}</b></span><span>成約<b class="num">${int(x.deals)}</b></span><span>売上（入金）<b class="num">${yen(x.paid)}</b></span></div>` : ''}
+      ${weak ? '<div class="pj-w">Metaで登録をほぼ計測できていません（クリックに対してLP到達が5%未満）</div>' : ''}
+      <div class="pj-sp">${sp}</div>
+      <div class="pj-f">${top.map(x => thumb(x.c, 's')).join('')}<span>配信中の広告 ${live.length}本 ・ LP ${AD_DATA.lps.filter(l => p.lpGroups.includes(l.group)).length}本</span><span class="go">中を見る →</span></div></button>`;
+  }).join('');
+  return `<div class="kpis" style="grid-template-columns:repeat(4,1fr)">
+    <div class="card kpi hero"><div class="l">リストイン数（全導線・${S.days}日）</div><div class="v">${int(all.listin)}<small>件</small></div><div class="s">${delta(all.listin, prev.listin)}<span>前の${S.days}日比</span></div></div>
+    ${k('1リストインの費用', cpaTxt(all), delta(all.cpa, prev.cpa, true))}
+    ${k('使った広告費', yen(all.spend), delta(all.spend, prev.spend))}
+    ${(() => { const xs = AD_DATA.projects.map(p => ({ x: ext(p), sp: derive(sum(AD_DATA.creatives.filter(c => p.campaignIds.includes(c.campaignId)).flatMap(c => slice(c)))).spend })).filter(o => o.x); const paid = xs.reduce((a, o) => a + o.x.paid, 0), sp = xs.reduce((a, o) => a + o.sp, 0); return xs.length && sp ? k('ROAS（入金÷広告費）', (paid / sp * 100).toFixed(0) + '%', '', `売上がつながっている導線のみ（${xs.length}本）`) : k('ROAS', '—', '', '売上はまだつないでいません'); })()}
+  </div>
+  <div style="display:flex;align-items:baseline;gap:8px;margin:20px 0 10px"><h2 style="font-size:15px;margin:0">導線ごと</h2><span style="font-size:12px;color:var(--ink-3)">${AD_DATA.projects.length}本 ・ 直近${S.days}日</span></div>
+  <div class="pjs">${cards}</div>`;
 }
 
 /* ---------- ダッシュボード ---------- */
@@ -514,9 +594,9 @@ function viewLp() {
   const lpCvr = m => m.lpview ? m.listin / m.lpview : 0;
   return `<div class="lpgrid">
     <div class="lpside">
-      <div class="card"><div class="card-h"><h2>LP一覧</h2><span class="sub">UTAGEから取得 ・ ${AD_DATA.lps.length}本</span></div>
+      <div class="card"><div class="card-h"><h2>LP一覧</h2><span class="sub">UTAGEから取得 ・ ${lpsNow().length}本</span></div>
         ${(() => { let h = '', g = null, st = null, n = 0;
-          for (const l of AD_DATA.lps) {
+          for (const l of lpsNow()) {
             if (l.group !== g) { g = l.group; st = null; n = 0; h += `<div class="lpgroup">${esc(l.group)}<span>${esc(l.funnel)}</span></div>`; }
             if ((l.stage || '') !== st) { st = l.stage || ''; n++; if (st) h += `<div class="lpstage"><i>${n}</i>${esc(st)}</div>`; }
             const { cs, m } = lpStat(l);
@@ -573,38 +653,50 @@ const closeDrawer = () => { $('#drawer').classList.remove('open'); $('#shade').c
 
 /* ---------- 描画と操作 ---------- */
 function render() {
-  $('#page').innerHTML = { dash: viewDash, rank: viewRank, lp: viewLp }[S.view]();
+  if (!S.proj) S.view = 'home';
+  $('#page').innerHTML = { home: viewHome, dash: viewDash, rank: viewRank, lp: viewLp }[S.view]();
   document.querySelectorAll('[data-go]').forEach(b => { if (b.closest('.toptabs') || b.closest('.rail')) b.classList.toggle('on', b.dataset.go === S.view); });
-  $('#ttl').textContent = { dash: 'ダッシュボード', rank: 'クリエイティブ', lp: 'LP' }[S.view];
+  $('#ttl').textContent = S.proj ? P().name : '導線まとめ';
+  $('#tabs').style.display = S.proj ? '' : 'none';
+  $('#railHome').classList.toggle('on', !S.proj);
+  document.querySelectorAll('#railProj [data-proj]').forEach(b => b.classList.toggle('on', b.dataset.proj === S.proj));
   document.querySelectorAll('#period button').forEach(b => b.classList.toggle('on', +b.dataset.d === S.days));
-  if (S.view === 'dash') drawChart();
+  if (S.view === 'dash') {
+    const x = ext(P()), px = ext(P(), true);
+    if (x) { const m = derive(sum(AD_DATA.creatives.filter(inCamp).flatMap(c => slice(c))));
+      $('.kpis').insertAdjacentHTML('afterend', `<div class="card ext"><div class="card-h"><h2>登録のあと</h2><span class="sub">${esc(P().extra.source)} ・ ${esc(P().extra.asOf)}時点</span></div>
+        <div class="mgrid"><div>LINEリスト<b class="num">${int(x.line)}</b>${delta(x.line, px.line)}</div><div>個別予約<b class="num">${int(x.booking)}</b>${delta(x.booking, px.booking)}</div><div>成約<b class="num">${int(x.deals)}</b>${delta(x.deals, px.deals)}</div><div>売上（入金）<b class="num">${yen(x.paid)}</b>${delta(x.paid, px.paid)}</div><div>ROAS（入金÷広告費）<b class="num">${m.spend ? (x.paid / m.spend * 100).toFixed(0) + '%' : '—'}</b></div></div></div>`); }
+    drawChart();
+  }
 }
 document.addEventListener('click', e => {
-  const t = e.target.closest('[data-go],[data-d],[data-sort],[data-mode],[data-cr],[data-lp],[data-dev],[data-close]');
+  const t = e.target.closest('[data-home],[data-proj],[data-go],[data-d],[data-sort],[data-mode],[data-cr],[data-lp],[data-dev],[data-close]');
   if (e.target.id === 'shade') return closeDrawer();
   if (!t) return;
   const d = t.dataset;
   if ('close' in d) return closeDrawer();
   if (d.cr) return openDrawer(d.cr);
+  if (d.home) { S.proj = null; S.view = 'home'; closeDrawer(); }
+  if (d.proj) { enter(d.proj); closeDrawer(); }
   if (d.go) S.view = d.go;
   if (d.d) S.days = +d.d;
   if (d.sort) S.sort = d.sort;
   if (d.mode) S.mode = d.mode;
   if (d.dev) S.dev = d.dev;
   if (d.lp) { S.lp = d.lp; S.view = 'lp'; closeDrawer(); }
-  render(); if (d.go || d.lp) scrollTo(0, 0);
+  render(); if (d.go || d.lp || d.home || d.proj) scrollTo(0, 0);
 });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
-$('#camp').onchange = e => { S.camp = e.target.value; render(); };
 addEventListener('resize', () => S.view === 'dash' && drawChart());
 function boot() {
+  ensureProjects(AD_DATA);
   S.lp = AD_DATA.lps[0].id;
-  $('#camp').innerHTML = '<option value="all">すべてのキャンペーン</option>' + AD_DATA.campaigns.map(c => `<option value="${esc(c.id)}">${esc(c.name)}</option>`).join('');
+  $('#railProj').innerHTML = AD_DATA.projects.map(p => `<button class="rail-item sub" data-proj="${esc(p.id)}"><span class="dot"></span><span class="t">${esc(p.name)}</span></button>`).join('');
   $('#updated').textContent = AD_DATA.updatedAt;
   if (AD_DATA.listinSource) $('#src').textContent = 'Metaから毎朝自動';
   if (AD_DATA.tokenExpiresAt) { const left = Math.ceil((new Date(AD_DATA.tokenExpiresAt) - new Date()) / 864e5); $('#tok').textContent = left >= 0 ? `トークン期限 あと${left}日` : 'トークンの期限切れ'; if (left < 10) $('#tok').style.color = '#ff8f8f'; }
   /* #rank や #lp、#lp-sp、#lp=lp2 を付けて開くと、その画面から始まる */
-  location.hash.slice(1).split('-').forEach(h => { const [k, v] = h.split('='); if (['dash', 'rank', 'lp'].includes(k)) S.view = k; if (k === 'sp') S.dev = 'sp'; if (k === 'lp' && lpOf(v)) S.lp = v; });
+  location.hash.slice(1).split('-').forEach(h => { const [k, v] = h.split('='); if (k === 'p' && AD_DATA.projects.some(p => p.id === v)) enter(v); if (['dash', 'rank', 'lp'].includes(k)) S.view = k; if (k === 'sp') S.dev = 'sp'; if (k === 'lp' && lpOf(v)) S.lp = v; });
   render();
 }
 /* 同じ場所に data.json があればそれを使う。無い・読めない時は上の仮データで動く */

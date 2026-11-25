@@ -6,6 +6,11 @@
 - 画面：https://koya-ship-it.github.io/harukaze-ads-tool/
 - 数字：https://github.com/koya-ship-it/harukaze-ads-tool/blob/main/data.json
 
+## 画面の構成
+
+左のメニューは「導線まとめ」と、その下に導線（プロジェクト）が並ぶ。導線を押すと、その導線だけのダッシュボード・クリエイティブ・LPが見られる。
+導線とキャンペーン・LPの対応は `data.json` の `projects` に持つ（`campaignIds`＝Metaのキャンペーン、`lpGroups`＝`lps` の `group`）。`projects` に無いキャンペーンは、自動で1キャンペーン＝1導線として出る。名前を付けたい時は `projects` に足す。自動更新では消えない。
+
 ## 中身
 
 | ファイル | 役割 |
