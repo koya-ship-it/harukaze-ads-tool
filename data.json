@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-24T22:13:17+09:00",
+ "updatedAt": "2026-11-25T14:35:27+09:00",
  "listinSource": "Meta: offsite_conversion.fb_pixel_complete_registration / offsite_conversion.fb_pixel_lead",
  "targetCpa": null,
  "monthlyGoal": null,
@@ -475,11 +475,19 @@
     },
     {
      "date": "2026-11-24",
-     "spend": 5924,
-     "imp": 285,
+     "spend": 6310,
+     "imp": 321,
      "click": 6,
      "lpview": 5,
      "listin": 0
+    },
+    {
+     "date": "2026-11-25",
+     "spend": 5779,
+     "imp": 255,
+     "click": 4,
+     "lpview": 3,
+     "listin": 1
     }
    ]
   },
@@ -878,14 +886,6 @@
    "copy": "",
    "daily": [
     {
-     "date": "2026-09-26",
-     "spend": 1079,
-     "imp": 64,
-     "click": 0,
-     "lpview": 0,
-     "listin": 0
-    },
-    {
      "date": "2026-09-27",
      "spend": 4491,
      "imp": 370,
@@ -1247,9 +1247,17 @@
     },
     {
      "date": "2026-11-24",
-     "spend": 6107,
-     "imp": 589,
-     "click": 11,
+     "spend": 6428,
+     "imp": 633,
+     "click": 12,
+     "lpview": 10,
+     "listin": 2
+    },
+    {
+     "date": "2026-11-25",
+     "spend": 8860,
+     "imp": 657,
+     "click": 19,
      "lpview": 9,
      "listin": 2
     }
@@ -1267,14 +1275,6 @@
    "videoUrl": null,
    "copy": "",
    "daily": [
-    {
-     "date": "2026-09-26",
-     "spend": 1776,
-     "imp": 138,
-     "click": 2,
-     "lpview": 2,
-     "listin": 0
-    },
     {
      "date": "2026-09-27",
      "spend": 11631,
@@ -1602,14 +1602,6 @@
    "copy": "",
    "daily": [
     {
-     "date": "2026-09-26",
-     "spend": 1247,
-     "imp": 38,
-     "click": 1,
-     "lpview": 1,
-     "listin": 1
-    },
-    {
      "date": "2026-09-27",
      "spend": 13689,
      "imp": 495,
@@ -1935,14 +1927,6 @@
    "videoUrl": null,
    "copy": "",
    "daily": [
-    {
-     "date": "2026-09-26",
-     "spend": 3391,
-     "imp": 128,
-     "click": 3,
-     "lpview": 3,
-     "listin": 1
-    },
     {
      "date": "2026-09-27",
      "spend": 16331,
@@ -2409,11 +2393,19 @@
     },
     {
      "date": "2026-11-24",
-     "spend": 17069,
-     "imp": 664,
-     "click": 17,
-     "lpview": 13,
+     "spend": 19444,
+     "imp": 765,
+     "click": 18,
+     "lpview": 15,
      "listin": 3
+    },
+    {
+     "date": "2026-11-25",
+     "spend": 6481,
+     "imp": 243,
+     "click": 11,
+     "lpview": 9,
+     "listin": 2
     }
    ]
   },
@@ -2429,14 +2421,6 @@
    "videoUrl": null,
    "copy": "",
    "daily": [
-    {
-     "date": "2026-09-26",
-     "spend": 28568,
-     "imp": 1752,
-     "click": 25,
-     "lpview": 21,
-     "listin": 6
-    },
     {
      "date": "2026-09-27",
      "spend": 33560,
@@ -2903,10 +2887,18 @@
     },
     {
      "date": "2026-11-24",
-     "spend": 29295,
-     "imp": 1958,
-     "click": 45,
-     "lpview": 31,
+     "spend": 33927,
+     "imp": 2359,
+     "click": 56,
+     "lpview": 37,
+     "listin": 3
+    },
+    {
+     "date": "2026-11-25",
+     "spend": 24174,
+     "imp": 1541,
+     "click": 38,
+     "lpview": 33,
      "listin": 3
     }
    ]
@@ -2923,14 +2915,6 @@
    "videoUrl": null,
    "copy": "",
    "daily": [
-    {
-     "date": "2026-09-26",
-     "spend": 3319,
-     "imp": 193,
-     "click": 3,
-     "lpview": 3,
-     "listin": 1
-    },
     {
      "date": "2026-09-27",
      "spend": 9781,
@@ -3257,14 +3241,6 @@
    "videoUrl": null,
    "copy": "",
    "daily": [
-    {
-     "date": "2026-09-26",
-     "spend": 25453,
-     "imp": 1713,
-     "click": 56,
-     "lpview": 50,
-     "listin": 2
-    },
     {
      "date": "2026-09-27",
      "spend": 10807,
@@ -3731,11 +3707,19 @@
     },
     {
      "date": "2026-11-24",
-     "spend": 11718,
-     "imp": 666,
-     "click": 20,
-     "lpview": 16,
+     "spend": 12546,
+     "imp": 728,
+     "click": 21,
+     "lpview": 18,
      "listin": 0
+    },
+    {
+     "date": "2026-11-25",
+     "spend": 8448,
+     "imp": 424,
+     "click": 10,
+     "lpview": 9,
+     "listin": 1
     }
    ]
   },
@@ -3751,14 +3735,6 @@
    "videoUrl": null,
    "copy": "",
    "daily": [
-    {
-     "date": "2026-09-26",
-     "spend": 17129,
-     "imp": 1111,
-     "click": 32,
-     "lpview": 29,
-     "listin": 0
-    },
     {
      "date": "2026-09-27",
      "spend": 16147,
@@ -4121,11 +4097,19 @@
     },
     {
      "date": "2026-11-24",
-     "spend": 10077,
-     "imp": 777,
-     "click": 23,
+     "spend": 11136,
+     "imp": 856,
+     "click": 30,
+     "lpview": 17,
+     "listin": 2
+    },
+    {
+     "date": "2026-11-25",
+     "spend": 10711,
+     "imp": 732,
+     "click": 21,
      "lpview": 14,
-     "listin": 1
+     "listin": 0
     }
    ]
   },
@@ -5174,14 +5158,6 @@
    "copy": "",
    "daily": [
     {
-     "date": "2026-09-26",
-     "spend": 99313,
-     "imp": 35518,
-     "click": 950,
-     "lpview": 95,
-     "listin": 122
-    },
-    {
      "date": "2026-09-27",
      "spend": 89525,
      "imp": 32789,
@@ -5275,14 +5251,6 @@
    "videoUrl": null,
    "copy": "",
    "daily": [
-    {
-     "date": "2026-09-26",
-     "spend": 5230,
-     "imp": 1762,
-     "click": 65,
-     "lpview": 6,
-     "listin": 7
-    },
     {
      "date": "2026-09-27",
      "spend": 25663,
@@ -5385,14 +5353,6 @@
    "videoUrl": null,
    "copy": "",
    "daily": [
-    {
-     "date": "2026-09-26",
-     "spend": 19659,
-     "imp": 5121,
-     "click": 166,
-     "lpview": 13,
-     "listin": 13
-    },
     {
      "date": "2026-09-27",
      "spend": 75460,
