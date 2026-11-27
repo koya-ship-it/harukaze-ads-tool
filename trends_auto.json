@@ -1,8 +1,8 @@
 {
  "rule": "直近180日・再生数がフォロワー数の10倍以上（企業・メディアは3倍以上）",
- "updatedAt": "2026-11-27T00:30:48+09:00",
+ "updatedAt": "2026-11-27T14:12:44+09:00",
  "accounts": 142,
- "checked": 58,
+ "checked": 70,
  "items": [
   {
    "url": "https://www.instagram.com/reel/DZT4YWMpp-s/",
@@ -110,6 +110,66 @@
    "postedAt": "2026-11-11T15:43:43+09:00"
   },
   {
+   "url": "https://www.instagram.com/reel/Df6z_YnSboY/",
+   "genre": [
+    "ビジネスメディア"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "[What’s in my MEMO?] LE SSERAFIM SAKURAのメモには何が書かれている？ 全編はYouTubeで公開中！ #u30fj #SAKURA #LE_S",
+   "username": "forbesjapan",
+   "followers": 52035,
+   "views": 466980,
+   "likes": 9837,
+   "comments": 59,
+   "ratio": 8.97,
+   "postedAt": "2026-11-19T19:01:03+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/Df9ZFzyAvgr/",
+   "genre": [
+    "ビジネスメディア"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "[What’s in my MEMO?] LE SSERAFIM SAKURAのメモには何が書かれている？ 全編はYouTubeで公開中！ https://youtu.be/6vH",
+   "username": "forbesjapan",
+   "followers": 52035,
+   "views": 393797,
+   "likes": 6798,
+   "comments": 38,
+   "ratio": 7.57,
+   "postedAt": "2026-11-20T19:01:31+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/Df_96ZLiULP/",
+   "genre": [
+    "ビジネスメディア"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "[What’s in my MEMO?] LE SSERAFIM SAKURAのメモには何が書かれている？ 全編はYouTubeで公開中！ https://youtu.be/6vH",
+   "username": "forbesjapan",
+   "followers": 52035,
+   "views": 380422,
+   "likes": 7809,
+   "comments": 22,
+   "ratio": 7.31,
+   "postedAt": "2026-11-21T19:01:31+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/DgCips8jZhr/",
+   "genre": [
+    "ビジネスメディア"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "[What’s in my MEMO?] LE SSERAFIM SAKURAのメモには何が書かれている？ 全編はYouTubeで公開中！ https://youtu.be/6vH",
+   "username": "forbesjapan",
+   "followers": 52035,
+   "views": 334805,
+   "likes": 4742,
+   "comments": 23,
+   "ratio": 6.43,
+   "postedAt": "2026-11-22T19:01:04+09:00"
+  },
+  {
    "url": "https://www.instagram.com/reel/DahXtzGiZkG/",
    "genre": [
     "AI系"
@@ -123,6 +183,36 @@
    "comments": 37,
    "ratio": 15.67,
    "postedAt": "2026-07-08T15:13:38+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/DdS44YkFHO2/",
+   "genre": [
+    "ビジネスメディア"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "2035年以降にAIロボットが激変する理由 ・ヒト型ロボットが増えた理由 日本企業が持っていた二足歩行ロボットの特許（世界シェア75%）が切れたため ・今後の製造業の勝負どころ A",
+   "username": "globis_hodai",
+   "followers": 10261,
+   "views": 36295,
+   "likes": 362,
+   "comments": 12,
+   "ratio": 3.54,
+   "postedAt": "2026-09-15T13:48:59+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/Dd6XZMJvttI/",
+   "genre": [
+    "ビジネスメディア"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "9月30日、西武渋谷店が58年の歴史に幕を下ろしました。最後の瞬間を現地で見届けてきました。 文化の発信地として長らく渋谷と共に歩んできた西武渋谷店。最終日には、それぞれの想いを抱",
+   "username": "businessinsiderjapan",
+   "followers": 5161,
+   "views": 33461,
+   "likes": 402,
+   "comments": 2,
+   "ratio": 6.48,
+   "postedAt": "2026-09-30T21:47:49+09:00"
   }
  ]
 }
