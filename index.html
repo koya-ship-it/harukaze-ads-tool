@@ -107,6 +107,8 @@ select.sel { border: 1px solid var(--line); border-radius: 8px; padding: 6px 9px
 
 /* クリエイティブのサムネ（実物の画像が入る場所） */
 .thumb { position: relative; aspect-ratio: 1; border-radius: 6px; overflow: hidden; color: #fff; display: flex; flex-direction: column; justify-content: flex-end; padding: 10px; font-weight: 800; line-height: 1.3; }
+.tagnote { margin: 0 0 12px; padding: 9px 14px; font-size: 12px; color: #7a5200; background: #fff7e0; border: 1px solid #f1dfa8; border-radius: 8px; }
+.notag { color: #b26a00; font-weight: 600; }
 .thumb .fmt { position: absolute; top: 8px; right: 8px; font-size: 10px; font-weight: 700; background: rgba(0,0,0,.45); padding: 2px 6px; border-radius: 4px; }
 .thumb.s { width: 44px; height: 44px; padding: 0; font-size: 0; flex: none; }
 .thumb.s .fmt { display: none; }
@@ -723,19 +725,21 @@ function viewRank() {
     <div class="seg">${sorts.map(([k, l]) => `<button data-sort="${k}" class="${S.sort === k ? 'on' : ''}">${l}</button>`).join('')}</div>
     <span class="spacer"></span><span class="lbl">${list.length}本 ・ ${recent()}</span>
     <div class="seg"><button data-mode="card" class="${S.mode === 'card' ? 'on' : ''}">カード</button><button data-mode="table" class="${S.mode === 'table' ? 'on' : ''}">表</button></div></div>`;
-  if (S.mode === 'table') return bar + `<div class="card tablewrap"><table class="tb"><thead><tr><th>順位</th><th>クリエイティブ</th>${hasT() ? '<th>状態</th>' : ''}<th>リストイン</th><th>1件の費用</th><th>広告費</th><th>表示</th><th>クリック</th><th>クリック率</th><th>登録率</th><th>LP</th></tr></thead><tbody>
+  const noTag = list.filter(({ c }) => c.tag === false).length;
+  const tagNote = list.some(({ c }) => 'tag' in c) && noTag ? `<div class="tagnote">成約とつなぐ目印（URLパラメータの utm_content）が付いていない広告：<b>${noTag}本</b>／${list.length}本。付いていない広告は、クリエイティブごとの成約率に入りません。</div>` : '';
+  if (S.mode === 'table') return bar + tagNote + `<div class="card tablewrap"><table class="tb"><thead><tr><th>順位</th><th>クリエイティブ</th>${hasT() ? '<th>状態</th>' : ''}<th>リストイン</th><th>1件の費用</th><th>広告費</th><th>表示</th><th>クリック</th><th>クリック率</th><th>登録率</th><th>LP</th></tr></thead><tbody>
     ${list.map(({ c, m }, i) => `<tr data-cr="${c.id}"><td class="num">${i + 1}</td><td><div class="cn">${thumb(c, 's')}${esc(c.name)}</div></td>
       ${hasT() ? `<td>${stTag(m)}</td>` : ''}<td class="num"><b>${int(m.listin)}</b></td><td class="num">${cpaTxt(m)}</td><td class="num">${yen(m.spend)}</td>
       <td class="num">${int(m.imp)}</td><td class="num">${int(m.click)}</td><td class="num">${pct(m.ctr)}</td><td class="num">${pct(m.cvr, 1)}</td><td>${esc(lpOf(c.lpId).name)}</td></tr>`).join('')}
     </tbody></table></div>`;
-  return bar + `<div class="rank">${list.map(({ c, m }, i) => `
+  return bar + tagNote + `<div class="rank">${list.map(({ c, m }, i) => `
     <button class="card rc" data-cr="${c.id}">
       <div style="position:relative">${thumb(c)}<span class="rkbadge ${i < 3 ? 'g' : ''}">${i + 1}位</span></div>
       <div class="pad">
         <div class="nm"><span>${esc(c.name)}</span>${stTag(m)}</div>${c.dup ? `<div class="adset">広告セット：${esc(c.adset)}</div>` : ''}
         <div class="hero"><b class="num">${int(m.listin)}</b><span>リストイン ・ 1件 ${cpaTxt(m)}</span></div>
         <div class="ms"><div>広告費<b class="num">${yen(m.spend)}</b></div><div>クリック率<b class="num">${pct(m.ctr)}</b></div><div>登録率<b class="num">${pct(m.cvr, 1)}</b></div></div>
-        <div class="lp">→ ${esc(lpOf(c.lpId).name)}</div>
+        <div class="lp">→ ${esc(lpOf(c.lpId).name)}${c.tag === false ? ' ・ <span class="notag">目印なし</span>' : ''}</div>
       </div></button>`).join('')}</div>`;
 }
 

@@ -97,6 +97,13 @@ def link_of(creative):
     return creative.get('link_url') or ''
 
 
+def has_tag(creative, link):
+    # 成約とつなぐ目印（utm_content）が、広告のURLパラメータかリンク先に入っているか
+    tags = [creative.get('url_tags') or '', link or '']
+    tags += [u.get('url_tags') or '' for u in (creative.get('asset_feed_spec') or {}).get('link_urls') or []]
+    return any('utm_content=' in t for t in tags)
+
+
 def is_video(creative):
     spec = creative.get('object_story_spec') or {}
     if creative.get('video_id') or spec.get('video_data'):
@@ -203,7 +210,7 @@ def build(rows, ads, old):
                     known.add(lp_id)
             c = creatives[ad_id] = {
                 'id': ad_id, 'name': r.get('ad_name') or ad_id, 'adset': r.get('adset_name') or '', 'account': r.get('account_name') or '', 'format': '動画' if is_video(cr) else '画像',
-                'campaignId': r['campaign_id'], 'lpId': lp_id, 'imageUrl': None, 'videoUrl': None, 'copy': '',
+                'campaignId': r['campaign_id'], 'lpId': lp_id, 'tag': has_tag(cr, link), 'imageUrl': None, 'videoUrl': None, 'copy': '',
                 '_img': cr.get('image_url') or cr.get('thumbnail_url'), '_vid': video_id_of(cr), 'daily': [],
             }
         acts = {a['action_type']: num(a.get('value')) for a in r.get('actions') or []}
@@ -264,7 +271,7 @@ def main():
     ads = {}
     ids = sorted({r['ad_id'] for r in rows})
     fields = ('creative.thumbnail_width(900).thumbnail_height(900)'
-              '{thumbnail_url,image_url,video_id,object_story_spec,asset_feed_spec,link_url}')
+              '{thumbnail_url,image_url,video_id,object_story_spec,asset_feed_spec,link_url,url_tags}')
     for i in range(0, len(ids), 50):
         res = api('', {'ids': ','.join(ids[i:i + 50]), 'fields': fields})
         ads.update(res if isinstance(res, dict) else {})
