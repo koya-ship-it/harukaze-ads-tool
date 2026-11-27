@@ -1,8 +1,8 @@
 {
  "rule": "直近180日・再生数がフォロワー数の10倍以上（企業・メディアは3倍以上）",
- "updatedAt": "2026-11-27T18:40:21+09:00",
+ "updatedAt": "2026-11-28T00:25:23+09:00",
  "accounts": 142,
- "checked": 82,
+ "checked": 94,
  "items": [
   {
    "url": "https://www.instagram.com/reel/DZT4YWMpp-s/",
@@ -20,6 +20,81 @@
    "postedAt": "2026-06-08T12:58:11+09:00"
   },
   {
+   "url": "https://www.instagram.com/reel/DdOSWP8pGms/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "おヨネ【デビュー前〜現在】 #おヨネ #ほんまやでなんでやねんしらんけど",
+   "username": "if_series_with_ai",
+   "followers": 7993,
+   "views": 3259738,
+   "likes": 12406,
+   "comments": 96,
+   "ratio": 407.82,
+   "postedAt": "2026-09-13T18:55:38+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/DgCbwBBRNDM/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "尿意がないのに「念のためトイレ」に行くとどうなる？ #トイレ #頻尿 #人体くん",
+   "username": "jintaikun_official",
+   "followers": 104794,
+   "views": 2367125,
+   "likes": 14847,
+   "comments": 245,
+   "ratio": 22.59,
+   "postedAt": "2026-11-22T18:00:04+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/DeWZRpPRkfJ/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "靴下を履いたまま寝るとどうなる？ #冷え性 #末端冷え性 #人体くん",
+   "username": "jintaikun_official",
+   "followers": 104794,
+   "views": 2321418,
+   "likes": 9199,
+   "comments": 118,
+   "ratio": 22.15,
+   "postedAt": "2026-10-11T19:00:04+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/DafhrM8J-N2/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "ZONE【当時〜現在】",
+   "username": "if_series_with_ai",
+   "followers": 7993,
+   "views": 1996385,
+   "likes": 4446,
+   "comments": 86,
+   "ratio": 249.77,
+   "postedAt": "2026-07-07T22:02:19+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/DcaA9hUJm3Y/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "M!LK【デビュー前×現在】 #好きすぎて滅 #爆裂愛してる #イイじゃん #佐野勇人",
+   "username": "if_series_with_ai",
+   "followers": 7993,
+   "views": 1563026,
+   "likes": 10781,
+   "comments": 72,
+   "ratio": 195.55,
+   "postedAt": "2026-08-24T11:44:44+09:00"
+  },
+  {
    "url": "https://www.instagram.com/reel/DfUPzzYzfOk/",
    "genre": [
     "在宅・副業系"
@@ -33,6 +108,66 @@
    "comments": 85,
    "ratio": 25.02,
    "postedAt": "2026-11-04T19:30:07+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/DfeffcCx9wf/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "目覚ましを止めて二度寝を繰り返すとどうなる？ #目覚まし #二度寝 #人体くん",
+   "username": "jintaikun_official",
+   "followers": 104794,
+   "views": 1427091,
+   "likes": 16113,
+   "comments": 77,
+   "ratio": 13.62,
+   "postedAt": "2026-11-08T19:00:05+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/Deq_khfRvtz/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "軸固定カラコンを毎日付けるとどうなる？ #軸固定カラコン #コンタクトレンズ #人体くん",
+   "username": "jintaikun_official",
+   "followers": 104794,
+   "views": 1281471,
+   "likes": 3573,
+   "comments": 28,
+   "ratio": 12.23,
+   "postedAt": "2026-10-19T19:00:10+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/DgKKGyQxGGH/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "鼻水をかまずにすすり続けるとどうなる？ #鼻水 #鼻炎 #風邪 #人体くん",
+   "username": "jintaikun_official",
+   "followers": 104794,
+   "views": 1154816,
+   "likes": 7781,
+   "comments": 69,
+   "ratio": 11.02,
+   "postedAt": "2026-11-25T18:00:05+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/DaXiEVHSYjh/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "もし人間が毎日、湯船に15分浸かったらどうなるのか？ #3dシミュレーション #雑学 #豆知識",
+   "username": "dokurochan92120",
+   "followers": 27191,
+   "views": 1100669,
+   "likes": 15561,
+   "comments": 81,
+   "ratio": 40.48,
+   "postedAt": "2026-07-04T19:38:40+09:00"
   },
   {
    "url": "https://www.instagram.com/reel/DafLO-CSwiY/",
@@ -65,6 +200,21 @@
    "postedAt": "2026-09-25T18:30:15+09:00"
   },
   {
+   "url": "https://www.instagram.com/reel/DaC9KXYyvvW/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "もし人間がシャワー中の排尿を癖にしてしまったらどうなるのか？ #3dシミュレーション #雑学 #豆知識",
+   "username": "dokurochan92120",
+   "followers": 27191,
+   "views": 968644,
+   "likes": 2172,
+   "comments": 53,
+   "ratio": 35.62,
+   "postedAt": "2026-06-26T19:45:01+09:00"
+  },
+  {
    "url": "https://www.instagram.com/reel/DZCZbWzyEOr/",
    "genre": [
     "デザイン系"
@@ -80,6 +230,21 @@
    "postedAt": "2026-06-01T18:02:09+09:00"
   },
   {
+   "url": "https://www.instagram.com/reel/DaScIC9SPkV/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "もし人間が毎日、寝室の温度を18度に設定したらどうなるのか？ #3dシミュレーション #雑学 #豆知識",
+   "username": "dokurochan92120",
+   "followers": 27191,
+   "views": 849699,
+   "likes": 11245,
+   "comments": 66,
+   "ratio": 31.25,
+   "postedAt": "2026-07-02T20:04:34+09:00"
+  },
+  {
    "url": "https://www.instagram.com/reel/Dck1PkXxJ6o/",
    "genre": [
     "デザイン系"
@@ -93,6 +258,51 @@
    "comments": 5,
    "ratio": 27.35,
    "postedAt": "2026-08-28T16:35:28+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/DZJZ7D3p7Wl/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "AKB48 1期生【当時×現在】 #AKB48 #神7 #アイドル #shorts",
+   "username": "if_series_with_ai",
+   "followers": 7993,
+   "views": 723303,
+   "likes": 1940,
+   "comments": 32,
+   "ratio": 90.49,
+   "postedAt": "2026-06-04T11:21:32+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/Dd_N_PoS47u/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "もし人間が毎日、軸固定カラコンを使い続けたらどうなるのか？ #3dシミュレーション #雑学 #カラコン",
+   "username": "dokurochan92120",
+   "followers": 27191,
+   "views": 582506,
+   "likes": 2189,
+   "comments": 22,
+   "ratio": 21.42,
+   "postedAt": "2026-10-02T19:00:27+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/Deyxz-chySB/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "もしも病棟がサンリオ仕様だったら3選♡ #ハローキティ #看護師あるある #看護師の日常 #AI動画 #サンリオ",
+   "username": "hibiki_ai1208",
+   "followers": 6858,
+   "views": 500221,
+   "likes": null,
+   "comments": 309,
+   "ratio": 72.94,
+   "postedAt": "2026-10-22T19:34:43+09:00"
   },
   {
    "url": "https://www.instagram.com/reel/Dfl3OnKvt9z/",
@@ -125,6 +335,36 @@
    "postedAt": "2026-11-19T19:01:03+09:00"
   },
   {
+   "url": "https://www.instagram.com/reel/DZPLmxrJ_3Q/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "AKB48 2期生【当時×現在】 #AKB48 #チームK #アイドル #shorts #thenandnow",
+   "username": "if_series_with_ai",
+   "followers": 7993,
+   "views": 449713,
+   "likes": 1216,
+   "comments": 15,
+   "ratio": 56.26,
+   "postedAt": "2026-06-06T17:10:47+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/Deja7rShzby/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "看護師通勤バックあるある５選！ あなたのバックはどのタイプ？コメントで教えてね！ #看護師 #看護師あるある #看護師の日常 #夜勤明け #AI動画",
+   "username": "hibiki_ai1208",
+   "followers": 6858,
+   "views": 396260,
+   "likes": 1266,
+   "comments": 26,
+   "ratio": 57.78,
+   "postedAt": "2026-10-16T20:25:56+09:00"
+  },
+  {
    "url": "https://www.instagram.com/reel/Df9ZFzyAvgr/",
    "genre": [
     "ビジネスメディア"
@@ -140,6 +380,21 @@
    "postedAt": "2026-11-20T19:01:31+09:00"
   },
   {
+   "url": "https://www.instagram.com/reel/DeojkSFBX4Y/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "もしも病棟がディズニー仕様だったら４選！ みんなはどの病棟がいい？コメントで教えてね！ #看護師 #看護師あるある #ai動画 #看護師の日常 #ディズニー",
+   "username": "hibiki_ai1208",
+   "followers": 6858,
+   "views": 390428,
+   "likes": 8333,
+   "comments": 108,
+   "ratio": 56.93,
+   "postedAt": "2026-10-18T20:17:30+09:00"
+  },
+  {
    "url": "https://www.instagram.com/reel/Df_96ZLiULP/",
    "genre": [
     "ビジネスメディア"
@@ -153,6 +408,21 @@
    "comments": 22,
    "ratio": 7.31,
    "postedAt": "2026-11-21T19:01:31+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/DZ7TI-9SXY5/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "もし人間が炊飯器にご飯を保温したまま、3日間放置して食べたらどうなるのか？ #3dシミュレーション #雑学 #豆知識",
+   "username": "dokurochan92120",
+   "followers": 27191,
+   "views": 360276,
+   "likes": 934,
+   "comments": 8,
+   "ratio": 13.25,
+   "postedAt": "2026-06-23T20:22:58+09:00"
   },
   {
    "url": "https://www.instagram.com/reel/DgCips8jZhr/",
@@ -185,6 +455,171 @@
    "postedAt": "2026-07-08T15:13:38+09:00"
   },
   {
+   "url": "https://www.instagram.com/reel/DfMk0kxhnkG/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "もしも病棟がマリオ仕様だったら7選！ #もしも動画 #看護師あるある #マリオ #AI動画 #看護師",
+   "username": "hibiki_ai1208",
+   "followers": 6858,
+   "views": 243266,
+   "likes": 5691,
+   "comments": 94,
+   "ratio": 35.47,
+   "postedAt": "2026-11-01T20:01:21+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/DeCBowCR8wM/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "地元の病院で働く看護師あるある５選 みんなのあるあるも教えて🩷 #看護師 #看護師あるある #夜勤明け #看護師の日常 #AI動画",
+   "username": "hibiki_ai1208",
+   "followers": 6858,
+   "views": 228074,
+   "likes": 959,
+   "comments": 15,
+   "ratio": 33.26,
+   "postedAt": "2026-10-03T21:09:59+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/DfWqI7Jzlu2/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "もしも、人類がちいかわ語しか話せなくなったら… #ちいかわ #もしも #もしもシリーズ #メディアトライ",
+   "username": "mediatry_official",
+   "followers": 452,
+   "views": 191227,
+   "likes": 5884,
+   "comments": 31,
+   "ratio": 423.07,
+   "postedAt": "2026-11-05T18:00:55+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/Dfa7KYZJr-B/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "【夢のコラボ?!】タチバナ家とさくら家がまさかの大集合！ もしも『あたしンち』のタチバナ家と『ちびまる子ちゃん』のさくら家が、同じ下町に暮らしていたら…？ お母さんたちの賑やかな日",
+   "username": "ai_moshimo_world",
+   "followers": 1031,
+   "views": 190183,
+   "likes": 742,
+   "comments": 22,
+   "ratio": 184.46,
+   "postedAt": "2026-11-07T09:46:11+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/Dd93RJgTAYK/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "公園で事件発生！？！？😂💥 まさおくんがまた弄られて大ピンチ…！？💦 みんなの表情やリアクションがカオスすぎるｗｗ 最後まで見るとジワジワくるよ👀✨ 感想をコメントで教えてね！👇 ",
+   "username": "ai_moshimo_world",
+   "followers": 1031,
+   "views": 181412,
+   "likes": 1252,
+   "comments": 25,
+   "ratio": 175.96,
+   "postedAt": "2026-10-02T06:22:44+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/DZFFT5mzzMl/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "第4話 隣人が風邪を引いていたので差し入れを持っていった #aiドラマ #ショートドラマ",
+   "username": "gensou_ai_",
+   "followers": 4024,
+   "views": 87409,
+   "likes": 600,
+   "comments": 4,
+   "ratio": 21.72,
+   "postedAt": "2026-06-02T19:06:33+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/DasAPzRzzK8/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "AI動画って難しそう…と思ってる人へ。 gensou.aiなら、画像や参考動画を入れて、作りたい内容を文章で入力するだけ。 今回はこの2匹のワンちゃんを使って、 「社長になった犬」",
+   "username": "gensou_ai_",
+   "followers": 4024,
+   "views": 59024,
+   "likes": null,
+   "comments": 1,
+   "ratio": 14.67,
+   "postedAt": "2026-07-12T18:21:49+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/Den6Qn4ytlC/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "【間違い探し】昭和・平成レトロなお部屋の中に、時代に合わない「令和の最新アイテム」が3つだけ紛れ込んでいます！👀💡 一見するとフツーの1992年（平成4年）の日常風景ですが…… よ",
+   "username": "ai_moshimo_world",
+   "followers": 1031,
+   "views": 56137,
+   "likes": 72,
+   "comments": 8,
+   "ratio": 54.45,
+   "postedAt": "2026-10-18T14:16:25+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/DZG7TfVT6JH/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "第5話 隣人を家に招待したら.. #aiドラマ #aiショートドラマ",
+   "username": "gensou_ai_",
+   "followers": 4024,
+   "views": 50967,
+   "likes": 365,
+   "comments": 4,
+   "ratio": 12.67,
+   "postedAt": "2026-06-03T12:23:08+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/DfLWBluBoOg/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "人類が消えて30年。ここ、本当に渋谷？ 【Instagram Reels｜キャプション】 いつもは人でいっぱいの渋谷に、誰もいない。 2056年。道路から木が生えて、看板が落ちた街",
+   "username": "moshimo_ai_short",
+   "followers": 236,
+   "views": 48310,
+   "likes": 281,
+   "comments": 17,
+   "ratio": 204.7,
+   "postedAt": "2026-11-01T08:32:06+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/DfVnpQJyOX6/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "昭和の農村風景の中に、令和のアイテムが3つ隠れています！ あなたは全部見つけられましたか？ 「〇個見つけた！」「〇〇が見つけにくい！」など、ぜひコメントで教えてください！ ① Bl",
+   "username": "ai_moshimo_world",
+   "followers": 1031,
+   "views": 47183,
+   "likes": 96,
+   "comments": 3,
+   "ratio": 45.76,
+   "postedAt": "2026-11-05T08:19:51+09:00"
+  },
+  {
    "url": "https://www.instagram.com/reel/DdS44YkFHO2/",
    "genre": [
     "ビジネスメディア"
@@ -213,6 +648,156 @@
    "comments": 2,
    "ratio": 6.48,
    "postedAt": "2026-09-30T21:47:49+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/DemictHpZwX/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "ハロウィンの夜、本物の死神が警察に呼び止められた。 鎌を見せても、魔力を見せても、警察はまさかの通常運転。 威厳たっぷりの死神と、真顔の警察A、驚きが隠せない警察B。 あなたなら、",
+   "username": "moshimo_ai_short",
+   "followers": 236,
+   "views": 30269,
+   "likes": 199,
+   "comments": 7,
+   "ratio": 128.26,
+   "postedAt": "2026-10-18T01:29:08+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/De0D_GxyV7T/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "「この昭和の食卓、何かおかしい…？」 家族で囲む温かいお鍋の風景。 一見、懐かしい昭和の日常ですが…… 実は【令和の最新アイテム】が3つ隠れています！ あなたは全部見つけられました",
+   "username": "ai_moshimo_world",
+   "followers": 1031,
+   "views": 22558,
+   "likes": 64,
+   "comments": 6,
+   "ratio": 21.88,
+   "postedAt": "2026-10-23T07:32:13+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/Desa39dB4aY/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "2026年。着物の人がスマホを使って、お団子はQR決済。 もし江戸時代が終わらなかったら、日本の日常はどうなっていた？ 未来（みく）が歩くのは、江戸の暮らしが今まで続いてきた城下町",
+   "username": "moshimo_ai_short",
+   "followers": 236,
+   "views": 19898,
+   "likes": 151,
+   "comments": 4,
+   "ratio": 84.31,
+   "postedAt": "2026-10-20T08:17:08+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/DfZOMNVTVyh/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "MBTIタイプ別、無人島の過ごし方 #mbti #mbti診断 #生成ai #無人島 #メディアトライ",
+   "username": "mediatry_official",
+   "followers": 452,
+   "views": 18513,
+   "likes": 115,
+   "comments": 9,
+   "ratio": 40.96,
+   "postedAt": "2026-11-06T17:53:51+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/DeqhStmJC-5/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "兵士100人 VS アリ100匹。 ただし、アリは全長2メートル。🐜 一斉射撃でも止まらない大群。 逃げ切ったと思った、その先に……。 あなたが指揮官なら、どう戦う？ 作戦をコメン",
+   "username": "moshimo_ai_short",
+   "followers": 236,
+   "views": 14856,
+   "likes": 82,
+   "comments": 31,
+   "ratio": 62.95,
+   "postedAt": "2026-10-19T14:36:05+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/DgDZpOeCXHD/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "もしもキスで子供ができる世界だったら？ WHAT IF A KISS COULD MAKE A BABY? たった一度のキスが、命につながる世界。 あなたならどうする？ Would",
+   "username": "if_______ai",
+   "followers": 783,
+   "views": 13221,
+   "likes": 43,
+   "comments": 0,
+   "ratio": 16.89,
+   "postedAt": "2026-11-23T03:01:34+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/DfjAIcdRqNp/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "MBTI別、旅行での過ごし方 #mbti #旅行 #占い #メディアトライ",
+   "username": "mediatry_official",
+   "followers": 452,
+   "views": 9587,
+   "likes": 51,
+   "comments": 4,
+   "ratio": 21.21,
+   "postedAt": "2026-11-10T13:05:28+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/DevwRWWRwf6/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "もしも世界中の海がゼリーになったら… #メディアトライ #もしもシリーズ",
+   "username": "mediatry_official",
+   "followers": 452,
+   "views": 7635,
+   "likes": 42,
+   "comments": 1,
+   "ratio": 16.89,
+   "postedAt": "2026-10-21T15:23:27+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/De-7Og7TKNy/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "もしもげんだに恐竜が大量に現れたら。 #もしも #もしもシリーズ #生成ai #メディアトライ",
+   "username": "mediatry_official",
+   "followers": 452,
+   "views": 5756,
+   "likes": 49,
+   "comments": 3,
+   "ratio": 12.73,
+   "postedAt": "2026-10-27T12:47:27+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/De0HNWkBamj/",
+   "genre": [
+    "もしも・科学系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "🇯🇵 日本代表、ついに必殺技解禁。⚽🔥 舞台はW杯決勝。 相手はサッカー王国ブラジル🇧🇷 しかし、この試合は何かがおかしい…。 ⚡ 超次元シュート炸裂！ 🧤 GKまで必殺技で応戦！",
+   "username": "moshimo_ai_short",
+   "followers": 236,
+   "views": 5166,
+   "likes": 39,
+   "comments": 2,
+   "ratio": 21.89,
+   "postedAt": "2026-10-23T08:00:06+09:00"
   }
  ]
 }
