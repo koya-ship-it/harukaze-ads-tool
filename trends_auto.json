@@ -1,8 +1,8 @@
 {
  "rule": "直近180日・再生数がフォロワー数の10倍以上（企業・メディアは3倍以上）",
- "updatedAt": "2026-11-28T16:06:54+09:00",
+ "updatedAt": "2026-11-28T23:24:38+09:00",
  "accounts": 142,
- "checked": 118,
+ "checked": 130,
  "items": [
   {
    "url": "https://www.instagram.com/reel/DZT4YWMpp-s/",
@@ -243,21 +243,6 @@
    "comments": 53,
    "ratio": 35.62,
    "postedAt": "2026-06-26T19:45:01+09:00"
-  },
-  {
-   "url": "https://www.instagram.com/reel/DZCZbWzyEOr/",
-   "genre": [
-    "デザイン系"
-   ],
-   "kind": "リール・ショート動画",
-   "memo": "#PR adobecreativecloudjp yukamaru_design もう本当に待ちに待った機能が Adobe Illustratorに来ました🎉 わざわざPhotos",
-   "username": "yukamaru_design",
-   "followers": 64184,
-   "views": 961862,
-   "likes": 223,
-   "comments": 0,
-   "ratio": 14.99,
-   "postedAt": "2026-06-01T18:02:09+09:00"
   },
   {
    "url": "https://www.instagram.com/reel/DaScIC9SPkV/",
@@ -635,6 +620,21 @@
    "postedAt": "2026-10-02T06:22:44+09:00"
   },
   {
+   "url": "https://www.instagram.com/reel/Dfrn8Q4SMWj/",
+   "genre": [
+    "AIビジネス系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "パン屋さんのトレー 実はただの運搬道具じゃないって知ってたましたか？🍞 とりあえず乗せたパン、戻そうと思ったのになんとなく戻しづらい…そんな経験ないですか？ 実はそこにも心理的な仕",
+   "username": "rasmaru_ai",
+   "followers": 13499,
+   "views": 176886,
+   "likes": 1107,
+   "comments": 49,
+   "ratio": 13.1,
+   "postedAt": "2026-11-13T21:26:40+09:00"
+  },
+  {
    "url": "https://www.instagram.com/reel/Dfepip1x16k/",
    "genre": [
     "AIで作った動画"
@@ -755,6 +755,21 @@
    "postedAt": "2026-11-05T08:19:51+09:00"
   },
   {
+   "url": "https://www.instagram.com/reel/De1acImPlr5/",
+   "genre": [
+    "AIビジネス系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "みんな大好きミスドの誕生秘話",
+   "username": "hajimari_story",
+   "followers": 317,
+   "views": 44981,
+   "likes": 391,
+   "comments": 3,
+   "ratio": 141.9,
+   "postedAt": "2026-10-23T20:08:07+09:00"
+  },
+  {
    "url": "https://www.instagram.com/reel/DdS44YkFHO2/",
    "genre": [
     "ビジネスメディア"
@@ -800,6 +815,51 @@
    "postedAt": "2026-10-18T01:29:08+09:00"
   },
   {
+   "url": "https://www.instagram.com/reel/Df_2_1rhfw3/",
+   "genre": [
+    "AIビジネス系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "たった1個なのに、見失う？🔴 赤い球を覚えて、最後まで追ってみて！ 一発で正解できたら、お見事👏 何番だと思った？コメントで教えてね！ 友だちにも挑戦してもらおう✨ 次のチャレンジ",
+   "username": "toyora1957",
+   "followers": 320,
+   "views": 26009,
+   "likes": 41,
+   "comments": 8,
+   "ratio": 81.28,
+   "postedAt": "2026-11-17T20:27:39+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/DeZOyzoPw9R/",
+   "genre": [
+    "AIビジネス系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "グリコの誕生秘話🦪",
+   "username": "hajimari_story",
+   "followers": 317,
+   "views": 25935,
+   "likes": 671,
+   "comments": 14,
+   "ratio": 81.81,
+   "postedAt": "2026-10-12T21:27:32+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/DeaxRM7tKnH/",
+   "genre": [
+    "AIビジネス系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "【検証！】タイヤ灯ってどれくらい明るい？💡🔍✨ 現場で必須の「タイヤ灯」を、クルまるが至近距離で点灯させてみたら… ​想像以上の爆光（＆感電⚡️？）で大パニック😵‍💫💦 最後は目が",
+   "username": "toyora1957",
+   "followers": 320,
+   "views": 24360,
+   "likes": 3,
+   "comments": 0,
+   "ratio": 76.12,
+   "postedAt": "2026-10-13T11:48:11+09:00"
+  },
+  {
    "url": "https://www.instagram.com/reel/De0D_GxyV7T/",
    "genre": [
     "もしも・科学系"
@@ -813,6 +873,21 @@
    "comments": 6,
    "ratio": 21.88,
    "postedAt": "2026-10-23T07:32:13+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/DfULk9dR8LU/",
+   "genre": [
+    "AIビジネス系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "最強ロンドン大学生の1日vlog！！ #挑戦 #大学生 #夢 #海外 #やりたいこと",
+   "username": "unique_2026.06",
+   "followers": 362,
+   "views": 20745,
+   "likes": 137,
+   "comments": 10,
+   "ratio": 57.31,
+   "postedAt": "2026-11-04T18:56:30+09:00"
   },
   {
    "url": "https://www.instagram.com/reel/Desa39dB4aY/",
@@ -860,6 +935,21 @@
    "postedAt": "2026-10-19T14:36:05+09:00"
   },
   {
+   "url": "https://www.instagram.com/reel/DfRprPUxK5g/",
+   "genre": [
+    "AIビジネス系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "改めて Un1queの一部運営メンバー紹介で す！！ このように世界トップレベルの大学に通いながら様々な方向に努力、挑戦を止めない人が集まっています！ このような人と夢を本気で語り",
+   "username": "unique_2026.06",
+   "followers": 362,
+   "views": 14535,
+   "likes": 88,
+   "comments": 9,
+   "ratio": 40.15,
+   "postedAt": "2026-11-03T19:19:40+09:00"
+  },
+  {
    "url": "https://www.instagram.com/reel/DgDZpOeCXHD/",
    "genre": [
     "もしも・科学系"
@@ -875,6 +965,36 @@
    "postedAt": "2026-11-23T03:01:34+09:00"
   },
   {
+   "url": "https://www.instagram.com/reel/Dfjs-IRvt5k/",
+   "genre": [
+    "AIビジネス系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "明日はポッキーの日❣️みんなは何味が好き？ ＃グリコ ＃ポッキー ＃ポッキーの日",
+   "username": "hajimari_story",
+   "followers": 317,
+   "views": 11591,
+   "likes": 81,
+   "comments": 0,
+   "ratio": 36.56,
+   "postedAt": "2026-11-10T19:34:47+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/DfHNf9oh-XE/",
+   "genre": [
+    "AIビジネス系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "行列に並ぶ、その前に。 案内表示とスマホで、トイレの空き状況をチェック。 #スマートトイレ #東洋ライト工業 #smarttoilet #iot #smartoffice",
+   "username": "toyora1957",
+   "followers": 320,
+   "views": 11054,
+   "likes": 5,
+   "comments": 0,
+   "ratio": 34.54,
+   "postedAt": "2026-10-30T18:00:08+09:00"
+  },
+  {
    "url": "https://www.instagram.com/reel/DfyIDzdRgEU/",
    "genre": [
     "もしも・科学系"
@@ -888,6 +1008,21 @@
    "comments": 0,
    "ratio": 1103.5,
    "postedAt": "2026-11-16T10:00:06+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/DfUMjVsR8b-/",
+   "genre": [
+    "AIビジネス系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "Un1queの一部運営メンバー紹介で す！！ このように世界トップレベルの大学に通いながら様々な方向に努力、挑戦を止めない人が集まっています！ このような人と夢を本気で語りたい！話",
+   "username": "unique_2026.06",
+   "followers": 362,
+   "views": 10842,
+   "likes": 63,
+   "comments": 5,
+   "ratio": 29.95,
+   "postedAt": "2026-11-04T19:03:05+09:00"
   },
   {
    "url": "https://www.instagram.com/reel/DfjAIcdRqNp/",
@@ -920,6 +1055,21 @@
    "postedAt": "2026-11-16T15:00:04+09:00"
   },
   {
+   "url": "https://www.instagram.com/reel/DeUPvnPP-dH/",
+   "genre": [
+    "AIビジネス系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "世界初のインスタントラーメン誕生秘話🍜",
+   "username": "hajimari_story",
+   "followers": 317,
+   "views": 8506,
+   "likes": 89,
+   "comments": 1,
+   "ratio": 26.83,
+   "postedAt": "2026-10-10T22:59:50+09:00"
+  },
+  {
    "url": "https://www.instagram.com/reel/DevwRWWRwf6/",
    "genre": [
     "もしも・科学系"
@@ -933,6 +1083,36 @@
    "comments": 1,
    "ratio": 16.89,
    "postedAt": "2026-10-21T15:23:27+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/Del328gvczn/",
+   "genre": [
+    "AIビジネス系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "時代を超えても大切なのは、諦めない力。 他人に言われる「うまくいかない」を押し切る力は、誰かの言葉より自分の答えを信じ抜くことから生まれるのかもしれません。 実は動画では語りきれな",
+   "username": "hajimari_story",
+   "followers": 317,
+   "views": 7012,
+   "likes": 90,
+   "comments": 1,
+   "ratio": 22.12,
+   "postedAt": "2026-10-17T19:17:31+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/De9BykMyk8W/",
+   "genre": [
+    "AIビジネス系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "あなたの夢は何ですか？ そう聞かれた時、あなたは本当に心から自分のやりたいことを答えられていますか？ 海外大に行き、何となく大学生活を過ごし、周りが年収の高いところに就職活動をして",
+   "username": "unique_2026.06",
+   "followers": 362,
+   "views": 6890,
+   "likes": 76,
+   "comments": 2,
+   "ratio": 19.03,
+   "postedAt": "2026-10-26T19:05:57+09:00"
   },
   {
    "url": "https://www.instagram.com/reel/De-7Og7TKNy/",
@@ -965,6 +1145,21 @@
    "postedAt": "2026-11-16T20:15:05+09:00"
   },
   {
+   "url": "https://www.instagram.com/reel/Dfbz1FaBEjk/",
+   "genre": [
+    "AIビジネス系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "頑張ってるのに、なぜ進まない？⛏️ あれこれ手を広げるより、ひとつを深く。 言葉を積むより、小さな行動を。 今日、あなたが続ける「ひとつ」は何ですか？ 気づきにつながる動画をお届け",
+   "username": "toyora1957",
+   "followers": 320,
+   "views": 5272,
+   "likes": 28,
+   "comments": 0,
+   "ratio": 16.48,
+   "postedAt": "2026-11-07T18:00:06+09:00"
+  },
+  {
    "url": "https://www.instagram.com/reel/De0HNWkBamj/",
    "genre": [
     "もしも・科学系"
@@ -978,6 +1173,36 @@
    "comments": 2,
    "ratio": 21.89,
    "postedAt": "2026-10-23T08:00:06+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/DfzNlefNgk8/",
+   "genre": [
+    "AIビジネス系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "うまくいく人は、最初からできたわけじゃない。🏀 何度も外して、試して、また挑戦する。 成功の瞬間には、見えない努力が積み重なっている。 今、あなたが続けている挑戦は何ですか？💭 心",
+   "username": "toyora1957",
+   "followers": 320,
+   "views": 4112,
+   "likes": 13,
+   "comments": 0,
+   "ratio": 12.85,
+   "postedAt": "2026-11-16T20:08:42+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/Df1j65VxFzt/",
+   "genre": [
+    "AIビジネス系"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "Un1que 何をしてる団体？→プロフィールまで #大学生 #挑戦 #夢 #viral #fyp",
+   "username": "unique_2026.06",
+   "followers": 362,
+   "views": 4086,
+   "likes": 38,
+   "comments": 3,
+   "ratio": 11.29,
+   "postedAt": "2026-11-17T18:03:19+09:00"
   },
   {
    "url": "https://www.instagram.com/reel/Dfy-_AiRnPT/",
