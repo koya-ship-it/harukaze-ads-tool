@@ -13266,5 +13266,2833 @@
     "postedAt": "2026-11-25T19:55:17+09:00"
    }
   ]
+ },
+ "mosinosi.sekai": {
+  "fetchedAt": "2026-11-28T13:48:16+09:00",
+  "status": "invalid",
+  "items": [],
+  "error": "Invalid user id（code 110）"
+ },
+ "rina_on_screen": {
+  "fetchedAt": "2026-11-28T13:48:16+09:00",
+  "status": "ok",
+  "followers": 10,
+  "items": [
+   {
+    "url": "https://www.instagram.com/reel/DfyIDzdRgEU/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "もしも全員が先まで行って、1台ずつ交互に合流したら？ 一宮JCT（名神 上り）で、柵を合流の先まで延ばして1台ずつ交互に入る形にしたら、渋滞で失った時間が約3割減り、渋滞の区間の通",
+    "username": "rina_on_screen",
+    "followers": 10,
+    "views": 11035,
+    "likes": 15,
+    "comments": 0,
+    "ratio": 1103.5,
+    "postedAt": "2026-11-16T10:00:06+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfyqcMNx92q/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "1台が30秒遅れただけで、バスが2台いっしょに 1本の線＝1台のバス、細い帯＝停留所で待っている人。遅れたバスは待つ人を多く乗せてさらに遅れ、後ろのバスは空いていて追いつきます。模",
+    "username": "rina_on_screen",
+    "followers": 10,
+    "views": 8871,
+    "likes": 18,
+    "comments": 1,
+    "ratio": 887.1,
+    "postedAt": "2026-11-16T15:00:04+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfzOf-ORedS/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "もしも渋滞の輪に、速さを変えない車を1台入れたら？ 渋滞の波が回る輪（22台）で、1台だけ時速27kmを保ち、前が空いても詰めない車に替えました。模型では波が消え、強いブレーキの回",
+    "username": "rina_on_screen",
+    "followers": 10,
+    "views": 5531,
+    "likes": 18,
+    "comments": 0,
+    "ratio": 553.1,
+    "postedAt": "2026-11-16T20:15:05+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Dfy-_AiRnPT/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "もしも、あなたが1日水を飲まなかったら？ 体重の2%の水が減ると、注意力と気分が落ちる。飲まないと、夜中までに約1L（ペットボトル2本）減る。 #もしも #雑学 #豆知識 #からだ",
+    "username": "rina_on_screen",
+    "followers": 10,
+    "views": 1635,
+    "likes": 5,
+    "comments": 0,
+    "ratio": 163.5,
+    "postedAt": "2026-11-16T18:00:06+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Dfx6V4Bx4k1/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "真上の雨は、まず頭に落ちます。速く動くと、頭に当たる粒は増える？減る？走る人と歩く人の札で数えました。答えは YouTube の本編「雨の中は、走るのと歩くの、どっちが濡れない？」",
+    "username": "rina_on_screen",
+    "followers": 10,
+    "views": 1631,
+    "likes": 8,
+    "comments": 0,
+    "ratio": 163.1,
+    "postedAt": "2026-11-16T08:00:05+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Dfy_Ce8R8NC/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "止まった列の中から見ると、横を先まで走っていく車は、割り込みに見えます。でも、上から見ると、こうでした。答えは YouTube の本編「合流は、早めに入る？先まで行く？」で（りなの",
+    "username": "rina_on_screen",
+    "followers": 10,
+    "views": 1620,
+    "likes": 2,
+    "comments": 0,
+    "ratio": 162.0,
+    "postedAt": "2026-11-16T18:00:05+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Dfy4J5rxx8c/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "雷は同じ場所に2度落ちない…は逆です ニューヨークの高いビルには、1年に20回以上も雷が落ちる。 #雑学 #豆知識 #防災 #雷",
+    "username": "rina_on_screen",
+    "followers": 10,
+    "views": 1525,
+    "likes": 5,
+    "comments": 0,
+    "ratio": 152.5,
+    "postedAt": "2026-11-16T17:00:09+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Dfx9y_uxiUL/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "もしも、月が今の半分の距離に来たら 見た目は2倍、明るさは4倍、海を引っぱる力は8倍になる。 #もしも #雑学 #豆知識 #宇宙 #月",
+    "username": "rina_on_screen",
+    "followers": 10,
+    "views": 1445,
+    "likes": 6,
+    "comments": 0,
+    "ratio": 144.5,
+    "postedAt": "2026-11-16T08:30:05+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfyV1Tsx8g7/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "そろった拍手は静かになる。そこで音を大きくしようと速く叩くと、そろいはどうなる？答えは YouTube の本編「拍手は、なぜ途中から勝手にそろうのか？」で（りなの YouTube・",
+    "username": "rina_on_screen",
+    "followers": 10,
+    "views": 1385,
+    "likes": 2,
+    "comments": 0,
+    "ratio": 138.5,
+    "postedAt": "2026-11-16T12:00:06+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfygIN7RBf4/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "空の水は、約9日でまた落ちてくる 空にある水は、平均で約9日たつと、雨や雪になって落ちてくる。 #雑学 #豆知識 #理科 #天気",
+    "username": "rina_on_screen",
+    "followers": 10,
+    "views": 1211,
+    "likes": 4,
+    "comments": 0,
+    "ratio": 121.1,
+    "postedAt": "2026-11-16T13:30:05+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Df9c2mwKgdd/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "詰まって見えるのに、ぶつかった様子がない鳥の群れ。1羽ずつの、いちばん近い鳥の向きを1枚の地図に集めると、横と後ろにはたくさんいるのに、進む先の前だけがほとんど空いていました。 答",
+    "username": "rina_on_screen",
+    "followers": 10,
+    "views": 523,
+    "likes": 0,
+    "comments": 0,
+    "ratio": 52.3,
+    "postedAt": "2026-11-20T19:34:12+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfzTqURxQZQ/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "2021年に、本物のナッツをX線で追いかけた実験。寝ていた大きいナッツが立ち上がる。でも、立っただけでは上がりませんでした。答えは YouTube の本編「ミックスナッツは、なぜ大",
+    "username": "rina_on_screen",
+    "followers": 10,
+    "views": 301,
+    "likes": 1,
+    "comments": 0,
+    "ratio": 30.1,
+    "postedAt": "2026-11-16T21:00:20+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Df0imsvR1JL/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "じっとしていても動いてる、あなたの速さベスト5 1位は時速約130万km。座っているだけのあなたも、1秒で約370km進んでいる。 #雑学 #豆知識 #宇宙 #もしも",
+    "username": "rina_on_screen",
+    "followers": 10,
+    "views": 227,
+    "likes": 0,
+    "comments": 0,
+    "ratio": 22.7,
+    "postedAt": "2026-11-17T08:30:04+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Df9SuaDq8J4/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "2つの泡がぶつかると、割れもせず、まっすぐな膜が立ちます。片方の泡だけ小さくすると、仕切りが曲がり始めました。ふくらんだのは大きい泡の側。なぜ、小さい泡の側ではないの？ 答えは Y",
+    "username": "rina_on_screen",
+    "followers": 10,
+    "views": 187,
+    "likes": 0,
+    "comments": 0,
+    "ratio": 18.7,
+    "postedAt": "2026-11-20T18:05:33+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Df9S3vJK8ui/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "距離で合わせているなら、混んだ群れほど大ぜいに合わせるはず。ローマのムクドリを1羽ずつ測った研究で、赤い1羽から近い順に線を引くと……7羽目から先は、近くても灰色のままでした。 答",
+    "username": "rina_on_screen",
+    "followers": 10,
+    "views": 184,
+    "likes": 0,
+    "comments": 0,
+    "ratio": 18.4,
+    "postedAt": "2026-11-20T18:06:57+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Df9U2xuqmne/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "後ろのバスが停留所に着くと、待っている列はほんの少し。すぐに出発して、2台のあいだの矢印が縮みました。次の停留所でも、また縮みます。速さは少しも変えていないのに。 答えは YouT",
+    "username": "rina_on_screen",
+    "followers": 10,
+    "views": 148,
+    "likes": 0,
+    "comments": 0,
+    "ratio": 14.8,
+    "postedAt": "2026-11-20T18:24:21+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Df9dST9KjAv/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "向かい合って歩く点を、100個から300個、420個へ。列ができる？止まる？ いま、止まりました。横へずれたくても、ずれる場所が無いのです。同じ数でも、最初の並びを変えるだけで結果",
+    "username": "rina_on_screen",
+    "followers": 10,
+    "views": 137,
+    "likes": 0,
+    "comments": 0,
+    "ratio": 13.7,
+    "postedAt": "2026-11-20T19:37:58+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Df9SiXYKrZl/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "4台が同じ速さで回る輪の模型。白い枠の1台の前に、たまたま人が少し多く来ました。1人乗るたびに、止まる時間の棒が伸びていきます。この少しの遅れは、次の停留所で取り戻せる？ 答えは ",
+    "username": "rina_on_screen",
+    "followers": 10,
+    "views": 137,
+    "likes": 0,
+    "comments": 0,
+    "ratio": 13.7,
+    "postedAt": "2026-11-20T18:03:55+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Dfx24gAxK8k/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "もしも、あなたが今夜寝なかったら？ 起きて17〜19時間で、反応や判断は お酒を飲んだ時くらいまで落ちることがある。 #もしも #雑学 #豆知識 #睡眠",
+    "username": "rina_on_screen",
+    "followers": 10,
+    "views": 131,
+    "likes": 1,
+    "comments": 0,
+    "ratio": 13.1,
+    "postedAt": "2026-11-16T07:30:05+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfyZPWRRpTL/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "もしも今、太陽が消えたら、あなたが気づくのは何分後？ 今見えている太陽は、約8分20秒前の太陽。消えても8分20秒は、空は明るいまま。 #もしも #雑学 #豆知識 #宇宙",
+    "username": "rina_on_screen",
+    "followers": 10,
+    "views": 129,
+    "likes": 0,
+    "comments": 0,
+    "ratio": 12.9,
+    "postedAt": "2026-11-16T12:30:06+09:00"
+   }
+  ]
+ },
+ "ryoma_kumagai": {
+  "fetchedAt": "2026-11-28T13:48:16+09:00",
+  "status": "ok",
+  "followers": 366142,
+  "items": [
+   {
+    "url": "https://www.instagram.com/reel/DfZWBqhy6lJ/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "電車に乗る人、これ知ってる？ どうせ電車に乗るなら、毎日の通勤やお出かけをもっとおトクに！ JCBカード Wに新規入会して対象の鉄道でクレカ乗車を利用すると55％還元！JCBカード",
+    "username": "ryoma_kumagai",
+    "followers": 366142,
+    "views": 1589677,
+    "likes": 168,
+    "comments": 29,
+    "ratio": 4.34,
+    "postedAt": "2026-11-06T19:03:00+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DgKjQXHSyMI/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "ガソリンスタンドはこの秘密を知られたくない #雑学 #豆知識",
+    "username": "ryoma_kumagai",
+    "followers": 366142,
+    "views": 914383,
+    "likes": 8288,
+    "comments": 151,
+    "ratio": 2.5,
+    "postedAt": "2026-11-25T21:41:44+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfjpSHsykxO/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "#雑学 #豆知識",
+    "username": "ryoma_kumagai",
+    "followers": 366142,
+    "views": 459212,
+    "likes": 7358,
+    "comments": 55,
+    "ratio": 1.25,
+    "postedAt": "2026-11-10T19:03:17+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfZJ1bAyjkS/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "#雑学 #豆知識",
+    "username": "ryoma_kumagai",
+    "followers": 366142,
+    "views": 351224,
+    "likes": 2704,
+    "comments": 15,
+    "ratio": 0.96,
+    "postedAt": "2026-11-06T17:15:24+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfuQia2yfl7/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "#雑学 #豆知識",
+    "username": "ryoma_kumagai",
+    "followers": 366142,
+    "views": 275828,
+    "likes": 1555,
+    "comments": 19,
+    "ratio": 0.75,
+    "postedAt": "2026-11-14T21:58:20+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Df1ki6ESQ8u/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "",
+    "username": "ryoma_kumagai",
+    "followers": 366142,
+    "views": 222395,
+    "likes": 2448,
+    "comments": 10,
+    "ratio": 0.61,
+    "postedAt": "2026-11-17T18:09:33+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Dfl4prWyUV4/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "#雑学 #豆知識",
+    "username": "ryoma_kumagai",
+    "followers": 366142,
+    "views": 197566,
+    "likes": 1975,
+    "comments": 48,
+    "ratio": 0.54,
+    "postedAt": "2026-11-11T15:55:54+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfcI09STe0e/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "#雑学 #豆知識",
+    "username": "ryoma_kumagai",
+    "followers": 366142,
+    "views": 182214,
+    "likes": 804,
+    "comments": 11,
+    "ratio": 0.5,
+    "postedAt": "2026-11-07T21:04:35+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DgC1h0kSG7C/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "#雑学 #豆知識",
+    "username": "ryoma_kumagai",
+    "followers": 366142,
+    "views": 151282,
+    "likes": 242,
+    "comments": 3,
+    "ratio": 0.41,
+    "postedAt": "2026-11-22T21:46:10+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DgFb3cqyKCe/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "仕事探している方は「年収」ってコメントしてね！ #雑学 #豆知識",
+    "username": "ryoma_kumagai",
+    "followers": 366142,
+    "views": 113881,
+    "likes": 106,
+    "comments": 1,
+    "ratio": 0.31,
+    "postedAt": "2026-11-23T22:01:26+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Df_815fSCoF/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "コメントに返品リンク書いておいたよ！ #雑学 #豆知識",
+    "username": "ryoma_kumagai",
+    "followers": 366142,
+    "views": 96683,
+    "likes": 870,
+    "comments": 5,
+    "ratio": 0.26,
+    "postedAt": "2026-11-21T18:52:39+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DgNIAGtzgJ8/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "電力会社はこの秘密を知られたくない #雑学 #豆知識",
+    "username": "ryoma_kumagai",
+    "followers": 366142,
+    "views": 48404,
+    "likes": 633,
+    "comments": 10,
+    "ratio": 0.13,
+    "postedAt": "2026-11-26T21:41:07+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Df9t02mynMx/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "コンビニ増量の秘密 #雑学 #豆知識",
+    "username": "ryoma_kumagai",
+    "followers": 366142,
+    "views": 47553,
+    "likes": 150,
+    "comments": 1,
+    "ratio": 0.13,
+    "postedAt": "2026-11-20T22:02:44+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfijQyaTtmH/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "#雑学 #豆知識",
+    "username": "ryoma_kumagai",
+    "followers": 366142,
+    "views": 49046,
+    "likes": 665,
+    "comments": 1,
+    "ratio": 0.13,
+    "postedAt": "2026-11-10T08:51:30+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfzI-MrSFRB/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "ロピアの秘密 #雑学 #豆知識",
+    "username": "ryoma_kumagai",
+    "followers": 366142,
+    "views": 43152,
+    "likes": 114,
+    "comments": 0,
+    "ratio": 0.12,
+    "postedAt": "2026-11-16T19:28:13+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfXBWf-zhzO/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "#雑学 #豆知識",
+    "username": "ryoma_kumagai",
+    "followers": 366142,
+    "views": 42174,
+    "likes": 166,
+    "comments": 0,
+    "ratio": 0.12,
+    "postedAt": "2026-11-05T21:24:31+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Dfebx-0hq4z/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "これって本当？ #雑学 #豆知識 #都市伝説",
+    "username": "ryoma_kumagai",
+    "followers": 366142,
+    "views": 40764,
+    "likes": 202,
+    "comments": 0,
+    "ratio": 0.11,
+    "postedAt": "2026-11-08T18:28:47+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfwtJE_SwQ-/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "ゴキブリ気になる人は最後まで見てください🪳",
+    "username": "ryoma_kumagai",
+    "followers": 366142,
+    "views": 36225,
+    "likes": 100,
+    "comments": 0,
+    "ratio": 0.1,
+    "postedAt": "2026-11-15T20:47:05+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Df4b7ovS-O3/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "",
+    "username": "ryoma_kumagai",
+    "followers": 366142,
+    "views": 21953,
+    "likes": 105,
+    "comments": 0,
+    "ratio": 0.06,
+    "postedAt": "2026-11-18T20:50:21+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Df6qzfIyu4b/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "もしもあなたがサッカー日本代表監督だったら⚽️ #雑学 #豆知識 #ワールドカップ",
+    "username": "ryoma_kumagai",
+    "followers": 366142,
+    "views": 18446,
+    "likes": 198,
+    "comments": 0,
+    "ratio": 0.05,
+    "postedAt": "2026-11-19T17:40:46+09:00"
+   }
+  ]
+ },
+ "kinsei.inc": {
+  "fetchedAt": "2026-11-28T13:48:16+09:00",
+  "status": "ok",
+  "followers": 172,
+  "items": [
+   {
+    "url": "https://www.instagram.com/reel/DdbPd3sqbhY/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "近大で「めっちゃカメレオン」完全再現したら擬態力がヤバすぎたwwww #近大 #近畿大学 #ゲーム #KINSEI",
+    "username": "kinsei.inc",
+    "followers": 172,
+    "views": 55011,
+    "likes": 202,
+    "comments": 2,
+    "ratio": 319.83,
+    "postedAt": "2026-09-18T19:43:09+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Df_4JxFiJ62/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "もし1日の睡眠が30分だけになったら？ ＝＝＝＝＝＝＝＝ 【答え】 アルコール濃度0.10%と同じ状態になります。 そして、その状態でライブ配信をすると..... #雑学 #近大 ",
+    "username": "kinsei.inc",
+    "followers": 172,
+    "views": 1693,
+    "likes": 17,
+    "comments": 0,
+    "ratio": 9.84,
+    "postedAt": "2026-11-21T18:42:37+09:00"
+   }
+  ]
+ },
+ "cafe.stunner": {
+  "fetchedAt": "2026-11-28T13:48:16+09:00",
+  "status": "ok",
+  "followers": 1285,
+  "items": [
+   {
+    "url": "https://www.instagram.com/reel/DgOMsX0yHcC/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "11/26（木）タコパ × DJ ありがとうございました🐙🎧 たこ焼きを焼きながら、5人の DJ がつないだ夜でした。 Suz suzukisyou DJ REMI reremic",
+    "username": "cafe.stunner",
+    "followers": 1285,
+    "views": null,
+    "likes": 14,
+    "comments": 0,
+    "ratio": null,
+    "postedAt": "2026-11-27T07:42:03+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Dfqrk4Luq5g/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "土曜の昼、地下に5組の生演奏が響きました🎵 【STUNNER LUNCH CONCERT Vol.1】11/7（土） 出演してくださったみなさん、ありがとうございました！ 14:0",
+    "username": "cafe.stunner",
+    "followers": 1285,
+    "views": null,
+    "likes": 19,
+    "comments": 3,
+    "ratio": null,
+    "postedAt": "2026-11-13T12:39:20+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfkBDYWOuyG/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "安心してください、急には止まりません。 本当の地球は、100年で約2.3ミリ秒ずつ、ゆっくり1日が長くなっているだけだそうです。 カレーは辛さ0〜3から選べて、ミニカレー（¥600",
+    "username": "cafe.stunner",
+    "followers": 1285,
+    "views": null,
+    "likes": 15,
+    "comments": 0,
+    "ratio": null,
+    "postedAt": "2026-11-10T22:31:58+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfdmmuGOeLP/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "明日11月9日（月）は店休日とさせていただきます。 ご来店を予定されていた皆さまにはご迷惑をおかけします。 11月10日（火）からは通常営業です（11:00〜22:00、L.O. ",
+    "username": "cafe.stunner",
+    "followers": 1285,
+    "views": null,
+    "likes": 7,
+    "comments": 0,
+    "ratio": null,
+    "postedAt": "2026-11-08T10:43:56+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfTUQeguYmt/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "幹事さんのために作りました。余興はこれでいきませんか。 STUNNER の新しい遊び「クイズピッチ」。 お店の100インチのスクリーンに問題が出て、みんなのスマホが早押しボタンにな",
+    "username": "cafe.stunner",
+    "followers": 1285,
+    "views": null,
+    "likes": 5,
+    "comments": 0,
+    "ratio": null,
+    "postedAt": "2026-11-04T10:53:37+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfLtYHJOF4V/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "はじめて来る人が、迷わないように。 外苑前駅の3番出口から、歩いて撮ってきました。 BMW の前の横断歩道を渡ったら、あとはほぼまっすぐです。 営業は 11:00〜22:00。 表",
+    "username": "cafe.stunner",
+    "followers": 1285,
+    "views": null,
+    "likes": 16,
+    "comments": 0,
+    "ratio": null,
+    "postedAt": "2026-11-01T11:58:23+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/De8eYF4u3Kj/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "土曜のお昼に、2週連続でランチコンサートをやります🎶 11.7（土）Vol.1 11.14（土）Vol.2 どちらも 14:00 START 入場無料です。ワンオーダー制（お一人さ",
+    "username": "cafe.stunner",
+    "followers": 1285,
+    "views": null,
+    "likes": 22,
+    "comments": 6,
+    "ratio": null,
+    "postedAt": "2026-10-26T13:56:57+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/De8JlBLu4bs/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "殿様、計算はお早めに。 30日目だけで5億粒。30日分を足すと、約10.7億粒になるそうです。 お米を2倍にしたい日は、ライス大盛（+¥350）もできます。 📍外苑前駅 徒歩5分／",
+    "username": "cafe.stunner",
+    "followers": 1285,
+    "views": null,
+    "likes": 12,
+    "comments": 0,
+    "ratio": null,
+    "postedAt": "2026-10-26T10:55:25+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/De3IqMqOhG3/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "本当に作ったら工場ごと飛びます。 12回の世界記録は、約1.2kmもある長い紙で作られたそうです。 手で7回が限界と言われるのは、普通の大きさの紙の話。 ローストビーフサンドは、オ",
+    "username": "cafe.stunner",
+    "followers": 1285,
+    "views": null,
+    "likes": 5,
+    "comments": 0,
+    "ratio": null,
+    "postedAt": "2026-10-24T13:59:11+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/De0Fe5gyixO/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "1位の直前で、すみません。 謎の映像はAIで作りました。 タコライスは本物です。 ランチのあとは、電源のある席とWi-Fiでそのまま作業もできます。 10/28(水) 19:00 ",
+    "username": "cafe.stunner",
+    "followers": 1285,
+    "views": null,
+    "likes": 6,
+    "comments": 0,
+    "ratio": null,
+    "postedAt": "2026-10-23T07:46:42+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Deu7Kpgye4w/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "本当に掘ったら怒られます。 地球を貫く穴を落ちると、反対側までは約40分。 どこに掘っても、だいたい同じ時間になるそうです。 穴を掘らなくても、外苑前駅から徒歩5分で着きます。 夜",
+    "username": "cafe.stunner",
+    "followers": 1285,
+    "views": null,
+    "likes": 31,
+    "comments": 4,
+    "ratio": null,
+    "postedAt": "2026-10-21T07:40:05+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DeseRlQS1Xt/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "もちろん、本当は火山には入れていません。 オーナーのおすすめは、チーズをトッピングすること。 ローストビーフはロコモコ（¥1,680）でも食べられます。 夜は、おつまみローストビー",
+    "username": "cafe.stunner",
+    "followers": 1285,
+    "views": null,
+    "likes": 6,
+    "comments": 0,
+    "ratio": null,
+    "postedAt": "2026-10-20T08:50:01+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Dep1-boyI23/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "触発されて作りました。 任務完了。標的はタコライスでした。 ランチのあとに PC を開くなら Wi-Fi と電源のある席（6〜7席）もあります。 ドリンクが1杯付くティーセットは ",
+    "username": "cafe.stunner",
+    "followers": 1285,
+    "views": null,
+    "likes": 8,
+    "comments": 2,
+    "ratio": null,
+    "postedAt": "2026-10-19T08:18:21+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DenSwC1ykdS/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "10月28日（水）、STUNNER の地下で一夜かぎりのハロウィン。 仮装で来ると500円OFF、お友達を連れてくると1人につき500円OFF。 衣装は本気でも面白でも大歓迎です。",
+    "username": "cafe.stunner",
+    "followers": 1285,
+    "views": null,
+    "likes": 13,
+    "comments": 0,
+    "ratio": null,
+    "postedAt": "2026-10-18T08:34:07+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DelfR3tO6RX/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "雲の上でも水の中でもないけれど。 本物の STUNNER は外苑前の地下1階。地下ですが窓があって昼は光が入ります。 ドリンク1杯だけのひと休みも歓迎です。紅茶・ピーチティー・コー",
+    "username": "cafe.stunner",
+    "followers": 1285,
+    "views": null,
+    "likes": 9,
+    "comments": 0,
+    "ratio": null,
+    "postedAt": "2026-10-17T15:42:21+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Dei9rTGulqO/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "本日はこちら。 ６０名規模のイベントです！ 果たして入るのか！？",
+    "username": "cafe.stunner",
+    "followers": 1285,
+    "views": null,
+    "likes": 3,
+    "comments": 0,
+    "ratio": null,
+    "postedAt": "2026-10-16T16:10:00+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DeeGJe_uhpK/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "いまの STUNNER は、昼はランチ（11:00〜）、夜は YORU CAFE（17:00〜22:00・L.O. 21:30）。 夜限定の「アボカドとローストビーフのタルタル ¥",
+    "username": "cafe.stunner",
+    "followers": 1285,
+    "views": null,
+    "likes": 12,
+    "comments": 0,
+    "ratio": null,
+    "postedAt": "2026-10-14T18:48:04+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DeaO7dIunm6/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "昼休みは短いので飛んで来ました。 ローストビーフサンドのオーナーおすすめトッピングはチーズとハラペーニョです。 サンドはローストビーフのほかに2種類。 ほとんどのメニューはテイクア",
+    "username": "cafe.stunner",
+    "followers": 1285,
+    "views": null,
+    "likes": 15,
+    "comments": 2,
+    "ratio": null,
+    "postedAt": "2026-10-13T06:49:15+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DeYk2V7OQDu/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "裏ワザ、動画に入りきらなかったぶんです。 ・ドリンク1杯だけでも大丈夫です（カフェでもバーでも） ・ランチタイムでもお酒が頼めます（樽生スパークリングワイン・ビール・ハイボールなど",
+    "username": "cafe.stunner",
+    "followers": 1285,
+    "views": null,
+    "likes": 0,
+    "comments": 0,
+    "ratio": null,
+    "postedAt": "2026-10-12T15:20:53+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DeVgkOguCvS/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "答え合わせです（全部税込）。 タコライス¥1,380／Spicyカレー¥1,100／ロコモコ¥1,680／ローストビーフサンドBig¥2,200／ミニカレー¥600／STUNNER",
+    "username": "cafe.stunner",
+    "followers": 1285,
+    "views": null,
+    "likes": 3,
+    "comments": 0,
+    "ratio": null,
+    "postedAt": "2026-10-11T10:45:44+09:00"
+   }
+  ]
+ },
+ "uchu_to_rekishi.true_story": {
+  "fetchedAt": "2026-11-28T13:48:16+09:00",
+  "status": "ok",
+  "followers": 22152,
+  "items": [
+   {
+    "url": "https://www.instagram.com/reel/DgQtjl2ud9p/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "太陽の1.4倍の重さの「死んだ星」パルサーが、太陽系を通り抜けたら？ 本物の重さと今日の惑星の位置から、重力を自分で計算しました。木星の衛星が奪われ、1年半後には地球も連れ去られま",
+    "username": "uchu_to_rekishi.true_story",
+    "followers": 22152,
+    "views": 226765,
+    "likes": 952,
+    "comments": 56,
+    "ratio": 10.24,
+    "postedAt": "2026-11-28T07:05:05+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfvbAMGB9TI/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "🚀 11月18日(水)午後7時16分(日本時間)、NASA の探査機ボイジャー1号が、地球から「1光日」の距離に到達します。 1光日 = 光が まる1日かかる距離 = 約259億k",
+    "username": "uchu_to_rekishi.true_story",
+    "followers": 22152,
+    "views": 163258,
+    "likes": 4509,
+    "comments": 186,
+    "ratio": 7.37,
+    "postedAt": "2026-11-15T08:48:59+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Dfx0Ek2uy9J/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "11月18日夜7時16分、ボイジャー1号が「光でも丸1日かかる場所」に届きます。人類の作った物で初めてです🛰️ NASAが世界中に呼びかけ中：11月17日の日没後、空に向けて光で「",
+    "username": "uchu_to_rekishi.true_story",
+    "followers": 22152,
+    "views": 160859,
+    "likes": 4349,
+    "comments": 80,
+    "ratio": 7.26,
+    "postedAt": "2026-11-16T07:05:05+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfztPLXBg4J/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "太陽系は秒速230kmで天の川銀河を回っています。本物の速さで描くと、惑星のらせんはほぼまっすぐ。そして前回ここを通った時の地球は…🌍 ※ナレーションはAI音声(VOICEVOX:",
+    "username": "uchu_to_rekishi.true_story",
+    "followers": 22152,
+    "views": 111934,
+    "likes": 2866,
+    "comments": 38,
+    "ratio": 5.05,
+    "postedAt": "2026-11-17T00:45:24+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Df0Y3SuOf6N/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "本日(11/17)夜7時16分に空へ向けた光は、24時間後、ボイジャー1号が「1光日」に届くその瞬間に、ぴったり追いつきます🔦✨ ボイジャーから振り返ると、太陽はオリオン座のそばの",
+    "username": "uchu_to_rekishi.true_story",
+    "followers": 22152,
+    "views": 86564,
+    "likes": 2428,
+    "comments": 49,
+    "ratio": 3.91,
+    "postedAt": "2026-11-17T07:05:09+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Df45W8cB7_i/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "地球は今この瞬間も、太陽といっしょに 秒速 約230km で 天の川銀河を回っています。 惑星は 太陽を回りながら ついていくので、通り道は 円ではなく らせん。 でも、よく見る「",
+    "username": "uchu_to_rekishi.true_story",
+    "followers": 22152,
+    "views": 85017,
+    "likes": 1315,
+    "comments": 47,
+    "ratio": 3.84,
+    "postedAt": "2026-11-19T01:07:41+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Df2U4bCBunh/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "いよいよ今夜。2026年11月18日(水)午後7時16分(日本時間)、ボイジャー1号が 地球から「1光日」の遠さに届きます。光でも まる1日かかる 約259億km。人類が作ったもの",
+    "username": "uchu_to_rekishi.true_story",
+    "followers": 22152,
+    "views": 70758,
+    "likes": 1485,
+    "comments": 28,
+    "ratio": 3.19,
+    "postedAt": "2026-11-18T01:10:16+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DgKDY55BjM_/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "【番外編】167年解けなかったリーマン予想を、数学者とAIが証明したと発表。証明は1700万行、コンピュータの確認では間違いなし。次は P対NP? AIは数学の謎を全部解いてしまう",
+    "username": "uchu_to_rekishi.true_story",
+    "followers": 22152,
+    "views": 55402,
+    "likes": 377,
+    "comments": 12,
+    "ratio": 2.5,
+    "postedAt": "2026-11-25T17:02:03+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Df9nXzBBMEe/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "太陽系の8つの惑星を同じ大きさに並べて、本当の速さの比率で回してみました。 地球は約24時間で1回転。火星もほぼ同じ24時間37分。 木星は地球の約11倍の大きさなのに、たった約1",
+    "username": "uchu_to_rekishi.true_story",
+    "followers": 22152,
+    "views": 49837,
+    "likes": 968,
+    "comments": 6,
+    "ratio": 2.25,
+    "postedAt": "2026-11-20T21:06:43+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DgFFChVBDUU/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "明日11月24日の夜、今年2番目に大きな満月が「すばる」を隠します。 東京では夕方6時20分ごろから、東の空で星がひとつずつ消えて、夜8時ごろに反対側から戻ってきます。札幌から那覇",
+    "username": "uchu_to_rekishi.true_story",
+    "followers": 22152,
+    "views": 33665,
+    "likes": 1028,
+    "comments": 12,
+    "ratio": 1.52,
+    "postedAt": "2026-11-23T18:40:24+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Dfm92NJhAk2/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "オリオン座の三つ星、ミンタカ・アルニラム・アルニタク。最新の測定では3つとも約1200光年先で、同じ星の集団で生まれた兄弟でした。今夜見える光は、奈良の大仏ができたころに出た光です",
+    "username": "uchu_to_rekishi.true_story",
+    "followers": 22152,
+    "views": 31385,
+    "likes": 483,
+    "comments": 12,
+    "ratio": 1.42,
+    "postedAt": "2026-11-12T02:00:22+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DgKrjm6hsZM/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "小さい天体から順に、本当の直径の比率で並べました。最後に太陽が出てきます。 ※ナレーションはAI音声(VOICEVOX:青山龍星)です。 直径: NASA Planetary Fa",
+    "username": "uchu_to_rekishi.true_story",
+    "followers": 22152,
+    "views": 30935,
+    "likes": 342,
+    "comments": 0,
+    "ratio": 1.4,
+    "postedAt": "2026-11-25T22:53:08+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DflqYvtBgA3/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "太陽をスカイツリーの大きさ(直径634m)まで縮めたら、地球はたった5.8mの玉で、68km先の熊谷のあたり。海王星は2000km先の与那国島です。となりの星はどこにあると思います",
+    "username": "uchu_to_rekishi.true_story",
+    "followers": 22152,
+    "views": 30465,
+    "likes": 122,
+    "comments": 2,
+    "ratio": 1.38,
+    "postedAt": "2026-11-11T13:50:47+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfoI48vhbJe/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "これ、CGの模様ではありません。観測された銀河4万3533個を、本当の位置にそのまま並べた宇宙の地図です。天の川から出発して、アンドロメダ、おとめ座銀河団、そして網の目のように並ぶ",
+    "username": "uchu_to_rekishi.true_story",
+    "followers": 22152,
+    "views": 30424,
+    "likes": 540,
+    "comments": 30,
+    "ratio": 1.37,
+    "postedAt": "2026-11-12T12:55:58+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfovjQKhhr3/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "国際天文学連合の小惑星センターが公開している、小惑星158万個の軌道から、今日の本当の位置を計算して並べました。火星と木星の間の小惑星帯、木星の前と後ろを回るトロヤ群、地球の近くを",
+    "username": "uchu_to_rekishi.true_story",
+    "followers": 22152,
+    "views": 27803,
+    "likes": 252,
+    "comments": 2,
+    "ratio": 1.26,
+    "postedAt": "2026-11-12T18:33:46+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfqlRdgheSR/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "なぜ「地球の出」の写真があるの？ 答えは「月の上に立っていたのではなく、月のまわりを回る宇宙船から撮ったから」🌏 月は いつも同じ面を地球に向けています(月が1回まわる間に、ちょう",
+    "username": "uchu_to_rekishi.true_story",
+    "followers": 22152,
+    "views": 18447,
+    "likes": 97,
+    "comments": 2,
+    "ratio": 0.83,
+    "postedAt": "2026-11-13T11:42:38+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Df_PutOhaK9/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "あなたは今、秒速230kmで銀河を回っています。なのに北斗七星の形が変わらないのは、近くの星もいっしょに回っているから。でも5万年たつと…🌌 5万年後の北斗七星、何に見える？コメン",
+    "username": "uchu_to_rekishi.true_story",
+    "followers": 22152,
+    "views": 17566,
+    "likes": 352,
+    "comments": 9,
+    "ratio": 0.79,
+    "postedAt": "2026-11-21T12:18:34+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DgID5YrBEKY/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "上から見た「時間の地図」(本物の銀河の位置と、何億年前の光かの輪)+「史上最大の/宇宙の3D地図/点は全部銀河」 B:斜めから見た3Dの地図+「120億年前の光まで/宇宙の3D地図",
+    "username": "uchu_to_rekishi.true_story",
+    "followers": 22152,
+    "views": 16500,
+    "likes": 217,
+    "comments": 4,
+    "ratio": 0.74,
+    "postedAt": "2026-11-24T22:28:39+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfnhZfMOmk6/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "なぜガラスが降る？ 答えは「とても熱くて、ガラスの材料(ケイ酸塩)が 空の上で雲になっているから」🌧️ この惑星 HD 189733 b は、恒星のすぐそばを たった2.2日で1周",
+    "username": "uchu_to_rekishi.true_story",
+    "followers": 22152,
+    "views": 15639,
+    "likes": 65,
+    "comments": 0,
+    "ratio": 0.71,
+    "postedAt": "2026-11-12T07:10:06+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DgOi_nSh237/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "アンドロメダ銀河が秒速110kmで近づいています。NASAの計算では約40億年後にぶつかり、約60億年後に1つの銀河「ミルコメダ」に。でも2025年の観測で、確率は約半々に。 あな",
+    "username": "uchu_to_rekishi.true_story",
+    "followers": 22152,
+    "views": 15471,
+    "likes": 123,
+    "comments": 1,
+    "ratio": 0.7,
+    "postedAt": "2026-11-27T10:55:20+09:00"
+   }
+  ]
+ },
+ "hajime_tabicreator": {
+  "fetchedAt": "2026-11-28T13:48:16+09:00",
+  "status": "ok",
+  "followers": 24682,
+  "items": [
+   {
+    "url": "https://www.instagram.com/reel/C14YPqoJbOA/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "他の投稿を見る ▷ ▷ hajime_tabicreator 忘れないように記憶しておきたい方は【 保存 】しておいてください🚀 🗒 今回は地震調査推進本部が出している日本で想定さ",
+    "username": "hajime_tabicreator",
+    "followers": 24682,
+    "views": 3940294,
+    "likes": null,
+    "comments": 256,
+    "ratio": 159.64,
+    "postedAt": "2024-01-09T22:22:55+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DFAZp5pz381/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "他の投稿を見る ▷ ▷ hajime_tabicreator 忘れないように記憶しておきたい方は【 保存 】しておいてください🚀 🗒 今回は内閣府の防災情報ページが出している都府県",
+    "username": "hajime_tabicreator",
+    "followers": 24682,
+    "views": 2101995,
+    "likes": 10152,
+    "comments": 485,
+    "ratio": 85.16,
+    "postedAt": "2025-01-19T20:57:11+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DLSATfUSGcE/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "他の投稿を見る ▷ ▷ hajime_tabicreator 忘れないように記憶しておきたい方は【 保存 】しておいてください🚀 🗒 今回は太陽系の重力の比較を動画にしました！ ⁡",
+    "username": "hajime_tabicreator",
+    "followers": 24682,
+    "views": 705706,
+    "likes": 4409,
+    "comments": 19,
+    "ratio": 28.59,
+    "postedAt": "2025-06-24T20:18:17+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DKjjwAtzaOw/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "他の投稿を見る ▷ ▷ hajime_tabicreator 忘れないように記憶しておきたい方は【 保存 】しておいてください🚀 🗒 今回は様々なものの速さを動画にしました！ ⁡ ",
+    "username": "hajime_tabicreator",
+    "followers": 24682,
+    "views": 686117,
+    "likes": 8495,
+    "comments": 49,
+    "ratio": 27.8,
+    "postedAt": "2025-06-06T19:15:20+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DLpQ0Xny1_P/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "他の投稿を見る ▷ ▷ hajime_tabicreator 忘れないように記憶しておきたい方は【 保存 】しておいてください🚀 🗒 今回は地球の位置にもし地球の大きさのブラックホ",
+    "username": "hajime_tabicreator",
+    "followers": 24682,
+    "views": 451251,
+    "likes": 1367,
+    "comments": 18,
+    "ratio": 18.28,
+    "postedAt": "2025-07-03T20:58:05+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DCv3BJuTYIj/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "他の投稿を見る ▷ ▷ hajime_tabicreator 忘れないように記憶しておきたい方は【 保存 】しておいてください🚀 🗒 今回は日本で唯一、47都道府県全てで揺れを観測",
+    "username": "hajime_tabicreator",
+    "followers": 24682,
+    "views": 304052,
+    "likes": 1378,
+    "comments": 5,
+    "ratio": 12.32,
+    "postedAt": "2024-11-24T17:44:12+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/C2Cm11evie8/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "他の投稿を見る ▷ ▷ hajime_tabicreator 忘れないように記憶しておきたい方は【 保存 】しておいてください🚀 🗒 今回は太陽系惑星の自転の速さを動画にしました！",
+    "username": "hajime_tabicreator",
+    "followers": 24682,
+    "views": 196580,
+    "likes": null,
+    "comments": 18,
+    "ratio": 7.96,
+    "postedAt": "2024-01-13T21:39:34+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DDmS-NxT0_Q/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "他の投稿を見る ▷ ▷ hajime_tabicreator 忘れないように記憶しておきたい方は【 保存 】しておいてください🚀 🗒 今回は光の速さで太陽と惑星を一周するのにどのく",
+    "username": "hajime_tabicreator",
+    "followers": 24682,
+    "views": 125375,
+    "likes": null,
+    "comments": 30,
+    "ratio": 5.08,
+    "postedAt": "2024-12-15T21:06:46+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/C1mG2VALEoz/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "他の投稿を見る ▷ ▷ hajime_tabicreator 忘れないように記憶しておきたい方は【 保存 】しておいてください🚀 🗒 今回は地震が起きた時に飛行機に乗っていたら安全",
+    "username": "hajime_tabicreator",
+    "followers": 24682,
+    "views": 103215,
+    "likes": null,
+    "comments": 8,
+    "ratio": 4.18,
+    "postedAt": "2024-01-02T20:00:03+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/C1orpZir7Ac/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "他の投稿を見る ▷ ▷ hajime_tabicreator 忘れないように記憶しておきたい方は【 保存 】しておいてください🚀 🗒 今回は津波がおこる自身の特徴。というお題で投稿",
+    "username": "hajime_tabicreator",
+    "followers": 24682,
+    "views": 92061,
+    "likes": null,
+    "comments": 12,
+    "ratio": 3.73,
+    "postedAt": "2024-01-03T20:00:09+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DCY9RMdTS7C/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "他の投稿を見る ▷ ▷ hajime_tabicreator 忘れないように記憶しておきたい方は【 保存 】しておいてください🚀 🗒 今回は太陽系の重力を比較しました！⁡ 地球の重",
+    "username": "hajime_tabicreator",
+    "followers": 24682,
+    "views": 90426,
+    "likes": null,
+    "comments": 7,
+    "ratio": 3.66,
+    "postedAt": "2024-11-15T20:18:58+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DDRZEJizxvT/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "他の投稿を見る ▷ ▷ hajime_tabicreator 忘れないように記憶しておきたい方は【 保存 】しておいてください🚀 🗒 今回は光の速さで太陽と惑星を一周するのにどのく",
+    "username": "hajime_tabicreator",
+    "followers": 24682,
+    "views": 83175,
+    "likes": 646,
+    "comments": 1,
+    "ratio": 3.37,
+    "postedAt": "2024-12-07T18:15:31+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DKwkFmCy_iM/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "他の投稿を見る ▷ ▷ hajime_tabicreator 忘れないように記憶しておきたい方は【 保存 】しておいてください🚀 🗒 今回は小惑星2024yr4についてを動画にしま",
+    "username": "hajime_tabicreator",
+    "followers": 24682,
+    "views": 80400,
+    "likes": 331,
+    "comments": 4,
+    "ratio": 3.26,
+    "postedAt": "2025-06-11T20:29:00+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DKou2mgz7OR/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "他の投稿を見る ▷ ▷ hajime_tabicreator 忘れないように記憶しておきたい方は【 保存 】しておいてください🚀 🗒 今回は地球を10cmにした時の他の天体の大きさ",
+    "username": "hajime_tabicreator",
+    "followers": 24682,
+    "views": 79967,
+    "likes": 484,
+    "comments": 4,
+    "ratio": 3.24,
+    "postedAt": "2025-06-08T19:28:32+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DKmDu5-Tn7b/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "他の投稿を見る ▷ ▷ hajime_tabicreator 忘れないように記憶しておきたい方は【 保存 】しておいてください🚀 🗒 今回は太陽の位置にブラックホールを置いたらを動",
+    "username": "hajime_tabicreator",
+    "followers": 24682,
+    "views": 78909,
+    "likes": 468,
+    "comments": 10,
+    "ratio": 3.2,
+    "postedAt": "2025-06-07T18:34:09+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Cwpm-DzpHz8/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "他の絶景を見る ▷ ▷ hajime_tabicreator 忘れないように記憶しておきたい方は【 保存 】しておいてください🚀 🗒 今回は関東大震災をテーマに動画を作りました。過",
+    "username": "hajime_tabicreator",
+    "followers": 24682,
+    "views": 77563,
+    "likes": null,
+    "comments": 7,
+    "ratio": 3.14,
+    "postedAt": "2023-09-01T22:04:34+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DEZeodzTLEZ/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "他の投稿を見る ▷ ▷ hajime_tabicreator 忘れないように記憶しておきたい方は【 保存 】しておいてください🚀 🗒 今回はブラックホールの大きさ比較を動画にしまし",
+    "username": "hajime_tabicreator",
+    "followers": 24682,
+    "views": 75561,
+    "likes": 757,
+    "comments": 20,
+    "ratio": 3.06,
+    "postedAt": "2025-01-04T18:09:55+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DMugGvRR7ci/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "他の投稿を見る ▷ ▷ hajime_tabicreator 忘れないように記憶しておきたい方は【 保存 】しておいてください🚀 🗒 今回はカムチャッカ半島の地震と津波についてを動",
+    "username": "hajime_tabicreator",
+    "followers": 24682,
+    "views": 74774,
+    "likes": 458,
+    "comments": 5,
+    "ratio": 3.03,
+    "postedAt": "2025-07-30T18:18:54+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/CwKf4cnp68h/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "他の絶景を見る ▷ ▷ hajime_tabicreator 忘れないように記憶しておきたい方は【 保存 】しておいてください🚀 🗒 今回は地球温暖化の平均気温の変化をアニメーショ",
+    "username": "hajime_tabicreator",
+    "followers": 24682,
+    "views": 74383,
+    "likes": null,
+    "comments": 48,
+    "ratio": 3.01,
+    "postedAt": "2023-08-20T20:05:55+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DLkNW_FSPxp/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "他の投稿を見る ▷ ▷ hajime_tabicreator 忘れないように記憶しておきたい方は【 保存 】しておいてください🚀 🗒 今回をもし金星の軌道に地球を置いたらどうなるか",
+    "username": "hajime_tabicreator",
+    "followers": 24682,
+    "views": 64024,
+    "likes": 402,
+    "comments": 4,
+    "ratio": 2.59,
+    "postedAt": "2025-07-01T21:51:03+09:00"
+   }
+  ]
+ },
+ "tombosenseition": {
+  "fetchedAt": "2026-11-28T13:48:16+09:00",
+  "status": "ok",
+  "followers": 6643,
+  "items": [
+   {
+    "url": "https://www.instagram.com/reel/DXEXrQOE5z8/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "AIを駆使して変な動画をつくっています🐻 音楽と一緒にどうぞ🎵 #AI",
+    "username": "tombosenseition",
+    "followers": 6643,
+    "views": 1724,
+    "likes": 100,
+    "comments": 0,
+    "ratio": 0.26,
+    "postedAt": "2026-04-13T19:22:23+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DWuvsmWgAXO/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "Under experiment...😂 #vtuber",
+    "username": "tombosenseition",
+    "followers": 6643,
+    "views": 1466,
+    "likes": 64,
+    "comments": 0,
+    "ratio": 0.22,
+    "postedAt": "2026-04-05T09:47:47+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DXJmyONk0tQ/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "大暴れ😂 #aiartist #aidance",
+    "username": "tombosenseition",
+    "followers": 6643,
+    "views": 1237,
+    "likes": 48,
+    "comments": 0,
+    "ratio": 0.19,
+    "postedAt": "2026-04-15T20:10:38+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DXRVSyEE6sm/",
+    "genre": [
+     "もしも・科学系"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "🪄🕺🩷 #aivideo #aiartist #ai",
+    "username": "tombosenseition",
+    "followers": 6643,
+    "views": 1119,
+    "likes": 40,
+    "comments": 0,
+    "ratio": 0.17,
+    "postedAt": "2026-04-18T20:10:07+09:00"
+   }
+  ]
+ },
+ "handitover_jp": {
+  "fetchedAt": "2026-11-28T13:48:16+09:00",
+  "status": "ok",
+  "followers": 258775,
+  "items": [
+   {
+    "url": "https://www.instagram.com/reel/DY83WnGRPub/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "知らぬ言葉の先で、あの日の笑顔だけが残る - Beyond the Unknown Words, Only the Smile of That Day Remains | A",
+    "username": "handitover_jp",
+    "followers": 258775,
+    "views": 887187,
+    "likes": 34905,
+    "comments": 336,
+    "ratio": 3.43,
+    "postedAt": "2026-05-30T14:27:35+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DdI8JknoZ1x/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "熟字訓を制す者は、日本語を制す - He Who Masters Jukujikun Masters Japanese. | AIアニメ「ハンドイットオーバー」とある日の、エリック",
+    "username": "handitover_jp",
+    "followers": 258775,
+    "views": 842929,
+    "likes": 32909,
+    "comments": 425,
+    "ratio": 3.26,
+    "postedAt": "2026-09-11T17:05:32+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DZUY18Pxfwt/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "エレフォンショッキング | AIアニメ「ハンドイットオーバー」とある日の、エリックとアレクシア #AIShortFilm #ショートコント",
+    "username": "handitover_jp",
+    "followers": 258775,
+    "views": 767034,
+    "likes": 19201,
+    "comments": 333,
+    "ratio": 2.96,
+    "postedAt": "2026-06-08T17:42:29+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DZhkE5Kvu9X/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "教材の沈黙を破る放物線 - The Parabola That Breaks the Silence of the Lesson | AIアニメ「ハンドイットオーバー」とある日の、",
+    "username": "handitover_jp",
+    "followers": 258775,
+    "views": 648362,
+    "likes": 23747,
+    "comments": 270,
+    "ratio": 2.51,
+    "postedAt": "2026-06-13T20:30:43+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DZKDkACxSYI/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "空を駆ける夢は誰のもの - Whose Dream Is It That Races Across the Sky? | AIアニメ「ハンドイットオーバー」とある日の、エリックとア",
+    "username": "handitover_jp",
+    "followers": 258775,
+    "views": 523916,
+    "likes": 18238,
+    "comments": 216,
+    "ratio": 2.02,
+    "postedAt": "2026-06-04T17:24:16+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DdLvWQHIfaW/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "なんてこったい！熟字訓 | AIアニメ「ハンドイットオーバー」とある日の、エリックとアレクシア #AIShortFilm #ショートコント",
+    "username": "handitover_jp",
+    "followers": 258775,
+    "views": 514002,
+    "likes": 22726,
+    "comments": 381,
+    "ratio": 1.99,
+    "postedAt": "2026-09-12T19:11:51+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DafKSBHP-xl/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "結ばれぬ座標に置かれた哀しき点 - A Sorrowful Point Set Upon Unjoined Coordinates | AIアニメ「ハンドイットオーバー」とある日",
+    "username": "handitover_jp",
+    "followers": 258775,
+    "views": 456947,
+    "likes": 20951,
+    "comments": 287,
+    "ratio": 1.77,
+    "postedAt": "2026-07-07T18:38:24+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DbfxW1ovnUD/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "まだあの人の声が君の中に - That Person’s Voice Still Lingers Within You | AIアニメ「ハンドイットオーバー」とある日の、エリッ",
+    "username": "handitover_jp",
+    "followers": 258775,
+    "views": 452221,
+    "likes": 16427,
+    "comments": 284,
+    "ratio": 1.75,
+    "postedAt": "2026-08-01T20:50:05+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DZeodm-RDf6/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "僕の想いはなんてこったい - What on Earth Has Become of My Heart? | AIアニメ「ハンドイットオーバー」とある日の、エリックとアレクシア #",
+    "username": "handitover_jp",
+    "followers": 258775,
+    "views": 449792,
+    "likes": 14602,
+    "comments": 184,
+    "ratio": 1.74,
+    "postedAt": "2026-06-12T17:11:26+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DZo_NAqxwiK/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "沈黙する機構はやがて噴き出す - The Silent Mechanism Eventually Erupts | AIアニメ「ハンドイットオーバー」とある日の、エリックとアレクシ",
+    "username": "handitover_jp",
+    "followers": 258775,
+    "views": 445753,
+    "likes": 13140,
+    "comments": 283,
+    "ratio": 1.72,
+    "postedAt": "2026-06-16T17:42:17+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DZE9GtzR4TL/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "指先を離れた時間の密度 - The Density of Time Released from the Fingertips | AIアニメ「ハンドイットオーバー」とある日の、エリ",
+    "username": "handitover_jp",
+    "followers": 258775,
+    "views": 433565,
+    "likes": 13605,
+    "comments": 202,
+    "ratio": 1.68,
+    "postedAt": "2026-06-02T17:51:44+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DapS8rdRZ4k/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "来たる荒廃に捧ぐ予行 - A Rehearsal Dedicated to the Coming Desolation | AIアニメ「ハンドイットオーバー」とある日の、エリックと",
+    "username": "handitover_jp",
+    "followers": 258775,
+    "views": 400519,
+    "likes": 10219,
+    "comments": 141,
+    "ratio": 1.55,
+    "postedAt": "2026-07-11T17:06:30+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DbxksjOoY96/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "生涯の末端にだけ熱狂は宿る - Only at the Edge of a Lifetime Does Frenzy Reside | AIアニメ「ハンドイットオーバー」とある日の",
+    "username": "handitover_jp",
+    "followers": 258775,
+    "views": 387200,
+    "likes": 13732,
+    "comments": 204,
+    "ratio": 1.5,
+    "postedAt": "2026-08-08T18:46:55+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DbNj887xFFI/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "力が示すものは無為の積算 - What Power Reveals Is the Accumulation of Inaction | AIアニメ「ハンドイットオーバー」とある日",
+    "username": "handitover_jp",
+    "followers": 258775,
+    "views": 366868,
+    "likes": 12115,
+    "comments": 178,
+    "ratio": 1.42,
+    "postedAt": "2026-07-25T19:07:51+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DbXr4MURRWd/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "確信へ至るほど選択肢は失われる - The Closer We Come to Certainty, the Fewer Choices Remain | AIアニメ「ハンドイット",
+    "username": "handitover_jp",
+    "followers": 258775,
+    "views": 353079,
+    "likes": 9445,
+    "comments": 168,
+    "ratio": 1.36,
+    "postedAt": "2026-07-29T17:29:17+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DaMxPTtxiWY/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "発兌の日に至りてなお逸脱するそれ - That Which Still Deviates Upon Reaching the Day of Release | AIアニメ「ハンドイ",
+    "username": "handitover_jp",
+    "followers": 258775,
+    "views": 343607,
+    "likes": 12449,
+    "comments": 131,
+    "ratio": 1.33,
+    "postedAt": "2026-06-30T15:12:44+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DZcKlMovVjs/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "孤高の冠は耳を澄ます - The Solitary Crest That Listens Closely to the World Around It | AIアニメ「ハンドイット",
+    "username": "handitover_jp",
+    "followers": 258775,
+    "views": 309639,
+    "likes": 10221,
+    "comments": 105,
+    "ratio": 1.2,
+    "postedAt": "2026-06-11T18:11:50+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DZwwhr7vNJF/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "迫真に足りぬ一点の証拠 - The One Missing Proof from Convincing Authenticity | AIアニメ「ハンドイットオーバー」とある日の、",
+    "username": "handitover_jp",
+    "followers": 258775,
+    "views": 271977,
+    "likes": 10790,
+    "comments": 145,
+    "ratio": 1.05,
+    "postedAt": "2026-06-19T18:08:07+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Dcx4oV2oTzn/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "僥倖は災厄の裏側に生まれる - Serendipity Is Born on the Reverse Side of Calamity | AIアニメ「ハンドイットオーバー」とある",
+    "username": "handitover_jp",
+    "followers": 258775,
+    "views": 260200,
+    "likes": 10101,
+    "comments": 101,
+    "ratio": 1.01,
+    "postedAt": "2026-09-02T18:12:32+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DcDmuZYoMu7/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "偏りはやがて必然の顔をする - Bias Eventually Assumes the Face of Inevitability | AIアニメ「ハンドイットオーバー」とある日の",
+    "username": "handitover_jp",
+    "followers": 258775,
+    "views": 252781,
+    "likes": 8034,
+    "comments": 148,
+    "ratio": 0.98,
+    "postedAt": "2026-08-15T18:51:03+09:00"
+   }
+  ]
+ },
+ "liberxx0": {
+  "fetchedAt": "2026-11-28T13:48:16+09:00",
+  "status": "ok",
+  "followers": 1090816,
+  "items": [
+   {
+    "url": "https://www.instagram.com/reel/DWGpYb2EuR8/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "・ 韓国・釜山市立美術館にて開催される「Digital Subculture: Narrative and Story in the Digital Era」に作品を展示することに",
+    "username": "liberxx0",
+    "followers": 1090816,
+    "views": null,
+    "likes": 813,
+    "comments": 8,
+    "ratio": null,
+    "postedAt": "2026-03-20T20:03:04+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DPgdrE4ACE-/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "My artwork in 5120×1080",
+    "username": "liberxx0",
+    "followers": 1090816,
+    "views": null,
+    "likes": 4385,
+    "comments": 24,
+    "ratio": null,
+    "postedAt": "2025-10-07T21:00:45+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DG8A1MkzWMj/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "神官 - #aivideo #aifashon #aianimetion #aivideo #generativeart #stablediffision #midjourney ",
+    "username": "liberxx0",
+    "followers": 1090816,
+    "views": null,
+    "likes": 6239,
+    "comments": 43,
+    "ratio": null,
+    "postedAt": "2025-03-08T21:05:14+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DGSvXdaTLVj/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "louisvuitton - #aivideo #aifashon #aianimetion #aivideo #generativeart #stablediffision #m",
+    "username": "liberxx0",
+    "followers": 1090816,
+    "views": null,
+    "likes": 3021,
+    "comments": 35,
+    "ratio": null,
+    "postedAt": "2025-02-20T20:23:31+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DGAv7DCTtsH/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "血哭の楽園 - #aivideo #aifashon #aianimetion #aivideo #generativeart #stablediffision #midjourn",
+    "username": "liberxx0",
+    "followers": 1090816,
+    "views": null,
+    "likes": 5567,
+    "comments": 53,
+    "ratio": null,
+    "postedAt": "2025-02-13T20:42:07+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DFfMKnzzqgg/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "細胞の輪廻 The cycle of cellular reincarnation - #aivideo #aifashon #aianimetion #aivideo #gene",
+    "username": "liberxx0",
+    "followers": 1090816,
+    "views": null,
+    "likes": 12912,
+    "comments": 118,
+    "ratio": null,
+    "postedAt": "2025-01-31T19:54:56+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DEzeyPDTONi/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "幽玄の彼方 klingai_official - #aivideo #aifashon #aianimetion #aivideo #generativeart #stabledi",
+    "username": "liberxx0",
+    "followers": 1090816,
+    "views": null,
+    "likes": 20877,
+    "comments": 110,
+    "ratio": null,
+    "postedAt": "2025-01-14T20:32:49+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DEufWqeTNVu/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "“Footsteps of Shadows Reaching the Sky” klingai_official - #aivideo #aifashon #aianimetion",
+    "username": "liberxx0",
+    "followers": 1090816,
+    "views": null,
+    "likes": 6389,
+    "comments": 32,
+    "ratio": null,
+    "postedAt": "2025-01-12T22:00:00+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DEmc6fmTHhO/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "「彷徨う悲哀の階」 “Steps of Wandering Sorrow” klingai_official - #aivideo #aifashon #aianimetion #",
+    "username": "liberxx0",
+    "followers": 1090816,
+    "views": null,
+    "likes": null,
+    "comments": 37,
+    "ratio": null,
+    "postedAt": "2025-01-09T19:07:34+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DD1zUDdTZAJ/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "「私たちの時間軸では、あなたたちの文明が終焉を迎える日が近づいています。」 \"In our timeline, the day your civilization comes to",
+    "username": "liberxx0",
+    "followers": 1090816,
+    "views": null,
+    "likes": null,
+    "comments": 23,
+    "ratio": null,
+    "postedAt": "2024-12-21T21:37:26+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DBoFBvBS-g5/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "幽玄の彼方 - #aivideo #aifashon #aianimetion #aivideo #generativeart #stablediffision #midjourn",
+    "username": "liberxx0",
+    "followers": 1090816,
+    "views": null,
+    "likes": 61336,
+    "comments": 283,
+    "ratio": null,
+    "postedAt": "2024-10-27T20:40:29+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DATGAFPMZlV/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "無言の連鎖 - #aivideo #aifashon #aianimetion #aivideo #generativeart #stablediffision #midjourn",
+    "username": "liberxx0",
+    "followers": 1090816,
+    "views": null,
+    "likes": 9703,
+    "comments": 77,
+    "ratio": null,
+    "postedAt": "2024-09-24T20:33:09+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DABA2Mstvie/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "霧中の神威 - #aivideo #aifashon #aianimetion #aivideo #generativeart #stablediffision #midjourn",
+    "username": "liberxx0",
+    "followers": 1090816,
+    "views": null,
+    "likes": 153398,
+    "comments": 657,
+    "ratio": null,
+    "postedAt": "2024-09-17T20:02:36+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/C_sdbfBSDWe/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "Echoes of the Cosmic Self - #aivideo #aifashon #aianimetion #aivideo #generativeart #stabl",
+    "username": "liberxx0",
+    "followers": 1090816,
+    "views": null,
+    "likes": 10411,
+    "comments": 73,
+    "ratio": null,
+    "postedAt": "2024-09-09T20:28:09+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/C_fkV0QSZaL/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "Silence 沈黙 - #aivideo #aifashon #aianimetion #aivideo #generativeart #stablediffision #mid",
+    "username": "liberxx0",
+    "followers": 1090816,
+    "views": null,
+    "likes": 204349,
+    "comments": 981,
+    "ratio": null,
+    "postedAt": "2024-09-04T20:19:08+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/C_X0qdFS9fz/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "Crossroads of Light and Dreams - #aivideo #aifashon #aianimetion #aivideo #generativeart #",
+    "username": "liberxx0",
+    "followers": 1090816,
+    "views": null,
+    "likes": 7540,
+    "comments": 39,
+    "ratio": null,
+    "postedAt": "2024-09-01T20:06:59+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/C_FzL4tyDW9/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "Nihility - #aivideo #aifashon #aianimetion #aivideo #generativeart #stablediffision #midjo",
+    "username": "liberxx0",
+    "followers": 1090816,
+    "views": null,
+    "likes": 202602,
+    "comments": 560,
+    "ratio": null,
+    "postedAt": "2024-08-25T20:07:14+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/C-2XxQKSQNb/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "夢幻変容 - #aivideo #aifashon #aianimetion #aivideo #generativeart #stablediffision #midjourne",
+    "username": "liberxx0",
+    "followers": 1090816,
+    "views": null,
+    "likes": 32073,
+    "comments": 161,
+    "ratio": null,
+    "postedAt": "2024-08-19T20:18:48+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/C-m6KSlyxiZ/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "この世界には、深く隠された真実が存在する。その真実を暴き出そうとする行為は、多くの者にとって無謀とされる。人々はその探求を避けるように警告するが、それは単に恐れから生まれたものか、",
+    "username": "liberxx0",
+    "followers": 1090816,
+    "views": null,
+    "likes": 40952,
+    "comments": 220,
+    "ratio": null,
+    "postedAt": "2024-08-13T20:11:36+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/C-U-vJ9NAZd/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "仏の顔も三度まで - #aivideo #aifashon #aianimetion #aivideo #generativeart #stablediffision #midjo",
+    "username": "liberxx0",
+    "followers": 1090816,
+    "views": null,
+    "likes": 37450,
+    "comments": 177,
+    "ratio": null,
+    "postedAt": "2024-08-06T21:05:16+09:00"
+   }
+  ]
+ },
+ "imma.gram": {
+  "fetchedAt": "2026-11-28T13:48:16+09:00",
+  "status": "ok",
+  "followers": 376201,
+  "items": [
+   {
+    "url": "https://www.instagram.com/reel/DfzTpzOsUyt/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "ca7riel ⚡️⚡️ i asked for one selfie. the rest of me heard about it. fangirling in bulk★ 1枚",
+    "username": "imma.gram",
+    "followers": 376201,
+    "views": 145485,
+    "likes": null,
+    "comments": 36,
+    "ratio": 0.39,
+    "postedAt": "2026-11-16T21:00:18+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DdWPKhJBUYG/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "バーチャルヒューマンが聞く、人間が嬉しい瞬間？！🫀🫁🧠🫆 with ayachow 社長も参戦っ⚡️ 人間なんでも着れるのいいな I’ve been collecting mome",
+    "username": "imma.gram",
+    "followers": 376201,
+    "views": 77328,
+    "likes": null,
+    "comments": 35,
+    "ratio": 0.21,
+    "postedAt": "2026-09-16T21:00:07+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DdTqT9KhR5p/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "thick shake. even thicker receipt 🧃📝 Tuk Tuk casanova_vintage3 SHOPPING DAY with ayachoww ",
+    "username": "imma.gram",
+    "followers": 376201,
+    "views": 79185,
+    "likes": null,
+    "comments": 128,
+    "ratio": 0.21,
+    "postedAt": "2026-09-15T21:00:05+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DeRkPY4sR7R/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "バーチャルヒューマンが聞く、人間が嬉しい瞬間？！ with kanako_makeup 🌸🌸🌸 人間誰にもなれるのいいな I’ve been collecting moment h",
+    "username": "imma.gram",
+    "followers": 376201,
+    "views": 72896,
+    "likes": null,
+    "comments": 68,
+    "ratio": 0.19,
+    "postedAt": "2026-10-09T22:00:19+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Da7sAdNBVdK/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "utauuu jjjiirroo #ガスバーチャル人間💨🧠",
+    "username": "imma.gram",
+    "followers": 376201,
+    "views": 63860,
+    "likes": null,
+    "comments": 14,
+    "ratio": 0.17,
+    "postedAt": "2026-07-18T20:30:06+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DcgKdarh8CR/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "人間大好きっ a month later, still thinking about this night 🪩東京全員集合🧠 complexjapan #あたし最近インタビュー🎤",
+    "username": "imma.gram",
+    "followers": 376201,
+    "views": 60462,
+    "likes": null,
+    "comments": 35,
+    "ratio": 0.16,
+    "postedAt": "2026-08-26T21:00:08+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Dfj21JxMbcZ/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "dm for bookings. skrillex of kareoke 🧠🎧⚡️",
+    "username": "imma.gram",
+    "followers": 376201,
+    "views": 44805,
+    "likes": null,
+    "comments": 37,
+    "ratio": 0.12,
+    "postedAt": "2026-11-10T21:00:05+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfHiGVqsACB/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "do u guys know parapara? ˚.🎀༘⋆˚.🎀༘⋆ it’s a dance that took over tokyo in the 90s 渋谷にギャル男増や",
+    "username": "imma.gram",
+    "followers": 376201,
+    "views": 38495,
+    "likes": null,
+    "comments": 22,
+    "ratio": 0.1,
+    "postedAt": "2026-10-30T21:00:05+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DdthMD8hV1j/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "just a normal day in tokyo",
+    "username": "imma.gram",
+    "followers": 376201,
+    "views": 36750,
+    "likes": 565,
+    "comments": 21,
+    "ratio": 0.1,
+    "postedAt": "2026-09-25T22:00:28+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DdBlUJ2hFC6/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "forbesjapan kanisasare_ayako カニササレアヤコさん発見🧠⚡️",
+    "username": "imma.gram",
+    "followers": 376201,
+    "views": 37906,
+    "likes": null,
+    "comments": 25,
+    "ratio": 0.1,
+    "postedAt": "2026-09-08T20:30:06+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Dc0p3-7BZ3T/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "あたしのゲーム 🧠 最近みんな何遊んでる？ what are yall up to these days? 🎮",
+    "username": "imma.gram",
+    "followers": 376201,
+    "views": 37128,
+    "likes": null,
+    "comments": 35,
+    "ratio": 0.1,
+    "postedAt": "2026-09-03T20:00:04+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DbS3JUghNRd/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "やばいっ🧠⚡️ Sean Wotherspoon × Pokémon WDYM ITS ONLY ON SALE FOR 2WEEKS!? ちなみにimmaリーザードンゲトりました",
+    "username": "imma.gram",
+    "followers": 376201,
+    "views": 28729,
+    "likes": null,
+    "comments": 9,
+    "ratio": 0.08,
+    "postedAt": "2026-07-27T20:30:06+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfI7VI_Mn6K/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "HAPPY HALLOWEEEN🖤 which ones real ??! あたし人間に量産されてて草🎃🧠 本体どこ？ what’s everyone dressed up as ",
+    "username": "imma.gram",
+    "followers": 376201,
+    "views": 25454,
+    "likes": null,
+    "comments": 35,
+    "ratio": 0.07,
+    "postedAt": "2026-10-31T10:00:05+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DbX9T-PBB7s/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "DID U KNOW tokyo has public toilets designed by goated architects and designers?? kkaa_off",
+    "username": "imma.gram",
+    "followers": 376201,
+    "views": 19690,
+    "likes": null,
+    "comments": 9,
+    "ratio": 0.05,
+    "postedAt": "2026-07-29T20:00:04+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DafQX2hh9eS/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "りゅうのしんのツノは愛と自由を広げるためのツノなんだって。 お母さんはシングルマザーで、兄弟を一人で育てながら事務職から社長にまでなった人。朝ごはんを家族みんなで囲むことはなかった",
+    "username": "imma.gram",
+    "followers": 376201,
+    "views": 19523,
+    "likes": null,
+    "comments": 11,
+    "ratio": 0.05,
+    "postedAt": "2026-07-07T19:30:11+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DbsuAr5hCL7/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "70s to now: the Japanese fashion timeline 🧠⚡️🧠⚡️ 最近トレンドはどう変形してくのか気になって調べてみたっ 調べて思った。ムーブメント",
+    "username": "imma.gram",
+    "followers": 376201,
+    "views": 15545,
+    "likes": null,
+    "comments": 12,
+    "ratio": 0.04,
+    "postedAt": "2026-08-06T21:30:06+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DgCwaKyssdJ/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "テレビで見てくれた人、いるカナ？ 野村グループの100周年CM「変わる世界、変わらない情熱。」に出演しました🌸 公開からもうすぐ1年？！ 時間が経つのは早いね、もう100年もあっと",
+    "username": "imma.gram",
+    "followers": 376201,
+    "views": 10664,
+    "likes": null,
+    "comments": 10,
+    "ratio": 0.03,
+    "postedAt": "2026-11-22T21:00:04+09:00"
+   }
+  ]
+ },
+ "masakichifamily": {
+  "fetchedAt": "2026-11-28T13:48:16+09:00",
+  "status": "ok",
+  "followers": 18270,
+  "items": [
+   {
+    "url": "https://www.instagram.com/reel/Df__W-DSjZ-/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "痛いよぉー😭怪我した妹がまさかの､､､🧒🏻👧🏻 #ai #まさかの ＝＝＝＝＝＝＝＝ 【年子姉妹と親バカパパの日常】 👧あおい6歳&👶すみれ4才 娘たちの成長を一緒に見守ってね❣️",
+    "username": "masakichifamily",
+    "followers": 18270,
+    "views": 479001,
+    "likes": 2026,
+    "comments": 18,
+    "ratio": 26.22,
+    "postedAt": "2026-11-21T19:15:09+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Df9hTnySWSU/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "メントスコーラを口の中でやったらまさかの､､､👧🏻🧒🏻#ai #エフェクト ＝＝＝＝＝＝＝＝ 【年子姉妹と親バカパパの日常】 👧あおい6歳&👶すみれ4才 娘たちの成長を一緒に見守っ",
+    "username": "masakichifamily",
+    "followers": 18270,
+    "views": 148531,
+    "likes": 628,
+    "comments": 11,
+    "ratio": 8.13,
+    "postedAt": "2026-11-20T20:13:09+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfpME_pySQx/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "ズルをしたらまさかの､､､🧒🏻👧🏻アウトだと思う人いたらコメントしてね😂 #世界は残酷だ #残酷なシリーズ #エアホッケー #姉妹バトル ＝＝＝＝＝＝＝＝ 【年子姉妹と親バカパパの",
+    "username": "masakichifamily",
+    "followers": 18270,
+    "views": 120753,
+    "likes": 416,
+    "comments": 5,
+    "ratio": 6.61,
+    "postedAt": "2026-11-12T22:43:50+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfuKyj0ySw5/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "セブンイレブンで11個好きな物買わせてみた👧🏻🧒🏻✨YouTube登録者77万人突破記念です🤗#セブンイレブン #たまごっち #ちいかわ #onicha ＝＝＝＝＝＝＝＝ 【年子姉",
+    "username": "masakichifamily",
+    "followers": 18270,
+    "views": 64374,
+    "likes": 450,
+    "comments": 3,
+    "ratio": 3.52,
+    "postedAt": "2026-11-14T21:08:47+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfriMPUSIOS/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "日本のプリンセスになってもらうはずがまさかの､､､👧🏻🧒🏻#過去動画 #残酷なシリーズ ＝＝＝＝＝＝＝＝ 【年子姉妹と親バカパパの日常】 👧あおい6歳&👶すみれ4才 娘たちの成長を",
+    "username": "masakichifamily",
+    "followers": 18270,
+    "views": 57102,
+    "likes": 397,
+    "comments": 8,
+    "ratio": 3.13,
+    "postedAt": "2026-11-13T20:35:03+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DgC51THycc-/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "Dino AIの体験詳細はこちら https://jp.dinoai.ai/s/2p866y2h —————————————————— 「英語をもっとスラスラ話せるようになりたい！",
+    "username": "masakichifamily",
+    "followers": 18270,
+    "views": 56151,
+    "likes": 76,
+    "comments": 3,
+    "ratio": 3.07,
+    "postedAt": "2026-11-22T22:33:30+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Df9uu24yGF6/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "高尾山で娘たちの願いを9個叶えてみた👧🏻🧒🏻#高尾山 #願いを叶える #紅葉 #紅葉狩り ＝＝＝＝＝＝＝＝ 【年子姉妹と親バカパパの日常】 👧あおい6歳&👶すみれ4才 娘たちの成長",
+    "username": "masakichifamily",
+    "followers": 18270,
+    "views": 54487,
+    "likes": 373,
+    "comments": 3,
+    "ratio": 2.98,
+    "postedAt": "2026-11-20T22:12:46+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Dfe7TvlKNG9/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "イオンモールで「い」のつくもの何でも買わせてみた👧🏻🧒🏻✨ #過去動画 #お買い物動画 #限定買い物 ＝＝＝＝＝＝＝＝ 【年子姉妹と親バカパパの日常】 👧あおい6歳&👶すみれ4才 ",
+    "username": "masakichifamily",
+    "followers": 18270,
+    "views": 53248,
+    "likes": 367,
+    "comments": 6,
+    "ratio": 2.91,
+    "postedAt": "2026-11-08T23:03:55+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfCNMKuydAJ/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "メロジョイダンスチャレンジ👧🏻✨原宿もスクイーズも大好きなあおいちゃん、メロジョイのPOP UP SHOPに連れていきたい🤗#メロジョイダンス #mellojoy mellojoy",
+    "username": "masakichifamily",
+    "followers": 18270,
+    "views": 49813,
+    "likes": 279,
+    "comments": 22,
+    "ratio": 2.73,
+    "postedAt": "2026-10-28T19:22:51+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfwoQLHyHtk/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "マジックやってみたらまさかの､､､🧒🏻👧🏻#マジック #まさかの ＝＝＝＝＝＝＝＝ 【年子姉妹と親バカパパの日常】 👧あおい6歳&👶すみれ4才 娘たちの成長を一緒に見守ってね❣️ ",
+    "username": "masakichifamily",
+    "followers": 18270,
+    "views": 48355,
+    "likes": 217,
+    "comments": 2,
+    "ratio": 2.65,
+    "postedAt": "2026-11-15T20:04:56+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DgH0OsoyS8t/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "火事に助けに入ったらまさかの､､､👧🏻 #ai #エフェクト ＝＝＝＝＝＝＝＝ 【年子姉妹と親バカパパの日常】 👧あおい6歳&👶すみれ4才 娘たちの成長を一緒に見守ってね❣️ 総フ",
+    "username": "masakichifamily",
+    "followers": 18270,
+    "views": 46500,
+    "likes": 176,
+    "comments": 4,
+    "ratio": 2.55,
+    "postedAt": "2026-11-24T20:10:53+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DgCnS23yD_D/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "我が家の音楽隊がまさかの､､､👧🏻🧒🏻#ai #エフェクト ＝＝＝＝＝＝＝＝ 【年子姉妹と親バカパパの日常】 👧あおい6歳&👶すみれ4才 娘たちの成長を一緒に見守ってね❣️ 総フォ",
+    "username": "masakichifamily",
+    "followers": 18270,
+    "views": 40817,
+    "likes": 167,
+    "comments": 1,
+    "ratio": 2.23,
+    "postedAt": "2026-11-22T19:41:49+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfUV1KESF8J/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "お熱な姉のために4歳児が看病グッズお買い物🧒🏻‼️#お買い物動画 ＝＝＝＝＝＝＝＝ 【年子姉妹と親バカパパの日常】 👧あおい6歳&👶すみれ4才 娘たちの成長を一緒に見守ってね❣️ ",
+    "username": "masakichifamily",
+    "followers": 18270,
+    "views": 30704,
+    "likes": 324,
+    "comments": 4,
+    "ratio": 1.68,
+    "postedAt": "2026-11-04T20:24:57+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DgM00uuo057/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "仲良しダンス👧🏻🧒🏻AIですがめっちゃ上手に踊れました☺️ #ai #踊ってみた ＝＝＝＝＝＝＝＝ 【年子姉妹と親バカパパの日常】 👧あおい6歳&👶すみれ4才 娘たちの成長を一緒に",
+    "username": "masakichifamily",
+    "followers": 18270,
+    "views": 27488,
+    "likes": 134,
+    "comments": 4,
+    "ratio": 1.5,
+    "postedAt": "2026-11-26T18:52:39+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfcSjwwyxbo/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "顔面エフェクトゲームにチャレンジ🧒🏻#エフェクト #ゲーム #すみれちゃん ＝＝＝＝＝＝＝＝ 【年子姉妹と親バカパパの日常】 👧あおい6歳&👶すみれ4才 娘たちの成長を一緒に見守っ",
+    "username": "masakichifamily",
+    "followers": 18270,
+    "views": 25935,
+    "likes": 138,
+    "comments": 4,
+    "ratio": 1.42,
+    "postedAt": "2026-11-07T22:29:28+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DgFN7jLSsjr/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "今後の活動に関わる重大発表です🧒🏻👧🏻‼️#緊急で動画を回しています ＝＝＝＝＝＝＝＝ 【年子姉妹と親バカパパの日常】 👧あおい6歳&👶すみれ4才 娘たちの成長を一緒に見守ってね❣",
+    "username": "masakichifamily",
+    "followers": 18270,
+    "views": 25245,
+    "likes": 174,
+    "comments": 1,
+    "ratio": 1.38,
+    "postedAt": "2026-11-23T19:59:45+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DgKZe2CSR7v/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "なんのモノマネでしょうか？🧒🏻👧🏻わかったらコメントしてね🤗#お風呂あがりモノマネ #メロジョイダンス #mellojoy mellojoyjapan",
+    "username": "masakichifamily",
+    "followers": 18270,
+    "views": 25091,
+    "likes": 142,
+    "comments": 13,
+    "ratio": 1.37,
+    "postedAt": "2026-11-25T20:15:27+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfRcPgMS0Sy/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "メロジョイダンスチャレンジ‼️AIのダンス動画出したら「実際に踊って！」のコメントをめっっちゃいただいたのであおいちゃんが頑張りました👧🏻✨#メロジョイダンス #mellojoy ",
+    "username": "masakichifamily",
+    "followers": 18270,
+    "views": 23761,
+    "likes": 168,
+    "comments": 8,
+    "ratio": 1.3,
+    "postedAt": "2026-11-03T17:25:09+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/Dfdpnp1KU43/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "人生初のベビタピに行ったらまさかの、、、👧🏻🧒🏻#過去動画 #ベビタピ #ベビタピトーキョー ＝＝＝＝＝＝＝＝ 【年子姉妹と親バカパパの日常】 👧あおい6歳&👶すみれ4才 娘たちの",
+    "username": "masakichifamily",
+    "followers": 18270,
+    "views": 22784,
+    "likes": 159,
+    "comments": 1,
+    "ratio": 1.25,
+    "postedAt": "2026-11-08T11:10:28+09:00"
+   },
+   {
+    "url": "https://www.instagram.com/reel/DfPNrUZyt5g/",
+    "genre": [
+     "AIで作った動画"
+    ],
+    "kind": "リール・ショート動画",
+    "memo": "制限時間5分‼️お熱な妹のために看病グッズ買って👧🏻#お買い物動画 #看病 ＝＝＝＝＝＝＝＝ 【年子姉妹と親バカパパの日常】 👧あおい6歳&👶すみれ4才 娘たちの成長を一緒に見守っ",
+    "username": "masakichifamily",
+    "followers": 18270,
+    "views": 21540,
+    "likes": 239,
+    "comments": 3,
+    "ratio": 1.18,
+    "postedAt": "2026-11-02T20:37:05+09:00"
+   }
+  ]
  }
 }
