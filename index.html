@@ -247,6 +247,7 @@ table.tb { width: 100%; border-collapse: collapse; font-size: 13px; }
 .ai-r { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 10px; font-size: 11.5px; color: var(--ink-2); }
 .ai-r > span { width: 78px; flex: none; }
 .ai-r .seg button { font-size: 12px; padding: 5px 10px; }
+.ai-fx { font-style: normal; font-size: 11px; color: #8a8a85; }
 .ai-ok { margin-top: 6px; min-height: 0; }
 .ai-ok { font-size: 12px; color: var(--green-dark); font-weight: 600; }
 .ai textarea { width: 100%; height: 260px; margin-top: 10px; border: 1px solid var(--line); border-radius: 6px; padding: 10px; font: 12px/1.6 ui-monospace, Menlo, monospace; background: #fff; resize: vertical; }
@@ -782,7 +783,7 @@ function viewLp() {
 
 /* ---------- 改善案づくり：DesignNOW（Codex／Claude Code）に渡す依頼文を、この広告の実物と成績から組み立てる ---------- */
 let BRIEF = '', BRIEF_ID = null;
-const B = { fix: 'auto', kind: 'banner' };  /* fix：固定する要素。kind：banner＝改善5案、motion＝動画にする */
+const B = { fix: [], kind: 'banner' };  /* fix：固定する要素（空＝AIが決める。2つまで選べる）。kind：banner＝改善5案、motion＝動画にする */
 function briefFor(c) {
   const m = stat(c), lp = lpOf(c.lpId) || {}, proj = AD_DATA.projects.find(p => p.campaignIds.includes(c.campaignId));
   const peers = AD_DATA.creatives.filter(x => x.campaignId === c.campaignId), avg = derive(sum(peers.flatMap(x => slice(x))));
@@ -845,10 +846,20 @@ ${head}
 
 ※ 「画像」のURLはサムネイルです。読み取りには必ず「動画」の実物を使ってください。`;
   const fixTxt = { copy: 'コピー（言葉・訴求・数字）', material: '素材（写真・イラスト・主役の絵）', world: '世界観（配色・書体・レイアウト・全体の雰囲気）' };
-  const fixBlock = B.fix === 'auto' ? `■ 最初にやること：要素分析
+  const fixAll = ['copy', 'material', 'world'], fixed = fixAll.filter(k => B.fix.includes(k)), free = fixAll.filter(k => !B.fix.includes(k));
+  const fixBlock = !fixed.length ? `■ 最初にやること：要素分析
 このバナーを「コピー／素材／世界観」の3つの要素に分けて言葉にし、上の成績と仮説から、当たっている要因だと思う要素を1つ選ぶ。それを「固定する要素」にする。選んだ理由を1〜2行で書いてから作り始める。`
-    : `■ 固定する要素（本人の指定）
-${fixTxt[B.fix]}。これは元のバナーのまま、一字一句・一点も変えない。`;
+    : `■ 固定する要素（本人の指定・${fixed.length}つ）
+${fixed.map(k => '・' + fixTxt[k]).join('\n')}
+${fixed.length > 1 ? 'この2つは' : 'これは'}元のバナーのまま、一字一句・一点も変えない。
+■ 変える要素
+${free.map(k => '・' + fixTxt[k]).join('\n')}`;
+  const rule1 = fixed.length === 2
+    ? `バナーの要素は「コピー／素材／世界観」の3つ。固定する要素は上の2つ。残りの1つ（${fixTxt[free[0]].split('（')[0]}）だけを、ガラッと変える。変えるのが1つでも、5案が並べて別物に見えるところまで振り切る。`
+    : 'バナーの要素は「コピー／素材／世界観」の3つ。固定する要素は1つだけ。残りの2つを、ガラッと変える。';
+  const rule3 = fixed.length === 2
+    ? `5案は、元のバナーとも、5案どうしでも別物にする。変える要素（${fixTxt[free[0]].split('（')[0]}）の方向を、案ごとに根本から変える。固定した2つには手を付けない。`
+    : '5案は、元のバナーとも、5案どうしでも別物にする。レイアウト、トーン＆マナー、世界観、主役の絵を、案ごとに根本から変える。';
   if (B.kind === 'motion') return `DesignNOWの動画（モーション）機能で、次の広告バナーを動画広告にしてください。
 
 ${head}
@@ -864,9 +875,9 @@ ${head}
 ${fixBlock}
 
 ■ 作り方の決まり
-1. バナーの要素は「コピー／素材／世界観」の3つ。固定する要素は1つだけ。残りの2つを、ガラッと変える。
+1. ${rule1}
 2. 「ガラッと」とは、並べて見た瞬間に別の広告だと分かること。色を変えただけ、書体を変えただけ、飾りを少し足しただけは、変えたうちに入れない。
-3. 5案は、元のバナーとも、5案どうしでも別物にする。レイアウト、トーン＆マナー、世界観、主役の絵を、案ごとに根本から変える。
+3. ${rule3}
 4. 5案のうち2案以上に、バナーそのものを別の何かに見立てるような仕掛け（ギミック）を入れる。何に見立てるかは、この広告の内容と読み手から自分で考える。
 5. 素材を変える時は、写真やイラストなどの実際の絵を入れる。図形や線を足すだけにしない。
 6. 固定した要素は、5案すべてで元のまま保つ。日付・講師名・ロゴ・価格などの事実も変えない。LPの内容と食い違う約束は書かない。
@@ -897,9 +908,9 @@ function aiRender() {
     <div class="ai-a"><button class="btn primary" data-brief="codex">Codexで始める</button><button class="btn primary" data-brief="claude">Claudeで始める</button><button class="btn" data-brief="copy">依頼文をコピー</button><button class="btn" data-brief="show">依頼文を見る</button></div>
     <div class="ai-ok" id="aiOk"></div><textarea id="aiTxt" readonly ${open ? '' : 'hidden'}></textarea>
     <div class="ai-n">${imgOk(c.videoUrl) ? '「Codexで始める」「Claudeで始める」を押すと、依頼文と動画のURLが入った状態で、それぞれの新しい会話が開きます。AIが動画を自分で取ってきて読み取ります。' : '「Codexで始める」「Claudeで始める」を押すと、依頼文が入った状態で新しい会話が開きます。この広告は動画の実物が取れていないので、動画ファイルを一緒に添付してから送ってください。'}</div>` : `
-    <div class="ai-h"><b>DesignNOWでより良いクリエイティブにする</b><span>固定する要素を1つ決めて、残りをガラッと変えた5案を作ります</span></div>
+    <div class="ai-h"><b>DesignNOWでより良いクリエイティブにする</b><span>固定する要素を決めて（2つまで）、残りをガラッと変えた5案を作ります</span></div>
     <div class="ai-r"><span>作るもの</span>${seg('kind', [['banner', '改善案を5案'], ['motion', '動画にする']])}</div>
-    ${B.kind === 'banner' ? `<div class="ai-r"><span>固定する要素</span>${seg('fix', [['auto', 'AIが分析して決める'], ['copy', 'コピー'], ['material', '素材'], ['world', '世界観']])}</div>` : ''}
+    ${B.kind === 'banner' ? `<div class="ai-r"><span>固定する要素</span><div class="seg">${[['auto', 'AIが分析して決める'], ['copy', 'コピー'], ['material', '素材'], ['world', '世界観']].map(([v, l]) => `<button data-fx="${v}" class="${(v === 'auto' ? !B.fix.length : B.fix.includes(v)) ? 'on' : ''}">${l}</button>`).join('')}</div><em class="ai-fx">2つまで選べます</em></div>` : ''}
     <div class="ai-a"><button class="btn primary" data-brief="codex">Codexで作る</button><button class="btn" data-brief="copy">依頼文をコピー</button><button class="btn" data-brief="show">依頼文を見る</button></div>
     <div class="ai-ok" id="aiOk"></div><textarea id="aiTxt" readonly ${open ? '' : 'hidden'}></textarea>
     <div class="ai-n">「Codexで作る」を押すと、依頼文が入った状態でCodexの新しいスレッドが開きます。DesignNOWがこの広告の画像と成績を読んで作り始めます。</div>`;
@@ -967,6 +978,12 @@ document.addEventListener('click', e => {
   if (!t) return;
   const d = t.dataset;
   if (d.al) { AL[d.al] = d.al === 'days' ? +d.av : d.av; render(); return; }
+  if (d.fx) {
+    if (d.fx === 'auto') B.fix = [];
+    else if (B.fix.includes(d.fx)) B.fix = B.fix.filter(k => k !== d.fx);
+    else { B.fix.push(d.fx); if (B.fix.length > 2) B.fix.shift(); }
+    aiRender(); return;
+  }
   if (d.bk) { B[d.bk] = d.bv; aiRender(); return; }
   if (d.brief) { const ta = $('#aiTxt'); ta.value = BRIEF;
     if (d.brief === 'show') { ta.hidden = !ta.hidden; return; }
