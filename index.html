@@ -973,7 +973,7 @@ function render() {
 }
 document.addEventListener('click', e => {
   if (S.calOpen && !e.target.closest('#cal,#calBtn')) { S.calOpen = false; S.pick = null; $('#cal').hidden = true; }
-  const t = e.target.closest('[data-al],[data-bk],[data-brief],[data-cal],[data-calm],[data-calx],[data-day],[data-trend],[data-tk],[data-home],[data-proj],[data-go],[data-d],[data-sort],[data-mode],[data-cr],[data-lp],[data-dev],[data-close]');
+  const t = e.target.closest('[data-al],[data-fx],[data-bk],[data-brief],[data-cal],[data-calm],[data-calx],[data-day],[data-trend],[data-tk],[data-home],[data-proj],[data-go],[data-d],[data-sort],[data-mode],[data-cr],[data-lp],[data-dev],[data-close]');
   if (e.target.id === 'shade') return closeDrawer();
   if (!t) return;
   const d = t.dataset;
