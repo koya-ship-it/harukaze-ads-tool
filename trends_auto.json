@@ -1,8 +1,8 @@
 {
  "rule": "直近180日・再生数がフォロワー数の10倍以上（企業・メディアは3倍以上）",
- "updatedAt": "2026-11-28T13:48:16+09:00",
+ "updatedAt": "2026-11-28T16:06:54+09:00",
  "accounts": 142,
- "checked": 106,
+ "checked": 118,
  "items": [
   {
    "url": "https://www.instagram.com/reel/DZT4YWMpp-s/",
@@ -18,6 +18,21 @@
    "comments": 95,
    "ratio": 13.03,
    "postedAt": "2026-06-08T12:58:11+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/DfbZlrSvCn8/",
+   "genre": [
+    "AIで作った動画"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "1年間、12作品。来月でデビューから10年。 12 films. One year. My first film turns 10 next month. 「にしくん」という名前で",
+   "username": "kohey_nishi",
+   "followers": 42298,
+   "views": 4642558,
+   "likes": 30184,
+   "comments": 743,
+   "ratio": 109.76,
+   "postedAt": "2026-11-07T14:15:44+09:00"
   },
   {
    "url": "https://www.instagram.com/reel/DdOSWP8pGms/",
@@ -140,6 +155,21 @@
    "postedAt": "2026-10-19T19:00:10+09:00"
   },
   {
+   "url": "https://www.instagram.com/reel/DeoSJ_wPisy/",
+   "genre": [
+    "AIで作った動画"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "サルが憑依したにしくん",
+   "username": "kohey_nishi",
+   "followers": 42298,
+   "views": 1228382,
+   "likes": 18026,
+   "comments": 130,
+   "ratio": 29.04,
+   "postedAt": "2026-10-18T17:45:31+09:00"
+  },
+  {
    "url": "https://www.instagram.com/reel/DgKKGyQxGGH/",
    "genre": [
     "もしも・科学系"
@@ -243,6 +273,36 @@
    "comments": 66,
    "ratio": 31.25,
    "postedAt": "2026-07-02T20:04:34+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/Df1xgB0u_aE/",
+   "genre": [
+    "AIで作った動画"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "AIで新しい仕事をつくりたい人は wad_ai0427 プロフィールリンクから🔗 #AI活用 #aiツール #生成ai #業務効率化",
+   "username": "wad_ai0427",
+   "followers": 18720,
+   "views": 767941,
+   "likes": 374,
+   "comments": 20,
+   "ratio": 41.02,
+   "postedAt": "2026-11-17T20:00:05+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/DfhFk5cvlpm/",
+   "genre": [
+    "AIで作った動画"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "Part 2 — where it all started. My debut film, 10 years ago, with Mao Hamasaki. We shared s",
+   "username": "kohey_nishi",
+   "followers": 42298,
+   "views": 758280,
+   "likes": 4003,
+   "comments": 84,
+   "ratio": 17.93,
+   "postedAt": "2026-11-09T19:17:39+09:00"
   },
   {
    "url": "https://www.instagram.com/reel/Dck1PkXxJ6o/",
@@ -545,6 +605,21 @@
    "postedAt": "2026-11-07T09:46:11+09:00"
   },
   {
+   "url": "https://www.instagram.com/reel/DgFojuwRbgP/",
+   "genre": [
+    "AIで作った動画"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "#第68回三田祭 #三田祭 #後夜祭2026 #後夜祭 #競技ダンス部 #慶應義塾大学",
+   "username": "shine_people_japan",
+   "followers": 11195,
+   "views": 187307,
+   "likes": 1224,
+   "comments": 11,
+   "ratio": 16.73,
+   "postedAt": "2026-11-23T23:51:14+09:00"
+  },
+  {
    "url": "https://www.instagram.com/reel/Dd93RJgTAYK/",
    "genre": [
     "もしも・科学系"
@@ -558,6 +633,21 @@
    "comments": 25,
    "ratio": 175.96,
    "postedAt": "2026-10-02T06:22:44+09:00"
+  },
+  {
+   "url": "https://www.instagram.com/reel/Dfepip1x16k/",
+   "genre": [
+    "AIで作った動画"
+   ],
+   "kind": "リール・ショート動画",
+   "memo": "#早稲田大学 #早稲田祭 #早稲田祭2026 #akaWaSeDa",
+   "username": "shine_people_japan",
+   "followers": 11195,
+   "views": 112418,
+   "likes": 507,
+   "comments": 1,
+   "ratio": 10.04,
+   "postedAt": "2026-11-08T20:28:51+09:00"
   },
   {
    "url": "https://www.instagram.com/reel/DZFFT5mzzMl/",
